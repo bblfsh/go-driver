@@ -2,7 +2,8 @@ package main
 
 import "go/ast"
 
-// setObjNil looks for the elements that can't be serialized and set it to nil. It has the properly signature to be a parameter of ast.Inspect function.
+// setObjNil looks for the elements that can't be serialized and set it to nil.
+// It has the properly signature to be a parameter of ast.Inspect function.
 func setObjNil(node ast.Node) bool {
 	switch node.(type) {
 	case *ast.BranchStmt:

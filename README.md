@@ -2,6 +2,8 @@
 
 This process parses a file and returns its AST. A request contains the content of the file being analyzed as a string.
 
+To get a request and reply a response, go-driver uses standard input and output.
+
 **Request** message has the following structure:
 
 ```
