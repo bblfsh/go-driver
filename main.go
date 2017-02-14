@@ -10,6 +10,7 @@ import (
 	"runtime"
 
 	"github.com/src-d/lang-parsers/go/go-driver/msg"
+
 	"github.com/ugorji/go/codec"
 )
 
@@ -20,34 +21,36 @@ const (
 var (
 	languageVersion = runtime.Version()
 	driverVersion   string
-
-	mpHandle codec.MsgpackHandle
-	mpDec    *codec.Decoder
-	mpEnc    *codec.Encoder
-
-	in  = os.Stdin
-	out = os.Stdout
-
-	req = &msg.Request{}
-	res *msg.Response
 )
 
-func init() {
-	mpDec = codec.NewDecoder(in, &mpHandle)
-	mpEnc = codec.NewEncoder(out, &mpHandle)
+func main() {
+	in := os.Stdin
+	out := os.Stdout
+
+	if err := start(in, out); err != nil {
+		log.Fatal(err)
+	}
 }
 
-func main() {
+func start(in io.Reader, out io.Writer) error {
+	var mpHandle codec.MsgpackHandle
+	mpDec := codec.NewDecoder(in, &mpHandle)
+	mpEnc := codec.NewEncoder(out, &mpHandle)
+	req := &msg.Request{}
+
 	for {
 		if err := mpDec.Decode(req); err != nil {
 			if err == io.EOF {
 				break
 			}
-			log.Fatal(err)
+
+			return err
 		}
+
 		res := getResponse(req)
 		mpEnc.MustEncode(res)
 	}
+	return nil
 }
 
 // getResponse always generates a msg.Response. The response will have the properly status (Ok, Error, Fatal).
@@ -66,6 +69,7 @@ func getResponse(m *msg.Request) *msg.Response {
 			res.Status = msg.Fatal
 			return res
 		}
+
 		res.Status = msg.Error
 	} else {
 		res.Status = msg.Ok
