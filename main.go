@@ -4,11 +4,10 @@ import (
 	"go/ast"
 	"go/parser"
 	"go/token"
+	"io"
 	"log"
 	"os"
 	"runtime"
-
-	"io"
 
 	"github.com/src-d/lang-parsers/go/go-driver/msg"
 	"github.com/ugorji/go/codec"
