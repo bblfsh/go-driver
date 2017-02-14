@@ -4,8 +4,11 @@ import (
 	"go/ast"
 	"go/parser"
 	"go/token"
+	"log"
 	"os"
 	"runtime"
+
+	"io"
 
 	"github.com/src-d/lang-parsers/go/go-driver/msg"
 	"github.com/ugorji/go/codec"
@@ -37,7 +40,12 @@ func init() {
 
 func main() {
 	for {
-		mpDec.MustDecode(req)
+		if err := mpDec.Decode(req); err != nil {
+			if err == io.EOF {
+				break
+			}
+			log.Fatal(err)
+		}
 		res := getResponse(req)
 		mpEnc.MustEncode(res)
 	}
