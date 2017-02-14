@@ -2,8 +2,8 @@ package main
 
 import "go/ast"
 
-// setObjNil looks for the elements that can't be serialized to JSON and set it to nil.
-func setObjNil(node interface{}) {
+// setObjNil looks for the elements that can't be serialized and set it to nil. It has the properly signature to be a parameter of ast.Inspect function.
+func setObjNil(node ast.Node) bool {
 	switch node.(type) {
 	case *ast.BranchStmt:
 		n := node.(*ast.BranchStmt)
@@ -42,9 +42,6 @@ func setObjNil(node interface{}) {
 		n.Files = nil
 		n.Imports = nil
 		safeScope(n.Scope)
-	case *ast.Scope:
-		n := node.(*ast.Scope)
-		safeScope(n)
 	case *ast.SelectorExpr:
 		n := node.(*ast.SelectorExpr)
 		safeIdent(n.Sel)
@@ -55,8 +52,10 @@ func setObjNil(node interface{}) {
 		n := node.(*ast.TypeSpec)
 		safeIdent(n.Name)
 	}
+	return true
 }
 
+// safeIdent set to nil conflictives fields of a ast.Ident.
 func safeIdent(node *ast.Ident) {
 	if node == nil {
 		return
@@ -64,26 +63,31 @@ func safeIdent(node *ast.Ident) {
 	node.Obj = nil
 }
 
+// safeIdentList iterates over a slice of ast.Ident and calls safeIdent.
 func safeIdentList(list []*ast.Ident) {
 	for i := range list {
 		safeIdent(list[i])
 	}
 }
 
+// safeImportSpec set to nil conflictives fields of a ast.ImportSpect.
 func safeImportSpec(is *ast.ImportSpec) {
 	safeIdent(is.Name)
 }
 
+// safeImportSpecList iterates over a slice of ast.ImportSpec and calls safeImportSpec.
 func safeImportSpecList(list []*ast.ImportSpec) {
 	for i := range list {
 		safeImportSpec(list[i])
 	}
 }
 
+// safeField set to nil conflictives fields of a ast.Field.
 func safeField(field *ast.Field) {
 	safeIdentList(field.Names)
 }
 
+// safeFieldList iterates over a slice of ast.Field and calls safeField.
 func safeFieldList(flist *ast.FieldList) {
 	if flist == nil {
 		return
@@ -94,11 +98,13 @@ func safeFieldList(flist *ast.FieldList) {
 	}
 }
 
+// safeFuncTye set to nil conflictives fields of a ast.FuncType.
 func safeFuncTye(ftype *ast.FuncType) {
 	safeFieldList(ftype.Params)
 	safeFieldList(ftype.Results)
 }
 
+// safeScope set to nil conflictives fields of a ast.Scope.
 func safeScope(scope *ast.Scope) {
 	scope.Objects = nil
 	scope.Outer = nil

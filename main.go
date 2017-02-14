@@ -4,14 +4,21 @@ import (
 	"go/ast"
 	"go/parser"
 	"go/token"
-	"log"
 	"os"
+	"runtime"
 
 	"github.com/src-d/lang-parsers/go/go-driver/msg"
 	"github.com/ugorji/go/codec"
 )
 
+const (
+	language = "Go"
+)
+
 var (
+	languageVersion = runtime.Version()
+	driverVersion   string
+
 	mpHandle codec.MsgpackHandle
 	mpDec    *codec.Decoder
 	mpEnc    *codec.Encoder
@@ -29,30 +36,36 @@ func init() {
 }
 
 func main() {
-	mpDec.MustDecode(req)
-	res, err := getResponse(req)
-	if err != nil {
-		log.Fatal(err)
+	for {
+		mpDec.MustDecode(req)
+		res := getResponse(req)
+		mpEnc.MustEncode(res)
 	}
-	mpEnc.MustEncode(res)
 }
 
-func getResponse(m *msg.Request) (*msg.Response, error) {
+// getResponse always generates a msg.Response. The response will have the properly status (Ok, Error, Fatal).
+func getResponse(m *msg.Request) *msg.Response {
+	res := &msg.Response{
+		Language:        language,
+		LanguageVersion: languageVersion,
+		Driver:          driverVersion,
+	}
+
 	fset := token.NewFileSet()
 	tree, err := parser.ParseFile(fset, "source.go", m.Content, parser.ParseComments)
 	if err != nil {
-		return nil, err
+		res.Errors = []string{err.Error()}
+		if tree == nil {
+			res.Status = msg.Fatal
+			return res
+		}
+		res.Status = msg.Error
+	} else {
+		res.Status = msg.Ok
 	}
 
-	ast.Inspect(tree, func(n ast.Node) bool {
-		setObjNil(n)
-		return true
-	})
+	ast.Inspect(tree, setObjNil)
 
-	res := &msg.Response{
-		Status: msg.Ok,
-		AST:    tree,
-	}
-
-	return res, nil
+	res.AST = tree
+	return res
 }
