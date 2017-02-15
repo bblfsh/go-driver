@@ -23,10 +23,32 @@ func main() {
 	fmt.Println("Hello World!")
 }
 `
-	req1 = &msg.Request{
+	reqOk = &msg.Request{
 		Action:  msg.ParseAst,
 		Content: source,
 	}
+
+	resOk = &msg.Response{
+		Status:          msg.Ok,
+		Driver:          driverVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
+		AST:             getTree(reqOk.Content),
+	}
+
+	reqError = &msg.Request{
+		Action: msg.ParseAst,
+	}
+
+	resError = &msg.Response{
+		Status:          msg.Error,
+		Errors:          []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"},
+		Driver:          driverVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
+	}
+
+	req1 = loadFile("testfiles/test1.go")
 
 	res1 = &msg.Response{
 		Status:          msg.Ok,
@@ -36,19 +58,17 @@ func main() {
 		AST:             getTree(req1.Content),
 	}
 
-	req2 = &msg.Request{
-		Action: msg.ParseAst,
-	}
+	req2 = loadFile("testfiles/test2.go")
 
 	res2 = &msg.Response{
-		Status:          msg.Error,
-		Errors:          []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"},
+		Status:          msg.Ok,
 		Driver:          driverVersion,
 		Language:        lang,
 		LanguageVersion: langVersion,
+		AST:             getTree(req2.Content),
 	}
 
-	req3 = loadFile("testfiles/test2.go")
+	req3 = loadFile("testfiles/test3.go")
 
 	res3 = &msg.Response{
 		Status:          msg.Ok,
@@ -58,7 +78,7 @@ func main() {
 		AST:             getTree(req3.Content),
 	}
 
-	req4 = loadFile("testfiles/test3.go")
+	req4 = loadFile("testfiles/test4.go")
 
 	res4 = &msg.Response{
 		Status:          msg.Ok,
@@ -68,7 +88,7 @@ func main() {
 		AST:             getTree(req4.Content),
 	}
 
-	req5 = loadFile("testfiles/test4.go")
+	req5 = loadFile("testfiles/test5.go")
 
 	res5 = &msg.Response{
 		Status:          msg.Ok,
@@ -91,26 +111,36 @@ func Test_getResponse(t *testing.T) {
 	}{
 		{
 			name: "statusOK",
+			args: args{m: reqOk},
+			want: resOk,
+		},
+		{
+			name: "statusError",
+			args: args{m: reqError},
+			want: resError,
+		},
+		{
+			name: "test1.go",
 			args: args{m: req1},
 			want: res1,
 		},
 		{
-			name: "statusFatal",
+			name: "test2.go",
 			args: args{m: req2},
 			want: res2,
 		},
 		{
-			name: "test2.go",
+			name: "test3.go",
 			args: args{m: req3},
 			want: res3,
 		},
 		{
-			name: "test3.go",
+			name: "test4.go",
 			args: args{m: req4},
 			want: res4,
 		},
 		{
-			name: "test4.go",
+			name: "test5.go",
 			args: args{m: req5},
 			want: res5,
 		},
