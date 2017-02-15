@@ -11,6 +11,7 @@ import (
 	"testing"
 
 	"github.com/src-d/lang-parsers/go/go-driver/msg"
+
 	"github.com/ugorji/go/codec"
 )
 
@@ -26,49 +27,54 @@ func main() {
 		Action:  msg.ParseAst,
 		Content: source,
 	}
+
 	res1 = &msg.Response{
 		Status:          msg.Ok,
 		Driver:          driverVersion,
-		Language:        language,
-		LanguageVersion: languageVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
 		AST:             getTree(req1.Content),
 	}
 
 	req2 = &msg.Request{
 		Action: msg.ParseAst,
 	}
+
 	res2 = &msg.Response{
 		Status:          msg.Error,
-		Errors:          []string{"source.go:1:1: expected 'package', found 'EOF'"},
+		Errors:          []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"},
 		Driver:          driverVersion,
-		Language:        language,
-		LanguageVersion: languageVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
 	}
 
 	req3 = loadFile("testfiles/test2.go")
+
 	res3 = &msg.Response{
 		Status:          msg.Ok,
 		Driver:          driverVersion,
-		Language:        language,
-		LanguageVersion: languageVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
 		AST:             getTree(req3.Content),
 	}
 
 	req4 = loadFile("testfiles/test3.go")
+
 	res4 = &msg.Response{
 		Status:          msg.Ok,
 		Driver:          driverVersion,
-		Language:        language,
-		LanguageVersion: languageVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
 		AST:             getTree(req4.Content),
 	}
 
 	req5 = loadFile("testfiles/test4.go")
+
 	res5 = &msg.Response{
 		Status:          msg.Ok,
 		Driver:          driverVersion,
-		Language:        language,
-		LanguageVersion: languageVersion,
+		Language:        lang,
+		LanguageVersion: langVersion,
 		AST:             getTree(req5.Content),
 	}
 )
@@ -77,6 +83,7 @@ func Test_getResponse(t *testing.T) {
 	type args struct {
 		m *msg.Request
 	}
+
 	tests := []struct {
 		name string
 		args args
@@ -108,6 +115,7 @@ func Test_getResponse(t *testing.T) {
 			want: res5,
 		},
 	}
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := getResponse(tt.args.m)
@@ -140,10 +148,11 @@ func loadFile(name string) *msg.Request {
 func getTree(source string) *ast.File {
 	fset := token.NewFileSet()
 	tree, _ := parser.ParseFile(fset, "source.go", source, parser.ParseComments)
+
 	return tree
 }
 
-// resEquals compare two Responses.
+// resEquals compares two Responses.
 func resEquals(got, want *msg.Response) bool {
 	if got.Status != want.Status {
 		return false

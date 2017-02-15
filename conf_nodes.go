@@ -53,6 +53,7 @@ func setObjNil(node ast.Node) bool {
 		n := node.(*ast.TypeSpec)
 		safeIdent(n.Name)
 	}
+
 	return true
 }
 
@@ -61,6 +62,7 @@ func safeIdent(node *ast.Ident) {
 	if node == nil {
 		return
 	}
+
 	node.Obj = nil
 }
 

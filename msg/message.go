@@ -5,9 +5,9 @@ import "go/ast"
 const (
 	// Ok status code.
 	Ok = "ok"
-	// Error status code.
+	// Error status code. It is replied when the driver has got the AST with errors.
 	Error = "error"
-	// Fatal status code.
+	// Fatal status code. It is replied when the driver hasn't could get the AST.
 	Fatal = "fatal"
 	// ParseAst is the Action identifier to parse an AST.
 	ParseAst = "ParseAST"
@@ -21,7 +21,7 @@ type Request struct {
 	Content         string `codec:"content"`
 }
 
-// Response is the message replies. It marshals to Messagepack.
+// Response is the replied message. It marshals to Messagepack.
 type Response struct {
 	Status          string    `codec:"status"`
 	Errors          []string  `codec:"errors,omitempty"`
