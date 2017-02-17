@@ -2,247 +2,115 @@ package main
 
 import (
 	"bytes"
-	"go/ast"
-	"go/parser"
-	"go/token"
-	"io/ioutil"
-	"log"
-	"os"
+	"fmt"
+	"io"
+	"os/exec"
 	"testing"
 
-	"github.com/src-d/lang-parsers/go/go-driver/msg"
+	"github.com/src-d/babelfish-go-driver/msg"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/ugorji/go/codec"
 )
 
-var (
-	source = `package main
-import "fmt"
-
-func main() {
-	fmt.Println("Hello World!")
-}
-`
-	reqOk = &msg.Request{
-		Action:  msg.ParseAst,
-		Content: source,
-	}
-
-	resOk = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(reqOk.Content),
-	}
-
-	reqError = &msg.Request{
-		Action: msg.ParseAst,
-	}
-
-	resError = &msg.Response{
-		Status:          msg.Error,
-		Errors:          []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"},
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-	}
-
-	req1 = loadFile("testfiles/test1.go")
-
-	res1 = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(req1.Content),
-	}
-
-	req2 = loadFile("testfiles/test2.go")
-
-	res2 = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(req2.Content),
-	}
-
-	req3 = loadFile("testfiles/test3.go")
-
-	res3 = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(req3.Content),
-	}
-
-	req4 = loadFile("testfiles/test4.go")
-
-	res4 = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(req4.Content),
-	}
-
-	req5 = loadFile("testfiles/test5.go")
-
-	res5 = &msg.Response{
-		Status:          msg.Ok,
-		Driver:          driverVersion,
-		Language:        lang,
-		LanguageVersion: langVersion,
-		AST:             getTree(req5.Content),
-	}
+const (
+	driverTestVersion = "beta-test-0.9"
 )
 
-func Test_getResponse(t *testing.T) {
-	type args struct {
-		m *msg.Request
-	}
+var tests = []*myTest{
+	0: newMyTest("statusError", &msg.Request{Action: msg.ParseAst},
+		msg.Error, []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"}),
+	1: newMyTest("test1.go", loadFile("testfiles/test1.go"), msg.Ok, nil),
+	2: newMyTest("test2.go", loadFile("testfiles/test2.go"), msg.Ok, nil),
+	3: newMyTest("test3.go", loadFile("testfiles/test3.go"), msg.Ok, nil),
+	4: newMyTest("test4.go", loadFile("testfiles/test4.go"), msg.Ok, nil),
+	5: newMyTest("test5.go", loadFile("testfiles/test5.go"), msg.Ok, nil),
+}
 
-	tests := []struct {
-		name string
-		args args
-		want *msg.Response
-	}{
-		{
-			name: "statusOK",
-			args: args{m: reqOk},
-			want: resOk,
-		},
-		{
-			name: "statusError",
-			args: args{m: reqError},
-			want: resError,
-		},
-		{
-			name: "test1.go",
-			args: args{m: req1},
-			want: res1,
-		},
-		{
-			name: "test2.go",
-			args: args{m: req2},
-			want: res2,
-		},
-		{
-			name: "test3.go",
-			args: args{m: req3},
-			want: res3,
-		},
-		{
-			name: "test4.go",
-			args: args{m: req4},
-			want: res4,
-		},
-		{
-			name: "test5.go",
-			args: args{m: req5},
-			want: res5,
-		},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got := getResponse(tt.args.m)
-			if !resEquals(got, tt.want) {
-				t.Errorf("getResponse() = %v, want %v", got, tt.want)
-			}
+func TestGetResponse(t *testing.T) {
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			got := getResponse(test.req)
+			require.Equal(t, test.res, got, fmt.Sprintf("getResponse() = %v, want %v", got, test.res))
 		})
 	}
 }
 
-// loadFile generates a msg.Request with content from a file.
-func loadFile(name string) *msg.Request {
-	file, err := os.Open(name)
-	if err != nil {
-		log.Fatal(err)
-	}
+func TestStart(t *testing.T) {
+	var input []byte
+	output := &bytes.Buffer{}
+	var handle codec.MsgpackHandle
+	dec := codec.NewDecoderBytes(output.Bytes(), &handle)
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			defer func() {
+				output.Reset()
+			}()
 
-	source, err := ioutil.ReadAll(file)
-	if err != nil {
-		log.Fatal(err)
-	}
+			// encode request
+			sliceLen := 64 + len([]byte(test.req.Content))
+			input = make([]byte, 0, sliceLen)
+			enc := codec.NewEncoderBytes(&input, &handle)
+			err := enc.Encode(test.req)
+			require.NoError(t, err)
 
-	return &msg.Request{
-		Action:  msg.ParseAst,
-		Content: string(source),
+			// execute start()
+			err = start(bytes.NewBuffer(input), output)
+			require.NoError(t, err, fmt.Sprintf("start(): error = %v, want nil", err))
+
+			// testing output can be decoded
+			var got interface{}
+			err = dec.Decode(got)
+			if assert.Error(t, err, fmt.Sprint("An error was expected")) {
+				require.Equal(t, err, io.EOF)
+			}
+
+			// encode desired response
+			want := make([]byte, 0, output.Len())
+			enc.ResetBytes(&want)
+			err = enc.Encode(test.res)
+			require.NoError(t, err)
+
+			// Comapare output(encoded generated response) against want(encoded desired response)
+			require.Equal(t, want, output.Bytes(), "start(): output != want")
+		})
 	}
 }
 
-// getTree get the ast from a source.
-func getTree(source string) *ast.File {
-	fset := token.NewFileSet()
-	tree, _ := parser.ParseFile(fset, "source.go", source, parser.ParseComments)
+func TestCmd(t *testing.T) {
+	var input []byte
+	output := &bytes.Buffer{}
+	var handle codec.MsgpackHandle
+	test := tests[4]
+	t.Run(test.name, func(t *testing.T) {
+		defer func() {
+			output.Reset()
+		}()
 
-	return tree
-}
+		// encode request
+		sliceLen := 64 + len([]byte(test.req.Content))
+		input = make([]byte, 0, sliceLen)
+		enc := codec.NewEncoderBytes(&input, &handle)
+		err := enc.Encode(test.req)
+		require.NoError(t, err)
 
-// resEquals compares two Responses.
-func resEquals(got, want *msg.Response) bool {
-	if got.Status != want.Status {
-		return false
-	}
+		// run command
+		dv := fmt.Sprintf("-X main.driverVersion=%v", driverTestVersion)
+		cmd := exec.Command("go", "run", "-ldflags", dv, "main.go", "conf_nodes.go")
+		cmd.Stdin = bytes.NewBuffer(input)
+		cmd.Stdout = output
+		err = cmd.Run()
+		require.NoError(t, err, fmt.Sprintf("exit command with errors: %v", err))
 
-	if len(got.Errors) != len(want.Errors) {
-		return false
-	}
+		// encode desired response
+		want := make([]byte, 0, output.Len())
+		enc.ResetBytes(&want)
+		test.res.Driver = driverTestVersion
+		err = enc.Encode(test.res)
+		require.NoError(t, err)
 
-	for i, v := range got.Errors {
-		if v != want.Errors[i] {
-			return false
-		}
-	}
-
-	if got.Driver != want.Driver {
-		return false
-	}
-
-	if got.Language != want.Language {
-		return false
-	}
-
-	if got.LanguageVersion != want.LanguageVersion {
-		return false
-	}
-
-	if got.LanguageVersion != want.LanguageVersion {
-		return false
-	}
-
-	if got.Status == msg.Ok && !equalsMsgpack(got.AST, want.AST) {
-		return false
-	}
-
-	return true
-}
-
-// equalsMsgpack serializes two AST and compare them.
-func equalsMsgpack(gotTree, wantTree *ast.File) bool {
-	// prepare to serialize
-	ast.Inspect(gotTree, setObjNil)
-	ast.Inspect(wantTree, setObjNil)
-
-	// get io.Writers to serialize
-	gotBuf := &bytes.Buffer{}
-	wantBuf := &bytes.Buffer{}
-
-	// get a Messagepack handle
-	var mpHandler codec.MsgpackHandle
-	mpHandler.Canonical = true
-
-	// get encoders
-	gotEnc := codec.NewEncoder(gotBuf, &mpHandler)
-	wantEnc := codec.NewEncoder(wantBuf, &mpHandler)
-
-	// encode trees
-	gotEnc.MustEncode(gotTree)
-	wantEnc.MustEncode(wantTree)
-
-	// compare both serializations
-	return bytes.Equal(gotBuf.Bytes(), wantBuf.Bytes())
+		// Comapare output(encoded generated response) against want(encoded desired response)
+		require.Equal(t, want, output.Bytes(), "start(): output != want")
+	})
 }

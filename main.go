@@ -10,7 +10,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/src-d/lang-parsers/go/go-driver/msg"
+	"github.com/src-d/babelfish-go-driver/msg"
 
 	"github.com/ugorji/go/codec"
 )
@@ -35,9 +35,9 @@ func main() {
 
 // start launchs a loop to read requests and write responses.
 func start(in io.Reader, out io.Writer) error {
-	var mpHandle codec.MsgpackHandle
-	mpDec := codec.NewDecoder(in, &mpHandle)
-	mpEnc := codec.NewEncoder(out, &mpHandle)
+	var handle codec.MsgpackHandle
+	mpDec := codec.NewDecoder(in, &handle)
+	mpEnc := codec.NewEncoder(out, &handle)
 	req := &msg.Request{}
 	var res *msg.Response
 
