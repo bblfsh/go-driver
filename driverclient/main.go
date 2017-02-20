@@ -38,8 +38,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	var mpHandle codec.MsgpackHandle
-	mpEnc := codec.NewEncoder(os.Stdout, &mpHandle)
+	var handle codec.MsgpackHandle
+	mpEnc := codec.NewEncoder(os.Stdout, &handle)
 	mpEnc.MustEncode(&msg.Request{
 		Action:          msg.ParseAst,
 		Language:        opt.Language,
