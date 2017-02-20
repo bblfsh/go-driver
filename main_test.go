@@ -26,6 +26,7 @@ var tests = []*myTest{
 	3: newMyTest("test3.source", loadFile("testfiles/test3.source"), msg.Ok, nil),
 	4: newMyTest("test4.source", loadFile("testfiles/test4.source"), msg.Ok, nil),
 	5: newMyTest("test5.source", loadFile("testfiles/test5.source"), msg.Ok, nil),
+	6: newMyTest("test6.source", loadFile("testfiles/test6.source"), msg.Ok, nil),
 }
 
 func TestGetResponse(t *testing.T) {
