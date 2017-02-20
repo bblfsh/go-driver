@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	var mpHandle codec.MsgpackHandle
-	mpDec := codec.NewDecoder(os.Stdin, &mpHandle)
+	var handle codec.MsgpackHandle
+	mpDec := codec.NewDecoder(os.Stdin, &handle)
 
 	var t interface{}
 	mpDec.MustDecode(&t)
