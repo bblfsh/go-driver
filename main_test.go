@@ -21,11 +21,11 @@ const (
 var tests = []*myTest{
 	0: newMyTest("statusError", &msg.Request{Action: msg.ParseAst},
 		msg.Error, []string{"source.go:1:1: expected ';', found 'EOF'", "source.go:1:1: expected 'IDENT', found 'EOF'", "source.go:1:1: expected 'package', found 'EOF'"}),
-	1: newMyTest("test1.go", loadFile("testfiles/test1.go"), msg.Ok, nil),
-	2: newMyTest("test2.go", loadFile("testfiles/test2.go"), msg.Ok, nil),
-	3: newMyTest("test3.go", loadFile("testfiles/test3.go"), msg.Ok, nil),
-	4: newMyTest("test4.go", loadFile("testfiles/test4.go"), msg.Ok, nil),
-	5: newMyTest("test5.go", loadFile("testfiles/test5.go"), msg.Ok, nil),
+	1: newMyTest("test1.source", loadFile("testfiles/test1.source"), msg.Ok, nil),
+	2: newMyTest("test2.source", loadFile("testfiles/test2.source"), msg.Ok, nil),
+	3: newMyTest("test3.source", loadFile("testfiles/test3.source"), msg.Ok, nil),
+	4: newMyTest("test4.source", loadFile("testfiles/test4.source"), msg.Ok, nil),
+	5: newMyTest("test5.source", loadFile("testfiles/test5.source"), msg.Ok, nil),
 }
 
 func TestGetResponse(t *testing.T) {
