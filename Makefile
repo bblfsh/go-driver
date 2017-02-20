@@ -8,6 +8,7 @@ LDFLAGS=-ldflags "-X main.driverVersion=${DRIVER_VERSION}"
 .DEFAULT_GOAL: $(BINARY)
 
 $(BINARY): $(SOURCES)
+	if [ ! -d ${ODIR} ]; then mkdir -p ${ODIR} ; fi
 	go build ${LDFLAGS} -o ${ODIR}/${BINARY} ${SOURCEDIR}
 
 .PHONY: clean
