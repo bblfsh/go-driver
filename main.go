@@ -54,6 +54,7 @@ func start(in io.Reader, out io.Writer) error {
 				LanguageVersion: langVersion,
 				Driver:          driverVersion,
 			}
+
 			mpEnc.MustEncode(res)
 			return err
 		}
