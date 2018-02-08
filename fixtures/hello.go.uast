@@ -1,0 +1,191 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+ {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  .  type: File
+.  }
+.  Children: {
+.  .  0:  {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 22
+.  .  .  .  Rparen: 31
+.  .  .  .  Tok: import
+.  .  .  .  TokPos: 15
+.  .  .  .  internalRole: Decls
+.  .  .  .  type: GenDecl
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  .  type: ImportSpec
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  Value: "fmt"
+.  .  .  .  .  .  .  .  ValuePos: 25
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  .  type: BasicLit
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1:  {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Decls
+.  .  .  .  type: FuncDecl
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Lbrace: 46
+.  .  .  .  .  .  Rbrace: 77
+.  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  type: BlockStmt
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  type: ExprStmt
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Ellipsis: 0
+.  .  .  .  .  .  .  .  .  .  Lparen: 60
+.  .  .  .  .  .  .  .  .  .  Rparen: 75
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  .  type: CallExpr
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  .  .  .  .  Value: "Hello World!"
+.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 61
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  .  .  .  type: BasicLit
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
+.  .  .  .  .  .  .  .  .  .  .  .  type: SelectorExpr
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: Println
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 53
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Sel
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  type: Ident
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1:  {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: fmt
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 49
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  type: Ident
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Name: main
+.  .  .  .  .  .  NamePos: 39
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  type: Ident
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Func: 34
+.  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  type: FuncType
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Closing: 44
+.  .  .  .  .  .  .  .  Opening: 43
+.  .  .  .  .  .  .  .  internalRole: Params
+.  .  .  .  .  .  .  .  type: FieldList
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2:  {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  EndPos: 0
+.  .  .  .  internalRole: Imports
+.  .  .  .  type: ImportSpec
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0:  {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  Value: "fmt"
+.  .  .  .  .  .  ValuePos: 25
+.  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  type: BasicLit
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3:  {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Name: main
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  .  type: Ident
+.  .  .  }
+.  .  }
+.  .  4:  {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Name: fmt
+.  .  .  .  NamePos: 49
+.  .  .  .  internalRole: Unresolved
+.  .  .  .  type: Ident
+.  .  .  }
+.  .  }
+.  }
+}
+

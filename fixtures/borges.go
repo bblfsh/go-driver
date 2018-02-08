@@ -5,7 +5,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/src-d/go-git-fixtures"
 	"github.com/stretchr/testify/require"
 )
 

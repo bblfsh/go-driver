@@ -1,0 +1,110 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 22,
+                    "Rparen": 31,
+                    "Specs": [
+                        {
+                            "EndPos": 0,
+                            "Path": {
+                                "Kind": "STRING",
+                                "Value": "\"fmt\"",
+                                "ValuePos": 25,
+                                "type": "BasicLit"
+                            },
+                            "type": "ImportSpec"
+                        }
+                    ],
+                    "Tok": "import",
+                    "TokPos": 15,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 46,
+                        "List": [
+                            {
+                                "X": {
+                                    "Args": [
+                                        {
+                                            "Kind": "STRING",
+                                            "Value": "\"Hello World!\"",
+                                            "ValuePos": 61,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Sel": {
+                                            "Name": "Println",
+                                            "NamePos": 53,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "fmt",
+                                            "NamePos": 49,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SelectorExpr"
+                                    },
+                                    "Lparen": 60,
+                                    "Rparen": 75,
+                                    "type": "CallExpr"
+                                },
+                                "type": "ExprStmt"
+                            }
+                        ],
+                        "Rbrace": 77,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "main",
+                        "NamePos": 39,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 34,
+                        "Params": {
+                            "Closing": 44,
+                            "Opening": 43,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Imports": [
+                {
+                    "EndPos": 0,
+                    "Path": {
+                        "Kind": "STRING",
+                        "Value": "\"fmt\"",
+                        "ValuePos": 25,
+                        "type": "BasicLit"
+                    },
+                    "type": "ImportSpec"
+                }
+            ],
+            "Name": {
+                "Name": "main",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "fmt",
+                    "NamePos": 49,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
