@@ -9,4 +9,10 @@ build-native-internal:
 	go get -d ./...  && \
 	go build -o $(BUILD_PATH)/bin/native native.go
 
+generate:
+	cd driver; \
+	go run ./gen/gen.go && \
+	go fmt ./goast/goast.go && \
+	go fmt ./normalizer/ann_gen.go
+
 include .sdk/Makefile

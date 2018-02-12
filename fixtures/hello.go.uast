@@ -2,14 +2,13 @@ Status:  ok
 Language:  go
 Errors: 
 UAST: 
- {
+File {
 .  Roles: File
 .  Properties: {
 .  .  Package: 1
-.  .  type: File
 .  }
 .  Children: {
-.  .  0:  {
+.  .  0: GenDecl {
 .  .  .  Roles: Unannotated
 .  .  .  Properties: {
 .  .  .  .  Lparen: 22
@@ -17,97 +16,86 @@ UAST:
 .  .  .  .  Tok: import
 .  .  .  .  TokPos: 15
 .  .  .  .  internalRole: Decls
-.  .  .  .  type: GenDecl
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
+.  .  .  .  0: ImportSpec {
 .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  .  type: ImportSpec
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  Value: "fmt"
 .  .  .  .  .  .  .  .  ValuePos: 25
 .  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  .  type: BasicLit
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  1:  {
+.  .  1: FuncDecl {
 .  .  .  Roles: Unannotated
 .  .  .  Properties: {
 .  .  .  .  internalRole: Decls
-.  .  .  .  type: FuncDecl
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  0: BlockStmt {
+.  .  .  .  .  Roles: Statement,Block,Body
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Lbrace: 46
 .  .  .  .  .  .  Rbrace: 77
 .  .  .  .  .  .  internalRole: Body
-.  .  .  .  .  .  type: BlockStmt
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  0: ExprStmt {
+.  .  .  .  .  .  .  Roles: Statement
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
-.  .  .  .  .  .  .  .  type: ExprStmt
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  0: CallExpr {
+.  .  .  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  .  .  Lparen: 60
 .  .  .  .  .  .  .  .  .  .  Rparen: 75
 .  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  .  type: CallExpr
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  .  .  .  .  TOKEN ""Hello World!""
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  .  .  .  .  Value: "Hello World!"
 .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 61
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
-.  .  .  .  .  .  .  .  .  .  .  .  type: BasicLit
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
-.  .  .  .  .  .  .  .  .  .  .  .  type: SelectorExpr
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0:  {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "Println"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: Println
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 53
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Sel
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  type: Ident
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1:  {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "fmt"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: fmt
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 49
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  type: Ident
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -118,72 +106,65 @@ UAST:
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  1: Ident {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "main"
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Name: main
 .  .  .  .  .  .  NamePos: 39
 .  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  .  type: Ident
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  2: FuncType {
+.  .  .  .  .  Roles: Expression
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Func: 34
 .  .  .  .  .  .  internalRole: Type
-.  .  .  .  .  .  type: FuncType
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0:  {
+.  .  .  .  .  .  0: FieldList {
 .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 44
 .  .  .  .  .  .  .  .  Opening: 43
 .  .  .  .  .  .  .  .  internalRole: Params
-.  .  .  .  .  .  .  .  type: FieldList
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2:  {
+.  .  2: ImportSpec {
 .  .  .  Roles: Unannotated
 .  .  .  Properties: {
 .  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
-.  .  .  .  type: ImportSpec
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0:  {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  0: BasicLit {
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  Value: "fmt"
 .  .  .  .  .  .  ValuePos: 25
 .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  type: BasicLit
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  3:  {
-.  .  .  Roles: Unannotated
+.  .  3: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "main"
 .  .  .  Properties: {
-.  .  .  .  Name: main
 .  .  .  .  NamePos: 9
 .  .  .  .  internalRole: Name
-.  .  .  .  type: Ident
 .  .  .  }
 .  .  }
-.  .  4:  {
-.  .  .  Roles: Unannotated
+.  .  4: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fmt"
 .  .  .  Properties: {
-.  .  .  .  Name: fmt
 .  .  .  .  NamePos: 49
 .  .  .  .  internalRole: Unresolved
-.  .  .  .  type: Ident
 .  .  .  }
 .  .  }
 .  }

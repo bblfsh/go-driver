@@ -1,0 +1,381 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Comments": [
+                {
+                    "List": [
+                        {
+                            "Slash": 216,
+                            "Text": "// routine",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                }
+            ],
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 32,
+                        "List": [
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c1",
+                                        "NamePos": 35,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Arrow": 0,
+                                                "Begin": 46,
+                                                "Dir": 3,
+                                                "Value": {
+                                                    "Name": "string",
+                                                    "NamePos": 51,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "ChanType"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 41,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 45,
+                                        "Rparen": 57,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 38,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c2",
+                                        "NamePos": 60,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Arrow": 0,
+                                                "Begin": 71,
+                                                "Dir": 3,
+                                                "Value": {
+                                                    "Name": "int",
+                                                    "NamePos": 76,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "ChanType"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "1",
+                                                "ValuePos": 81,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 66,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 70,
+                                        "Rparen": 82,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 63,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 92,
+                                    "List": [
+                                        {
+                                            "Body": [
+                                                {
+                                                    "Lhs": [
+                                                        {
+                                                            "Name": "_",
+                                                            "NamePos": 113,
+                                                            "type": "Ident"
+                                                        }
+                                                    ],
+                                                    "Rhs": [
+                                                        {
+                                                            "Name": "s",
+                                                            "NamePos": 117,
+                                                            "type": "Ident"
+                                                        }
+                                                    ],
+                                                    "Tok": "=",
+                                                    "TokPos": 115,
+                                                    "type": "AssignStmt"
+                                                }
+                                            ],
+                                            "Case": 95,
+                                            "Colon": 109,
+                                            "Comm": {
+                                                "Lhs": [
+                                                    {
+                                                        "Name": "s",
+                                                        "NamePos": 100,
+                                                        "type": "Ident"
+                                                    }
+                                                ],
+                                                "Rhs": [
+                                                    {
+                                                        "Op": "<-",
+                                                        "OpPos": 105,
+                                                        "X": {
+                                                            "Name": "c1",
+                                                            "NamePos": 107,
+                                                            "type": "Ident"
+                                                        },
+                                                        "type": "UnaryExpr"
+                                                    }
+                                                ],
+                                                "Tok": ":=",
+                                                "TokPos": 102,
+                                                "type": "AssignStmt"
+                                            },
+                                            "type": "CommClause"
+                                        },
+                                        {
+                                            "Body": [
+                                                {
+                                                    "Lhs": [
+                                                        {
+                                                            "Name": "_",
+                                                            "NamePos": 142,
+                                                            "type": "Ident"
+                                                        },
+                                                        {
+                                                            "Name": "_",
+                                                            "NamePos": 145,
+                                                            "type": "Ident"
+                                                        }
+                                                    ],
+                                                    "Rhs": [
+                                                        {
+                                                            "Name": "v",
+                                                            "NamePos": 149,
+                                                            "type": "Ident"
+                                                        },
+                                                        {
+                                                            "Name": "ok",
+                                                            "NamePos": 152,
+                                                            "type": "Ident"
+                                                        }
+                                                    ],
+                                                    "Tok": "=",
+                                                    "TokPos": 147,
+                                                    "type": "AssignStmt"
+                                                }
+                                            ],
+                                            "Case": 120,
+                                            "Colon": 138,
+                                            "Comm": {
+                                                "Lhs": [
+                                                    {
+                                                        "Name": "v",
+                                                        "NamePos": 125,
+                                                        "type": "Ident"
+                                                    },
+                                                    {
+                                                        "Name": "ok",
+                                                        "NamePos": 128,
+                                                        "type": "Ident"
+                                                    }
+                                                ],
+                                                "Rhs": [
+                                                    {
+                                                        "Op": "<-",
+                                                        "OpPos": 134,
+                                                        "X": {
+                                                            "Name": "c2",
+                                                            "NamePos": 136,
+                                                            "type": "Ident"
+                                                        },
+                                                        "type": "UnaryExpr"
+                                                    }
+                                                ],
+                                                "Tok": ":=",
+                                                "TokPos": 131,
+                                                "type": "AssignStmt"
+                                            },
+                                            "type": "CommClause"
+                                        },
+                                        {
+                                            "Case": 156,
+                                            "Colon": 174,
+                                            "Comm": {
+                                                "Arrow": 164,
+                                                "Chan": {
+                                                    "Name": "c2",
+                                                    "NamePos": 161,
+                                                    "type": "Ident"
+                                                },
+                                                "Value": {
+                                                    "Args": [
+                                                        {
+                                                            "Name": "c2",
+                                                            "NamePos": 171,
+                                                            "type": "Ident"
+                                                        }
+                                                    ],
+                                                    "Ellipsis": 0,
+                                                    "Fun": {
+                                                        "Name": "len",
+                                                        "NamePos": 167,
+                                                        "type": "Ident"
+                                                    },
+                                                    "Lparen": 170,
+                                                    "Rparen": 173,
+                                                    "type": "CallExpr"
+                                                },
+                                                "type": "SendStmt"
+                                            },
+                                            "type": "CommClause"
+                                        },
+                                        {
+                                            "Body": [
+                                                {
+                                                    "X": {
+                                                        "Args": [
+                                                            {
+                                                                "Name": "c2",
+                                                                "NamePos": 194,
+                                                                "type": "Ident"
+                                                            }
+                                                        ],
+                                                        "Ellipsis": 0,
+                                                        "Fun": {
+                                                            "Name": "close",
+                                                            "NamePos": 188,
+                                                            "type": "Ident"
+                                                        },
+                                                        "Lparen": 193,
+                                                        "Rparen": 196,
+                                                        "type": "CallExpr"
+                                                    },
+                                                    "type": "ExprStmt"
+                                                }
+                                            ],
+                                            "Case": 177,
+                                            "Colon": 184,
+                                            "type": "CommClause"
+                                        }
+                                    ],
+                                    "Rbrace": 199,
+                                    "type": "BlockStmt"
+                                },
+                                "Select": 85,
+                                "type": "SelectStmt"
+                            },
+                            {
+                                "Call": {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Body": {
+                                            "Lbrace": 212,
+                                            "Rbrace": 228,
+                                            "type": "BlockStmt"
+                                        },
+                                        "Type": {
+                                            "Func": 205,
+                                            "Params": {
+                                                "Closing": 210,
+                                                "Opening": 209,
+                                                "type": "FieldList"
+                                            },
+                                            "type": "FuncType"
+                                        },
+                                        "type": "FuncLit"
+                                    },
+                                    "Lparen": 229,
+                                    "Rparen": 230,
+                                    "type": "CallExpr"
+                                },
+                                "Go": 202,
+                                "type": "GoStmt"
+                            }
+                        ],
+                        "Rbrace": 232,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "chans",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 30,
+                            "Opening": 29,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "make",
+                    "NamePos": 41,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 51,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "make",
+                    "NamePos": 66,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 76,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "len",
+                    "NamePos": 167,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "close",
+                    "NamePos": 188,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

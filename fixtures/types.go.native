@@ -1,0 +1,584 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "EndPos": 0,
+                            "Path": {
+                                "Kind": "STRING",
+                                "Value": "\"bytes\"",
+                                "ValuePos": 26,
+                                "type": "BasicLit"
+                            },
+                            "type": "ImportSpec"
+                        }
+                    ],
+                    "Tok": "import",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "A",
+                                "NamePos": 40,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Name": "int",
+                                "NamePos": 42,
+                                "type": "Ident"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 35,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 54,
+                            "Name": {
+                                "Name": "B",
+                                "NamePos": 52,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Name": "A",
+                                "NamePos": 56,
+                                "type": "Ident"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 47,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Buf",
+                                "NamePos": 64,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Sel": {
+                                    "Name": "Buffer",
+                                    "NamePos": 74,
+                                    "type": "Ident"
+                                },
+                                "X": {
+                                    "Name": "bytes",
+                                    "NamePos": 68,
+                                    "type": "Ident"
+                                },
+                                "type": "SelectorExpr"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 59,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Arr",
+                                "NamePos": 87,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Elt": {
+                                    "Name": "string",
+                                    "NamePos": 93,
+                                    "type": "Ident"
+                                },
+                                "Lbrack": 91,
+                                "type": "ArrayType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 82,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Obj",
+                                "NamePos": 106,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 227,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Sel": {
+                                                    "Name": "Writer",
+                                                    "NamePos": 123,
+                                                    "type": "Ident"
+                                                },
+                                                "X": {
+                                                    "Name": "io",
+                                                    "NamePos": 120,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "SelectorExpr"
+                                            },
+                                            "type": "Field"
+                                        },
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 131,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tag": {
+                                                "Kind": "STRING",
+                                                "Value": "`json:\"-\" foo:\"int\"`",
+                                                "ValuePos": 142,
+                                                "type": "BasicLit"
+                                            },
+                                            "Type": {
+                                                "Name": "int",
+                                                "NamePos": 138,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        },
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "A",
+                                                    "NamePos": 164,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "B",
+                                                    "NamePos": 167,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Name": "string",
+                                                "NamePos": 171,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        },
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "Field",
+                                                    "NamePos": 179,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Star": 186,
+                                                "X": {
+                                                    "Elt": {
+                                                        "Name": "Obj",
+                                                        "NamePos": 189,
+                                                        "type": "Ident"
+                                                    },
+                                                    "Lbrack": 187,
+                                                    "type": "ArrayType"
+                                                },
+                                                "type": "StarExpr"
+                                            },
+                                            "type": "Field"
+                                        },
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "Inline",
+                                                    "NamePos": 194,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Fields": {
+                                                    "Closing": 225,
+                                                    "List": [
+                                                        {
+                                                            "Names": [
+                                                                {
+                                                                    "Name": "Name",
+                                                                    "NamePos": 212,
+                                                                    "type": "Ident"
+                                                                }
+                                                            ],
+                                                            "Type": {
+                                                                "Name": "string",
+                                                                "NamePos": 217,
+                                                                "type": "Ident"
+                                                            },
+                                                            "type": "Field"
+                                                        }
+                                                    ],
+                                                    "Opening": 208,
+                                                    "type": "FieldList"
+                                                },
+                                                "Incomplete": false,
+                                                "Struct": 201,
+                                                "type": "StructType"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 117,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 110,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 101,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Void",
+                                "NamePos": 235,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Incomplete": false,
+                                "Interface": 240,
+                                "Methods": {
+                                    "Closing": 250,
+                                    "Opening": 249,
+                                    "type": "FieldList"
+                                },
+                                "type": "InterfaceType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 230,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Node",
+                                "NamePos": 258,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Incomplete": false,
+                                "Interface": 263,
+                                "Methods": {
+                                    "Closing": 291,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Name": "Void",
+                                                "NamePos": 276,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        },
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "IsNode",
+                                                    "NamePos": 282,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Func": 0,
+                                                "Params": {
+                                                    "Closing": 289,
+                                                    "Opening": 288,
+                                                    "type": "FieldList"
+                                                },
+                                                "type": "FuncType"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 273,
+                                    "type": "FieldList"
+                                },
+                                "type": "InterfaceType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 253,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "LongMap",
+                                "NamePos": 299,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Key": {
+                                    "Name": "string",
+                                    "NamePos": 311,
+                                    "type": "Ident"
+                                },
+                                "Map": 307,
+                                "Value": {
+                                    "Key": {
+                                        "Name": "int",
+                                        "NamePos": 322,
+                                        "type": "Ident"
+                                    },
+                                    "Map": 318,
+                                    "Value": {
+                                        "Elt": {
+                                            "Name": "string",
+                                            "NamePos": 328,
+                                            "type": "Ident"
+                                        },
+                                        "Lbrack": 326,
+                                        "type": "ArrayType"
+                                    },
+                                    "type": "MapType"
+                                },
+                                "type": "MapType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 294,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Chan",
+                                "NamePos": 341,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Arrow": 0,
+                                "Begin": 346,
+                                "Dir": 3,
+                                "Value": {
+                                    "Name": "int",
+                                    "NamePos": 351,
+                                    "type": "Ident"
+                                },
+                                "type": "ChanType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 336,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "ChanIn",
+                                "NamePos": 360,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Arrow": 371,
+                                "Begin": 367,
+                                "Dir": 1,
+                                "Value": {
+                                    "Name": "int",
+                                    "NamePos": 374,
+                                    "type": "Ident"
+                                },
+                                "type": "ChanType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 355,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "ChanOut",
+                                "NamePos": 383,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Arrow": 391,
+                                "Begin": 391,
+                                "Dir": 2,
+                                "Value": {
+                                    "Fields": {
+                                        "Closing": 405,
+                                        "Opening": 404,
+                                        "type": "FieldList"
+                                    },
+                                    "Incomplete": false,
+                                    "Struct": 398,
+                                    "type": "StructType"
+                                },
+                                "type": "ChanType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 378,
+                    "type": "GenDecl"
+                }
+            ],
+            "Imports": [
+                {
+                    "EndPos": 0,
+                    "Path": {
+                        "Kind": "STRING",
+                        "Value": "\"bytes\"",
+                        "ValuePos": 26,
+                        "type": "BasicLit"
+                    },
+                    "type": "ImportSpec"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 42,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "bytes",
+                    "NamePos": 68,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 93,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "io",
+                    "NamePos": 120,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 138,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 171,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 217,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 311,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 322,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 328,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 351,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 374,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

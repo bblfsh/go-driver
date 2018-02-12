@@ -1,4 +1,4 @@
-# go-driver  ![Driver Status](https://img.shields.io/badge/status-pre--alpha-d6ae86.svg) [![Build Status](https://travis-ci.org/bblfsh/go-driver.svg?branch=master)](https://travis-ci.org/bblfsh/go-driver) ![Native Version](https://img.shields.io/badge/go%20version-1.9-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.9-63afbf.svg)
+# go-driver  ![Driver Status](https://img.shields.io/badge/status-alpha-db975c.svg) [![Build Status](https://travis-ci.org/bblfsh/go-driver.svg?branch=master)](https://travis-ci.org/bblfsh/go-driver) ![Native Version](https://img.shields.io/badge/go%20version-1.9-aa93ea.svg) ![Go Version](https://img.shields.io/badge/go%20version-1.9-63afbf.svg)
 
 
 

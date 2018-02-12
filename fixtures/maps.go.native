@@ -1,0 +1,578 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 31,
+                        "List": [
+                            {
+                                "Decl": {
+                                    "Lparen": 0,
+                                    "Rparen": 0,
+                                    "Specs": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "m",
+                                                    "NamePos": 38,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Key": {
+                                                    "Name": "string",
+                                                    "NamePos": 44,
+                                                    "type": "Ident"
+                                                },
+                                                "Map": 40,
+                                                "Value": {
+                                                    "Name": "int",
+                                                    "NamePos": 51,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "MapType"
+                                            },
+                                            "type": "ValueSpec"
+                                        }
+                                    ],
+                                    "Tok": "var",
+                                    "TokPos": 34,
+                                    "type": "GenDecl"
+                                },
+                                "type": "DeclStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "m",
+                                        "NamePos": 56,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Key": {
+                                                    "Name": "string",
+                                                    "NamePos": 69,
+                                                    "type": "Ident"
+                                                },
+                                                "Map": 65,
+                                                "Value": {
+                                                    "Name": "int",
+                                                    "NamePos": 76,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "MapType"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 60,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 64,
+                                        "Rparen": 79,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 58,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "m",
+                                        "NamePos": 82,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Key": {
+                                                    "Name": "string",
+                                                    "NamePos": 95,
+                                                    "type": "Ident"
+                                                },
+                                                "Map": 91,
+                                                "Value": {
+                                                    "Name": "int",
+                                                    "NamePos": 102,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "MapType"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "3",
+                                                "ValuePos": 107,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 86,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 90,
+                                        "Rparen": 108,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 84,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "m",
+                                        "NamePos": 111,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Elts": [
+                                            {
+                                                "Colon": 136,
+                                                "Key": {
+                                                    "Kind": "STRING",
+                                                    "Value": "\"a\"",
+                                                    "ValuePos": 133,
+                                                    "type": "BasicLit"
+                                                },
+                                                "Value": {
+                                                    "Kind": "INT",
+                                                    "Value": "1",
+                                                    "ValuePos": 138,
+                                                    "type": "BasicLit"
+                                                },
+                                                "type": "KeyValueExpr"
+                                            },
+                                            {
+                                                "Colon": 142,
+                                                "Key": {
+                                                    "Name": "x",
+                                                    "NamePos": 141,
+                                                    "type": "Ident"
+                                                },
+                                                "Value": {
+                                                    "Kind": "INT",
+                                                    "Value": "2",
+                                                    "ValuePos": 144,
+                                                    "type": "BasicLit"
+                                                },
+                                                "type": "KeyValueExpr"
+                                            }
+                                        ],
+                                        "Lbrace": 129,
+                                        "Rbrace": 148,
+                                        "Type": {
+                                            "Key": {
+                                                "Name": "string",
+                                                "NamePos": 119,
+                                                "type": "Ident"
+                                            },
+                                            "Map": 115,
+                                            "Value": {
+                                                "Name": "int",
+                                                "NamePos": 126,
+                                                "type": "Ident"
+                                            },
+                                            "type": "MapType"
+                                        },
+                                        "type": "CompositeLit"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 113,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "v",
+                                        "NamePos": 152,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Index": {
+                                            "Kind": "STRING",
+                                            "Value": "\"a\"",
+                                            "ValuePos": 159,
+                                            "type": "BasicLit"
+                                        },
+                                        "Lbrack": 158,
+                                        "Rbrack": 162,
+                                        "X": {
+                                            "Name": "m",
+                                            "NamePos": 157,
+                                            "type": "Ident"
+                                        },
+                                        "type": "IndexExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 154,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Index": {
+                                            "Kind": "STRING",
+                                            "Value": "\"foo\"",
+                                            "ValuePos": 167,
+                                            "type": "BasicLit"
+                                        },
+                                        "Lbrack": 166,
+                                        "Rbrack": 172,
+                                        "X": {
+                                            "Name": "m",
+                                            "NamePos": 165,
+                                            "type": "Ident"
+                                        },
+                                        "type": "IndexExpr"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Op": "+",
+                                        "OpPos": 178,
+                                        "X": {
+                                            "Name": "v",
+                                            "NamePos": 176,
+                                            "type": "Ident"
+                                        },
+                                        "Y": {
+                                            "Args": [
+                                                {
+                                                    "Name": "m",
+                                                    "NamePos": 184,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Ellipsis": 0,
+                                            "Fun": {
+                                                "Name": "len",
+                                                "NamePos": 180,
+                                                "type": "Ident"
+                                            },
+                                            "Lparen": 183,
+                                            "Rparen": 185,
+                                            "type": "CallExpr"
+                                        },
+                                        "type": "BinaryExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 174,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "v",
+                                        "NamePos": 189,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "ok",
+                                        "NamePos": 192,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Index": {
+                                            "Name": "x",
+                                            "NamePos": 200,
+                                            "type": "Ident"
+                                        },
+                                        "Lbrack": 199,
+                                        "Rbrack": 201,
+                                        "X": {
+                                            "Name": "m",
+                                            "NamePos": 198,
+                                            "type": "Ident"
+                                        },
+                                        "type": "IndexExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 195,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "_",
+                                        "NamePos": 204,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "_",
+                                        "NamePos": 207,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Name": "v",
+                                        "NamePos": 211,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "ok",
+                                        "NamePos": 214,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 209,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 236,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "v",
+                                                    "NamePos": 240,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Index": {
+                                                        "Name": "k",
+                                                        "NamePos": 247,
+                                                        "type": "Ident"
+                                                    },
+                                                    "Lbrack": 246,
+                                                    "Rbrack": 248,
+                                                    "X": {
+                                                        "Name": "m",
+                                                        "NamePos": 245,
+                                                        "type": "Ident"
+                                                    },
+                                                    "type": "IndexExpr"
+                                                }
+                                            ],
+                                            "Tok": ":=",
+                                            "TokPos": 242,
+                                            "type": "AssignStmt"
+                                        },
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 252,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 255,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Name": "k",
+                                                    "NamePos": 259,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "v",
+                                                    "NamePos": 262,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 257,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 265,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 219,
+                                "Key": {
+                                    "Name": "k",
+                                    "NamePos": 223,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 225,
+                                "X": {
+                                    "Name": "m",
+                                    "NamePos": 234,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 289,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 293,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 296,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Name": "k",
+                                                    "NamePos": 300,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "v",
+                                                    "NamePos": 303,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 298,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 306,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 269,
+                                "Key": {
+                                    "Name": "k",
+                                    "NamePos": 273,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 278,
+                                "Value": {
+                                    "Name": "v",
+                                    "NamePos": 276,
+                                    "type": "Ident"
+                                },
+                                "X": {
+                                    "Name": "m",
+                                    "NamePos": 287,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            }
+                        ],
+                        "Rbrace": 308,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "maps",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 29,
+                            "Opening": 28,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "string",
+                    "NamePos": 44,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 51,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "make",
+                    "NamePos": 60,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 69,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 76,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "make",
+                    "NamePos": 86,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 95,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 102,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 119,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 126,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "len",
+                    "NamePos": 180,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "x",
+                    "NamePos": 200,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

@@ -1,0 +1,222 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 25,
+                    "Rparen": 50,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumA1",
+                                    "NamePos": 28,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Name": "iota",
+                                    "NamePos": 37,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumA2",
+                                    "NamePos": 43,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "const",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 59,
+                    "Rparen": 101,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumB1",
+                                    "NamePos": 62,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Op": "+",
+                                            "OpPos": 80,
+                                            "X": {
+                                                "Name": "iota",
+                                                "NamePos": 75,
+                                                "type": "Ident"
+                                            },
+                                            "Y": {
+                                                "Kind": "INT",
+                                                "Value": "1",
+                                                "ValuePos": 82,
+                                                "type": "BasicLit"
+                                            },
+                                            "type": "BinaryExpr"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "Foo",
+                                        "NamePos": 71,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 74,
+                                    "Rparen": 83,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumB2",
+                                    "NamePos": 86,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumB2",
+                                    "NamePos": 94,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "const",
+                    "TokPos": 53,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 110,
+                    "Rparen": 146,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumC1",
+                                    "NamePos": 113,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Kind": "INT",
+                                            "Value": "1",
+                                            "ValuePos": 126,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "Foo",
+                                        "NamePos": 122,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 125,
+                                    "Rparen": 127,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "EnumC2",
+                                    "NamePos": 130,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Kind": "INT",
+                                            "Value": "2",
+                                            "ValuePos": 143,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "Foo",
+                                        "NamePos": 139,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 142,
+                                    "Rparen": 144,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "const",
+                    "TokPos": 104,
+                    "type": "GenDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "iota",
+                    "NamePos": 37,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Foo",
+                    "NamePos": 71,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "iota",
+                    "NamePos": 75,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Foo",
+                    "NamePos": 122,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Foo",
+                    "NamePos": 139,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
