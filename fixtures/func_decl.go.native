@@ -1,0 +1,460 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 30,
+                        "List": [
+                            {
+                                "Return": 33,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 40,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "foo",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 28,
+                            "Opening": 27,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 90,
+                        "List": [
+                            {
+                                "Results": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 100,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 103,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "nil",
+                                        "NamePos": 106,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Return": 93,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 110,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "bar",
+                        "NamePos": 48,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 43,
+                        "Params": {
+                            "Closing": 67,
+                            "List": [
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "a",
+                                            "NamePos": 52,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 54,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "b",
+                                            "NamePos": 59,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "string",
+                                        "NamePos": 61,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 51,
+                            "type": "FieldList"
+                        },
+                        "Results": {
+                            "Closing": 88,
+                            "List": [
+                                {
+                                    "Type": {
+                                        "Name": "string",
+                                        "NamePos": 70,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 78,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Type": {
+                                        "Name": "error",
+                                        "NamePos": 83,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 69,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 155,
+                        "List": [
+                            {
+                                "Return": 158,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 165,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "baz",
+                        "NamePos": 118,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 113,
+                        "Params": {
+                            "Closing": 153,
+                            "List": [
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "a",
+                                            "NamePos": 122,
+                                            "type": "Ident"
+                                        },
+                                        {
+                                            "Name": "b",
+                                            "NamePos": 125,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 127,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "_",
+                                            "NamePos": 132,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 134,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "args",
+                                            "NamePos": 139,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Ellipsis": 144,
+                                        "Elt": {
+                                            "Name": "string",
+                                            "NamePos": 147,
+                                            "type": "Ident"
+                                        },
+                                        "type": "Ellipsis"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 121,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 183,
+                        "List": [
+                            {
+                                "Return": 186,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 193,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "foo",
+                        "NamePos": 177,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 175,
+                        "List": [
+                            {
+                                "Type": {
+                                    "Name": "A",
+                                    "NamePos": 174,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 173,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 168,
+                        "Params": {
+                            "Closing": 181,
+                            "Opening": 180,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 236,
+                        "List": [
+                            {
+                                "Results": [
+                                    {
+                                        "Kind": "INT",
+                                        "Value": "1",
+                                        "ValuePos": 246,
+                                        "type": "BasicLit"
+                                    },
+                                    {
+                                        "Kind": "INT",
+                                        "Value": "2",
+                                        "ValuePos": 249,
+                                        "type": "BasicLit"
+                                    },
+                                    {
+                                        "Kind": "STRING",
+                                        "Value": "\"x\"",
+                                        "ValuePos": 252,
+                                        "type": "BasicLit"
+                                    }
+                                ],
+                                "Return": 239,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 256,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "bar",
+                        "NamePos": 207,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 205,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 202,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "A",
+                                    "NamePos": 204,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 201,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 196,
+                        "Params": {
+                            "Closing": 211,
+                            "Opening": 210,
+                            "type": "FieldList"
+                        },
+                        "Results": {
+                            "Closing": 234,
+                            "List": [
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "i1",
+                                            "NamePos": 214,
+                                            "type": "Ident"
+                                        },
+                                        {
+                                            "Name": "i2",
+                                            "NamePos": 218,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 221,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                },
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "s",
+                                            "NamePos": 226,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "string",
+                                        "NamePos": 228,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 213,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 54,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 61,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 70,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 78,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "error",
+                    "NamePos": 83,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "nil",
+                    "NamePos": 106,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 127,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 134,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 147,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "A",
+                    "NamePos": 174,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "A",
+                    "NamePos": 204,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 221,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 228,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

@@ -1,0 +1,326 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  }
+.  Children: {
+.  .  0: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 25
+.  .  .  .  Rparen: 50
+.  .  .  .  Tok: const
+.  .  .  .  TokPos: 19
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumA1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 28
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "iota"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 37
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumA2"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 43
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 59
+.  .  .  .  Rparen: 101
+.  .  .  .  Tok: const
+.  .  .  .  TokPos: 53
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumB1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 62
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CallExpr {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Ellipsis: 0
+.  .  .  .  .  .  .  .  Lparen: 74
+.  .  .  .  .  .  .  .  Rparen: 83
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BinaryExpr {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  BinaryExpr.Op: +
+.  .  .  .  .  .  .  .  .  .  OpPos: 80
+.  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "+"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "iota"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 75
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number,Binary,Right
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 82
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Y
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 71
+.  .  .  .  .  .  .  .  .  .  internalRole: Fun
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumB2"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 86
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumB2"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 94
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 110
+.  .  .  .  Rparen: 146
+.  .  .  .  Tok: const
+.  .  .  .  TokPos: 104
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumC1"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 113
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CallExpr {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Ellipsis: 0
+.  .  .  .  .  .  .  .  Lparen: 125
+.  .  .  .  .  .  .  .  Rparen: 127
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  ValuePos: 126
+.  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 122
+.  .  .  .  .  .  .  .  .  .  internalRole: Fun
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "EnumC2"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 130
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CallExpr {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Ellipsis: 0
+.  .  .  .  .  .  .  .  Lparen: 142
+.  .  .  .  .  .  .  .  Rparen: 144
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  TOKEN "2"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  ValuePos: 143
+.  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 139
+.  .  .  .  .  .  .  .  .  .  internalRole: Fun
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  4: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "iota"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 37
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  5: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "Foo"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 71
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  6: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "iota"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 75
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  7: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "Foo"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 122
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  8: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "Foo"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 139
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  }
+}
+

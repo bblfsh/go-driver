@@ -1,0 +1,125 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 33,
+                        "List": [
+                            {
+                                "Colon": 39,
+                                "Label": {
+                                    "Name": "loop",
+                                    "NamePos": 35,
+                                    "type": "Ident"
+                                },
+                                "Stmt": {
+                                    "Body": {
+                                        "Lbrace": 46,
+                                        "List": [
+                                            {
+                                                "Body": {
+                                                    "Lbrace": 54,
+                                                    "List": [
+                                                        {
+                                                            "Label": {
+                                                                "Name": "loop",
+                                                                "NamePos": 65,
+                                                                "type": "Ident"
+                                                            },
+                                                            "Tok": "break",
+                                                            "TokPos": 59,
+                                                            "type": "BranchStmt"
+                                                        }
+                                                    ],
+                                                    "Rbrace": 72,
+                                                    "type": "BlockStmt"
+                                                },
+                                                "For": 50,
+                                                "type": "ForStmt"
+                                            }
+                                        ],
+                                        "Rbrace": 75,
+                                        "type": "BlockStmt"
+                                    },
+                                    "For": 42,
+                                    "type": "ForStmt"
+                                },
+                                "type": "LabeledStmt"
+                            },
+                            {
+                                "Colon": 83,
+                                "Label": {
+                                    "Name": "start",
+                                    "NamePos": 78,
+                                    "type": "Ident"
+                                },
+                                "Stmt": {
+                                    "Body": {
+                                        "Lbrace": 95,
+                                        "List": [
+                                            {
+                                                "Label": {
+                                                    "Name": "start",
+                                                    "NamePos": 104,
+                                                    "type": "Ident"
+                                                },
+                                                "Tok": "goto",
+                                                "TokPos": 99,
+                                                "type": "BranchStmt"
+                                            }
+                                        ],
+                                        "Rbrace": 111,
+                                        "type": "BlockStmt"
+                                    },
+                                    "Cond": {
+                                        "Name": "false",
+                                        "NamePos": 89,
+                                        "type": "Ident"
+                                    },
+                                    "If": 86,
+                                    "type": "IfStmt"
+                                },
+                                "type": "LabeledStmt"
+                            }
+                        ],
+                        "Rbrace": 113,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "labels",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 31,
+                            "Opening": 30,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "false",
+                    "NamePos": 89,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

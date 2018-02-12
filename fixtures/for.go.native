@@ -1,0 +1,280 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Comments": [
+                {
+                    "List": [
+                        {
+                            "Slash": 196,
+                            "Text": "// body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                }
+            ],
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 31,
+                        "List": [
+                            {
+                                "Body": {
+                                    "Lbrace": 57,
+                                    "List": [
+                                        {
+                                            "Tok": "continue",
+                                            "TokPos": 61,
+                                            "type": "BranchStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 71,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Op": "<",
+                                    "OpPos": 48,
+                                    "X": {
+                                        "Name": "i",
+                                        "NamePos": 46,
+                                        "type": "Ident"
+                                    },
+                                    "Y": {
+                                        "Kind": "INT",
+                                        "Value": "5",
+                                        "ValuePos": 50,
+                                        "type": "BasicLit"
+                                    },
+                                    "type": "BinaryExpr"
+                                },
+                                "For": 34,
+                                "Init": {
+                                    "Lhs": [
+                                        {
+                                            "Name": "i",
+                                            "NamePos": 38,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Rhs": [
+                                        {
+                                            "Kind": "INT",
+                                            "Value": "0",
+                                            "ValuePos": 43,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Tok": ":=",
+                                    "TokPos": 40,
+                                    "type": "AssignStmt"
+                                },
+                                "Post": {
+                                    "Tok": "++",
+                                    "TokPos": 54,
+                                    "X": {
+                                        "Name": "i",
+                                        "NamePos": 53,
+                                        "type": "Ident"
+                                    },
+                                    "type": "IncDecStmt"
+                                },
+                                "type": "ForStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 78,
+                                    "List": [
+                                        {
+                                            "Tok": "break",
+                                            "TokPos": 82,
+                                            "type": "BranchStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 89,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 74,
+                                "type": "ForStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 101,
+                                    "List": [
+                                        {
+                                            "Tok": "break",
+                                            "TokPos": 105,
+                                            "type": "BranchStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 112,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Name": "true",
+                                    "NamePos": 96,
+                                    "type": "Ident"
+                                },
+                                "For": 92,
+                                "type": "ForStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 132,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 136,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Name": "i",
+                                                    "NamePos": 140,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 138,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 143,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 115,
+                                "Key": {
+                                    "Name": "i",
+                                    "NamePos": 119,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 121,
+                                "X": {
+                                    "Name": "c",
+                                    "NamePos": 130,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 166,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 170,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Name": "v",
+                                                    "NamePos": 174,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 172,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 177,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 146,
+                                "Key": {
+                                    "Name": "_",
+                                    "NamePos": 150,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 155,
+                                "Value": {
+                                    "Name": "v",
+                                    "NamePos": 153,
+                                    "type": "Ident"
+                                },
+                                "X": {
+                                    "Name": "c",
+                                    "NamePos": 164,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 192,
+                                    "Rbrace": 205,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 180,
+                                "Tok": "ILLEGAL",
+                                "TokPos": 0,
+                                "X": {
+                                    "Name": "c",
+                                    "NamePos": 190,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            }
+                        ],
+                        "Rbrace": 207,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "fors",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 29,
+                            "Opening": 28,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "true",
+                    "NamePos": 96,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "c",
+                    "NamePos": 130,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "c",
+                    "NamePos": 164,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "c",
+                    "NamePos": 190,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

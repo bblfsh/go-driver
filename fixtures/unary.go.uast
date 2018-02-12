@@ -1,0 +1,201 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  }
+.  Children: {
+.  .  0: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 23
+.  .  .  .  Rparen: 58
+.  .  .  .  Tok: var
+.  .  .  .  TokPos: 19
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 26
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: UnaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Op: ^
+.  .  .  .  .  .  .  .  OpPos: 30
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 31
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 34
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: UnaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Op: -
+.  .  .  .  .  .  .  .  OpPos: 38
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 39
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 42
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: UnaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Op: +
+.  .  .  .  .  .  .  .  OpPos: 46
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 47
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 51
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: UnaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Unary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Op: !
+.  .  .  .  .  .  .  .  OpPos: 55
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 56
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  2: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 31
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  3: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 39
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  4: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 47
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  5: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 56
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  }
+}
+

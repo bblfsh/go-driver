@@ -1,0 +1,665 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  }
+.  Children: {
+.  .  0: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 23
+.  .  .  .  Rparen: 266
+.  .  .  .  Tok: var
+.  .  .  .  TokPos: 19
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 26
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "nil"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 30
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 36
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "true"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 40
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 46
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "false"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 50
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 58
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  TOKEN "42"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  ValuePos: 62
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  4: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 66
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  TOKEN "42.0"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: FLOAT
+.  .  .  .  .  .  .  .  ValuePos: 70
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  5: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 76
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  TOKEN "42e0"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: FLOAT
+.  .  .  .  .  .  .  .  ValuePos: 80
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  6: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 86
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  TOKEN "0x42"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  ValuePos: 90
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  7: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 96
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  TOKEN "042"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  ValuePos: 100
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  8: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 106
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  TOKEN ""next\\\nline""
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  ValuePos: 110
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  9: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 126
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  TOKEN "`next\
+line`"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  ValuePos: 130
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  10: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 145
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Character
+.  .  .  .  .  .  .  TOKEN "'a'"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: CHAR
+.  .  .  .  .  .  .  .  ValuePos: 149
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  11: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 154
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Character
+.  .  .  .  .  .  .  TOKEN "'λ'"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: CHAR
+.  .  .  .  .  .  .  .  ValuePos: 158
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  12: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 165
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CompositeLit {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Lbrace: 175
+.  .  .  .  .  .  .  .  Rbrace: 177
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  TOKEN "0"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  ValuePos: 176
+.  .  .  .  .  .  .  .  .  .  internalRole: Elts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ArrayType {
+.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrack: 169
+.  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "byte"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 171
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Elt
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  13: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 180
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CompositeLit {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Lbrace: 191
+.  .  .  .  .  .  .  .  Rbrace: 193
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  TOKEN "0"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  ValuePos: 192
+.  .  .  .  .  .  .  .  .  .  internalRole: Elts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ArrayType {
+.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrack: 184
+.  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "byte"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 187
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Elt
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 185
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Len
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  14: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 196
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CompositeLit {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Lbrace: 217
+.  .  .  .  .  .  .  .  Rbrace: 230
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: KeyValueExpr {
+.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Colon: 223
+.  .  .  .  .  .  .  .  .  .  internalRole: Elts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  .  .  .  .  TOKEN ""foo""
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 218
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  .  .  .  .  TOKEN ""bar""
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 225
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: MapType {
+.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Map: 200
+.  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 204
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 211
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  15: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 233
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: CompositeLit {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Lbrace: 258
+.  .  .  .  .  .  .  .  Rbrace: 264
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  .  .  TOKEN ""foo""
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  .  .  ValuePos: 259
+.  .  .  .  .  .  .  .  .  .  internalRole: Elts
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: StructType {
+.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Incomplete: false
+.  .  .  .  .  .  .  .  .  .  Struct: 237
+.  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Closing: 257
+.  .  .  .  .  .  .  .  .  .  .  .  Opening: 243
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fields
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: Field {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "name"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 245
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 250
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  2: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "nil"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 30
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  3: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "true"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 40
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  4: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "false"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 50
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  5: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "byte"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 171
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  6: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "byte"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 187
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  7: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "string"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 204
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  8: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "string"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 211
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  9: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "string"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 250
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  }
+}
+

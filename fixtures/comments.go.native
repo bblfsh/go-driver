@@ -1,0 +1,353 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Comments": [
+                {
+                    "List": [
+                        {
+                            "Slash": 1,
+                            "Text": "// Package fixtures is a collection of Go code samples.",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 75,
+                            "Text": "// detached comment",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 96,
+                            "Text": "/* detached comment 2 */",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 122,
+                            "Text": "/*\n\tdetached\n\tmutiline\n*/",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 149,
+                            "Text": "//go:generate echo directive",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 179,
+                            "Text": "// var block comment",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 207,
+                            "Text": "// a is a variable",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 240,
+                            "Text": "// inline comment",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 261,
+                            "Text": "// foo is a sample function",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 303,
+                            "Text": "// function body comment",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 331,
+                            "Text": "// data is a sample struct",
+                            "type": "Comment"
+                        },
+                        {
+                            "Slash": 358,
+                            "Text": "//",
+                            "type": "Comment"
+                        },
+                        {
+                            "Slash": 361,
+                            "Text": "// It's not very useful.",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 415,
+                            "Text": "// struct field comment",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                }
+            ],
+            "Decls": [
+                {
+                    "Doc": {
+                        "List": [
+                            {
+                                "Slash": 179,
+                                "Text": "// var block comment",
+                                "type": "Comment"
+                            }
+                        ],
+                        "type": "CommentGroup"
+                    },
+                    "Lparen": 204,
+                    "Rparen": 258,
+                    "Specs": [
+                        {
+                            "Doc": {
+                                "List": [
+                                    {
+                                        "Slash": 207,
+                                        "Text": "// a is a variable",
+                                        "type": "Comment"
+                                    }
+                                ],
+                                "type": "CommentGroup"
+                            },
+                            "Names": [
+                                {
+                                    "Name": "a",
+                                    "NamePos": 227,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "int",
+                                "NamePos": 229,
+                                "type": "Ident"
+                            },
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Comment": {
+                                "List": [
+                                    {
+                                        "Slash": 240,
+                                        "Text": "// inline comment",
+                                        "type": "Comment"
+                                    }
+                                ],
+                                "type": "CommentGroup"
+                            },
+                            "Names": [
+                                {
+                                    "Name": "b",
+                                    "NamePos": 234,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "int",
+                                "NamePos": 236,
+                                "type": "Ident"
+                            },
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "var",
+                    "TokPos": 200,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 300,
+                        "Rbrace": 328,
+                        "type": "BlockStmt"
+                    },
+                    "Doc": {
+                        "List": [
+                            {
+                                "Slash": 261,
+                                "Text": "// foo is a sample function",
+                                "type": "Comment"
+                            }
+                        ],
+                        "type": "CommentGroup"
+                    },
+                    "Name": {
+                        "Name": "foo",
+                        "NamePos": 294,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 289,
+                        "Params": {
+                            "Closing": 298,
+                            "Opening": 297,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Doc": {
+                        "List": [
+                            {
+                                "Slash": 331,
+                                "Text": "// data is a sample struct",
+                                "type": "Comment"
+                            },
+                            {
+                                "Slash": 358,
+                                "Text": "//",
+                                "type": "Comment"
+                            },
+                            {
+                                "Slash": 361,
+                                "Text": "// It's not very useful.",
+                                "type": "Comment"
+                            }
+                        ],
+                        "type": "CommentGroup"
+                    },
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "data",
+                                "NamePos": 391,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 439,
+                                    "List": [
+                                        {
+                                            "Comment": {
+                                                "List": [
+                                                    {
+                                                        "Slash": 415,
+                                                        "Text": "// struct field comment",
+                                                        "type": "Comment"
+                                                    }
+                                                ],
+                                                "type": "CommentGroup"
+                                            },
+                                            "Names": [
+                                                {
+                                                    "Name": "a",
+                                                    "NamePos": 406,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Name": "string",
+                                                "NamePos": 408,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 403,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 396,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 386,
+                    "type": "GenDecl"
+                }
+            ],
+            "Doc": {
+                "List": [
+                    {
+                        "Slash": 1,
+                        "Text": "// Package fixtures is a collection of Go code samples.",
+                        "type": "Comment"
+                    }
+                ],
+                "type": "CommentGroup"
+            },
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 65,
+                "type": "Ident"
+            },
+            "Package": 57,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 229,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 236,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "string",
+                    "NamePos": 408,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

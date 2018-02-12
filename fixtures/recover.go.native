@@ -1,0 +1,180 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 31,
+                        "List": [
+                            {
+                                "Call": {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Body": {
+                                            "Lbrace": 47,
+                                            "List": [
+                                                {
+                                                    "Body": {
+                                                        "Lbrace": 79,
+                                                        "List": [
+                                                            {
+                                                                "Lhs": [
+                                                                    {
+                                                                        "Name": "_",
+                                                                        "NamePos": 84,
+                                                                        "type": "Ident"
+                                                                    }
+                                                                ],
+                                                                "Rhs": [
+                                                                    {
+                                                                        "Name": "r",
+                                                                        "NamePos": 88,
+                                                                        "type": "Ident"
+                                                                    }
+                                                                ],
+                                                                "Tok": "=",
+                                                                "TokPos": 86,
+                                                                "type": "AssignStmt"
+                                                            }
+                                                        ],
+                                                        "Rbrace": 92,
+                                                        "type": "BlockStmt"
+                                                    },
+                                                    "Cond": {
+                                                        "Op": "!=",
+                                                        "OpPos": 72,
+                                                        "X": {
+                                                            "Name": "r",
+                                                            "NamePos": 70,
+                                                            "type": "Ident"
+                                                        },
+                                                        "Y": {
+                                                            "Name": "nil",
+                                                            "NamePos": 75,
+                                                            "type": "Ident"
+                                                        },
+                                                        "type": "BinaryExpr"
+                                                    },
+                                                    "If": 51,
+                                                    "Init": {
+                                                        "Lhs": [
+                                                            {
+                                                                "Name": "r",
+                                                                "NamePos": 54,
+                                                                "type": "Ident"
+                                                            }
+                                                        ],
+                                                        "Rhs": [
+                                                            {
+                                                                "Ellipsis": 0,
+                                                                "Fun": {
+                                                                    "Name": "recover",
+                                                                    "NamePos": 59,
+                                                                    "type": "Ident"
+                                                                },
+                                                                "Lparen": 66,
+                                                                "Rparen": 67,
+                                                                "type": "CallExpr"
+                                                            }
+                                                        ],
+                                                        "Tok": ":=",
+                                                        "TokPos": 56,
+                                                        "type": "AssignStmt"
+                                                    },
+                                                    "type": "IfStmt"
+                                                }
+                                            ],
+                                            "Rbrace": 95,
+                                            "type": "BlockStmt"
+                                        },
+                                        "Type": {
+                                            "Func": 40,
+                                            "Params": {
+                                                "Closing": 45,
+                                                "Opening": 44,
+                                                "type": "FieldList"
+                                            },
+                                            "type": "FuncType"
+                                        },
+                                        "type": "FuncLit"
+                                    },
+                                    "Lparen": 96,
+                                    "Rparen": 97,
+                                    "type": "CallExpr"
+                                },
+                                "Defer": 34,
+                                "type": "DeferStmt"
+                            },
+                            {
+                                "X": {
+                                    "Args": [
+                                        {
+                                            "Kind": "STRING",
+                                            "Value": "\"stop!\"",
+                                            "ValuePos": 106,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "panic",
+                                        "NamePos": 100,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 105,
+                                    "Rparen": 113,
+                                    "type": "CallExpr"
+                                },
+                                "type": "ExprStmt"
+                            }
+                        ],
+                        "Rbrace": 115,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "fail",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 29,
+                            "Opening": 28,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "recover",
+                    "NamePos": 59,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "nil",
+                    "NamePos": 75,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "panic",
+                    "NamePos": 100,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

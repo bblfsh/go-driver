@@ -1,0 +1,240 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Comments": [
+                {
+                    "List": [
+                        {
+                            "Slash": 42,
+                            "Text": "// body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 63,
+                            "Text": "// body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 83,
+                            "Text": "// else body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 109,
+                            "Text": "// body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 134,
+                            "Text": "// body 2",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 156,
+                            "Text": "// else body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                },
+                {
+                    "List": [
+                        {
+                            "Slash": 190,
+                            "Text": "// body",
+                            "type": "Comment"
+                        }
+                    ],
+                    "type": "CommentGroup"
+                }
+            ],
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 30,
+                        "List": [
+                            {
+                                "Body": {
+                                    "Lbrace": 38,
+                                    "Rbrace": 51,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Name": "a",
+                                    "NamePos": 36,
+                                    "type": "Ident"
+                                },
+                                "If": 33,
+                                "type": "IfStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 59,
+                                    "Rbrace": 72,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Name": "a",
+                                    "NamePos": 57,
+                                    "type": "Ident"
+                                },
+                                "Else": {
+                                    "Lbrace": 79,
+                                    "Rbrace": 97,
+                                    "type": "BlockStmt"
+                                },
+                                "If": 54,
+                                "type": "IfStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 105,
+                                    "Rbrace": 118,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Name": "a",
+                                    "NamePos": 103,
+                                    "type": "Ident"
+                                },
+                                "Else": {
+                                    "Body": {
+                                        "Lbrace": 130,
+                                        "Rbrace": 145,
+                                        "type": "BlockStmt"
+                                    },
+                                    "Cond": {
+                                        "Name": "b",
+                                        "NamePos": 128,
+                                        "type": "Ident"
+                                    },
+                                    "Else": {
+                                        "Lbrace": 152,
+                                        "Rbrace": 170,
+                                        "type": "BlockStmt"
+                                    },
+                                    "If": 125,
+                                    "type": "IfStmt"
+                                },
+                                "If": 100,
+                                "type": "IfStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 186,
+                                    "Rbrace": 199,
+                                    "type": "BlockStmt"
+                                },
+                                "Cond": {
+                                    "Name": "c",
+                                    "NamePos": 184,
+                                    "type": "Ident"
+                                },
+                                "If": 173,
+                                "Init": {
+                                    "Lhs": [
+                                        {
+                                            "Name": "c",
+                                            "NamePos": 176,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Rhs": [
+                                        {
+                                            "Name": "a",
+                                            "NamePos": 181,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Tok": ":=",
+                                    "TokPos": 178,
+                                    "type": "AssignStmt"
+                                },
+                                "type": "IfStmt"
+                            }
+                        ],
+                        "Rbrace": 201,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "ifs",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 28,
+                            "Opening": 27,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "a",
+                    "NamePos": 36,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 57,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 103,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "b",
+                    "NamePos": 128,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 181,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

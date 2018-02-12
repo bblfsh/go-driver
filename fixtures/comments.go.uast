@@ -1,0 +1,558 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 57
+.  }
+.  Children: {
+.  .  0: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// Package fixtures is a collection of Go code samples."
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 1
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// detached comment"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 75
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "/* detached comment 2 */"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 96
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "/*
+	detached
+	mutiline
+*/"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 122
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "//go:generate echo directive"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 149
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// var block comment"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 179
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// a is a variable"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 207
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  7: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// inline comment"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 240
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  8: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// foo is a sample function"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 261
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  9: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// function body comment"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 303
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  10: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// data is a sample struct"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 331
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "//"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 358
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// It's not very useful."
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 361
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  11: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// struct field comment"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 415
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  12: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 204
+.  .  .  .  Rparen: 258
+.  .  .  .  Tok: var
+.  .  .  .  TokPos: 200
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: CommentGroup {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Doc
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  TOKEN "// var block comment"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Slash: 179
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: CommentGroup {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Doc
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  .  .  TOKEN "// a is a variable"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Slash: 207
+.  .  .  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 227
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "int"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 229
+.  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ValueSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: CommentGroup {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Comment
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  .  .  TOKEN "// inline comment"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Slash: 240
+.  .  .  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 234
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "int"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 236
+.  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  13: FuncDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: BlockStmt {
+.  .  .  .  .  Roles: Statement,Block,Body
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Lbrace: 300
+.  .  .  .  .  .  Rbrace: 328
+.  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: CommentGroup {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Doc
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  TOKEN "// foo is a sample function"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Slash: 261
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Ident {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  NamePos: 294
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: FuncType {
+.  .  .  .  .  Roles: Expression
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Func: 289
+.  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Closing: 298
+.  .  .  .  .  .  .  .  Opening: 297
+.  .  .  .  .  .  .  .  internalRole: Params
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  14: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 0
+.  .  .  .  Rparen: 0
+.  .  .  .  Tok: type
+.  .  .  .  TokPos: 386
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: CommentGroup {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Doc
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  TOKEN "// data is a sample struct"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Slash: 331
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Comment {
+.  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  TOKEN "//"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Slash: 358
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: Comment {
+.  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  TOKEN "// It's not very useful."
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Slash: 361
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: TypeSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Assign: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "data"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 391
+.  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: StructType {
+.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Incomplete: false
+.  .  .  .  .  .  .  .  Struct: 396
+.  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Closing: 439
+.  .  .  .  .  .  .  .  .  .  Opening: 403
+.  .  .  .  .  .  .  .  .  .  internalRole: Fields
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Field {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: CommentGroup {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Comment
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Comment {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "// struct field comment"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Slash: 415
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 406
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 408
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  15: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Doc
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// Package fixtures is a collection of Go code samples."
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 1
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  16: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 65
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  17: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "int"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 229
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  18: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "int"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 236
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  19: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "string"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 408
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  }
+}
+

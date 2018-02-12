@@ -1,0 +1,289 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "EndPos": 0,
+                            "Path": {
+                                "Kind": "STRING",
+                                "Value": "\"fmt\"",
+                                "ValuePos": 26,
+                                "type": "BasicLit"
+                            },
+                            "type": "ImportSpec"
+                        }
+                    ],
+                    "Tok": "import",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 37,
+                    "Rparen": 145,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 40,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "foo",
+                                        "NamePos": 47,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 50,
+                                    "Rparen": 51,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 54,
+                                    "type": "Ident"
+                                },
+                                {
+                                    "Name": "_",
+                                    "NamePos": 57,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Name": "a",
+                                            "NamePos": 65,
+                                            "type": "Ident"
+                                        },
+                                        {
+                                            "Name": "b",
+                                            "NamePos": 68,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "foo",
+                                        "NamePos": 61,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 64,
+                                    "Rparen": 69,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 72,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Sel": {
+                                            "Name": "foo",
+                                            "NamePos": 81,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "a",
+                                            "NamePos": 79,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SelectorExpr"
+                                    },
+                                    "Lparen": 84,
+                                    "Rparen": 85,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 89,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Body": {
+                                            "Lbrace": 104,
+                                            "List": [
+                                                {
+                                                    "Results": [
+                                                        {
+                                                            "Kind": "INT",
+                                                            "Value": "1",
+                                                            "ValuePos": 115,
+                                                            "type": "BasicLit"
+                                                        }
+                                                    ],
+                                                    "Return": 108,
+                                                    "type": "ReturnStmt"
+                                                }
+                                            ],
+                                            "Rbrace": 118,
+                                            "type": "BlockStmt"
+                                        },
+                                        "Type": {
+                                            "Func": 93,
+                                            "Params": {
+                                                "Closing": 98,
+                                                "Opening": 97,
+                                                "type": "FieldList"
+                                            },
+                                            "Results": {
+                                                "Closing": 0,
+                                                "List": [
+                                                    {
+                                                        "Type": {
+                                                            "Name": "int",
+                                                            "NamePos": 100,
+                                                            "type": "Ident"
+                                                        },
+                                                        "type": "Field"
+                                                    }
+                                                ],
+                                                "Opening": 0,
+                                                "type": "FieldList"
+                                            },
+                                            "type": "FuncType"
+                                        },
+                                        "type": "FuncLit"
+                                    },
+                                    "Lparen": 119,
+                                    "Rparen": 120,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 124,
+                                    "type": "Ident"
+                                },
+                                {
+                                    "Name": "_",
+                                    "NamePos": 127,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Sel": {
+                                            "Name": "Println",
+                                            "NamePos": 135,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "fmt",
+                                            "NamePos": 131,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SelectorExpr"
+                                    },
+                                    "Lparen": 142,
+                                    "Rparen": 143,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "var",
+                    "TokPos": 33,
+                    "type": "GenDecl"
+                }
+            ],
+            "Imports": [
+                {
+                    "EndPos": 0,
+                    "Path": {
+                        "Kind": "STRING",
+                        "Value": "\"fmt\"",
+                        "ValuePos": 26,
+                        "type": "BasicLit"
+                    },
+                    "type": "ImportSpec"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "foo",
+                    "NamePos": 47,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "foo",
+                    "NamePos": 61,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 65,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "b",
+                    "NamePos": 68,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 79,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 100,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "fmt",
+                    "NamePos": 131,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

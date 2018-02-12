@@ -1,0 +1,760 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 33,
+                        "List": [
+                            {
+                                "Decl": {
+                                    "Lparen": 0,
+                                    "Rparen": 0,
+                                    "Specs": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "a",
+                                                    "NamePos": 40,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Values": [
+                                                {
+                                                    "Elts": [
+                                                        {
+                                                            "Kind": "INT",
+                                                            "Value": "1",
+                                                            "ValuePos": 53,
+                                                            "type": "BasicLit"
+                                                        },
+                                                        {
+                                                            "Kind": "INT",
+                                                            "Value": "2",
+                                                            "ValuePos": 56,
+                                                            "type": "BasicLit"
+                                                        }
+                                                    ],
+                                                    "Lbrace": 52,
+                                                    "Rbrace": 57,
+                                                    "Type": {
+                                                        "Elt": {
+                                                            "Name": "int",
+                                                            "NamePos": 49,
+                                                            "type": "Ident"
+                                                        },
+                                                        "Lbrack": 44,
+                                                        "Len": {
+                                                            "Ellipsis": 45,
+                                                            "type": "Ellipsis"
+                                                        },
+                                                        "type": "ArrayType"
+                                                    },
+                                                    "type": "CompositeLit"
+                                                }
+                                            ],
+                                            "type": "ValueSpec"
+                                        }
+                                    ],
+                                    "Tok": "var",
+                                    "TokPos": 36,
+                                    "type": "GenDecl"
+                                },
+                                "type": "DeclStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 60,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Elts": [
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "3",
+                                                "ValuePos": 71,
+                                                "type": "BasicLit"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "4",
+                                                "ValuePos": 74,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Lbrace": 70,
+                                        "Rbrace": 75,
+                                        "Type": {
+                                            "Elt": {
+                                                "Name": "int",
+                                                "NamePos": 67,
+                                                "type": "Ident"
+                                            },
+                                            "Lbrack": 65,
+                                            "type": "ArrayType"
+                                        },
+                                        "type": "CompositeLit"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 62,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "d",
+                                        "NamePos": 78,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Elts": [
+                                            {
+                                                "Elts": [
+                                                    {
+                                                        "Kind": "INT",
+                                                        "Value": "6",
+                                                        "ValuePos": 95,
+                                                        "type": "BasicLit"
+                                                    }
+                                                ],
+                                                "Lbrace": 94,
+                                                "Rbrace": 96,
+                                                "type": "CompositeLit"
+                                            }
+                                        ],
+                                        "Lbrace": 90,
+                                        "Rbrace": 100,
+                                        "Type": {
+                                            "Elt": {
+                                                "Elt": {
+                                                    "Name": "int",
+                                                    "NamePos": 87,
+                                                    "type": "Ident"
+                                                },
+                                                "Lbrack": 85,
+                                                "type": "ArrayType"
+                                            },
+                                            "Lbrack": 83,
+                                            "type": "ArrayType"
+                                        },
+                                        "type": "CompositeLit"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 80,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 104,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Name": "b",
+                                                "NamePos": 115,
+                                                "type": "Ident"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "5",
+                                                "ValuePos": 118,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "append",
+                                            "NamePos": 108,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 114,
+                                        "Rparen": 119,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 106,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 122,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Name": "b",
+                                                "NamePos": 133,
+                                                "type": "Ident"
+                                            },
+                                            {
+                                                "Lbrack": 137,
+                                                "Rbrack": 139,
+                                                "Slice3": false,
+                                                "X": {
+                                                    "Name": "a",
+                                                    "NamePos": 136,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "SliceExpr"
+                                            }
+                                        ],
+                                        "Ellipsis": 140,
+                                        "Fun": {
+                                            "Name": "append",
+                                            "NamePos": 126,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 132,
+                                        "Rparen": 143,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 124,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 146,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Name": "b",
+                                                "NamePos": 157,
+                                                "type": "Ident"
+                                            },
+                                            {
+                                                "Index": {
+                                                    "Kind": "INT",
+                                                    "Value": "0",
+                                                    "ValuePos": 162,
+                                                    "type": "BasicLit"
+                                                },
+                                                "Lbrack": 161,
+                                                "Rbrack": 163,
+                                                "X": {
+                                                    "Name": "d",
+                                                    "NamePos": 160,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "IndexExpr"
+                                            }
+                                        ],
+                                        "Ellipsis": 164,
+                                        "Fun": {
+                                            "Name": "append",
+                                            "NamePos": 150,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 156,
+                                        "Rparen": 167,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 148,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 171,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Lbrack": 176,
+                                        "Low": {
+                                            "Kind": "INT",
+                                            "Value": "1",
+                                            "ValuePos": 177,
+                                            "type": "BasicLit"
+                                        },
+                                        "Rbrack": 179,
+                                        "Slice3": false,
+                                        "X": {
+                                            "Name": "b",
+                                            "NamePos": 175,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SliceExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 173,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 182,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "High": {
+                                            "Kind": "INT",
+                                            "Value": "2",
+                                            "ValuePos": 190,
+                                            "type": "BasicLit"
+                                        },
+                                        "Lbrack": 187,
+                                        "Low": {
+                                            "Kind": "INT",
+                                            "Value": "1",
+                                            "ValuePos": 188,
+                                            "type": "BasicLit"
+                                        },
+                                        "Max": {
+                                            "Kind": "INT",
+                                            "Value": "2",
+                                            "ValuePos": 192,
+                                            "type": "BasicLit"
+                                        },
+                                        "Rbrack": 193,
+                                        "Slice3": true,
+                                        "X": {
+                                            "Name": "b",
+                                            "NamePos": 186,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SliceExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 184,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Index": {
+                                            "Kind": "INT",
+                                            "Value": "0",
+                                            "ValuePos": 198,
+                                            "type": "BasicLit"
+                                        },
+                                        "Lbrack": 197,
+                                        "Rbrack": 199,
+                                        "X": {
+                                            "Name": "b",
+                                            "NamePos": 196,
+                                            "type": "Ident"
+                                        },
+                                        "type": "IndexExpr"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Op": "+",
+                                        "OpPos": 211,
+                                        "X": {
+                                            "Args": [
+                                                {
+                                                    "Name": "b",
+                                                    "NamePos": 208,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Ellipsis": 0,
+                                            "Fun": {
+                                                "Name": "len",
+                                                "NamePos": 204,
+                                                "type": "Ident"
+                                            },
+                                            "Lparen": 207,
+                                            "Rparen": 209,
+                                            "type": "CallExpr"
+                                        },
+                                        "Y": {
+                                            "Args": [
+                                                {
+                                                    "Name": "b",
+                                                    "NamePos": 217,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Ellipsis": 0,
+                                            "Fun": {
+                                                "Name": "cap",
+                                                "NamePos": 213,
+                                                "type": "Ident"
+                                            },
+                                            "Lparen": 216,
+                                            "Rparen": 218,
+                                            "type": "CallExpr"
+                                        },
+                                        "type": "BinaryExpr"
+                                    }
+                                ],
+                                "Tok": "+=",
+                                "TokPos": 201,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c",
+                                        "NamePos": 222,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 227,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 224,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c",
+                                        "NamePos": 230,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Name": "nil",
+                                        "NamePos": 234,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 232,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c",
+                                        "NamePos": 239,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Elt": {
+                                                    "Name": "int",
+                                                    "NamePos": 250,
+                                                    "type": "Ident"
+                                                },
+                                                "Lbrack": 248,
+                                                "type": "ArrayType"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "3",
+                                                "ValuePos": 255,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 243,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 247,
+                                        "Rparen": 256,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 241,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "c",
+                                        "NamePos": 259,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Elt": {
+                                                    "Name": "int",
+                                                    "NamePos": 270,
+                                                    "type": "Ident"
+                                                },
+                                                "Lbrack": 268,
+                                                "type": "ArrayType"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "0",
+                                                "ValuePos": 275,
+                                                "type": "BasicLit"
+                                            },
+                                            {
+                                                "Kind": "INT",
+                                                "Value": "3",
+                                                "ValuePos": 278,
+                                                "type": "BasicLit"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "make",
+                                            "NamePos": 263,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 267,
+                                        "Rparen": 279,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 261,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 300,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 304,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Index": {
+                                                        "Name": "i",
+                                                        "NamePos": 310,
+                                                        "type": "Ident"
+                                                    },
+                                                    "Lbrack": 309,
+                                                    "Rbrack": 311,
+                                                    "X": {
+                                                        "Name": "b",
+                                                        "NamePos": 308,
+                                                        "type": "Ident"
+                                                    },
+                                                    "type": "IndexExpr"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 306,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 314,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 283,
+                                "Key": {
+                                    "Name": "i",
+                                    "NamePos": 287,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 289,
+                                "X": {
+                                    "Name": "b",
+                                    "NamePos": 298,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            },
+                            {
+                                "Body": {
+                                    "Lbrace": 337,
+                                    "List": [
+                                        {
+                                            "Lhs": [
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 341,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "_",
+                                                    "NamePos": 344,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Rhs": [
+                                                {
+                                                    "Name": "i",
+                                                    "NamePos": 348,
+                                                    "type": "Ident"
+                                                },
+                                                {
+                                                    "Name": "v",
+                                                    "NamePos": 351,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Tok": "=",
+                                            "TokPos": 346,
+                                            "type": "AssignStmt"
+                                        }
+                                    ],
+                                    "Rbrace": 354,
+                                    "type": "BlockStmt"
+                                },
+                                "For": 317,
+                                "Key": {
+                                    "Name": "i",
+                                    "NamePos": 321,
+                                    "type": "Ident"
+                                },
+                                "Tok": ":=",
+                                "TokPos": 326,
+                                "Value": {
+                                    "Name": "v",
+                                    "NamePos": 324,
+                                    "type": "Ident"
+                                },
+                                "X": {
+                                    "Name": "b",
+                                    "NamePos": 335,
+                                    "type": "Ident"
+                                },
+                                "type": "RangeStmt"
+                            }
+                        ],
+                        "Rbrace": 356,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "slices",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 31,
+                            "Opening": 30,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 49,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 67,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 87,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "append",
+                    "NamePos": 108,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "append",
+                    "NamePos": 126,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "append",
+                    "NamePos": 150,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "len",
+                    "NamePos": 204,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "cap",
+                    "NamePos": 213,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "nil",
+                    "NamePos": 234,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "make",
+                    "NamePos": 243,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 250,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "make",
+                    "NamePos": 263,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 270,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

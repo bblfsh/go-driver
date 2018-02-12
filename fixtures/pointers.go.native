@@ -1,0 +1,190 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 35,
+                        "List": [
+                            {
+                                "Decl": {
+                                    "Lparen": 0,
+                                    "Rparen": 0,
+                                    "Specs": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "a",
+                                                    "NamePos": 42,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Star": 44,
+                                                "X": {
+                                                    "Name": "int",
+                                                    "NamePos": 45,
+                                                    "type": "Ident"
+                                                },
+                                                "type": "StarExpr"
+                                            },
+                                            "type": "ValueSpec"
+                                        }
+                                    ],
+                                    "Tok": "var",
+                                    "TokPos": 38,
+                                    "type": "GenDecl"
+                                },
+                                "type": "DeclStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "b",
+                                        "NamePos": 50,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Kind": "INT",
+                                        "Value": "0",
+                                        "ValuePos": 55,
+                                        "type": "BasicLit"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 52,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 58,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Op": "&",
+                                        "OpPos": 62,
+                                        "X": {
+                                            "Name": "b",
+                                            "NamePos": 63,
+                                            "type": "Ident"
+                                        },
+                                        "type": "UnaryExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 60,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Star": 66,
+                                        "X": {
+                                            "Name": "a",
+                                            "NamePos": 67,
+                                            "type": "Ident"
+                                        },
+                                        "type": "StarExpr"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Kind": "INT",
+                                        "Value": "1",
+                                        "ValuePos": 71,
+                                        "type": "BasicLit"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 69,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 74,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Name": "int",
+                                                "NamePos": 82,
+                                                "type": "Ident"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "new",
+                                            "NamePos": 78,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 81,
+                                        "Rparen": 85,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 76,
+                                "type": "AssignStmt"
+                            }
+                        ],
+                        "Rbrace": 87,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "pointers",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 33,
+                            "Opening": 32,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 45,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "new",
+                    "NamePos": 78,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 82,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

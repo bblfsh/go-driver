@@ -1,0 +1,269 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "EndPos": 0,
+                            "Path": {
+                                "Kind": "STRING",
+                                "Value": "\"unsafe\"",
+                                "ValuePos": 26,
+                                "type": "BasicLit"
+                            },
+                            "type": "ImportSpec"
+                        }
+                    ],
+                    "Tok": "import",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "a",
+                                    "NamePos": 42,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Kind": "INT",
+                                    "Value": "1",
+                                    "ValuePos": 46,
+                                    "type": "BasicLit"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "const",
+                    "TokPos": 36,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 55,
+                    "Rparen": 161,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "b",
+                                    "NamePos": 58,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Kind": "INT",
+                                            "Value": "1",
+                                            "ValuePos": 73,
+                                            "type": "BasicLit"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Name": "int",
+                                        "NamePos": 69,
+                                        "type": "Ident"
+                                    },
+                                    "Lparen": 72,
+                                    "Rparen": 74,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "c",
+                                    "NamePos": 77,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "int",
+                                "NamePos": 82,
+                                "type": "Ident"
+                            },
+                            "Values": [
+                                {
+                                    "Kind": "INT",
+                                    "Value": "1",
+                                    "ValuePos": 88,
+                                    "type": "BasicLit"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "d",
+                                    "NamePos": 91,
+                                    "type": "Ident"
+                                },
+                                {
+                                    "Name": "e",
+                                    "NamePos": 94,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Kind": "INT",
+                                    "Value": "1",
+                                    "ValuePos": 102,
+                                    "type": "BasicLit"
+                                },
+                                {
+                                    "Kind": "STRING",
+                                    "Value": "\"e\"",
+                                    "ValuePos": 105,
+                                    "type": "BasicLit"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "f",
+                                    "NamePos": 110,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Op": "+",
+                                    "OpPos": 123,
+                                    "X": {
+                                        "Name": "c",
+                                        "NamePos": 121,
+                                        "type": "Ident"
+                                    },
+                                    "Y": {
+                                        "Name": "d",
+                                        "NamePos": 125,
+                                        "type": "Ident"
+                                    },
+                                    "type": "BinaryExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "g",
+                                    "NamePos": 128,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Args": [
+                                                {
+                                                    "Kind": "INT",
+                                                    "Value": "5",
+                                                    "ValuePos": 157,
+                                                    "type": "BasicLit"
+                                                }
+                                            ],
+                                            "Ellipsis": 0,
+                                            "Fun": {
+                                                "Name": "int",
+                                                "NamePos": 153,
+                                                "type": "Ident"
+                                            },
+                                            "Lparen": 156,
+                                            "Rparen": 158,
+                                            "type": "CallExpr"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Sel": {
+                                            "Name": "Sizeof",
+                                            "NamePos": 146,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "unsafe",
+                                            "NamePos": 139,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SelectorExpr"
+                                    },
+                                    "Lparen": 152,
+                                    "Rparen": 159,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "const",
+                    "TokPos": 49,
+                    "type": "GenDecl"
+                }
+            ],
+            "Imports": [
+                {
+                    "EndPos": 0,
+                    "Path": {
+                        "Kind": "STRING",
+                        "Value": "\"unsafe\"",
+                        "ValuePos": 26,
+                        "type": "BasicLit"
+                    },
+                    "type": "ImportSpec"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 69,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 82,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "unsafe",
+                    "NamePos": 139,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 153,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

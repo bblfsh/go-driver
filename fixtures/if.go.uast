@@ -1,0 +1,383 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  }
+.  Children: {
+.  .  0: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 42
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 63
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// else body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 83
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 109
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  4: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// body 2"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 134
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  5: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// else body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 156
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  6: CommentGroup {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN "// body"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Slash: 190
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  7: FuncDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: BlockStmt {
+.  .  .  .  .  Roles: Statement,Block,Body
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Lbrace: 30
+.  .  .  .  .  .  Rbrace: 201
+.  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: IfStmt {
+.  .  .  .  .  .  .  Roles: Statement,If
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  If: 33
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BlockStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Body,Then
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrace: 38
+.  .  .  .  .  .  .  .  .  .  Rbrace: 51
+.  .  .  .  .  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,If,Condition
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 36
+.  .  .  .  .  .  .  .  .  .  internalRole: Cond
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: IfStmt {
+.  .  .  .  .  .  .  Roles: Statement,If
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  If: 54
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BlockStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Body,Then
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrace: 59
+.  .  .  .  .  .  .  .  .  .  Rbrace: 72
+.  .  .  .  .  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,If,Condition
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 57
+.  .  .  .  .  .  .  .  .  .  internalRole: Cond
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: BlockStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Else
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrace: 79
+.  .  .  .  .  .  .  .  .  .  Rbrace: 97
+.  .  .  .  .  .  .  .  .  .  internalRole: Else
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: IfStmt {
+.  .  .  .  .  .  .  Roles: Statement,If
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  If: 100
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BlockStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Body,Then
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrace: 105
+.  .  .  .  .  .  .  .  .  .  Rbrace: 118
+.  .  .  .  .  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,If,Condition
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 103
+.  .  .  .  .  .  .  .  .  .  internalRole: Cond
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: IfStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Else,If
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  If: 125
+.  .  .  .  .  .  .  .  .  .  internalRole: Else
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: BlockStmt {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Body,Then
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Lbrace: 130
+.  .  .  .  .  .  .  .  .  .  .  .  Rbrace: 145
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,If,Condition
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 128
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Cond
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: BlockStmt {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Block,Else
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  Lbrace: 152
+.  .  .  .  .  .  .  .  .  .  .  .  Rbrace: 170
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Else
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  3: IfStmt {
+.  .  .  .  .  .  .  Roles: Statement,If
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  If: 173
+.  .  .  .  .  .  .  .  internalRole: List
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BlockStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement,Block,Body,Then
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Lbrace: 186
+.  .  .  .  .  .  .  .  .  .  Rbrace: 199
+.  .  .  .  .  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,If,Condition
+.  .  .  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 184
+.  .  .  .  .  .  .  .  .  .  internalRole: Cond
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: AssignStmt {
+.  .  .  .  .  .  .  .  .  Roles: Statement
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  Tok: :=
+.  .  .  .  .  .  .  .  .  .  TokPos: 178
+.  .  .  .  .  .  .  .  .  .  internalRole: Init
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "c"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 176
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 181
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Ident {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "ifs"
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  NamePos: 24
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: FuncType {
+.  .  .  .  .  Roles: Expression
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Func: 19
+.  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Closing: 28
+.  .  .  .  .  .  .  .  Opening: 27
+.  .  .  .  .  .  .  .  internalRole: Params
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  8: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  9: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 36
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  10: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 57
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  11: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 103
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  12: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 128
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  13: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 181
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  }
+}
+

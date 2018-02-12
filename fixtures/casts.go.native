@@ -1,0 +1,231 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 32,
+                        "List": [
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 35,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Args": [
+                                            {
+                                                "Args": [
+                                                    {
+                                                        "Kind": "INT",
+                                                        "Value": "5",
+                                                        "ValuePos": 52,
+                                                        "type": "BasicLit"
+                                                    }
+                                                ],
+                                                "Ellipsis": 0,
+                                                "Fun": {
+                                                    "Name": "float64",
+                                                    "NamePos": 44,
+                                                    "type": "Ident"
+                                                },
+                                                "Lparen": 51,
+                                                "Rparen": 53,
+                                                "type": "CallExpr"
+                                            }
+                                        ],
+                                        "Ellipsis": 0,
+                                        "Fun": {
+                                            "Name": "int",
+                                            "NamePos": 40,
+                                            "type": "Ident"
+                                        },
+                                        "Lparen": 43,
+                                        "Rparen": 54,
+                                        "type": "CallExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 37,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Decl": {
+                                    "Lparen": 0,
+                                    "Rparen": 0,
+                                    "Specs": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "c",
+                                                    "NamePos": 61,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Incomplete": false,
+                                                "Interface": 63,
+                                                "Methods": {
+                                                    "Closing": 73,
+                                                    "Opening": 72,
+                                                    "type": "FieldList"
+                                                },
+                                                "type": "InterfaceType"
+                                            },
+                                            "Values": [
+                                                {
+                                                    "Name": "a",
+                                                    "NamePos": 77,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "type": "ValueSpec"
+                                        }
+                                    ],
+                                    "Tok": "var",
+                                    "TokPos": 57,
+                                    "type": "GenDecl"
+                                },
+                                "type": "DeclStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "_",
+                                        "NamePos": 80,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Lparen": 86,
+                                        "Rparen": 90,
+                                        "Type": {
+                                            "Name": "int",
+                                            "NamePos": 87,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "c",
+                                            "NamePos": 84,
+                                            "type": "Ident"
+                                        },
+                                        "type": "TypeAssertExpr"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 82,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "_",
+                                        "NamePos": 93,
+                                        "type": "Ident"
+                                    },
+                                    {
+                                        "Name": "ok",
+                                        "NamePos": 96,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Lparen": 104,
+                                        "Rparen": 108,
+                                        "Type": {
+                                            "Name": "int",
+                                            "NamePos": 105,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "c",
+                                            "NamePos": 102,
+                                            "type": "Ident"
+                                        },
+                                        "type": "TypeAssertExpr"
+                                    }
+                                ],
+                                "Tok": ":=",
+                                "TokPos": 99,
+                                "type": "AssignStmt"
+                            },
+                            {
+                                "Lhs": [
+                                    {
+                                        "Name": "_",
+                                        "NamePos": 111,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Name": "ok",
+                                        "NamePos": 115,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 113,
+                                "type": "AssignStmt"
+                            }
+                        ],
+                        "Rbrace": 118,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "casts",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 30,
+                            "Opening": 29,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 40,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "float64",
+                    "NamePos": 44,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 87,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 105,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
