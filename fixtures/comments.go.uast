@@ -268,7 +268,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 227
@@ -308,7 +308,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 234
@@ -328,13 +328,13 @@ File {
 .  .  .  }
 .  .  }
 .  .  13: FuncDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Scope,Body
+.  .  .  .  .  Roles: Statement,Block,Scope,Body,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Lbrace: 300
 .  .  .  .  .  .  Rbrace: 328
@@ -358,7 +358,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: Ident {
-.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  Roles: Expression,Identifier,Function,Name
 .  .  .  .  .  TOKEN "foo"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  NamePos: 294
@@ -366,7 +366,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: FuncType {
-.  .  .  .  .  Roles: Expression
+.  .  .  .  .  Roles: Expression,Function,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Func: 289
 .  .  .  .  .  .  internalRole: Type
@@ -385,7 +385,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  14: GenDecl {
-.  .  .  Roles: Declaration
+.  .  .  Roles: Declaration,Type
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -450,7 +450,6 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Closing: 439
 .  .  .  .  .  .  .  .  .  .  Opening: 403
@@ -480,7 +479,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 406
@@ -488,7 +487,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 408

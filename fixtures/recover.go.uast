@@ -9,13 +9,13 @@ File {
 .  }
 .  Children: {
 .  .  0: FuncDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Scope,Body
+.  .  .  .  .  Roles: Statement,Block,Scope,Body,Function
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Lbrace: 31
 .  .  .  .  .  .  Rbrace: 115
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: AssignStmt {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Assignment
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: =
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: 86
@@ -76,7 +76,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 84
@@ -84,7 +84,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "r"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 88
@@ -129,7 +129,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  2: AssignStmt {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Statement,Assignment
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: :=
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: 56
@@ -137,7 +137,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Assignment,Binary,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "r"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 54
@@ -145,7 +145,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: CallExpr {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Call
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Assignment,Binary,Right,Call
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: 66
@@ -231,7 +231,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Ident {
-.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  Roles: Expression,Identifier,Function,Name
 .  .  .  .  .  TOKEN "fail"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  NamePos: 24
@@ -239,7 +239,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FuncType {
-.  .  .  .  .  Roles: Expression
+.  .  .  .  .  Roles: Expression,Function,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Func: 19
 .  .  .  .  .  .  internalRole: Type
