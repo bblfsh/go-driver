@@ -119,8 +119,8 @@ var AnnotationRules = On(Any).Self(
 
 		// For range
 		On(goast.RangeStmt).Roles(uast.For, uast.Iterator).Children(
-			OnIntRole("Key", uast.For, uast.Iterator),
-			OnIntRole("Value", uast.For, uast.Iterator),
+			OnIntRole("Key", uast.For, uast.Iterator, uast.Key),
+			OnIntRole("Value", uast.For, uast.Iterator, uast.Value),
 			OnIntRole("Body", uast.For, uast.Body),
 		),
 
@@ -140,7 +140,7 @@ var AnnotationRules = On(Any).Self(
 		// Declarations
 		On(goast.GenDecl).Roles(uast.Declaration).Self(
 			On(HasProperty("Tok", "var")).Roles(uast.Variable).Children(
-				OnIntRole("Specs", uast.Variable).Children(
+				OnIntRole("Specs").Children(
 					OnIntRole("Names", uast.Variable),
 				),
 			),
@@ -154,6 +154,7 @@ var AnnotationRules = On(Any).Self(
 
 		// Imports
 		On(goast.ImportSpec).Roles(uast.Import, uast.Declaration).Children(
+			OnIntRole("Name", uast.Import, uast.Alias),
 			OnIntRole("Path", uast.Import, uast.Pathname),
 		),
 
