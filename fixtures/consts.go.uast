@@ -9,7 +9,7 @@ File {
 .  }
 .  Children: {
 .  .  0: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -19,14 +19,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Import,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  .  .  TOKEN ""unsafe""
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
@@ -39,7 +39,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -49,7 +49,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -76,7 +76,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 55
 .  .  .  .  Rparen: 161
@@ -86,7 +86,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -100,7 +100,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: CallExpr {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Call
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  Lparen: 72
@@ -109,7 +109,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number,Argument,Positional
 .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Kind: INT
@@ -118,7 +118,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Callee
 .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 69
@@ -130,7 +130,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -144,7 +144,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 82
@@ -163,7 +163,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -205,7 +205,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -227,7 +227,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Add
 .  .  .  .  .  .  .  .  .  TOKEN "+"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -254,7 +254,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
@@ -268,7 +268,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: CallExpr {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Call
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  Lparen: 152
@@ -277,7 +277,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: CallExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Argument,Positional,Call
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  .  .  Lparen: 156
@@ -286,7 +286,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,Number,Argument,Positional
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "5"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
@@ -295,7 +295,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Callee
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 153
@@ -305,7 +305,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Callee
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: Fun
 .  .  .  .  .  .  .  .  .  }
@@ -335,14 +335,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: ImportSpec {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Import,Declaration
 .  .  .  Properties: {
 .  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  TOKEN ""unsafe""
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING

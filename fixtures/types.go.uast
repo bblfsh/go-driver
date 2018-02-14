@@ -9,7 +9,7 @@ File {
 .  }
 .  Children: {
 .  .  0: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -19,14 +19,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Import,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  .  .  TOKEN ""bytes""
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
@@ -39,7 +39,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -49,7 +49,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -64,7 +64,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 42
@@ -76,7 +76,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -86,7 +86,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 54
 .  .  .  .  .  .  internalRole: Specs
@@ -101,7 +101,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "A"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 56
@@ -113,7 +113,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -123,7 +123,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -138,7 +138,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
@@ -166,7 +166,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  4: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -176,7 +176,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -191,7 +191,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: ArrayType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Lbrack: 91
 .  .  .  .  .  .  .  .  internalRole: Type
@@ -212,7 +212,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  5: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -222,7 +222,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -237,7 +237,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: StructType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Incomplete: false
 .  .  .  .  .  .  .  .  Struct: 110
@@ -460,7 +460,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  6: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -470,7 +470,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -485,7 +485,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: InterfaceType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Incomplete: false
 .  .  .  .  .  .  .  .  Interface: 240
@@ -507,7 +507,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  7: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -517,7 +517,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -532,7 +532,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: InterfaceType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Incomplete: false
 .  .  .  .  .  .  .  .  Interface: 263
@@ -605,7 +605,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  8: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -615,7 +615,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -630,7 +630,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: MapType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Map: 307
 .  .  .  .  .  .  .  .  internalRole: Type
@@ -685,7 +685,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  9: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -695,7 +695,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -710,7 +710,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: ChanType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Arrow: 0
 .  .  .  .  .  .  .  .  Begin: 346
@@ -733,7 +733,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  10: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -743,7 +743,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -758,7 +758,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: ChanType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Arrow: 371
 .  .  .  .  .  .  .  .  Begin: 367
@@ -781,7 +781,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  11: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -791,7 +791,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
@@ -806,7 +806,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: ChanType {
-.  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Arrow: 391
 .  .  .  .  .  .  .  .  Begin: 391
@@ -839,14 +839,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  12: ImportSpec {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Import,Declaration
 .  .  .  Properties: {
 .  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  TOKEN ""bytes""
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING

@@ -9,23 +9,23 @@ File {
 .  }
 .  Children: {
 .  .  0: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Variable
 .  .  .  Properties: {
 .  .  .  .  Lparen: 23
-.  .  .  .  Rparen: 113
+.  .  .  .  Rparen: 137
 .  .  .  .  Tok: var
 .  .  .  .  TokPos: 19
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 26
@@ -41,7 +41,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Add
 .  .  .  .  .  .  .  .  .  TOKEN "+"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -68,13 +68,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 37
@@ -90,7 +90,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Substract
 .  .  .  .  .  .  .  .  .  TOKEN "-"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -117,13 +117,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 48
@@ -139,7 +139,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Multiply
 .  .  .  .  .  .  .  .  .  TOKEN "*"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -166,13 +166,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  3: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 59
@@ -188,7 +188,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Divide
 .  .  .  .  .  .  .  .  .  TOKEN "/"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -215,13 +215,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  4: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 70
@@ -237,7 +237,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Modulo
 .  .  .  .  .  .  .  .  .  TOKEN "%"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -264,13 +264,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  5: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 81
@@ -286,7 +286,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Bitwise,Xor
 .  .  .  .  .  .  .  .  .  TOKEN "^"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -313,13 +313,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  6: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 92
@@ -335,7 +335,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Bitwise,Or
 .  .  .  .  .  .  .  .  .  TOKEN "|"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -362,13 +362,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  7: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 103
@@ -384,7 +384,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Bitwise,And
 .  .  .  .  .  .  .  .  .  TOKEN "&"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -410,29 +410,127 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: GenDecl {
-.  .  .  Roles: Unannotated
-.  .  .  Properties: {
-.  .  .  .  Lparen: 120
-.  .  .  .  Rparen: 135
-.  .  .  .  Tok: var
-.  .  .  .  TokPos: 116
-.  .  .  .  internalRole: Decls
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  8: ValueSpec {
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 123
+.  .  .  .  .  .  .  .  NamePos: 114
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BinaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Binary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  BinaryExpr.Op: <<
+.  .  .  .  .  .  .  .  OpPos: 120
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BinaryExpr.Op {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Bitwise,LeftShift
+.  .  .  .  .  .  .  .  .  TOKEN "<<"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 118
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 123
+.  .  .  .  .  .  .  .  .  .  internalRole: Y
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  9: ValueSpec {
+.  .  .  .  .  Roles: Variable,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 126
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BinaryExpr {
+.  .  .  .  .  .  .  Roles: Expression,Binary
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  BinaryExpr.Op: >>
+.  .  .  .  .  .  .  .  OpPos: 132
+.  .  .  .  .  .  .  .  internalRole: Values
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: BinaryExpr.Op {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Bitwise,RightShift
+.  .  .  .  .  .  .  .  .  TOKEN ">>"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
+.  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 130
+.  .  .  .  .  .  .  .  .  .  internalRole: X
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
+.  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  NamePos: 135
+.  .  .  .  .  .  .  .  .  .  internalRole: Y
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
+.  .  .  Roles: Declaration,Variable
+.  .  .  Properties: {
+.  .  .  .  Lparen: 144
+.  .  .  .  Rparen: 159
+.  .  .  .  Tok: var
+.  .  .  .  TokPos: 140
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ValueSpec {
+.  .  .  .  .  Roles: Variable,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 147
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -440,12 +538,12 @@ File {
 .  .  .  .  .  .  .  Roles: Expression,Binary
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  BinaryExpr.Op: +
-.  .  .  .  .  .  .  .  OpPos: 130
+.  .  .  .  .  .  .  .  OpPos: 154
 .  .  .  .  .  .  .  .  internalRole: Values
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Arithmetic,Add
 .  .  .  .  .  .  .  .  .  TOKEN "+"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -455,7 +553,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "s1"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 127
+.  .  .  .  .  .  .  .  .  .  NamePos: 151
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -463,7 +561,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "s2"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 132
+.  .  .  .  .  .  .  .  .  .  NamePos: 156
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -474,26 +572,26 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Variable
 .  .  .  Properties: {
-.  .  .  .  Lparen: 142
-.  .  .  .  Rparen: 172
+.  .  .  .  Lparen: 166
+.  .  .  .  Rparen: 196
 .  .  .  .  Tok: var
-.  .  .  .  TokPos: 138
+.  .  .  .  TokPos: 162
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 145
+.  .  .  .  .  .  .  .  NamePos: 169
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -501,12 +599,12 @@ File {
 .  .  .  .  .  .  .  Roles: Expression,Binary
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  BinaryExpr.Op: &&
-.  .  .  .  .  .  .  .  OpPos: 152
+.  .  .  .  .  .  .  .  OpPos: 176
 .  .  .  .  .  .  .  .  internalRole: Values
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Boolean,And
 .  .  .  .  .  .  .  .  .  TOKEN "&&"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -516,7 +614,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 149
+.  .  .  .  .  .  .  .  .  .  NamePos: 173
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -524,7 +622,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 155
+.  .  .  .  .  .  .  .  .  .  NamePos: 179
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -533,16 +631,16 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 159
+.  .  .  .  .  .  .  .  NamePos: 183
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -550,12 +648,12 @@ File {
 .  .  .  .  .  .  .  Roles: Expression,Binary
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  BinaryExpr.Op: ||
-.  .  .  .  .  .  .  .  OpPos: 166
+.  .  .  .  .  .  .  .  OpPos: 190
 .  .  .  .  .  .  .  .  internalRole: Values
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: BinaryExpr.Op {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator
+.  .  .  .  .  .  .  .  .  Roles: Expression,Binary,Operator,Boolean,Or
 .  .  .  .  .  .  .  .  .  TOKEN "||"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  promotedPropertyString: true
@@ -565,7 +663,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 163
+.  .  .  .  .  .  .  .  .  .  NamePos: 187
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -573,7 +671,7 @@ File {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 169
+.  .  .  .  .  .  .  .  .  .  NamePos: 193
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -721,49 +819,81 @@ File {
 .  .  }
 .  .  20: Ident {
 .  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "s1"
+.  .  .  TOKEN "a"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 127
+.  .  .  .  NamePos: 118
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  21: Ident {
 .  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "s2"
+.  .  .  TOKEN "b"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 132
+.  .  .  .  NamePos: 123
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  22: Ident {
 .  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b1"
+.  .  .  TOKEN "a"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 149
+.  .  .  .  NamePos: 130
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  23: Ident {
 .  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b2"
+.  .  .  TOKEN "b"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 155
+.  .  .  .  NamePos: 135
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  24: Ident {
 .  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b1"
+.  .  .  TOKEN "s1"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 163
+.  .  .  .  NamePos: 151
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  25: Ident {
 .  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "s2"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 156
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  26: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b1"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 173
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  27: Ident {
+.  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b2"
 .  .  .  Properties: {
-.  .  .  .  NamePos: 169
+.  .  .  .  NamePos: 179
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  28: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b1"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 187
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  29: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b2"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 193
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }

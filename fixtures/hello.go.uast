@@ -9,7 +9,7 @@ File {
 .  }
 .  Children: {
 .  .  0: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration
 .  .  .  Properties: {
 .  .  .  .  Lparen: 22
 .  .  .  .  Rparen: 31
@@ -19,14 +19,14 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Import,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
@@ -45,7 +45,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Body
+.  .  .  .  .  Roles: Statement,Block,Scope,Body
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Lbrace: 46
 .  .  .  .  .  .  Rbrace: 77
@@ -59,7 +59,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: CallExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Call
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Ellipsis: 0
 .  .  .  .  .  .  .  .  .  .  Lparen: 60
@@ -68,7 +68,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Argument,Positional
 .  .  .  .  .  .  .  .  .  .  .  TOKEN ""Hello World!""
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
@@ -77,7 +77,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Callee
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -134,14 +134,14 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: ImportSpec {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Import,Declaration
 .  .  .  Properties: {
 .  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING

@@ -49,35 +49,79 @@ var AnnotationRules = On(Any).Self(
 
 		// Binary Expression
 		On(goast.BinaryExpr).Roles(uast.Binary).Children(
-			OnIntType("BinaryExpr.Op", uast.Expression, uast.Binary, uast.Operator),
+			OnIntType("BinaryExpr.Op", uast.Expression, uast.Binary, uast.Operator).Self(
+				On(HasToken("+")).Roles(uast.Arithmetic, uast.Add),
+				On(HasToken("-")).Roles(uast.Arithmetic, uast.Substract),
+				On(HasToken("*")).Roles(uast.Arithmetic, uast.Multiply),
+				On(HasToken("/")).Roles(uast.Arithmetic, uast.Divide),
+				On(HasToken("%")).Roles(uast.Arithmetic, uast.Modulo),
+
+				On(HasToken("^")).Roles(uast.Bitwise, uast.Xor),
+				On(HasToken("|")).Roles(uast.Bitwise, uast.Or),
+				On(HasToken("&")).Roles(uast.Bitwise, uast.And),
+				On(HasToken("<<")).Roles(uast.Bitwise, uast.LeftShift),
+				On(HasToken(">>")).Roles(uast.Bitwise, uast.RightShift),
+
+				On(HasToken("||")).Roles(uast.Boolean, uast.Or),
+				On(HasToken("&&")).Roles(uast.Boolean, uast.And),
+
+				On(HasToken("==")).Roles(uast.Relational, uast.Equal),
+				On(HasToken("!=")).Roles(uast.Relational, uast.Not, uast.Equal),
+				On(HasToken("<")).Roles(uast.Relational, uast.LessThan),
+				On(HasToken(">")).Roles(uast.Relational, uast.GreaterThan),
+				On(HasToken("<=")).Roles(uast.Relational, uast.LessThanOrEqual),
+				On(HasToken(">=")).Roles(uast.Relational, uast.GreaterThanOrEqual),
+			),
 			OnIntRole("X", uast.Binary, uast.Left),
 			OnIntRole("Y", uast.Binary, uast.Right),
 		),
 
 		// Unary Expression
 		On(goast.UnaryExpr).Roles(uast.Unary).Children(
-			OnIntType("UnaryExpr.Op", uast.Expression, uast.Unary, uast.Operator),
+			OnIntType("UnaryExpr.Op", uast.Expression, uast.Unary, uast.Operator).Self(
+				On(HasToken("+")).Roles(uast.Arithmetic, uast.Positive),
+				On(HasToken("-")).Roles(uast.Arithmetic, uast.Negative),
+				On(HasToken("*")).Roles(uast.Dereference),
+				On(HasToken("&")).Roles(uast.TakeAddress),
+				On(HasToken("^")).Roles(uast.Bitwise, uast.Negative),
+				On(HasToken("!")).Roles(uast.Boolean, uast.Negative),
+			),
+		),
+
+		// Inc/Dec statement
+		On(goast.IncDecStmt).Self(
+			On(HasToken("--")).Roles(uast.Decrement),
+			On(HasToken("++")).Roles(uast.Increment),
 		),
 
 		// Comments
 		On(goast.Comment).Roles(uast.Comment),
 
 		// Blocks
-		On(goast.BlockStmt).Roles(uast.Block).Self(
-			On(HasInternalRole("Body")).Roles(uast.Body),
+		On(goast.BlockStmt).Roles(uast.Block, uast.Scope).Self(
+			OnIntRole("Body", uast.Body),
 		),
 
 		// If statement
 		On(goast.IfStmt).Roles(uast.If).Children(
-			On(HasInternalRole("Cond")).Roles(uast.If, uast.Condition),
-			On(HasInternalRole("Body")).Roles(uast.Then),
-			On(HasInternalRole("Else")).Roles(uast.Else),
+			OnIntRole("Cond", uast.If, uast.Condition),
+			OnIntRole("Body", uast.Then),
+			OnIntRole("Else", uast.Else),
 		),
 
 		// For loop
 		On(goast.ForStmt).Roles(uast.For).Children(
-			On(HasInternalRole("Cond")).Roles(uast.For, uast.Condition),
-			On(HasInternalRole("Body")).Roles(uast.For, uast.Body),
+			OnIntRole("Cond", uast.For, uast.Condition),
+			OnIntRole("Init", uast.For, uast.Initialization),
+			OnIntRole("Post", uast.For, uast.Update),
+			OnIntRole("Body", uast.For, uast.Body),
+		),
+
+		// For range
+		On(goast.RangeStmt).Roles(uast.For, uast.Iterator).Children(
+			OnIntRole("Key", uast.For, uast.Iterator),
+			OnIntRole("Value", uast.For, uast.Iterator),
+			OnIntRole("Body", uast.For, uast.Body),
 		),
 
 		// Branch statements
@@ -86,6 +130,48 @@ var AnnotationRules = On(Any).Self(
 			On(HasProperty("Tok", "break")).Roles(uast.Break),
 			On(HasProperty("Tok", "goto")).Roles(uast.Goto),
 			// TODO: fallthrough
+		),
+
+		// Switch statement
+		On(goast.SwitchStmt).Roles(uast.Switch),
+		On(goast.CaseClause).Roles(uast.Case),
+		// TODO: default (length of List is zero)
+
+		// Declarations
+		On(goast.GenDecl).Roles(uast.Declaration).Self(
+			On(HasProperty("Tok", "var")).Roles(uast.Variable).Children(
+				OnIntRole("Specs", uast.Variable).Children(
+					OnIntRole("Names", uast.Variable),
+				),
+			),
+			// TODO: constants
+			//On(HasProperty("Tok","const")).Roles(uast.Constant).Children(
+			//	OnIntRole("Specs", uast.Constant).Children(
+			//		OnIntRole("Names", uast.Constant),
+			//	),
+			//),
+		),
+
+		// Imports
+		On(goast.ImportSpec).Roles(uast.Import, uast.Declaration).Children(
+			OnIntRole("Path", uast.Import, uast.Pathname),
+		),
+
+		// Var/Const declarations (see GenDecl)
+		On(goast.ValueSpec).Roles(uast.Declaration).Children(
+			OnIntRole("Type", uast.Type),
+		),
+
+		// Type declarations
+		On(goast.TypeSpec).Roles(uast.Declaration).Children(
+			OnIntRole("Type", uast.Type),
+		),
+
+		// Function calls
+		On(goast.CallExpr).Roles(uast.Call).Children(
+			OnIntRole("X", uast.Receiver),
+			OnIntRole("Fun", uast.Callee),
+			OnIntRole("Args", uast.Argument, uast.Positional),
 		),
 	),
 )

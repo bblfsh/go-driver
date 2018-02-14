@@ -9,7 +9,7 @@ File {
 .  }
 .  Children: {
 .  .  0: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Variable
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -19,13 +19,13 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 23
@@ -33,7 +33,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 25
@@ -45,7 +45,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: GenDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Variable
 .  .  .  Properties: {
 .  .  .  .  Lparen: 34
 .  .  .  .  Rparen: 83
@@ -55,13 +55,13 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 37
@@ -69,7 +69,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 40
@@ -77,7 +77,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 42
@@ -105,13 +105,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 54
@@ -130,13 +130,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: ValueSpec {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Variable,Declaration
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 68
@@ -163,7 +163,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Body
+.  .  .  .  .  Roles: Statement,Block,Scope,Body
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Lbrace: 97
 .  .  .  .  .  .  Rbrace: 135
