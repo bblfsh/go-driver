@@ -9,6 +9,8 @@ var (
 	_ = a ^ b
 	_ = a | b
 	_ = a & b
+	_ = a << b
+	_ = a >> b
 )
 
 var (

@@ -1,0 +1,74 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 36,
+                        "List": [
+                            {
+                                "Tok": "++",
+                                "TokPos": 40,
+                                "X": {
+                                    "Name": "a",
+                                    "NamePos": 39,
+                                    "type": "Ident"
+                                },
+                                "type": "IncDecStmt"
+                            },
+                            {
+                                "Tok": "--",
+                                "TokPos": 45,
+                                "X": {
+                                    "Name": "a",
+                                    "NamePos": 44,
+                                    "type": "Ident"
+                                },
+                                "type": "IncDecStmt"
+                            }
+                        ],
+                        "Rbrace": 48,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "increment",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 34,
+                            "Opening": 33,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "a",
+                    "NamePos": 39,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "a",
+                    "NamePos": 44,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
