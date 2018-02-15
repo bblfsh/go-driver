@@ -9,7 +9,7 @@ File {
 .  }
 .  Children: {
 .  .  0: CommentGroup {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Comment,List
 .  .  .  Properties: {
 .  .  .  .  internalRole: Comments
 .  .  .  }
@@ -33,7 +33,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  1: CommentGroup {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Comment,List
 .  .  .  Properties: {
 .  .  .  .  internalRole: Comments
 .  .  .  }
@@ -49,7 +49,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  2: CommentGroup {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Comment,List
 .  .  .  Properties: {
 .  .  .  .  internalRole: Comments
 .  .  .  }
@@ -65,7 +65,7 @@ File {
 .  .  .  }
 .  .  }
 .  .  3: CommentGroup {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Comment,List
 .  .  .  Properties: {
 .  .  .  .  internalRole: Comments
 .  .  .  }
@@ -349,7 +349,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -382,7 +382,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1195,14 +1195,14 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: FuncType {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Function,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Func: 659
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: 678
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: 663
@@ -1210,13 +1210,13 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 664
@@ -1224,7 +1224,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Star: 666
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -1261,7 +1261,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: 0
@@ -1269,13 +1269,13 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 680
@@ -1415,7 +1415,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 329
 .  .  .  .  .  .  Opening: 317
@@ -1423,13 +1423,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 318
@@ -1437,7 +1437,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 320
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -1465,7 +1465,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 360
 .  .  .  .  .  .  .  .  Opening: 339
@@ -1473,13 +1473,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "commit"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 340
@@ -1487,7 +1487,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1515,7 +1515,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -1523,13 +1523,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 362
@@ -2320,7 +2320,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 803
 .  .  .  .  .  .  Opening: 791
@@ -2328,13 +2328,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 792
@@ -2342,7 +2342,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 794
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -2370,7 +2370,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 850
 .  .  .  .  .  .  .  .  Opening: 817
@@ -2378,13 +2378,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 818
@@ -2392,7 +2392,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 820
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -2427,13 +2427,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "idx"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 834
@@ -2441,7 +2441,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 838
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -2478,7 +2478,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -2486,13 +2486,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 852
@@ -2532,14 +2532,14 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FuncType {
-.  .  .  .  .  .  .  Roles: Expression,Type
+.  .  .  .  .  .  .  Roles: Expression,Type,Function
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Func: 1189
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Closing: 1228
 .  .  .  .  .  .  .  .  .  .  Opening: 1193
@@ -2547,13 +2547,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1194
@@ -2561,7 +2561,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Star: 1196
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -2596,13 +2596,13 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "os"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1210
@@ -2610,7 +2610,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Star: 1213
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -3500,7 +3500,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 1248
 .  .  .  .  .  .  Opening: 1236
@@ -3508,13 +3508,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 1237
@@ -3522,7 +3522,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 1239
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -3550,7 +3550,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 1292
 .  .  .  .  .  .  .  .  Opening: 1259
@@ -3558,13 +3558,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1260
@@ -3572,7 +3572,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 1262
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -3607,13 +3607,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "idx"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1276
@@ -3621,7 +3621,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 1280
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -3658,7 +3658,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -3666,13 +3666,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1294
@@ -4804,7 +4804,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 1820
 .  .  .  .  .  .  Opening: 1808
@@ -4812,13 +4812,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 1809
@@ -4826,7 +4826,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 1811
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -4854,7 +4854,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 1829
 .  .  .  .  .  .  .  .  Opening: 1828
@@ -4862,7 +4862,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 1845
 .  .  .  .  .  .  .  .  Opening: 1831
@@ -4870,13 +4870,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "Status"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1832
@@ -4886,13 +4886,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 1840
@@ -5460,7 +5460,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 2382
 .  .  .  .  .  .  Opening: 2370
@@ -5468,13 +5468,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 2371
@@ -5482,7 +5482,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 2373
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -5510,7 +5510,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 2438
 .  .  .  .  .  .  .  .  Opening: 2404
@@ -5518,13 +5518,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2405
@@ -5532,7 +5532,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -5558,13 +5558,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2424
@@ -5572,7 +5572,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 2426
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -5609,7 +5609,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 2458
 .  .  .  .  .  .  .  .  Opening: 2440
@@ -5617,13 +5617,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "StatusCode"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2441
@@ -5633,13 +5633,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2453
@@ -5959,7 +5959,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "modeExec"
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2888
@@ -6163,7 +6163,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 2717
 .  .  .  .  .  .  Opening: 2705
@@ -6171,13 +6171,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "w"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 2706
@@ -6185,7 +6185,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: StarExpr {
-.  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  Roles: Expression,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Star: 2708
 .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -6213,7 +6213,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 2744
 .  .  .  .  .  .  .  .  Opening: 2726
@@ -6221,13 +6221,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "fi"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 2727
@@ -6235,7 +6235,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -6263,7 +6263,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -6271,13 +6271,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -6319,7 +6319,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: CommentGroup {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Doc
 .  .  .  .  .  }
@@ -6610,7 +6610,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 3085
 .  .  .  .  .  .  Opening: 3076
@@ -6618,13 +6618,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "s"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3077
@@ -6632,7 +6632,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  TOKEN "Status"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3079
@@ -6651,7 +6651,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 3107
 .  .  .  .  .  .  .  .  Opening: 3091
@@ -6659,13 +6659,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "filename"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 3092
@@ -6673,7 +6673,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 3101
@@ -6685,7 +6685,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -6693,13 +6693,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: StarExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Star: 3109
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
@@ -6961,7 +6961,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 3229
 .  .  .  .  .  .  Opening: 3220
@@ -6969,13 +6969,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "s"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3221
@@ -6983,7 +6983,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  TOKEN "Status"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3223
@@ -7002,7 +7002,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 3239
 .  .  .  .  .  .  .  .  Opening: 3238
@@ -7010,7 +7010,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -7018,13 +7018,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "bool"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 3241
@@ -7781,7 +7781,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 3399
 .  .  .  .  .  .  Opening: 3390
@@ -7789,13 +7789,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "s"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3391
@@ -7803,7 +7803,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  TOKEN "Status"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 3393
@@ -7822,7 +7822,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 3408
 .  .  .  .  .  .  .  .  Opening: 3407
@@ -7830,7 +7830,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -7838,13 +7838,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 3410
@@ -7870,7 +7870,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: CommentGroup {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Doc
 .  .  .  .  .  }
@@ -7916,7 +7916,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -7940,7 +7940,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -7964,7 +7964,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  2: Field {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  .  .  Roles: Entry
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -8006,7 +8006,7 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: CommentGroup {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Doc
 .  .  .  .  .  }
@@ -8065,7 +8065,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Unmodified"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4040
@@ -8097,7 +8097,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Untracked"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4070
@@ -8113,7 +8113,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Modified"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4081
@@ -8129,7 +8129,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Added"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4091
@@ -8145,7 +8145,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Deleted"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4098
@@ -8161,7 +8161,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Renamed"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4107
@@ -8177,7 +8177,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "Copied"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4116
@@ -8193,7 +8193,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Incomplete
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  TOKEN "UpdatedButUnmerged"
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 4124
@@ -8572,7 +8572,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FieldList {
-.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Roles: Function,Receiver,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Closing: 4164
 .  .  .  .  .  .  Opening: 4151
@@ -8580,13 +8580,13 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: Function,Receiver
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Name
 .  .  .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 4152
@@ -8594,7 +8594,7 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Function,Receiver,Type
 .  .  .  .  .  .  .  .  .  TOKEN "StatusCode"
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  NamePos: 4154
@@ -8613,7 +8613,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 4173
 .  .  .  .  .  .  .  .  Opening: 4172
@@ -8621,7 +8621,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -8629,13 +8629,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4175
@@ -9340,7 +9340,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 4513
 .  .  .  .  .  .  .  .  Opening: 4476
@@ -9348,13 +9348,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "fs"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4477
@@ -9362,7 +9362,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -9388,13 +9388,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "filename"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4498
@@ -9402,7 +9402,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4507
@@ -9414,7 +9414,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 4536
 .  .  .  .  .  .  .  .  Opening: 4515
@@ -9422,13 +9422,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -9454,13 +9454,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4531
@@ -9655,7 +9655,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 4917
 .  .  .  .  .  .  .  .  Opening: 4889
@@ -9663,13 +9663,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "filesystem"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4890
@@ -9677,7 +9677,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -9705,7 +9705,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 4952
 .  .  .  .  .  .  .  .  Opening: 4919
@@ -9713,7 +9713,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
@@ -9762,13 +9762,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 4947
@@ -10427,7 +10427,7 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 5132
 .  .  .  .  .  .  .  .  Opening: 5066
@@ -10435,13 +10435,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "fs"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 5067
@@ -10449,7 +10449,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: SelectorExpr {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Incomplete
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Type,Incomplete
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -10475,13 +10475,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  1: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "path"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 5088
@@ -10489,7 +10489,7 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 5093
@@ -10499,13 +10499,13 @@ File {
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "files"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 5101
@@ -10558,7 +10558,7 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Closing: 0
 .  .  .  .  .  .  .  .  Opening: 0
@@ -10566,13 +10566,13 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: Field {
-.  .  .  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  .  .  Roles: Argument
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "error"
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 5134
