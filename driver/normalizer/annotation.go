@@ -113,6 +113,7 @@ var AnnotationRules = On(Any).Self(
 		),
 
 		// Comments
+		On(goast.CommentGroup).Roles(uast.Comment, uast.List),
 		On(goast.Comment).Roles(uast.Comment),
 
 		// Blocks
@@ -208,7 +209,27 @@ var AnnotationRules = On(Any).Self(
 		// Structs
 		On(goast.StructType).Roles(uast.Type).Children(
 			OnIntRole("Fields").Children(
-				On(goast.Field).Children(
+				On(goast.Field).Roles(uast.Entry).Children(
+					OnIntRole("Names").Roles(uast.Name),
+					OnIntRole("Type").Roles(uast.Type),
+				),
+			),
+		),
+
+		// Interfaces
+		On(goast.InterfaceType).Roles(uast.Type, uast.Incomplete).Children(
+			OnIntRole("Methods", uast.Function, uast.List).Children(
+				On(goast.Field).Roles(uast.Entry).Children(
+					OnIntRole("Names").Roles(uast.Name),
+					OnIntRole("Type").Roles(uast.Type),
+				),
+			),
+		),
+
+		// Function type
+		On(goast.FuncType).Roles(uast.Function, uast.Type).Children(
+			On(goast.FieldList).Roles(uast.ArgsList).Children(
+				On(goast.Field).Roles(uast.Argument).Children(
 					OnIntRole("Names").Roles(uast.Name),
 					OnIntRole("Type").Roles(uast.Type),
 				),
@@ -217,13 +238,14 @@ var AnnotationRules = On(Any).Self(
 
 		// Function declaration
 		On(goast.FuncDecl).Roles(uast.Declaration, uast.Function).Children(
-			OnIntRole("Name").Roles(uast.Function, uast.Name),
-			OnIntRole("Type").Roles(uast.Function, uast.Type).Children(
-				OnIntRole("FieldList").Roles(uast.Argument).Children(
-					OnIntRole("Names").Roles(uast.Name),
-					OnIntRole("Type").Roles(uast.Type),
+			OnIntRole("Recv", uast.Function, uast.Receiver, uast.List).Children(
+				On(goast.Field).Roles(uast.Function, uast.Receiver).Children(
+					OnIntRole("Names", uast.Function, uast.Receiver, uast.Name),
+					OnIntRole("Type", uast.Function, uast.Receiver, uast.Type),
 				),
 			),
+			OnIntRole("Name").Roles(uast.Function, uast.Name),
+			OnIntRole("Type").Roles(uast.Function, uast.Type),
 			OnIntRole("Body").Roles(uast.Function),
 		),
 
