@@ -1,0 +1,180 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Foo",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 35,
+                                    "Opening": 34,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 28,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 42,
+                    "Rparen": 105,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 45,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "Interf",
+                                "NamePos": 47,
+                                "type": "Ident"
+                            },
+                            "Values": [
+                                {
+                                    "Lbrace": 59,
+                                    "Rbrace": 60,
+                                    "Type": {
+                                        "Name": "Foo",
+                                        "NamePos": 56,
+                                        "type": "Ident"
+                                    },
+                                    "type": "CompositeLit"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 63,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "Interf",
+                                "NamePos": 65,
+                                "type": "Ident"
+                            },
+                            "Values": [
+                                {
+                                    "Op": "&",
+                                    "OpPos": 74,
+                                    "X": {
+                                        "Lbrace": 78,
+                                        "Rbrace": 79,
+                                        "Type": {
+                                            "Name": "Foo",
+                                            "NamePos": 75,
+                                            "type": "Ident"
+                                        },
+                                        "type": "CompositeLit"
+                                    },
+                                    "type": "UnaryExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        },
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 82,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Type": {
+                                "Name": "Interf",
+                                "NamePos": 84,
+                                "type": "Ident"
+                            },
+                            "Values": [
+                                {
+                                    "Args": [
+                                        {
+                                            "Name": "nil",
+                                            "NamePos": 100,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Ellipsis": 0,
+                                    "Fun": {
+                                        "Lparen": 93,
+                                        "Rparen": 98,
+                                        "X": {
+                                            "Star": 94,
+                                            "X": {
+                                                "Name": "Foo",
+                                                "NamePos": 95,
+                                                "type": "Ident"
+                                            },
+                                            "type": "StarExpr"
+                                        },
+                                        "type": "ParenExpr"
+                                    },
+                                    "Lparen": 99,
+                                    "Rparen": 103,
+                                    "type": "CallExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "var",
+                    "TokPos": 38,
+                    "type": "GenDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "Interf",
+                    "NamePos": 47,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Interf",
+                    "NamePos": 65,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Interf",
+                    "NamePos": 84,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "nil",
+                    "NamePos": 100,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
