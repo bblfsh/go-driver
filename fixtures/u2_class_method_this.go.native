@@ -1,0 +1,90 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Foo",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 35,
+                                    "Opening": 34,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 28,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 59,
+                        "Rbrace": 62,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Do",
+                        "NamePos": 54,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 52,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "this",
+                                        "NamePos": 44,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Foo",
+                                    "NamePos": 49,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 43,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 38,
+                        "Params": {
+                            "Closing": 57,
+                            "Opening": 56,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "type": "File"
+        }
+    }
+}

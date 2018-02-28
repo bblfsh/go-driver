@@ -1,0 +1,97 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Body": {
+                        "Lbrace": 39,
+                        "List": [
+                            {
+                                "Results": [
+                                    {
+                                        "Name": "a",
+                                        "NamePos": 49,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Return": 42,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 51,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Foo",
+                        "NamePos": 24,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 19,
+                        "Params": {
+                            "Closing": 33,
+                            "List": [
+                                {
+                                    "Names": [
+                                        {
+                                            "Name": "a",
+                                            "NamePos": 28,
+                                            "type": "Ident"
+                                        }
+                                    ],
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 30,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 27,
+                            "type": "FieldList"
+                        },
+                        "Results": {
+                            "Closing": 0,
+                            "List": [
+                                {
+                                    "Type": {
+                                        "Name": "int",
+                                        "NamePos": 35,
+                                        "type": "Ident"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 0,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 30,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "int",
+                    "NamePos": 35,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

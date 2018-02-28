@@ -1,0 +1,90 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "EndPos": 0,
+                            "Path": {
+                                "Kind": "STRING",
+                                "Value": "\"fmt\"",
+                                "ValuePos": 26,
+                                "type": "BasicLit"
+                            },
+                            "type": "ImportSpec"
+                        }
+                    ],
+                    "Tok": "import",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Names": [
+                                {
+                                    "Name": "_",
+                                    "NamePos": 37,
+                                    "type": "Ident"
+                                }
+                            ],
+                            "Values": [
+                                {
+                                    "Sel": {
+                                        "Name": "Print",
+                                        "NamePos": 45,
+                                        "type": "Ident"
+                                    },
+                                    "X": {
+                                        "Name": "fmt",
+                                        "NamePos": 41,
+                                        "type": "Ident"
+                                    },
+                                    "type": "SelectorExpr"
+                                }
+                            ],
+                            "type": "ValueSpec"
+                        }
+                    ],
+                    "Tok": "var",
+                    "TokPos": 33,
+                    "type": "GenDecl"
+                }
+            ],
+            "Imports": [
+                {
+                    "EndPos": 0,
+                    "Path": {
+                        "Kind": "STRING",
+                        "Value": "\"fmt\"",
+                        "ValuePos": 26,
+                        "type": "BasicLit"
+                    },
+                    "type": "ImportSpec"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "fmt",
+                    "NamePos": 41,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

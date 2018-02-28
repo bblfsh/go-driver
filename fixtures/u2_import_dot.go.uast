@@ -1,0 +1,85 @@
+Status:  ok
+Language:  go
+Errors: 
+UAST: 
+File {
+.  Roles: File
+.  Properties: {
+.  .  Package: 1
+.  }
+.  Children: {
+.  .  0: GenDecl {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  Lparen: 0
+.  .  .  .  Rparen: 0
+.  .  .  .  Tok: import
+.  .  .  .  TokPos: 19
+.  .  .  .  internalRole: Decls
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ImportSpec {
+.  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  TOKEN "."
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 26
+.  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  .  .  TOKEN ""fmt""
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  ValuePos: 28
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  1: ImportSpec {
+.  .  .  Roles: Unannotated
+.  .  .  Properties: {
+.  .  .  .  EndPos: 0
+.  .  .  .  internalRole: Imports
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Ident {
+.  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  TOKEN "."
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  NamePos: 26
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: BasicLit {
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String
+.  .  .  .  .  TOKEN ""fmt""
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  ValuePos: 28
+.  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  2: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  }
+}
+
