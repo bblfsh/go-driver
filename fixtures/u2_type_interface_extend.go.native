@@ -1,0 +1,63 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Foo",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Incomplete": false,
+                                "Interface": 28,
+                                "Methods": {
+                                    "Closing": 44,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Name": "Bar",
+                                                "NamePos": 40,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 37,
+                                    "type": "FieldList"
+                                },
+                                "type": "InterfaceType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "Bar",
+                    "NamePos": 40,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
