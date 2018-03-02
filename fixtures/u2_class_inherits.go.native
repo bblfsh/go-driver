@@ -12,18 +12,25 @@
                         {
                             "Assign": 0,
                             "Name": {
-                                "Name": "Foo",
+                                "Name": "Bar",
                                 "NamePos": 24,
                                 "type": "Ident"
                             },
                             "Type": {
                                 "Fields": {
-                                    "Closing": 41,
+                                    "Closing": 49,
                                     "List": [
                                         {
+                                            "Names": [
+                                                {
+                                                    "Name": "Name",
+                                                    "NamePos": 37,
+                                                    "type": "Ident"
+                                                }
+                                            ],
                                             "Type": {
-                                                "Name": "Bar",
-                                                "NamePos": 37,
+                                                "Name": "string",
+                                                "NamePos": 42,
                                                 "type": "Ident"
                                             },
                                             "type": "Field"
@@ -42,6 +49,44 @@
                     "Tok": "type",
                     "TokPos": 19,
                     "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Foo",
+                                "NamePos": 57,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 75,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Name": "Bar",
+                                                "NamePos": 71,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 68,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 61,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 52,
+                    "type": "GenDecl"
                 }
             ],
             "Name": {
@@ -52,8 +97,8 @@
             "Package": 1,
             "Unresolved": [
                 {
-                    "Name": "Bar",
-                    "NamePos": 37,
+                    "Name": "string",
+                    "NamePos": 42,
                     "type": "Ident"
                 }
             ],
