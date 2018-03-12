@@ -8,6 +8,7 @@ import (
 	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v1/uast/transformer/annotatter"
+	"gopkg.in/bblfsh/sdk.v1/uast/transformer/positioner"
 )
 
 // Transformers is the of list `transformer.Transfomer` to apply to a UAST, to
@@ -17,6 +18,7 @@ var Transformers = []transformer.Tranformer{
 	annotatter.NewAnnotatter(AnnotationRulesExpr),
 	annotatter.NewAnnotatter(AnnotationRulesStmt),
 	annotatter.NewAnnotatter(AnnotationRules),
+	positioner.NewFillLineColFromOffset(),
 }
 
 func OnIntRole(r string, roles ...uast.Role) *Rule {

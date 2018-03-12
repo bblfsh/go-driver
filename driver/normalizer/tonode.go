@@ -20,17 +20,41 @@ var ToNode = &uast.ObjectToNode{
 	PromotedPropertyStrings: map[string]map[string]bool{
 		"BinaryExpr": {"Op": true},
 	},
+	OffsetKey:    "offset",
+	EndOffsetKey: "end",
 
 	Modifier: func(n map[string]interface{}) error {
-		// Remove // and /*...*/ from comment nodes' tokens
-		if t, ok := n["type"].(string); ok && t == "Comment" {
+		rename := func(from, to string) {
+			if v, ok := n[from]; ok {
+				delete(n, from)
+				n[to] = v
+			}
+		}
+		switch t, _ := n["type"].(string); t {
+		case "Ident":
+			rename("NamePos", "offset")
+		case "BasicLit":
+			rename("ValuePos", "offset")
+		case "GenDecl":
+			rename("TokPos", "offset")
+			rename("Rparen", "end")
+		case "BlockStmt":
+			rename("Lbrace", "offset")
+			rename("Rbrace", "end")
+		case "FuncType":
+			rename("Func", "offset")
+		case "DeferStmt":
+			rename("Defer", "offset")
+		case "Comment":
 			if text, ok := n["Text"].(string); ok {
+				// Remove // and /*...*/ from comment nodes' tokens
 				if strings.HasPrefix(text, "//") {
-					n["Text"] = text[2:];
+					n["Text"] = text[2:]
 				} else if strings.HasPrefix(text, "/*") {
-					n["Text"] = text[2:len(text)-2]
+					n["Text"] = text[2 : len(text)-2]
 				}
 			}
+			rename("Slash", "offset")
 		}
 		return nil
 	},
