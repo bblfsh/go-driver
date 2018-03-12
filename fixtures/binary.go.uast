@@ -8,13 +8,33 @@ File {
 .  .  Package: 1
 .  }
 .  Children: {
-.  .  0: GenDecl {
+.  .  0: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 9
+.  .  .  .  Line: 1
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
 .  .  .  Roles: Declaration,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 137
+.  .  .  .  Line: 14
+.  .  .  .  Col: 2
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 23
-.  .  .  .  Rparen: 137
 .  .  .  .  Tok: var
-.  .  .  .  TokPos: 19
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -27,8 +47,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 26
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -50,16 +74,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 30
+.  .  .  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 30
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 34
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -76,8 +108,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 37
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 37
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -99,16 +135,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 41
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 45
+.  .  .  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 45
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -125,8 +169,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 48
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 48
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -148,16 +196,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 52
+.  .  .  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 52
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 56
+.  .  .  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 56
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -174,8 +230,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 59
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 59
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -197,16 +257,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 63
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 67
+.  .  .  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 67
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -223,8 +291,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 70
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 70
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -246,16 +318,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 74
+.  .  .  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 74
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 78
+.  .  .  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 78
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -272,8 +352,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 81
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -295,16 +379,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 85
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 85
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 89
+.  .  .  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 89
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -321,8 +413,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 92
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -344,16 +440,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 96
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 96
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 100
+.  .  .  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 100
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -370,8 +474,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 103
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 103
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -393,16 +501,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 107
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 107
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 111
+.  .  .  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  .  .  Col: 11
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 111
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -419,8 +535,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 114
+.  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 114
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -442,16 +562,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 118
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 118
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 123
+.  .  .  .  .  .  .  .  .  .  Line: 12
+.  .  .  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 123
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -468,8 +596,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 126
+.  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 126
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -491,16 +623,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 130
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 130
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 135
+.  .  .  .  .  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 135
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -510,13 +650,261 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  1: GenDecl {
+.  .  2: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 30
+.  .  .  .  Line: 4
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  3: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 34
+.  .  .  .  Line: 4
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  4: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 41
+.  .  .  .  Line: 5
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  5: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 45
+.  .  .  .  Line: 5
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  6: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 52
+.  .  .  .  Line: 6
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  7: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 56
+.  .  .  .  Line: 6
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  8: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 63
+.  .  .  .  Line: 7
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  9: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 67
+.  .  .  .  Line: 7
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  10: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 74
+.  .  .  .  Line: 8
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  11: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 78
+.  .  .  .  Line: 8
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  12: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 85
+.  .  .  .  Line: 9
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  13: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 89
+.  .  .  .  Line: 9
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  14: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 96
+.  .  .  .  Line: 10
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  15: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 100
+.  .  .  .  Line: 10
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  16: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 107
+.  .  .  .  Line: 11
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  17: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 111
+.  .  .  .  Line: 11
+.  .  .  .  Col: 11
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  18: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 118
+.  .  .  .  Line: 12
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  19: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 123
+.  .  .  .  Line: 12
+.  .  .  .  Col: 12
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  20: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "a"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 130
+.  .  .  .  Line: 13
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  21: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "b"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 135
+.  .  .  .  Line: 13
+.  .  .  .  Col: 12
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  22: GenDecl {
 .  .  .  Roles: Declaration,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 140
+.  .  .  .  Line: 16
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 159
+.  .  .  .  Line: 18
+.  .  .  .  Col: 2
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 144
-.  .  .  .  Rparen: 159
 .  .  .  .  Tok: var
-.  .  .  .  TokPos: 140
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -529,8 +917,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 147
+.  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 147
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -552,16 +944,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "s1"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 151
+.  .  .  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 151
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "s2"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 156
+.  .  .  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 156
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -571,13 +971,45 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: GenDecl {
+.  .  23: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "s1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 151
+.  .  .  .  Line: 17
+.  .  .  .  Col: 7
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  24: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "s2"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 156
+.  .  .  .  Line: 17
+.  .  .  .  Col: 12
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  25: GenDecl {
 .  .  .  Roles: Declaration,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 162
+.  .  .  .  Line: 20
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 196
+.  .  .  .  Line: 23
+.  .  .  .  Col: 2
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 166
-.  .  .  .  Rparen: 196
 .  .  .  .  Tok: var
-.  .  .  .  TokPos: 162
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -590,8 +1022,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 169
+.  .  .  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 169
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -613,16 +1049,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 173
+.  .  .  .  .  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 173
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 179
+.  .  .  .  .  .  .  .  .  .  Line: 21
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 179
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -639,8 +1083,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 183
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 183
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -662,16 +1110,24 @@ File {
 .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Left
 .  .  .  .  .  .  .  .  .  TOKEN "b1"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 187
+.  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 187
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Binary,Right
 .  .  .  .  .  .  .  .  .  TOKEN "b2"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 193
+.  .  .  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  .  .  Col: 13
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 193
 .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -681,219 +1137,51 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  3: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 9
-.  .  .  .  internalRole: Name
-.  .  .  }
-.  .  }
-.  .  4: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 30
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  5: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 34
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  6: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 41
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  7: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 45
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  8: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 52
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  9: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 56
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  10: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 63
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  11: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 67
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  12: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 74
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  13: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 78
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  14: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 85
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  15: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 89
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  16: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 96
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  17: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 100
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  18: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 107
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  19: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 111
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  20: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 118
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  21: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 123
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  22: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 130
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  23: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 135
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  24: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "s1"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 151
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  25: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "s2"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 156
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
 .  .  26: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 173
+.  .  .  .  Line: 21
+.  .  .  .  Col: 7
+.  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 173
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  27: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b2"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 179
+.  .  .  .  Line: 21
+.  .  .  .  Col: 13
+.  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 179
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  28: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b1"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 187
+.  .  .  .  Line: 22
+.  .  .  .  Col: 7
+.  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 187
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  .  29: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "b2"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 193
+.  .  .  .  Line: 22
+.  .  .  .  Col: 13
+.  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 193
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }

@@ -17,8 +17,12 @@ File {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
 .  .  .  .  .  TOKEN " Package fixtures is a collection of Go code samples."
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 1
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 1
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
@@ -27,33 +31,33 @@ File {
 .  .  1: CommentGroup {
 .  .  .  Roles: Comment,List
 .  .  .  Properties: {
-.  .  .  .  internalRole: Comments
+.  .  .  .  internalRole: Doc
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " detached comment"
+.  .  .  .  .  TOKEN " Package fixtures is a collection of Go code samples."
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 1
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 75
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: CommentGroup {
-.  .  .  Roles: Comment,List
-.  .  .  Properties: {
-.  .  .  .  internalRole: Comments
+.  .  2: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 65
+.  .  .  .  Line: 2
+.  .  .  .  Col: 10
 .  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " detached comment 2 "
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 96
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Name
 .  .  .  }
 .  .  }
 .  .  3: CommentGroup {
@@ -64,12 +68,13 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN "
-	detached
-	mutiline
-"
+.  .  .  .  .  TOKEN " detached comment"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 75
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 122
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
@@ -83,9 +88,13 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN "go:generate echo directive"
+.  .  .  .  .  TOKEN " detached comment 2 "
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 96
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 149
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
@@ -99,9 +108,16 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " var block comment"
+.  .  .  .  .  TOKEN "
+	detached
+	mutiline
+"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 122
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 179
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
@@ -115,9 +131,13 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " a is a variable"
+.  .  .  .  .  TOKEN "go:generate echo directive"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 149
+.  .  .  .  .  .  Line: 13
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 207
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
@@ -131,100 +151,33 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " inline comment"
+.  .  .  .  .  TOKEN " var block comment"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 179
+.  .  .  .  .  .  Line: 15
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 240
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  8: CommentGroup {
-.  .  .  Roles: Comment,List
-.  .  .  Properties: {
-.  .  .  .  internalRole: Comments
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " foo is a sample function"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 261
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  9: CommentGroup {
-.  .  .  Roles: Comment,List
-.  .  .  Properties: {
-.  .  .  .  internalRole: Comments
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " function body comment"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 303
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  10: CommentGroup {
-.  .  .  Roles: Comment,List
-.  .  .  Properties: {
-.  .  .  .  internalRole: Comments
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " data is a sample struct"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 331
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 358
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " It's not very useful."
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 361
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  11: CommentGroup {
-.  .  .  Roles: Comment,List
-.  .  .  Properties: {
-.  .  .  .  internalRole: Comments
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: Comment {
-.  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " struct field comment"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 415
-.  .  .  .  .  .  internalRole: List
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  12: GenDecl {
+.  .  8: GenDecl {
 .  .  .  Roles: Declaration,Variable
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 200
+.  .  .  .  Line: 16
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 258
+.  .  .  .  Line: 20
+.  .  .  .  Col: 2
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 204
-.  .  .  .  Rparen: 258
 .  .  .  .  Tok: var
-.  .  .  .  TokPos: 200
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -237,8 +190,12 @@ File {
 .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  TOKEN " var block comment"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 179
+.  .  .  .  .  .  .  .  Line: 15
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Slash: 179
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -259,8 +216,12 @@ File {
 .  .  .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  .  .  TOKEN " a is a variable"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 207
+.  .  .  .  .  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Slash: 207
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
@@ -269,16 +230,24 @@ File {
 .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
 .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 227
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 227
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "int"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 229
+.  .  .  .  .  .  .  .  Line: 18
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 229
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -290,7 +259,31 @@ File {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: CommentGroup {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  TOKEN "b"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 234
+.  .  .  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
+.  .  .  .  .  .  .  TOKEN "int"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 236
+.  .  .  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: CommentGroup {
 .  .  .  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  internalRole: Comment
@@ -299,48 +292,112 @@ File {
 .  .  .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  .  .  TOKEN " inline comment"
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 240
+.  .  .  .  .  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Slash: 240
 .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
-.  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 234
-.  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Type
-.  .  .  .  .  .  .  TOKEN "int"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 236
-.  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  13: FuncDecl {
+.  .  9: CommentGroup {
+.  .  .  Roles: Comment,List
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " a is a variable"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 207
+.  .  .  .  .  .  Line: 17
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  10: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "int"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 229
+.  .  .  .  Line: 18
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  11: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "int"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 236
+.  .  .  .  Line: 19
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  12: CommentGroup {
+.  .  .  Roles: Comment,List
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " inline comment"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 240
+.  .  .  .  .  .  Line: 19
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  13: CommentGroup {
+.  .  .  Roles: Comment,List
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " foo is a sample function"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 261
+.  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  14: FuncDecl {
 .  .  .  Roles: Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Scope,Body,Function
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Lbrace: 300
-.  .  .  .  .  .  Rbrace: 328
-.  .  .  .  .  .  internalRole: Body
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: CommentGroup {
+.  .  .  .  0: CommentGroup {
 .  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Doc
@@ -349,25 +406,25 @@ File {
 .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  TOKEN " foo is a sample function"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 261
+.  .  .  .  .  .  .  .  Line: 22
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Slash: 261
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  2: Ident {
-.  .  .  .  .  Roles: Expression,Identifier,Function,Name
-.  .  .  .  .  TOKEN "foo"
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 294
-.  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: FuncType {
+.  .  .  .  1: FuncType {
 .  .  .  .  .  Roles: Expression,Function,Type
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 289
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Func: 289
 .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
@@ -381,15 +438,114 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
+.  .  .  .  2: Ident {
+.  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  TOKEN "foo"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 294
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: BlockStmt {
+.  .  .  .  .  Roles: Statement,Block,Scope,Body,Function
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 300
+.  .  .  .  .  .  Line: 23
+.  .  .  .  .  .  Col: 13
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 328
+.  .  .  .  .  .  Line: 25
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: Body
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  14: GenDecl {
+.  .  15: CommentGroup {
+.  .  .  Roles: Comment,List
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " function body comment"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 303
+.  .  .  .  .  .  Line: 24
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  16: CommentGroup {
+.  .  .  Roles: Comment,List
+.  .  .  Properties: {
+.  .  .  .  internalRole: Comments
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " data is a sample struct"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 331
+.  .  .  .  .  .  Line: 27
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 358
+.  .  .  .  .  .  Line: 28
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: Comment {
+.  .  .  .  .  Roles: Comment
+.  .  .  .  .  TOKEN " It's not very useful."
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 361
+.  .  .  .  .  .  Line: 29
+.  .  .  .  .  .  Col: 2
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  internalRole: List
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  17: GenDecl {
 .  .  .  Roles: Declaration,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 386
+.  .  .  .  Line: 30
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
-.  .  .  .  Rparen: 0
 .  .  .  .  Tok: type
-.  .  .  .  TokPos: 386
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -402,23 +558,35 @@ File {
 .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  TOKEN " data is a sample struct"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 331
+.  .  .  .  .  .  .  .  Line: 27
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Slash: 331
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: Comment {
 .  .  .  .  .  .  .  Roles: Comment
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 358
+.  .  .  .  .  .  .  .  Line: 28
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Slash: 358
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: Comment {
 .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  TOKEN " It's not very useful."
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 361
+.  .  .  .  .  .  .  .  Line: 29
+.  .  .  .  .  .  .  .  Col: 2
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Slash: 361
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -434,8 +602,12 @@ File {
 .  .  .  .  .  .  0: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  TOKEN "data"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 391
+.  .  .  .  .  .  .  .  Line: 30
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 391
 .  .  .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -460,7 +632,31 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: CommentGroup {
+.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 406
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 31
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
+.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
+.  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 408
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 31
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: CommentGroup {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Comment,List
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Comment
@@ -469,27 +665,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Comment {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Comment
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN " struct field comment"
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 415
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Line: 31
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Slash: 415
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Name
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 406
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
-.  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
-.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 408
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -502,52 +686,36 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  15: CommentGroup {
+.  .  18: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "string"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 408
+.  .  .  .  Line: 31
+.  .  .  .  Col: 5
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  }
+.  .  19: CommentGroup {
 .  .  .  Roles: Comment,List
 .  .  .  Properties: {
-.  .  .  .  internalRole: Doc
+.  .  .  .  internalRole: Comments
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: Comment {
 .  .  .  .  .  Roles: Comment
-.  .  .  .  .  TOKEN " Package fixtures is a collection of Go code samples."
+.  .  .  .  .  TOKEN " struct field comment"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 415
+.  .  .  .  .  .  Line: 31
+.  .  .  .  .  .  Col: 12
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Slash: 1
 .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  16: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 65
-.  .  .  .  internalRole: Name
-.  .  .  }
-.  .  }
-.  .  17: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "int"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 229
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  18: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "int"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 236
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  }
-.  .  19: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "string"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 408
-.  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
 .  }

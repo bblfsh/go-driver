@@ -8,13 +8,33 @@ File {
 .  .  Package: 1
 .  }
 .  Children: {
-.  .  0: GenDecl {
+.  .  0: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 9
+.  .  .  .  Line: 1
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
 .  .  .  Roles: Declaration
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 0
+.  .  .  .  Line: 1
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
-.  .  .  .  Rparen: 0
 .  .  .  .  Tok: import
-.  .  .  .  TokPos: 19
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
@@ -28,153 +48,13 @@ File {
 .  .  .  .  .  .  0: BasicLit {
 .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  .  .  TOKEN ""fmt""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 26
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  1: GenDecl {
-.  .  .  Roles: Declaration
-.  .  .  Properties: {
-.  .  .  .  Lparen: 40
-.  .  .  .  Rparen: 138
-.  .  .  .  Tok: import
-.  .  .  .  TokPos: 33
-.  .  .  .  internalRole: Decls
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""./local""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 43
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""bytes""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 54
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""github.com/bblfsh/bblfshd""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 63
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  .  .  TOKEN "."
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 92
-.  .  .  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""runtime""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 94
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  4: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  .  .  TOKEN "_"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 105
-.  .  .  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""runtime/debug""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 107
-.  .  .  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  5: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  .  .  TOKEN "str"
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 124
-.  .  .  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  .  .  TOKEN ""strings""
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 128
 .  .  .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -192,28 +72,202 @@ File {
 .  .  .  .  0: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  TOKEN ""fmt""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 26
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  3: ImportSpec {
-.  .  .  Roles: Import,Declaration
+.  .  3: GenDecl {
+.  .  .  Roles: Declaration
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 33
+.  .  .  .  Line: 5
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 138
+.  .  .  .  Line: 12
+.  .  .  .  Col: 2
+.  .  .  }
 .  .  .  Properties: {
-.  .  .  .  EndPos: 0
-.  .  .  .  internalRole: Imports
+.  .  .  .  Lparen: 40
+.  .  .  .  Tok: import
+.  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""./local""
+.  .  .  .  0: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 43
-.  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""./local""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""bytes""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""github.com/bblfsh/bblfshd""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
+.  .  .  .  .  .  .  TOKEN "."
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""runtime""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 94
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  4: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
+.  .  .  .  .  .  .  TOKEN "_"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 105
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""runtime/debug""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 107
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 5
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  5: ImportSpec {
+.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  EndPos: 0
+.  .  .  .  .  .  internalRole: Specs
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
+.  .  .  .  .  .  .  TOKEN "str"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 124
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 3
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  TOKEN ""strings""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
@@ -227,10 +281,14 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""bytes""
+.  .  .  .  .  TOKEN ""./local""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 54
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
@@ -245,10 +303,14 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""github.com/bblfsh/bblfshd""
+.  .  .  .  .  TOKEN ""bytes""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 63
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
@@ -261,20 +323,16 @@ File {
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Ident {
-.  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  TOKEN "."
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 92
-.  .  .  .  .  .  internalRole: Name
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: BasicLit {
+.  .  .  .  0: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""runtime""
+.  .  .  .  .  TOKEN ""github.com/bblfsh/bblfshd""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 94
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
@@ -289,18 +347,26 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Ident {
 .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  TOKEN "_"
+.  .  .  .  .  TOKEN "."
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 105
 .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""runtime/debug""
+.  .  .  .  .  TOKEN ""runtime""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 94
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 107
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
@@ -315,29 +381,63 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: Ident {
 .  .  .  .  .  Roles: Expression,Identifier,Import,Alias
-.  .  .  .  .  TOKEN "str"
+.  .  .  .  .  TOKEN "_"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 105
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 124
+.  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: BasicLit {
+.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  TOKEN ""runtime/debug""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 107
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 5
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  9: ImportSpec {
+.  .  .  Roles: Import,Declaration
+.  .  .  Properties: {
+.  .  .  .  EndPos: 0
+.  .  .  .  internalRole: Imports
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Ident {
+.  .  .  .  .  Roles: Expression,Identifier,Import,Alias
+.  .  .  .  .  TOKEN "str"
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 124
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: BasicLit {
 .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
 .  .  .  .  .  TOKEN ""strings""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 128
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 128
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  9: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 9
-.  .  .  .  internalRole: Name
 .  .  .  }
 .  .  }
 .  }
