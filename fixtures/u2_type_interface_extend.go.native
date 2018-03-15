@@ -1,0 +1,105 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Bar",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Incomplete": false,
+                                "Interface": 28,
+                                "Methods": {
+                                    "Closing": 45,
+                                    "List": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "Do",
+                                                    "NamePos": 40,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Func": 0,
+                                                "Params": {
+                                                    "Closing": 43,
+                                                    "Opening": 42,
+                                                    "type": "FieldList"
+                                                },
+                                                "type": "FuncType"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 37,
+                                    "type": "FieldList"
+                                },
+                                "type": "InterfaceType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Foo",
+                                "NamePos": 53,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Incomplete": false,
+                                "Interface": 57,
+                                "Methods": {
+                                    "Closing": 74,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Name": "Bar",
+                                                "NamePos": 70,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 67,
+                                    "type": "FieldList"
+                                },
+                                "type": "InterfaceType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 48,
+                    "type": "GenDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "type": "File"
+        }
+    }
+}
