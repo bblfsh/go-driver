@@ -1,0 +1,110 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls1",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 40,
+                                    "Opening": 39,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 33,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 68,
+                        "List": [
+                            {
+                                "Results": [
+                                    {
+                                        "Op": "&",
+                                        "OpPos": 78,
+                                        "X": {
+                                            "Lbrace": 87,
+                                            "Rbrace": 88,
+                                            "Type": {
+                                                "Name": "Testcls1",
+                                                "NamePos": 79,
+                                                "type": "Ident"
+                                            },
+                                            "type": "CompositeLit"
+                                        },
+                                        "type": "UnaryExpr"
+                                    }
+                                ],
+                                "Return": 71,
+                                "type": "ReturnStmt"
+                            }
+                        ],
+                        "Rbrace": 90,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc1",
+                        "NamePos": 47,
+                        "type": "Ident"
+                    },
+                    "Type": {
+                        "Func": 42,
+                        "Params": {
+                            "Closing": 56,
+                            "Opening": 55,
+                            "type": "FieldList"
+                        },
+                        "Results": {
+                            "Closing": 0,
+                            "List": [
+                                {
+                                    "Type": {
+                                        "Star": 58,
+                                        "X": {
+                                            "Name": "Testcls1",
+                                            "NamePos": 59,
+                                            "type": "Ident"
+                                        },
+                                        "type": "StarExpr"
+                                    },
+                                    "type": "Field"
+                                }
+                            ],
+                            "Opening": 0,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "type": "File"
+        }
+    }
+}

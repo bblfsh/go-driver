@@ -1,3 +1,4 @@
 package fixtures
 
-type Foo = Bar
+type Testtype1 struct {}
+type Testtype2 Testtype1

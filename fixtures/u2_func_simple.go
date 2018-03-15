@@ -1,5 +1,5 @@
 package fixtures
 
-func Foo(a int) int {
+func Testfnc1(a int, b string) int {
 	return a
 }

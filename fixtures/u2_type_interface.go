@@ -1,5 +1,5 @@
 package fixtures
 
-type Foo interface {
-	Bar()
+type Testiface interface {
+	Testfnc1()
 }

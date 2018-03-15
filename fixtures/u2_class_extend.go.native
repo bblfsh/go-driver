@@ -1,0 +1,91 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls1",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 41,
+                                    "Opening": 40,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 33,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls2",
+                                "NamePos": 48,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 71,
+                                    "List": [
+                                        {
+                                            "Type": {
+                                                "Name": "Bar",
+                                                "NamePos": 67,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 64,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 57,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 43,
+                    "type": "GenDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "Bar",
+                    "NamePos": 67,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
