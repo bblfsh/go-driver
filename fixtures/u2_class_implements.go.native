@@ -12,19 +12,40 @@
                         {
                             "Assign": 0,
                             "Name": {
-                                "Name": "Foo",
+                                "Name": "Testiface1",
                                 "NamePos": 24,
                                 "type": "Ident"
                             },
                             "Type": {
-                                "Fields": {
-                                    "Closing": 35,
-                                    "Opening": 34,
+                                "Incomplete": false,
+                                "Interface": 35,
+                                "Methods": {
+                                    "Closing": 58,
+                                    "List": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "Testfnc1",
+                                                    "NamePos": 47,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Func": 0,
+                                                "Params": {
+                                                    "Closing": 56,
+                                                    "Opening": 55,
+                                                    "type": "FieldList"
+                                                },
+                                                "type": "FuncType"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 44,
                                     "type": "FieldList"
                                 },
-                                "Incomplete": false,
-                                "Struct": 28,
-                                "type": "StructType"
+                                "type": "InterfaceType"
                             },
                             "type": "TypeSpec"
                         }
@@ -34,115 +55,111 @@
                     "type": "GenDecl"
                 },
                 {
-                    "Lparen": 42,
-                    "Rparen": 105,
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls1",
+                                "NamePos": 65,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 81,
+                                    "Opening": 80,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 74,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 60,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 112,
+                        "Rbrace": 113,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc1",
+                        "NamePos": 101,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 99,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "t",
+                                        "NamePos": 89,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Testcls1",
+                                    "NamePos": 91,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 88,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 83,
+                        "Params": {
+                            "Closing": 110,
+                            "Opening": 109,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
                     "Specs": [
                         {
                             "Names": [
                                 {
                                     "Name": "_",
-                                    "NamePos": 45,
+                                    "NamePos": 120,
                                     "type": "Ident"
                                 }
                             ],
                             "Type": {
-                                "Name": "Interf",
-                                "NamePos": 47,
+                                "Name": "Testiface1",
+                                "NamePos": 122,
                                 "type": "Ident"
                             },
                             "Values": [
                                 {
-                                    "Lbrace": 59,
-                                    "Rbrace": 60,
+                                    "Lbrace": 143,
+                                    "Rbrace": 144,
                                     "Type": {
-                                        "Name": "Foo",
-                                        "NamePos": 56,
+                                        "Name": "Testcls1",
+                                        "NamePos": 135,
                                         "type": "Ident"
                                     },
                                     "type": "CompositeLit"
                                 }
                             ],
                             "type": "ValueSpec"
-                        },
-                        {
-                            "Names": [
-                                {
-                                    "Name": "_",
-                                    "NamePos": 63,
-                                    "type": "Ident"
-                                }
-                            ],
-                            "Type": {
-                                "Name": "Interf",
-                                "NamePos": 65,
-                                "type": "Ident"
-                            },
-                            "Values": [
-                                {
-                                    "Op": "&",
-                                    "OpPos": 74,
-                                    "X": {
-                                        "Lbrace": 78,
-                                        "Rbrace": 79,
-                                        "Type": {
-                                            "Name": "Foo",
-                                            "NamePos": 75,
-                                            "type": "Ident"
-                                        },
-                                        "type": "CompositeLit"
-                                    },
-                                    "type": "UnaryExpr"
-                                }
-                            ],
-                            "type": "ValueSpec"
-                        },
-                        {
-                            "Names": [
-                                {
-                                    "Name": "_",
-                                    "NamePos": 82,
-                                    "type": "Ident"
-                                }
-                            ],
-                            "Type": {
-                                "Name": "Interf",
-                                "NamePos": 84,
-                                "type": "Ident"
-                            },
-                            "Values": [
-                                {
-                                    "Args": [
-                                        {
-                                            "Name": "nil",
-                                            "NamePos": 100,
-                                            "type": "Ident"
-                                        }
-                                    ],
-                                    "Ellipsis": 0,
-                                    "Fun": {
-                                        "Lparen": 93,
-                                        "Rparen": 98,
-                                        "X": {
-                                            "Star": 94,
-                                            "X": {
-                                                "Name": "Foo",
-                                                "NamePos": 95,
-                                                "type": "Ident"
-                                            },
-                                            "type": "StarExpr"
-                                        },
-                                        "type": "ParenExpr"
-                                    },
-                                    "Lparen": 99,
-                                    "Rparen": 103,
-                                    "type": "CallExpr"
-                                }
-                            ],
-                            "type": "ValueSpec"
                         }
                     ],
                     "Tok": "var",
-                    "TokPos": 38,
+                    "TokPos": 115,
                     "type": "GenDecl"
                 }
             ],
@@ -152,28 +169,6 @@
                 "type": "Ident"
             },
             "Package": 1,
-            "Unresolved": [
-                {
-                    "Name": "Interf",
-                    "NamePos": 47,
-                    "type": "Ident"
-                },
-                {
-                    "Name": "Interf",
-                    "NamePos": 65,
-                    "type": "Ident"
-                },
-                {
-                    "Name": "Interf",
-                    "NamePos": 84,
-                    "type": "Ident"
-                },
-                {
-                    "Name": "nil",
-                    "NamePos": 100,
-                    "type": "Ident"
-                }
-            ],
             "type": "File"
         }
     }

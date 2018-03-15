@@ -1,9 +1,6 @@
 package fixtures
 
-type Bar interface {
-	Do()
-}
-
-type Foo interface {
-	Bar
+type Testiface1 interface {}
+type Testiface2 interface {
+	Testiface1
 }

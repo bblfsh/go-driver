@@ -1,0 +1,146 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls1",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 40,
+                                    "Opening": 39,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 33,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 72,
+                        "Rbrace": 73,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc1",
+                        "NamePos": 61,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 59,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "f",
+                                        "NamePos": 49,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "testcls1",
+                                    "NamePos": 51,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 48,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 43,
+                        "Params": {
+                            "Closing": 70,
+                            "Opening": 69,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 104,
+                        "Rbrace": 105,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc1",
+                        "NamePos": 93,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 91,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "f",
+                                        "NamePos": 81,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Testcls2",
+                                    "NamePos": 83,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 80,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 75,
+                        "Params": {
+                            "Closing": 102,
+                            "Opening": 101,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "testcls1",
+                    "NamePos": 51,
+                    "type": "Ident"
+                },
+                {
+                    "Name": "Testcls2",
+                    "NamePos": 83,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

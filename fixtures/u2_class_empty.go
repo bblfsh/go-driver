@@ -1,3 +1,3 @@
 package fixtures
 
-type Foo struct{}
+type Testcls1 struct{}

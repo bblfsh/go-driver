@@ -9,39 +9,39 @@ File {
 .  }
 .  Children: {
 .  .  0: FuncDecl {
-.  .  .  Roles: Unannotated
+.  .  .  Roles: Declaration,Function
 .  .  .  Properties: {
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BlockStmt {
-.  .  .  .  .  Roles: Statement,Block,Body
+.  .  .  .  .  Roles: Statement,Block,Scope,Body,Function
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Lbrace: 30
-.  .  .  .  .  .  Rbrace: 31
+.  .  .  .  .  .  Lbrace: 35
+.  .  .  .  .  .  Rbrace: 36
 .  .  .  .  .  .  internalRole: Body
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  1: Ident {
-.  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  TOKEN "Foo"
+.  .  .  .  .  Roles: Expression,Identifier,Function,Name
+.  .  .  .  .  TOKEN "Testfnc1"
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  NamePos: 24
 .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: FuncType {
-.  .  .  .  .  Roles: Expression
+.  .  .  .  .  Roles: Expression,Function,Type
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Func: 19
 .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: FieldList {
-.  .  .  .  .  .  .  Roles: Unannotated
+.  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Closing: 28
-.  .  .  .  .  .  .  .  Opening: 27
+.  .  .  .  .  .  .  .  Closing: 33
+.  .  .  .  .  .  .  .  Opening: 32
 .  .  .  .  .  .  .  .  internalRole: Params
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }

@@ -1,3 +1,3 @@
 package fixtures
 
-func Foo() {}
+func Testfnc1() {}

@@ -10,22 +10,50 @@
                     "Rparen": 0,
                     "Specs": [
                         {
-                            "Assign": 28,
+                            "Assign": 0,
                             "Name": {
-                                "Name": "Foo",
+                                "Name": "Testtype1",
                                 "NamePos": 24,
                                 "type": "Ident"
                             },
                             "Type": {
-                                "Name": "Bar",
-                                "NamePos": 30,
-                                "type": "Ident"
+                                "Fields": {
+                                    "Closing": 42,
+                                    "Opening": 41,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 34,
+                                "type": "StructType"
                             },
                             "type": "TypeSpec"
                         }
                     ],
                     "Tok": "type",
                     "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testtype2",
+                                "NamePos": 49,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Name": "Testtype1",
+                                "NamePos": 59,
+                                "type": "Ident"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 44,
                     "type": "GenDecl"
                 }
             ],
@@ -35,13 +63,6 @@
                 "type": "Ident"
             },
             "Package": 1,
-            "Unresolved": [
-                {
-                    "Name": "Bar",
-                    "NamePos": 30,
-                    "type": "Ident"
-                }
-            ],
             "type": "File"
         }
     }

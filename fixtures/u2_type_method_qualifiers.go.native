@@ -1,0 +1,136 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testtype1",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Name": "int",
+                                "NamePos": 34,
+                                "type": "Ident"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 68,
+                        "Rbrace": 69,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "testfnc1",
+                        "NamePos": 57,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 55,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "f",
+                                        "NamePos": 44,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Testtype1",
+                                    "NamePos": 46,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 43,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 38,
+                        "Params": {
+                            "Closing": 66,
+                            "Opening": 65,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 101,
+                        "Rbrace": 102,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc2",
+                        "NamePos": 90,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 88,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "f",
+                                        "NamePos": 77,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Testtype1",
+                                    "NamePos": 79,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 76,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 71,
+                        "Params": {
+                            "Closing": 99,
+                            "Opening": 98,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 34,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}

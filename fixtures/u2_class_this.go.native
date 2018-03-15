@@ -1,0 +1,144 @@
+{
+    "status": "ok",
+    "language": "go",
+    "errors": [],
+    "ast": {
+        "GOAST": {
+            "Decls": [
+                {
+                    "Lparen": 0,
+                    "Rparen": 0,
+                    "Specs": [
+                        {
+                            "Assign": 0,
+                            "Name": {
+                                "Name": "Testcls1",
+                                "NamePos": 24,
+                                "type": "Ident"
+                            },
+                            "Type": {
+                                "Fields": {
+                                    "Closing": 49,
+                                    "List": [
+                                        {
+                                            "Names": [
+                                                {
+                                                    "Name": "a",
+                                                    "NamePos": 43,
+                                                    "type": "Ident"
+                                                }
+                                            ],
+                                            "Type": {
+                                                "Name": "int",
+                                                "NamePos": 45,
+                                                "type": "Ident"
+                                            },
+                                            "type": "Field"
+                                        }
+                                    ],
+                                    "Opening": 40,
+                                    "type": "FieldList"
+                                },
+                                "Incomplete": false,
+                                "Struct": 33,
+                                "type": "StructType"
+                            },
+                            "type": "TypeSpec"
+                        }
+                    ],
+                    "Tok": "type",
+                    "TokPos": 19,
+                    "type": "GenDecl"
+                },
+                {
+                    "Body": {
+                        "Lbrace": 83,
+                        "List": [
+                            {
+                                "Lhs": [
+                                    {
+                                        "Sel": {
+                                            "Name": "a",
+                                            "NamePos": 91,
+                                            "type": "Ident"
+                                        },
+                                        "X": {
+                                            "Name": "this",
+                                            "NamePos": 86,
+                                            "type": "Ident"
+                                        },
+                                        "type": "SelectorExpr"
+                                    }
+                                ],
+                                "Rhs": [
+                                    {
+                                        "Kind": "INT",
+                                        "Value": "1",
+                                        "ValuePos": 95,
+                                        "type": "BasicLit"
+                                    }
+                                ],
+                                "Tok": "=",
+                                "TokPos": 93,
+                                "type": "AssignStmt"
+                            }
+                        ],
+                        "Rbrace": 97,
+                        "type": "BlockStmt"
+                    },
+                    "Name": {
+                        "Name": "Testfnc1",
+                        "NamePos": 72,
+                        "type": "Ident"
+                    },
+                    "Recv": {
+                        "Closing": 70,
+                        "List": [
+                            {
+                                "Names": [
+                                    {
+                                        "Name": "this",
+                                        "NamePos": 57,
+                                        "type": "Ident"
+                                    }
+                                ],
+                                "Type": {
+                                    "Name": "Testcls1",
+                                    "NamePos": 62,
+                                    "type": "Ident"
+                                },
+                                "type": "Field"
+                            }
+                        ],
+                        "Opening": 56,
+                        "type": "FieldList"
+                    },
+                    "Type": {
+                        "Func": 51,
+                        "Params": {
+                            "Closing": 81,
+                            "Opening": 80,
+                            "type": "FieldList"
+                        },
+                        "type": "FuncType"
+                    },
+                    "type": "FuncDecl"
+                }
+            ],
+            "Name": {
+                "Name": "fixtures",
+                "NamePos": 9,
+                "type": "Ident"
+            },
+            "Package": 1,
+            "Unresolved": [
+                {
+                    "Name": "int",
+                    "NamePos": 45,
+                    "type": "Ident"
+                }
+            ],
+            "type": "File"
+        }
+    }
+}
