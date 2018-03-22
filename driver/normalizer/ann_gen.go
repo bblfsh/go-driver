@@ -3,58 +3,54 @@
 package normalizer
 
 import (
-	"github.com/bblfsh/go-driver/driver/goast"
-	"gopkg.in/bblfsh/sdk.v1/uast"
-	. "gopkg.in/bblfsh/sdk.v1/uast/ann"
+	"gopkg.in/bblfsh/sdk.v1/uast/role"
 )
 
-// all AST nodes that implements ast.Expr
-var AnnotationRulesExpr = On(goast.File).Descendants(
-	On(goast.ArrayType).Roles(uast.Expression),
-	On(goast.BadExpr).Roles(uast.Expression),
-	On(goast.BasicLit).Roles(uast.Expression),
-	On(goast.BinaryExpr).Roles(uast.Expression),
-	On(goast.CallExpr).Roles(uast.Expression),
-	On(goast.ChanType).Roles(uast.Expression),
-	On(goast.CompositeLit).Roles(uast.Expression),
-	On(goast.Ellipsis).Roles(uast.Expression),
-	On(goast.FuncLit).Roles(uast.Expression),
-	On(goast.FuncType).Roles(uast.Expression),
-	On(goast.Ident).Roles(uast.Expression),
-	On(goast.IndexExpr).Roles(uast.Expression),
-	On(goast.InterfaceType).Roles(uast.Expression),
-	On(goast.KeyValueExpr).Roles(uast.Expression),
-	On(goast.MapType).Roles(uast.Expression),
-	On(goast.ParenExpr).Roles(uast.Expression),
-	On(goast.SelectorExpr).Roles(uast.Expression),
-	On(goast.SliceExpr).Roles(uast.Expression),
-	On(goast.StarExpr).Roles(uast.Expression),
-	On(goast.StructType).Roles(uast.Expression),
-	On(goast.TypeAssertExpr).Roles(uast.Expression),
-	On(goast.UnaryExpr).Roles(uast.Expression),
-)
+var typeRoles = map[string][]role.Role{
+	// all AST nodes that implements ast.Expr
+	"ArrayType":      {role.Expression},
+	"BadExpr":        {role.Expression},
+	"BasicLit":       {role.Expression},
+	"BinaryExpr":     {role.Expression},
+	"CallExpr":       {role.Expression},
+	"ChanType":       {role.Expression},
+	"CompositeLit":   {role.Expression},
+	"Ellipsis":       {role.Expression},
+	"FuncLit":        {role.Expression},
+	"FuncType":       {role.Expression},
+	"Ident":          {role.Expression},
+	"IndexExpr":      {role.Expression},
+	"InterfaceType":  {role.Expression},
+	"KeyValueExpr":   {role.Expression},
+	"MapType":        {role.Expression},
+	"ParenExpr":      {role.Expression},
+	"SelectorExpr":   {role.Expression},
+	"SliceExpr":      {role.Expression},
+	"StarExpr":       {role.Expression},
+	"StructType":     {role.Expression},
+	"TypeAssertExpr": {role.Expression},
+	"UnaryExpr":      {role.Expression},
 
-// all AST nodes that implements ast.Stmt
-var AnnotationRulesStmt = On(goast.File).Descendants(
-	On(goast.AssignStmt).Roles(uast.Statement),
-	On(goast.BadStmt).Roles(uast.Statement),
-	On(goast.BlockStmt).Roles(uast.Statement),
-	On(goast.BranchStmt).Roles(uast.Statement),
-	On(goast.CaseClause).Roles(uast.Statement),
-	On(goast.CommClause).Roles(uast.Statement),
-	On(goast.DeclStmt).Roles(uast.Statement),
-	On(goast.DeferStmt).Roles(uast.Statement),
-	On(goast.EmptyStmt).Roles(uast.Statement),
-	On(goast.ExprStmt).Roles(uast.Statement),
-	On(goast.ForStmt).Roles(uast.Statement),
-	On(goast.GoStmt).Roles(uast.Statement),
-	On(goast.IfStmt).Roles(uast.Statement),
-	On(goast.IncDecStmt).Roles(uast.Statement),
-	On(goast.LabeledStmt).Roles(uast.Statement),
-	On(goast.RangeStmt).Roles(uast.Statement),
-	On(goast.ReturnStmt).Roles(uast.Statement),
-	On(goast.SelectStmt).Roles(uast.Statement),
-	On(goast.SendStmt).Roles(uast.Statement),
-	On(goast.SwitchStmt).Roles(uast.Statement),
-	On(goast.TypeSwitchStmt).Roles(uast.Statement),
-)
+	// all AST nodes that implements ast.Stmt
+	"AssignStmt":     {role.Statement},
+	"BadStmt":        {role.Statement},
+	"BlockStmt":      {role.Statement},
+	"BranchStmt":     {role.Statement},
+	"CaseClause":     {role.Statement},
+	"CommClause":     {role.Statement},
+	"DeclStmt":       {role.Statement},
+	"DeferStmt":      {role.Statement},
+	"EmptyStmt":      {role.Statement},
+	"ExprStmt":       {role.Statement},
+	"ForStmt":        {role.Statement},
+	"GoStmt":         {role.Statement},
+	"IfStmt":         {role.Statement},
+	"IncDecStmt":     {role.Statement},
+	"LabeledStmt":    {role.Statement},
+	"RangeStmt":      {role.Statement},
+	"ReturnStmt":     {role.Statement},
+	"SelectStmt":     {role.Statement},
+	"SendStmt":       {role.Statement},
+	"SwitchStmt":     {role.Statement},
+	"TypeSwitchStmt": {role.Statement},
+}
