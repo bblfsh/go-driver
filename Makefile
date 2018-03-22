@@ -12,7 +12,6 @@ build-native-internal:
 generate:
 	cd driver; \
 	go run ./gen/gen.go && \
-	go fmt ./goast/goast.go && \
 	go fmt ./normalizer/ann_gen.go
 
 include .sdk/Makefile

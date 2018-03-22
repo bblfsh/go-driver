@@ -69,6 +69,7 @@ var (
 	scopeType  = reflect.TypeOf((*ast.Scope)(nil))
 	objectType = reflect.TypeOf((*ast.Object)(nil))
 	tokenType  = reflect.TypeOf(token.Token(0))
+	nodeType   = reflect.TypeOf((*ast.Node)(nil)).Elem()
 )
 
 // convValue takes an AST node/value and converts it to a tree of generic types
@@ -101,18 +102,20 @@ func convValue(v reflect.Value) interface{} {
 				// do not follow scope and object pointers - need a graph structure for it
 				continue
 			}
-			o := convValue(v.Field(i))
-			if o == nil {
-				continue
-			}
-			m[f.Name] = o
+			m[f.Name] = convValue(v.Field(i))
 		}
 		return m
 	case reflect.Ptr, reflect.Interface:
 		if v.IsNil() {
 			return nil
 		}
-		return convValue(v.Elem())
+		o := convValue(v.Elem())
+		if m, ok := o.(map[string]interface{}); ok && v.Type().Implements(nodeType) {
+			n := v.Interface().(ast.Node)
+			m["start"] = n.Pos()
+			m["end"] = n.End()
+		}
+		return o
 	}
 	return v.Interface()
 }

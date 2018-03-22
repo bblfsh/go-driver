@@ -21,10 +21,22 @@ func TestNative(t *testing.T) {
 	require.Empty(t, resp.Errors)
 	exp := astRoot{
 		AST: map[string]interface{}{
-			"Package": token.Pos(1), "type": "File",
+			"Doc": nil,
 			"Name": map[string]interface{}{
-				"type": "Ident", "NamePos": token.Pos(9), "Name": "main",
+				"type":    "Ident",
+				"NamePos": token.Pos(9),
+				"Name":    "main",
+				"start":   token.Pos(9),
+				"end":     token.Pos(13),
 			},
+			"Imports":    nil,
+			"Comments":   nil,
+			"end":        token.Pos(13),
+			"type":       "File",
+			"Package":    token.Pos(1),
+			"Decls":      nil,
+			"Unresolved": nil,
+			"start":      token.Pos(1),
 		},
 	}
 	require.Equal(t, exp, resp.AST)
