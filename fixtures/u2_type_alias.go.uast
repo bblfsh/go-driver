@@ -4,12 +4,50 @@ Errors:
 UAST: 
 File {
 .  Roles: File
+.  StartPosition: {
+.  .  Offset: 1
+.  .  Line: 1
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 70
+.  .  Line: 5
+.  .  Col: 1
+.  }
 .  Properties: {
 .  .  Package: 1
 .  }
 .  Children: {
-.  .  0: GenDecl {
+.  .  0: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 9
+.  .  .  .  Line: 1
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 17
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
 .  .  .  Roles: Declaration,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 43
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -20,14 +58,34 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Type
 .  .  .  .  .  .  .  TOKEN "Testtype1"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 33
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 24
 .  .  .  .  .  .  .  .  internalRole: Name
@@ -35,6 +93,16 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  .  1: StructType {
 .  .  .  .  .  .  .  Roles: Expression,Type
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 34
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 17
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Incomplete: false
 .  .  .  .  .  .  .  .  Struct: 34
@@ -42,6 +110,16 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
 .  .  .  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 24
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  Closing: 42
 .  .  .  .  .  .  .  .  .  .  Opening: 41
@@ -54,8 +132,18 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  1: GenDecl {
+.  .  2: GenDecl {
 .  .  .  Roles: Declaration,Type
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 44
+.  .  .  .  Line: 4
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 70
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -66,14 +154,34 @@ File {
 .  .  .  Children: {
 .  .  .  .  0: TypeSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 7
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 70
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Assign: 59
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Type
 .  .  .  .  .  .  .  TOKEN "Testtype2"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 58
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 16
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 49
 .  .  .  .  .  .  .  .  internalRole: Name
@@ -82,6 +190,16 @@ File {
 .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  Roles: Expression,Identifier,Type
 .  .  .  .  .  .  .  TOKEN "Testtype1"
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 61
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 19
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 70
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  NamePos: 61
 .  .  .  .  .  .  .  .  internalRole: Type
@@ -89,14 +207,6 @@ File {
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 9
-.  .  .  .  internalRole: Name
 .  .  .  }
 .  .  }
 .  }

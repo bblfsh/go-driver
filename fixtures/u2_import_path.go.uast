@@ -4,12 +4,50 @@ Errors:
 UAST: 
 File {
 .  Roles: File
+.  StartPosition: {
+.  .  Offset: 1
+.  .  Line: 1
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 63
+.  .  Line: 5
+.  .  Col: 1
+.  }
 .  Properties: {
 .  .  Package: 1
 .  }
 .  Children: {
-.  .  0: GenDecl {
+.  .  0: Ident {
+.  .  .  Roles: Expression,Identifier
+.  .  .  TOKEN "fixtures"
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 9
+.  .  .  .  Line: 1
+.  .  .  .  Col: 10
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 17
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  NamePos: 9
+.  .  .  .  internalRole: Name
+.  .  .  }
+.  .  }
+.  .  1: GenDecl {
 .  .  .  Roles: Declaration
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 19
+.  .  .  .  Line: 3
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 46
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -19,15 +57,35 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Roles: Declaration,Import
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 46
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
 .  .  .  .  .  .  .  TOKEN ""github.com/foo/bar""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 46
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
 .  .  .  .  .  .  .  .  ValuePos: 26
@@ -38,8 +96,56 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  1: GenDecl {
+.  .  2: ImportSpec {
+.  .  .  Roles: Declaration,Import
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 26
+.  .  .  .  Line: 3
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 46
+.  .  .  .  Line: 4
+.  .  .  .  Col: 1
+.  .  .  }
+.  .  .  Properties: {
+.  .  .  .  EndPos: 0
+.  .  .  .  internalRole: Imports
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: BasicLit {
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
+.  .  .  .  .  TOKEN ""github.com/foo/bar""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 46
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  Kind: STRING
+.  .  .  .  .  .  ValuePos: 26
+.  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
+.  .  }
+.  .  3: GenDecl {
 .  .  .  Roles: Declaration
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 47
+.  .  .  .  Line: 4
+.  .  .  .  Col: 2
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 63
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 0
 .  .  .  .  Rparen: 0
@@ -49,15 +155,35 @@ File {
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ImportSpec {
-.  .  .  .  .  Roles: Import,Declaration
+.  .  .  .  .  Roles: Declaration,Import
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: BasicLit {
-.  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
 .  .  .  .  .  .  .  TOKEN ""./local""
+.  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 9
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
 .  .  .  .  .  .  .  .  ValuePos: 54
@@ -68,48 +194,42 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: ImportSpec {
-.  .  .  Roles: Import,Declaration
+.  .  4: ImportSpec {
+.  .  .  Roles: Declaration,Import
+.  .  .  StartPosition: {
+.  .  .  .  Offset: 54
+.  .  .  .  Line: 4
+.  .  .  .  Col: 9
+.  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 63
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
 .  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
-.  .  .  .  .  TOKEN ""github.com/foo/bar""
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 26
-.  .  .  .  .  .  internalRole: Path
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: ImportSpec {
-.  .  .  Roles: Import,Declaration
-.  .  .  Properties: {
-.  .  .  .  EndPos: 0
-.  .  .  .  internalRole: Imports
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: BasicLit {
-.  .  .  .  .  Roles: Expression,Literal,Primitive,String,Import,Pathname
+.  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
 .  .  .  .  .  TOKEN ""./local""
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 54
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 63
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
 .  .  .  .  .  .  ValuePos: 54
 .  .  .  .  .  .  internalRole: Path
 .  .  .  .  .  }
 .  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  4: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  Properties: {
-.  .  .  .  NamePos: 9
-.  .  .  .  internalRole: Name
 .  .  .  }
 .  .  }
 .  }

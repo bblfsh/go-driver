@@ -4,6 +4,16 @@ Errors:
 UAST: 
 File {
 .  Roles: File
+.  StartPosition: {
+.  .  Offset: 1
+.  .  Line: 1
+.  .  Col: 2
+.  }
+.  EndPosition: {
+.  .  Offset: 94
+.  .  Line: 12
+.  .  Col: 1
+.  }
 .  Properties: {
 .  .  Package: 1
 .  }
@@ -16,7 +26,13 @@ File {
 .  .  .  .  Line: 1
 .  .  .  .  Col: 10
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 17
+.  .  .  .  Line: 2
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 9
 .  .  .  .  internalRole: Name
 .  .  .  }
 .  .  }
@@ -28,31 +44,49 @@ File {
 .  .  .  .  Col: 2
 .  .  .  }
 .  .  .  EndPosition: {
-.  .  .  .  Offset: 93
-.  .  .  .  Line: 11
-.  .  .  .  Col: 2
+.  .  .  .  Offset: 94
+.  .  .  .  Line: 12
+.  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
 .  .  .  .  Lparen: 23
+.  .  .  .  Rparen: 93
 .  .  .  .  Tok: var
+.  .  .  .  TokPos: 19
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
 .  .  .  .  0: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 26
+.  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 33
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "a"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 26
 .  .  .  .  .  .  .  .  Line: 4
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 27
+.  .  .  .  .  .  .  .  Line: 4
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 26
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -64,7 +98,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 4
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 33
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 28
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -72,19 +112,35 @@ File {
 .  .  .  .  }
 .  .  .  .  1: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 35
+.  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "b"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 35
 .  .  .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 36
+.  .  .  .  .  .  .  .  Line: 5
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 35
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -96,7 +152,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 5
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 41
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 37
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -104,19 +166,35 @@ File {
 .  .  .  .  }
 .  .  .  .  2: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 43
+.  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "c"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 43
 .  .  .  .  .  .  .  .  Line: 6
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 44
+.  .  .  .  .  .  .  .  Line: 6
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 43
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -128,7 +206,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 6
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 49
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 45
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -136,19 +220,35 @@ File {
 .  .  .  .  }
 .  .  .  .  3: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 51
+.  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 56
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "d"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 51
 .  .  .  .  .  .  .  .  Line: 7
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 52
+.  .  .  .  .  .  .  .  Line: 7
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 51
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -160,7 +260,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 7
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 56
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 53
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -168,19 +274,35 @@ File {
 .  .  .  .  }
 .  .  .  .  4: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 58
+.  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 67
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "e"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 58
 .  .  .  .  .  .  .  .  Line: 8
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 59
+.  .  .  .  .  .  .  .  Line: 8
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 58
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -192,7 +314,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 8
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 67
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 60
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -200,19 +328,35 @@ File {
 .  .  .  .  }
 .  .  .  .  5: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 69
+.  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 78
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "f"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 69
 .  .  .  .  .  .  .  .  Line: 9
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 70
+.  .  .  .  .  .  .  .  Line: 9
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 69
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -224,7 +368,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 9
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 78
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 71
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -232,19 +382,35 @@ File {
 .  .  .  .  }
 .  .  .  .  6: ValueSpec {
 .  .  .  .  .  Roles: Declaration
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 80
+.  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  Col: 3
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  Col: 1
+.  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
 .  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Variable,Name
+.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
 .  .  .  .  .  .  .  TOKEN "i"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 80
 .  .  .  .  .  .  .  .  Line: 10
 .  .  .  .  .  .  .  .  Col: 3
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 81
+.  .  .  .  .  .  .  .  Line: 10
+.  .  .  .  .  .  .  .  Col: 4
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 80
 .  .  .  .  .  .  .  .  internalRole: Names
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -256,7 +422,13 @@ File {
 .  .  .  .  .  .  .  .  Line: 10
 .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  Offset: 92
+.  .  .  .  .  .  .  .  Line: 11
+.  .  .  .  .  .  .  .  Col: 1
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  NamePos: 82
 .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
@@ -272,7 +444,13 @@ File {
 .  .  .  .  Line: 4
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 33
+.  .  .  .  Line: 5
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 28
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -284,7 +462,13 @@ File {
 .  .  .  .  Line: 5
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 41
+.  .  .  .  Line: 6
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 37
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -296,7 +480,13 @@ File {
 .  .  .  .  Line: 6
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 49
+.  .  .  .  Line: 7
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 45
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -308,7 +498,13 @@ File {
 .  .  .  .  Line: 7
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 56
+.  .  .  .  Line: 8
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 53
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -320,7 +516,13 @@ File {
 .  .  .  .  Line: 8
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 67
+.  .  .  .  Line: 9
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 60
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -332,7 +534,13 @@ File {
 .  .  .  .  Line: 9
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 78
+.  .  .  .  Line: 10
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 71
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }
@@ -344,7 +552,13 @@ File {
 .  .  .  .  Line: 10
 .  .  .  .  Col: 5
 .  .  .  }
+.  .  .  EndPosition: {
+.  .  .  .  Offset: 92
+.  .  .  .  Line: 11
+.  .  .  .  Col: 1
+.  .  .  }
 .  .  .  Properties: {
+.  .  .  .  NamePos: 82
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
 .  .  }

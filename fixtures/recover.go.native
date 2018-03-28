@@ -4,6 +4,7 @@
     "errors": [],
     "ast": {
         "GOAST": {
+            "Comments": null,
             "Decls": [
                 {
                     "Body": {
@@ -11,6 +12,7 @@
                         "List": [
                             {
                                 "Call": {
+                                    "Args": null,
                                     "Ellipsis": 0,
                                     "Fun": {
                                         "Body": {
@@ -25,6 +27,8 @@
                                                                     {
                                                                         "Name": "_",
                                                                         "NamePos": 84,
+                                                                        "end": 85,
+                                                                        "start": 84,
                                                                         "type": "Ident"
                                                                     }
                                                                 ],
@@ -32,15 +36,21 @@
                                                                     {
                                                                         "Name": "r",
                                                                         "NamePos": 88,
+                                                                        "end": 89,
+                                                                        "start": 88,
                                                                         "type": "Ident"
                                                                     }
                                                                 ],
                                                                 "Tok": "=",
                                                                 "TokPos": 86,
+                                                                "end": 89,
+                                                                "start": 84,
                                                                 "type": "AssignStmt"
                                                             }
                                                         ],
                                                         "Rbrace": 92,
+                                                        "end": 93,
+                                                        "start": 79,
                                                         "type": "BlockStmt"
                                                     },
                                                     "Cond": {
@@ -49,63 +59,95 @@
                                                         "X": {
                                                             "Name": "r",
                                                             "NamePos": 70,
+                                                            "end": 71,
+                                                            "start": 70,
                                                             "type": "Ident"
                                                         },
                                                         "Y": {
                                                             "Name": "nil",
                                                             "NamePos": 75,
+                                                            "end": 78,
+                                                            "start": 75,
                                                             "type": "Ident"
                                                         },
+                                                        "end": 78,
+                                                        "start": 70,
                                                         "type": "BinaryExpr"
                                                     },
+                                                    "Else": null,
                                                     "If": 51,
                                                     "Init": {
                                                         "Lhs": [
                                                             {
                                                                 "Name": "r",
                                                                 "NamePos": 54,
+                                                                "end": 55,
+                                                                "start": 54,
                                                                 "type": "Ident"
                                                             }
                                                         ],
                                                         "Rhs": [
                                                             {
+                                                                "Args": null,
                                                                 "Ellipsis": 0,
                                                                 "Fun": {
                                                                     "Name": "recover",
                                                                     "NamePos": 59,
+                                                                    "end": 66,
+                                                                    "start": 59,
                                                                     "type": "Ident"
                                                                 },
                                                                 "Lparen": 66,
                                                                 "Rparen": 67,
+                                                                "end": 68,
+                                                                "start": 59,
                                                                 "type": "CallExpr"
                                                             }
                                                         ],
                                                         "Tok": ":=",
                                                         "TokPos": 56,
+                                                        "end": 68,
+                                                        "start": 54,
                                                         "type": "AssignStmt"
                                                     },
+                                                    "end": 93,
+                                                    "start": 51,
                                                     "type": "IfStmt"
                                                 }
                                             ],
                                             "Rbrace": 95,
+                                            "end": 96,
+                                            "start": 47,
                                             "type": "BlockStmt"
                                         },
                                         "Type": {
                                             "Func": 40,
                                             "Params": {
                                                 "Closing": 45,
+                                                "List": null,
                                                 "Opening": 44,
+                                                "end": 46,
+                                                "start": 44,
                                                 "type": "FieldList"
                                             },
+                                            "Results": null,
+                                            "end": 46,
+                                            "start": 40,
                                             "type": "FuncType"
                                         },
+                                        "end": 96,
+                                        "start": 40,
                                         "type": "FuncLit"
                                     },
                                     "Lparen": 96,
                                     "Rparen": 97,
+                                    "end": 98,
+                                    "start": 40,
                                     "type": "CallExpr"
                                 },
                                 "Defer": 34,
+                                "end": 98,
+                                "start": 34,
                                 "type": "DeferStmt"
                             },
                             {
@@ -115,6 +157,8 @@
                                             "Kind": "STRING",
                                             "Value": "\"stop!\"",
                                             "ValuePos": 106,
+                                            "end": 113,
+                                            "start": 106,
                                             "type": "BasicLit"
                                         }
                                     ],
@@ -122,38 +166,62 @@
                                     "Fun": {
                                         "Name": "panic",
                                         "NamePos": 100,
+                                        "end": 105,
+                                        "start": 100,
                                         "type": "Ident"
                                     },
                                     "Lparen": 105,
                                     "Rparen": 113,
+                                    "end": 114,
+                                    "start": 100,
                                     "type": "CallExpr"
                                 },
+                                "end": 114,
+                                "start": 100,
                                 "type": "ExprStmt"
                             }
                         ],
                         "Rbrace": 115,
+                        "end": 116,
+                        "start": 31,
                         "type": "BlockStmt"
                     },
+                    "Doc": null,
                     "Name": {
                         "Name": "fail",
                         "NamePos": 24,
+                        "end": 28,
+                        "start": 24,
                         "type": "Ident"
                     },
+                    "Recv": null,
                     "Type": {
                         "Func": 19,
                         "Params": {
                             "Closing": 29,
+                            "List": null,
                             "Opening": 28,
+                            "end": 30,
+                            "start": 28,
                             "type": "FieldList"
                         },
+                        "Results": null,
+                        "end": 30,
+                        "start": 19,
                         "type": "FuncType"
                     },
+                    "end": 116,
+                    "start": 19,
                     "type": "FuncDecl"
                 }
             ],
+            "Doc": null,
+            "Imports": null,
             "Name": {
                 "Name": "fixtures",
                 "NamePos": 9,
+                "end": 17,
+                "start": 9,
                 "type": "Ident"
             },
             "Package": 1,
@@ -161,19 +229,27 @@
                 {
                     "Name": "recover",
                     "NamePos": 59,
+                    "end": 66,
+                    "start": 59,
                     "type": "Ident"
                 },
                 {
                     "Name": "nil",
                     "NamePos": 75,
+                    "end": 78,
+                    "start": 75,
                     "type": "Ident"
                 },
                 {
                     "Name": "panic",
                     "NamePos": 100,
+                    "end": 105,
+                    "start": 100,
                     "type": "Ident"
                 }
             ],
+            "end": 116,
+            "start": 1,
             "type": "File"
         }
     }

@@ -4,24 +4,35 @@
     "errors": [],
     "ast": {
         "GOAST": {
+            "Comments": null,
             "Decls": [
                 {
+                    "Doc": null,
                     "Lparen": 22,
                     "Rparen": 31,
                     "Specs": [
                         {
+                            "Comment": null,
+                            "Doc": null,
                             "EndPos": 0,
+                            "Name": null,
                             "Path": {
                                 "Kind": "STRING",
                                 "Value": "\"fmt\"",
                                 "ValuePos": 25,
+                                "end": 30,
+                                "start": 25,
                                 "type": "BasicLit"
                             },
+                            "end": 30,
+                            "start": 25,
                             "type": "ImportSpec"
                         }
                     ],
                     "Tok": "import",
                     "TokPos": 15,
+                    "end": 32,
+                    "start": 15,
                     "type": "GenDecl"
                 },
                 {
@@ -35,6 +46,8 @@
                                             "Kind": "STRING",
                                             "Value": "\"Hello World!\"",
                                             "ValuePos": 61,
+                                            "end": 75,
+                                            "start": 61,
                                             "type": "BasicLit"
                                         }
                                     ],
@@ -43,57 +56,91 @@
                                         "Sel": {
                                             "Name": "Println",
                                             "NamePos": 53,
+                                            "end": 60,
+                                            "start": 53,
                                             "type": "Ident"
                                         },
                                         "X": {
                                             "Name": "fmt",
                                             "NamePos": 49,
+                                            "end": 52,
+                                            "start": 49,
                                             "type": "Ident"
                                         },
+                                        "end": 60,
+                                        "start": 49,
                                         "type": "SelectorExpr"
                                     },
                                     "Lparen": 60,
                                     "Rparen": 75,
+                                    "end": 76,
+                                    "start": 49,
                                     "type": "CallExpr"
                                 },
+                                "end": 76,
+                                "start": 49,
                                 "type": "ExprStmt"
                             }
                         ],
                         "Rbrace": 77,
+                        "end": 78,
+                        "start": 46,
                         "type": "BlockStmt"
                     },
+                    "Doc": null,
                     "Name": {
                         "Name": "main",
                         "NamePos": 39,
+                        "end": 43,
+                        "start": 39,
                         "type": "Ident"
                     },
+                    "Recv": null,
                     "Type": {
                         "Func": 34,
                         "Params": {
                             "Closing": 44,
+                            "List": null,
                             "Opening": 43,
+                            "end": 45,
+                            "start": 43,
                             "type": "FieldList"
                         },
+                        "Results": null,
+                        "end": 45,
+                        "start": 34,
                         "type": "FuncType"
                     },
+                    "end": 78,
+                    "start": 34,
                     "type": "FuncDecl"
                 }
             ],
+            "Doc": null,
             "Imports": [
                 {
+                    "Comment": null,
+                    "Doc": null,
                     "EndPos": 0,
+                    "Name": null,
                     "Path": {
                         "Kind": "STRING",
                         "Value": "\"fmt\"",
                         "ValuePos": 25,
+                        "end": 30,
+                        "start": 25,
                         "type": "BasicLit"
                     },
+                    "end": 30,
+                    "start": 25,
                     "type": "ImportSpec"
                 }
             ],
             "Name": {
                 "Name": "main",
                 "NamePos": 9,
+                "end": 13,
+                "start": 9,
                 "type": "Ident"
             },
             "Package": 1,
@@ -101,9 +148,13 @@
                 {
                     "Name": "fmt",
                     "NamePos": 49,
+                    "end": 52,
+                    "start": 49,
                     "type": "Ident"
                 }
             ],
+            "end": 78,
+            "start": 1,
             "type": "File"
         }
     }
