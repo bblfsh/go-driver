@@ -4,16 +4,22 @@
     "errors": [],
     "ast": {
         "GOAST": {
+            "Comments": null,
             "Decls": [
                 {
+                    "Doc": null,
                     "Lparen": 0,
                     "Rparen": 0,
                     "Specs": [
                         {
                             "Assign": 0,
+                            "Comment": null,
+                            "Doc": null,
                             "Name": {
                                 "Name": "Testcls1",
                                 "NamePos": 24,
+                                "end": 32,
+                                "start": 24,
                                 "type": "Ident"
                             },
                             "Type": {
@@ -21,33 +27,50 @@
                                     "Closing": 49,
                                     "List": [
                                         {
+                                            "Comment": null,
+                                            "Doc": null,
                                             "Names": [
                                                 {
                                                     "Name": "a",
                                                     "NamePos": 43,
+                                                    "end": 44,
+                                                    "start": 43,
                                                     "type": "Ident"
                                                 }
                                             ],
+                                            "Tag": null,
                                             "Type": {
                                                 "Name": "int",
                                                 "NamePos": 45,
+                                                "end": 48,
+                                                "start": 45,
                                                 "type": "Ident"
                                             },
+                                            "end": 48,
+                                            "start": 43,
                                             "type": "Field"
                                         }
                                     ],
                                     "Opening": 40,
+                                    "end": 50,
+                                    "start": 40,
                                     "type": "FieldList"
                                 },
                                 "Incomplete": false,
                                 "Struct": 33,
+                                "end": 50,
+                                "start": 33,
                                 "type": "StructType"
                             },
+                            "end": 50,
+                            "start": 24,
                             "type": "TypeSpec"
                         }
                     ],
                     "Tok": "type",
                     "TokPos": 19,
+                    "end": 50,
+                    "start": 19,
                     "type": "GenDecl"
                 },
                 {
@@ -60,13 +83,19 @@
                                         "Sel": {
                                             "Name": "a",
                                             "NamePos": 91,
+                                            "end": 92,
+                                            "start": 91,
                                             "type": "Ident"
                                         },
                                         "X": {
                                             "Name": "this",
                                             "NamePos": 86,
+                                            "end": 90,
+                                            "start": 86,
                                             "type": "Ident"
                                         },
+                                        "end": 92,
+                                        "start": 86,
                                         "type": "SelectorExpr"
                                     }
                                 ],
@@ -75,53 +104,81 @@
                                         "Kind": "INT",
                                         "Value": "1",
                                         "ValuePos": 95,
+                                        "end": 96,
+                                        "start": 95,
                                         "type": "BasicLit"
                                     }
                                 ],
                                 "Tok": "=",
                                 "TokPos": 93,
+                                "end": 96,
+                                "start": 86,
                                 "type": "AssignStmt"
                             }
                         ],
                         "Rbrace": 97,
+                        "end": 98,
+                        "start": 83,
                         "type": "BlockStmt"
                     },
+                    "Doc": null,
                     "Name": {
                         "Name": "Testfnc1",
                         "NamePos": 72,
+                        "end": 80,
+                        "start": 72,
                         "type": "Ident"
                     },
                     "Recv": {
                         "Closing": 70,
                         "List": [
                             {
+                                "Comment": null,
+                                "Doc": null,
                                 "Names": [
                                     {
                                         "Name": "this",
                                         "NamePos": 57,
+                                        "end": 61,
+                                        "start": 57,
                                         "type": "Ident"
                                     }
                                 ],
+                                "Tag": null,
                                 "Type": {
                                     "Name": "Testcls1",
                                     "NamePos": 62,
+                                    "end": 70,
+                                    "start": 62,
                                     "type": "Ident"
                                 },
+                                "end": 70,
+                                "start": 57,
                                 "type": "Field"
                             }
                         ],
                         "Opening": 56,
+                        "end": 71,
+                        "start": 56,
                         "type": "FieldList"
                     },
                     "Type": {
                         "Func": 51,
                         "Params": {
                             "Closing": 81,
+                            "List": null,
                             "Opening": 80,
+                            "end": 82,
+                            "start": 80,
                             "type": "FieldList"
                         },
+                        "Results": null,
+                        "end": 82,
+                        "start": 51,
                         "type": "FuncType"
                     },
+                    "end": 98,
+                    "start": 51,
                     "type": "FuncDecl"
                 },
                 {
@@ -134,13 +191,19 @@
                                         "Sel": {
                                             "Name": "a",
                                             "NamePos": 150,
+                                            "end": 151,
+                                            "start": 150,
                                             "type": "Ident"
                                         },
                                         "X": {
                                             "Name": "otherthis",
                                             "NamePos": 140,
+                                            "end": 149,
+                                            "start": 140,
                                             "type": "Ident"
                                         },
+                                        "end": 151,
+                                        "start": 140,
                                         "type": "SelectorExpr"
                                     }
                                 ],
@@ -149,59 +212,91 @@
                                         "Kind": "INT",
                                         "Value": "2",
                                         "ValuePos": 154,
+                                        "end": 155,
+                                        "start": 154,
                                         "type": "BasicLit"
                                     }
                                 ],
                                 "Tok": "=",
                                 "TokPos": 152,
+                                "end": 155,
+                                "start": 140,
                                 "type": "AssignStmt"
                             }
                         ],
                         "Rbrace": 156,
+                        "end": 157,
+                        "start": 137,
                         "type": "BlockStmt"
                     },
+                    "Doc": null,
                     "Name": {
                         "Name": "Testfnc2",
                         "NamePos": 126,
+                        "end": 134,
+                        "start": 126,
                         "type": "Ident"
                     },
                     "Recv": {
                         "Closing": 124,
                         "List": [
                             {
+                                "Comment": null,
+                                "Doc": null,
                                 "Names": [
                                     {
                                         "Name": "otherthis",
                                         "NamePos": 106,
+                                        "end": 115,
+                                        "start": 106,
                                         "type": "Ident"
                                     }
                                 ],
+                                "Tag": null,
                                 "Type": {
                                     "Name": "Testcls1",
                                     "NamePos": 116,
+                                    "end": 124,
+                                    "start": 116,
                                     "type": "Ident"
                                 },
+                                "end": 124,
+                                "start": 106,
                                 "type": "Field"
                             }
                         ],
                         "Opening": 105,
+                        "end": 125,
+                        "start": 105,
                         "type": "FieldList"
                     },
                     "Type": {
                         "Func": 100,
                         "Params": {
                             "Closing": 135,
+                            "List": null,
                             "Opening": 134,
+                            "end": 136,
+                            "start": 134,
                             "type": "FieldList"
                         },
+                        "Results": null,
+                        "end": 136,
+                        "start": 100,
                         "type": "FuncType"
                     },
+                    "end": 157,
+                    "start": 100,
                     "type": "FuncDecl"
                 }
             ],
+            "Doc": null,
+            "Imports": null,
             "Name": {
                 "Name": "fixtures",
                 "NamePos": 9,
+                "end": 17,
+                "start": 9,
                 "type": "Ident"
             },
             "Package": 1,
@@ -209,9 +304,13 @@
                 {
                     "Name": "int",
                     "NamePos": 45,
+                    "end": 48,
+                    "start": 45,
                     "type": "Ident"
                 }
             ],
+            "end": 157,
+            "start": 1,
             "type": "File"
         }
     }
