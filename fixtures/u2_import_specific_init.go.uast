@@ -14,11 +14,16 @@ File {
 .  .  Line: 4
 .  .  Col: 1
 .  }
-.  Properties: {
-.  .  Package: 1
-.  }
 .  Children: {
-.  .  0: Ident {
+.  .  0: ast:Position {
+.  .  .  Properties: {
+.  .  .  .  col: 2
+.  .  .  .  internalRole: Package
+.  .  .  .  line: 1
+.  .  .  .  off: 1
+.  .  .  }
+.  .  }
+.  .  1: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "fixtures"
 .  .  .  StartPosition: {
@@ -32,11 +37,20 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 9
 .  .  .  .  internalRole: Name
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 10
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  off: 9
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  1: GenDecl {
+.  .  2: GenDecl {
 .  .  .  Roles: Declaration
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 19
@@ -49,14 +63,35 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  Lparen: 0
-.  .  .  .  Rparen: 0
 .  .  .  .  Tok: import
-.  .  .  .  TokPos: 19
 .  .  .  .  internalRole: Decls
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: ImportSpec {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 1
+.  .  .  .  .  .  internalRole: Lparen
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  off: 0
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 1
+.  .  .  .  .  .  internalRole: Rparen
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  off: 0
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  2: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 2
+.  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  line: 3
+.  .  .  .  .  .  off: 19
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  3: ImportSpec {
 .  .  .  .  .  Roles: Declaration,Import
 .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  Offset: 26
@@ -69,11 +104,18 @@ File {
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  EndPos: 0
 .  .  .  .  .  .  internalRole: Specs
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  internalRole: EndPos
+.  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  Roles: Alias,Expression,Identifier,Import
 .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  StartPosition: {
@@ -87,11 +129,20 @@ File {
 .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  NamePos: 26
 .  .  .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  off: 26
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  2: BasicLit {
 .  .  .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
 .  .  .  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  .  .  StartPosition: {
@@ -106,15 +157,24 @@ File {
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  ValuePos: 28
 .  .  .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  off: 28
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: ImportSpec {
+.  .  3: ImportSpec {
 .  .  .  Roles: Declaration,Import
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 26
@@ -127,11 +187,18 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  EndPos: 0
 .  .  .  .  internalRole: Imports
 .  .  .  }
 .  .  .  Children: {
-.  .  .  .  0: Ident {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 1
+.  .  .  .  .  .  internalRole: EndPos
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  off: 0
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  .  1: Ident {
 .  .  .  .  .  Roles: Alias,Expression,Identifier,Import
 .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  StartPosition: {
@@ -145,11 +212,20 @@ File {
 .  .  .  .  .  .  Col: 10
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 26
 .  .  .  .  .  .  internalRole: Name
 .  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  off: 26
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  }
 .  .  .  .  }
-.  .  .  .  1: BasicLit {
+.  .  .  .  2: BasicLit {
 .  .  .  .  .  Roles: Expression,Import,Literal,Pathname,Primitive,String
 .  .  .  .  .  TOKEN ""fmt""
 .  .  .  .  .  StartPosition: {
@@ -164,8 +240,17 @@ File {
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
 .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  ValuePos: 28
 .  .  .  .  .  .  internalRole: Path
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  off: 28
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  }

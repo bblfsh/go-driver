@@ -14,11 +14,16 @@ File {
 .  .  Line: 26
 .  .  Col: 1
 .  }
-.  Properties: {
-.  .  Package: 1
-.  }
 .  Children: {
-.  .  0: Ident {
+.  .  0: ast:Position {
+.  .  .  Properties: {
+.  .  .  .  col: 2
+.  .  .  .  internalRole: Package
+.  .  .  .  line: 1
+.  .  .  .  off: 1
+.  .  .  }
+.  .  }
+.  .  1: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "fixtures"
 .  .  .  StartPosition: {
@@ -32,11 +37,20 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 9
 .  .  .  .  internalRole: Name
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 10
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  off: 9
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  1: FuncDecl {
+.  .  2: FuncDecl {
 .  .  .  Roles: Declaration,Function
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 19
@@ -65,11 +79,18 @@ File {
 .  .  .  .  .  .  Col: 13
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Func: 19
 .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: FieldList {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 2
+.  .  .  .  .  .  .  .  internalRole: Func
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  off: 19
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: FieldList {
 .  .  .  .  .  .  .  Roles: ArgsList
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 28
@@ -82,9 +103,25 @@ File {
 .  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Closing: 29
-.  .  .  .  .  .  .  .  Opening: 28
 .  .  .  .  .  .  .  .  internalRole: Params
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  internalRole: Closing
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  off: 29
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  internalRole: Opening
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  off: 28
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  }
@@ -103,8 +140,17 @@ File {
 .  .  .  .  .  .  Col: 11
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  NamePos: 24
 .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  }
+.  .  .  .  .  Children: {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  off: 24
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
 .  .  .  .  .  }
 .  .  .  .  }
 .  .  .  .  2: BlockStmt {
@@ -120,12 +166,26 @@ File {
 .  .  .  .  .  .  Col: 1
 .  .  .  .  .  }
 .  .  .  .  .  Properties: {
-.  .  .  .  .  .  Lbrace: 31
-.  .  .  .  .  .  Rbrace: 308
 .  .  .  .  .  .  internalRole: Body
 .  .  .  .  .  }
 .  .  .  .  .  Children: {
-.  .  .  .  .  .  0: DeclStmt {
+.  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 14
+.  .  .  .  .  .  .  .  internalRole: Lbrace
+.  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  off: 31
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  col: 2
+.  .  .  .  .  .  .  .  internalRole: Rbrace
+.  .  .  .  .  .  .  .  line: 25
+.  .  .  .  .  .  .  .  off: 308
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  }
+.  .  .  .  .  .  2: DeclStmt {
 .  .  .  .  .  .  .  Roles: Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 34
@@ -154,14 +214,35 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lparen: 0
-.  .  .  .  .  .  .  .  .  .  Rparen: 0
 .  .  .  .  .  .  .  .  .  .  Tok: var
-.  .  .  .  .  .  .  .  .  .  TokPos: 34
 .  .  .  .  .  .  .  .  .  .  internalRole: Decl
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ValueSpec {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 4
+.  .  .  .  .  .  .  .  .  .  .  .  off: 34
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  3: ValueSpec {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Declaration
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 38
@@ -191,8 +272,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 38
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Names
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 38
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  1: MapType {
@@ -208,11 +298,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Map: 40
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Map
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 40
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -226,11 +323,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 19
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 44
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 44
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -244,8 +350,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 51
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 20
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 51
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
@@ -256,7 +371,7 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: AssignStmt {
+.  .  .  .  .  .  3: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 56
@@ -269,7 +384,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 58
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -280,7 +394,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 5
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  off: 58
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -294,11 +416,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 56
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  off: 56
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: CallExpr {
+.  .  .  .  .  .  .  .  3: CallExpr {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Call,Expression,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 60
@@ -311,13 +442,34 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Ellipsis: 0
-.  .  .  .  .  .  .  .  .  .  Lparen: 64
-.  .  .  .  .  .  .  .  .  .  Rparen: 79
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Ellipsis
+.  .  .  .  .  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  off: 64
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 26
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  off: 79
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Callee,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "make"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -331,11 +483,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 60
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 60
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: MapType {
+.  .  .  .  .  .  .  .  .  .  4: MapType {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Argument,Expression,Map,Positional,Type
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 65
@@ -348,11 +509,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Map: 65
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Map
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 65
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -366,11 +534,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 22
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 69
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 69
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -384,8 +561,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 76
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 76
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -394,7 +580,7 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  2: AssignStmt {
+.  .  .  .  .  .  4: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 82
@@ -407,7 +593,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 84
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -418,7 +603,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 5
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  off: 84
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -432,11 +625,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 82
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  off: 82
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: CallExpr {
+.  .  .  .  .  .  .  .  3: CallExpr {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Call,Expression,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 86
@@ -449,13 +651,34 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Ellipsis: 0
-.  .  .  .  .  .  .  .  .  .  Lparen: 90
-.  .  .  .  .  .  .  .  .  .  Rparen: 108
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Ellipsis
+.  .  .  .  .  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  off: 90
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 29
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rparen
+.  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  off: 108
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Callee,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "make"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -469,11 +692,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 86
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 86
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: MapType {
+.  .  .  .  .  .  .  .  .  .  4: MapType {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Argument,Expression,Map,Positional,Type
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 91
@@ -486,11 +718,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Map: 91
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Map
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 91
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -504,11 +743,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 22
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 95
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 16
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 95
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -522,13 +770,22 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 26
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 102
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 102
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  2: BasicLit {
+.  .  .  .  .  .  .  .  .  .  5: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Argument,Expression,Literal,Number,Positional,Primitive
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "3"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -543,15 +800,24 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
-.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 107
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 28
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 107
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  3: AssignStmt {
+.  .  .  .  .  .  5: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 111
@@ -564,7 +830,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 113
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -575,7 +840,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 5
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  off: 113
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -589,11 +862,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 111
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  off: 111
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: CompositeLit {
+.  .  .  .  .  .  .  .  3: CompositeLit {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Literal,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 115
@@ -606,12 +888,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrace: 129
-.  .  .  .  .  .  .  .  .  .  Rbrace: 148
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: MapType {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 21
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  off: 129
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 9
+.  .  .  .  .  .  .  .  .  .  .  .  off: 148
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: MapType {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Map,Type
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 115
@@ -624,11 +920,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Map: 115
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Type
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Map
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 115
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "string"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -642,11 +945,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 17
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 119
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 119
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Entry,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "int"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -660,13 +972,22 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 126
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 126
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: KeyValueExpr {
+.  .  .  .  .  .  .  .  .  .  3: KeyValueExpr {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 133
@@ -679,11 +1000,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Colon: 136
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Elts
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Colon
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 136
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Key,Literal,Primitive,String
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -698,11 +1026,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 133
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 133
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  .  2: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Primitive,Value
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "1"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -717,13 +1054,22 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 138
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 138
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  2: KeyValueExpr {
+.  .  .  .  .  .  .  .  .  .  4: KeyValueExpr {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 141
@@ -736,11 +1082,18 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 16
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Colon: 142
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Elts
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Colon
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 142
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier,Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "x"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -754,11 +1107,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 141
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 141
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  .  .  2: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Number,Primitive,Value
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "2"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -773,8 +1135,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 144
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Value
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 15
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 144
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -783,7 +1154,7 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  4: AssignStmt {
+.  .  .  .  .  .  6: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Declaration,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 152
@@ -796,7 +1167,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 154
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -807,7 +1177,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 5
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  off: 154
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -821,11 +1199,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 152
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  off: 152
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: IndexExpr {
+.  .  .  .  .  .  .  .  3: IndexExpr {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 157
@@ -838,12 +1225,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrack: 158
-.  .  .  .  .  .  .  .  .  .  Rbrack: 162
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  off: 158
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  off: 162
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -857,11 +1258,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 9
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 157
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 8
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 157
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  3: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
 .  .  .  .  .  .  .  .  .  .  .  TOKEN ""a""
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -876,15 +1286,24 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 159
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Index
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 10
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 159
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  5: AssignStmt {
+.  .  .  .  .  .  7: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 165
@@ -897,7 +1316,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 174
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -908,7 +1326,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: IndexExpr {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  off: 174
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: IndexExpr {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Left
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 165
@@ -921,12 +1347,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrack: 166
-.  .  .  .  .  .  .  .  .  .  Rbrack: 172
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 4
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  off: 166
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 10
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  off: 172
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -940,11 +1380,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 165
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 165
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: BasicLit {
+.  .  .  .  .  .  .  .  .  .  3: BasicLit {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Literal,Primitive,String
 .  .  .  .  .  .  .  .  .  .  .  TOKEN ""foo""
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -959,13 +1408,22 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
 .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
-.  .  .  .  .  .  .  .  .  .  .  .  ValuePos: 167
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Index
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 5
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: ValuePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 167
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: BinaryExpr {
+.  .  .  .  .  .  .  .  3: BinaryExpr {
 .  .  .  .  .  .  .  .  .  Roles: Add,Arithmetic,Assignment,Binary,Expression,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 176
@@ -978,7 +1436,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  OpPos: 178
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
@@ -989,7 +1446,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 16
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: OpPos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  off: 178
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1003,11 +1468,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 176
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 176
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  2: CallExpr {
+.  .  .  .  .  .  .  .  .  .  3: CallExpr {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Binary,Call,Expression,Right
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 180
@@ -1020,13 +1494,34 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: 0
-.  .  .  .  .  .  .  .  .  .  .  .  Lparen: 183
-.  .  .  .  .  .  .  .  .  .  .  .  Rparen: 185
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Y
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Ellipsis
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 1
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 0
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 21
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lparen
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 183
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rparen
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 185
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Callee,Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "len"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1040,11 +1535,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 21
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 180
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Fun
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 180
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  4: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Argument,Expression,Identifier,Positional
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1058,8 +1562,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 23
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 184
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Args
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 22
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 184
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1068,7 +1581,7 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  6: AssignStmt {
+.  .  .  .  .  .  8: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Declaration,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 189
@@ -1081,7 +1594,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 195
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -1092,7 +1604,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  off: 195
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1106,11 +1626,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 189
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  off: 189
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "ok"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1124,11 +1653,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 192
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  off: 192
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  3: IndexExpr {
+.  .  .  .  .  .  .  .  4: IndexExpr {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Right
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 198
@@ -1141,12 +1679,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrack: 199
-.  .  .  .  .  .  .  .  .  .  Rbrack: 201
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  off: 199
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 15
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrack
+.  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  off: 201
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1160,11 +1712,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 13
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 198
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 198
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  TOKEN "x"
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1178,15 +1739,24 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 15
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  NamePos: 200
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Index
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 200
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  7: AssignStmt {
+.  .  .  .  .  .  9: AssignStmt {
 .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 204
@@ -1199,7 +1769,6 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  TokPos: 209
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
@@ -1210,7 +1779,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 8
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 15
+.  .  .  .  .  .  .  .  .  .  off: 209
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1224,11 +1801,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 4
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 204
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 15
+.  .  .  .  .  .  .  .  .  .  .  .  off: 204
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1242,11 +1828,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 7
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 207
 .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 15
+.  .  .  .  .  .  .  .  .  .  .  .  off: 207
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  3: Ident {
+.  .  .  .  .  .  .  .  4: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1260,11 +1855,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 211
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 10
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 15
+.  .  .  .  .  .  .  .  .  .  .  .  off: 211
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  4: Ident {
+.  .  .  .  .  .  .  .  5: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  TOKEN "ok"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1278,13 +1882,22 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 214
 .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 13
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 15
+.  .  .  .  .  .  .  .  .  .  .  .  off: 214
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  8: RangeStmt {
+.  .  .  .  .  .  10: RangeStmt {
 .  .  .  .  .  .  .  Roles: For,Iterator,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 219
@@ -1297,13 +1910,27 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  For: 219
 .  .  .  .  .  .  .  .  Tok: :=
-.  .  .  .  .  .  .  .  TokPos: 225
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  internalRole: For
+.  .  .  .  .  .  .  .  .  .  line: 17
+.  .  .  .  .  .  .  .  .  .  off: 219
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 17
+.  .  .  .  .  .  .  .  .  .  off: 225
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,For,Identifier,Iterator,Key
 .  .  .  .  .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1317,11 +1944,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 223
 .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 17
+.  .  .  .  .  .  .  .  .  .  .  .  off: 223
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1335,11 +1971,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 19
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 234
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 18
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 17
+.  .  .  .  .  .  .  .  .  .  .  .  off: 234
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: BlockStmt {
+.  .  .  .  .  .  .  .  4: BlockStmt {
 .  .  .  .  .  .  .  .  .  Roles: Block,Body,For,Scope,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 236
@@ -1352,12 +1997,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrace: 236
-.  .  .  .  .  .  .  .  .  .  Rbrace: 265
 .  .  .  .  .  .  .  .  .  .  internalRole: Body
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: AssignStmt {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 20
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 17
+.  .  .  .  .  .  .  .  .  .  .  .  off: 236
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 20
+.  .  .  .  .  .  .  .  .  .  .  .  off: 265
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: AssignStmt {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Declaration,Statement
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 240
@@ -1370,7 +2029,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  TokPos: 242
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
@@ -1381,7 +2039,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 6
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 242
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1395,11 +2061,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 240
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 240
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  2: IndexExpr {
+.  .  .  .  .  .  .  .  .  .  .  .  3: IndexExpr {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Offset: 245
@@ -1412,12 +2087,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: 246
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrack: 248
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 10
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrack
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 246
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrack
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 248
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1431,11 +2120,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 10
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 245
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 245
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1449,15 +2147,24 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 247
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Index
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 18
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 247
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  1: AssignStmt {
+.  .  .  .  .  .  .  .  .  .  3: AssignStmt {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 252
@@ -1470,7 +2177,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  TokPos: 257
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
@@ -1481,7 +2187,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 19
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 257
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1495,11 +2209,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 252
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 19
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 252
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1513,11 +2236,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 255
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 19
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 255
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  4: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1531,11 +2263,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 259
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 19
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 259
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  4: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  5: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1549,8 +2290,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 262
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 19
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 262
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1559,7 +2309,7 @@ File {
 .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  9: RangeStmt {
+.  .  .  .  .  .  11: RangeStmt {
 .  .  .  .  .  .  .  Roles: For,Iterator,Statement
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 269
@@ -1572,13 +2322,27 @@ File {
 .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  For: 269
 .  .  .  .  .  .  .  .  Tok: :=
-.  .  .  .  .  .  .  .  TokPos: 278
 .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: Ident {
+.  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  internalRole: For
+.  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  off: 269
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 12
+.  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  off: 278
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,For,Identifier,Iterator,Key
 .  .  .  .  .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1592,11 +2356,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 273
 .  .  .  .  .  .  .  .  .  .  internalRole: Key
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  off: 273
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,For,Identifier,Iterator,Value
 .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1610,11 +2383,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 11
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 276
 .  .  .  .  .  .  .  .  .  .  internalRole: Value
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 10
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  off: 276
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  4: Ident {
 .  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
 .  .  .  .  .  .  .  .  .  TOKEN "m"
 .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1628,11 +2410,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 22
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  NamePos: 287
 .  .  .  .  .  .  .  .  .  .  internalRole: X
 .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 21
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  off: 287
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  3: BlockStmt {
+.  .  .  .  .  .  .  .  5: BlockStmt {
 .  .  .  .  .  .  .  .  .  Roles: Block,Body,For,Scope,Statement
 .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  Offset: 289
@@ -1645,12 +2436,26 @@ File {
 .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  Lbrace: 289
-.  .  .  .  .  .  .  .  .  .  Rbrace: 306
 .  .  .  .  .  .  .  .  .  .  internalRole: Body
 .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: AssignStmt {
+.  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 23
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 22
+.  .  .  .  .  .  .  .  .  .  .  .  off: 289
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  col: 3
+.  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rbrace
+.  .  .  .  .  .  .  .  .  .  .  .  line: 24
+.  .  .  .  .  .  .  .  .  .  .  .  off: 306
+.  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  2: AssignStmt {
 .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Statement
 .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  .  .  .  .  Offset: 293
@@ -1663,7 +2468,6 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  TokPos: 298
 .  .  .  .  .  .  .  .  .  .  .  .  internalRole: List
 .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  Children: {
@@ -1674,7 +2478,15 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Op
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  1: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 9
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: TokPos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 298
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1688,11 +2500,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 5
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 293
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 4
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 293
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  2: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Left
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "_"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1706,11 +2527,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 8
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 296
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Lhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 7
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 296
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  3: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  4: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "k"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1724,11 +2554,20 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 12
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 300
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 11
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 300
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  .  .  4: Ident {
+.  .  .  .  .  .  .  .  .  .  .  .  5: Ident {
 .  .  .  .  .  .  .  .  .  .  .  .  .  Roles: Assignment,Binary,Expression,Identifier,Right
 .  .  .  .  .  .  .  .  .  .  .  .  .  TOKEN "v"
 .  .  .  .  .  .  .  .  .  .  .  .  .  StartPosition: {
@@ -1742,8 +2581,17 @@ File {
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  Col: 1
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: 303
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: Rhs
+.  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  0: ast:Position {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  col: 14
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  line: 23
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  off: 303
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  .  .  .  .  }
@@ -1756,7 +2604,7 @@ File {
 .  .  .  .  }
 .  .  .  }
 .  .  }
-.  .  2: Ident {
+.  .  3: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "string"
 .  .  .  StartPosition: {
@@ -1770,11 +2618,20 @@ File {
 .  .  .  .  Col: 19
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 44
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 13
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 4
+.  .  .  .  .  .  off: 44
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  3: Ident {
+.  .  4: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "int"
 .  .  .  StartPosition: {
@@ -1788,11 +2645,20 @@ File {
 .  .  .  .  Col: 1
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 51
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 20
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 4
+.  .  .  .  .  .  off: 51
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  4: Ident {
+.  .  5: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "make"
 .  .  .  StartPosition: {
@@ -1806,11 +2672,20 @@ File {
 .  .  .  .  Col: 11
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 60
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 7
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 5
+.  .  .  .  .  .  off: 60
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  5: Ident {
+.  .  6: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "string"
 .  .  .  StartPosition: {
@@ -1824,11 +2699,20 @@ File {
 .  .  .  .  Col: 22
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 69
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 16
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 5
+.  .  .  .  .  .  off: 69
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  6: Ident {
+.  .  7: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "int"
 .  .  .  StartPosition: {
@@ -1842,11 +2726,20 @@ File {
 .  .  .  .  Col: 26
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 76
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 23
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 5
+.  .  .  .  .  .  off: 76
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  7: Ident {
+.  .  8: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "make"
 .  .  .  StartPosition: {
@@ -1860,11 +2753,20 @@ File {
 .  .  .  .  Col: 11
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 86
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 7
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 6
+.  .  .  .  .  .  off: 86
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  8: Ident {
+.  .  9: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "string"
 .  .  .  StartPosition: {
@@ -1878,11 +2780,20 @@ File {
 .  .  .  .  Col: 22
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 95
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 16
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 6
+.  .  .  .  .  .  off: 95
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  9: Ident {
+.  .  10: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "int"
 .  .  .  StartPosition: {
@@ -1896,11 +2807,20 @@ File {
 .  .  .  .  Col: 26
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 102
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 23
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 6
+.  .  .  .  .  .  off: 102
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  10: Ident {
+.  .  11: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "string"
 .  .  .  StartPosition: {
@@ -1914,11 +2834,20 @@ File {
 .  .  .  .  Col: 17
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 119
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 11
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 7
+.  .  .  .  .  .  off: 119
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  11: Ident {
+.  .  12: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "int"
 .  .  .  StartPosition: {
@@ -1932,11 +2861,20 @@ File {
 .  .  .  .  Col: 21
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 126
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 18
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 7
+.  .  .  .  .  .  off: 126
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  12: Ident {
+.  .  13: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "len"
 .  .  .  StartPosition: {
@@ -1950,11 +2888,20 @@ File {
 .  .  .  .  Col: 21
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 180
 .  .  .  .  internalRole: Unresolved
 .  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 18
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 12
+.  .  .  .  .  .  off: 180
+.  .  .  .  .  }
+.  .  .  .  }
+.  .  .  }
 .  .  }
-.  .  13: Ident {
+.  .  14: Ident {
 .  .  .  Roles: Expression,Identifier
 .  .  .  TOKEN "x"
 .  .  .  StartPosition: {
@@ -1968,8 +2915,17 @@ File {
 .  .  .  .  Col: 15
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  NamePos: 200
 .  .  .  .  internalRole: Unresolved
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: ast:Position {
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 14
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 14
+.  .  .  .  .  .  off: 200
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  }

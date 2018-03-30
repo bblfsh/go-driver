@@ -3,263 +3,756 @@
     "language": "go",
     "errors": [],
     "ast": {
-        "GOAST": {
-            "Comments": null,
-            "Decls": [
-                {
-                    "Body": {
-                        "Lbrace": 35,
-                        "List": [
-                            {
-                                "Decl": {
-                                    "Doc": null,
-                                    "Lparen": 0,
-                                    "Rparen": 0,
-                                    "Specs": [
-                                        {
-                                            "Comment": null,
-                                            "Doc": null,
-                                            "Names": [
-                                                {
-                                                    "Name": "a",
-                                                    "NamePos": 42,
-                                                    "end": 43,
-                                                    "start": 42,
-                                                    "type": "Ident"
-                                                }
-                                            ],
-                                            "Type": {
-                                                "Star": 44,
-                                                "X": {
-                                                    "Name": "int",
-                                                    "NamePos": 45,
-                                                    "end": 48,
-                                                    "start": 45,
-                                                    "type": "Ident"
-                                                },
-                                                "end": 48,
-                                                "start": 44,
-                                                "type": "StarExpr"
-                                            },
-                                            "Values": null,
-                                            "end": 48,
-                                            "start": 42,
-                                            "type": "ValueSpec"
-                                        }
-                                    ],
-                                    "Tok": "var",
-                                    "TokPos": 38,
-                                    "end": 48,
-                                    "start": 38,
-                                    "type": "GenDecl"
+        "@end": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 88
+        },
+        "@start": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "@type": "File",
+        "Comments": null,
+        "Decls": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 88
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 19
+                },
+                "@type": "FuncDecl",
+                "Body": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 88
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 35
+                    },
+                    "@type": "BlockStmt",
+                    "Lbrace": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 35
+                    },
+                    "List": [
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 48
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 38
+                            },
+                            "@type": "DeclStmt",
+                            "Decl": {
+                                "@end": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 48
                                 },
-                                "end": 48,
-                                "start": 38,
-                                "type": "DeclStmt"
-                            },
-                            {
-                                "Lhs": [
+                                "@start": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 38
+                                },
+                                "@type": "GenDecl",
+                                "Doc": null,
+                                "Lparen": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 0
+                                },
+                                "Rparen": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 0
+                                },
+                                "Specs": [
                                     {
-                                        "Name": "b",
-                                        "NamePos": 50,
-                                        "end": 51,
-                                        "start": 50,
-                                        "type": "Ident"
-                                    }
-                                ],
-                                "Rhs": [
-                                    {
-                                        "Kind": "INT",
-                                        "Value": "0",
-                                        "ValuePos": 55,
-                                        "end": 56,
-                                        "start": 55,
-                                        "type": "BasicLit"
-                                    }
-                                ],
-                                "Tok": ":=",
-                                "TokPos": 52,
-                                "end": 56,
-                                "start": 50,
-                                "type": "AssignStmt"
-                            },
-                            {
-                                "Lhs": [
-                                    {
-                                        "Name": "a",
-                                        "NamePos": 58,
-                                        "end": 59,
-                                        "start": 58,
-                                        "type": "Ident"
-                                    }
-                                ],
-                                "Rhs": [
-                                    {
-                                        "Op": "&",
-                                        "OpPos": 62,
-                                        "X": {
-                                            "Name": "b",
-                                            "NamePos": 63,
-                                            "end": 64,
-                                            "start": 63,
-                                            "type": "Ident"
+                                        "@end": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 48
                                         },
-                                        "end": 64,
-                                        "start": 62,
-                                        "type": "UnaryExpr"
-                                    }
-                                ],
-                                "Tok": "=",
-                                "TokPos": 60,
-                                "end": 64,
-                                "start": 58,
-                                "type": "AssignStmt"
-                            },
-                            {
-                                "Lhs": [
-                                    {
-                                        "Star": 66,
-                                        "X": {
-                                            "Name": "a",
-                                            "NamePos": 67,
-                                            "end": 68,
-                                            "start": 67,
-                                            "type": "Ident"
+                                        "@start": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 42
                                         },
-                                        "end": 68,
-                                        "start": 66,
-                                        "type": "StarExpr"
-                                    }
-                                ],
-                                "Rhs": [
-                                    {
-                                        "Kind": "INT",
-                                        "Value": "1",
-                                        "ValuePos": 71,
-                                        "end": 72,
-                                        "start": 71,
-                                        "type": "BasicLit"
-                                    }
-                                ],
-                                "Tok": "=",
-                                "TokPos": 69,
-                                "end": 72,
-                                "start": 66,
-                                "type": "AssignStmt"
-                            },
-                            {
-                                "Lhs": [
-                                    {
-                                        "Name": "a",
-                                        "NamePos": 74,
-                                        "end": 75,
-                                        "start": 74,
-                                        "type": "Ident"
-                                    }
-                                ],
-                                "Rhs": [
-                                    {
-                                        "Args": [
+                                        "@type": "ValueSpec",
+                                        "Comment": null,
+                                        "Doc": null,
+                                        "Names": [
                                             {
-                                                "Name": "int",
-                                                "NamePos": 82,
-                                                "end": 85,
-                                                "start": 82,
-                                                "type": "Ident"
+                                                "@end": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 43
+                                                },
+                                                "@start": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 42
+                                                },
+                                                "@type": "Ident",
+                                                "Name": "a",
+                                                "NamePos": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 42
+                                                }
                                             }
                                         ],
-                                        "Ellipsis": 0,
-                                        "Fun": {
-                                            "Name": "new",
-                                            "NamePos": 78,
-                                            "end": 81,
-                                            "start": 78,
-                                            "type": "Ident"
+                                        "Type": {
+                                            "@end": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 48
+                                            },
+                                            "@start": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 44
+                                            },
+                                            "@type": "StarExpr",
+                                            "Star": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 44
+                                            },
+                                            "X": {
+                                                "@end": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 48
+                                                },
+                                                "@start": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 45
+                                                },
+                                                "@type": "Ident",
+                                                "Name": "int",
+                                                "NamePos": {
+                                                    "@type": "ast:Position",
+                                                    "col": 0,
+                                                    "line": 0,
+                                                    "off": 45
+                                                }
+                                            }
                                         },
-                                        "Lparen": 81,
-                                        "Rparen": 85,
-                                        "end": 86,
-                                        "start": 78,
-                                        "type": "CallExpr"
+                                        "Values": null
                                     }
                                 ],
-                                "Tok": "=",
-                                "TokPos": 76,
-                                "end": 86,
-                                "start": 74,
-                                "type": "AssignStmt"
+                                "Tok": "var",
+                                "TokPos": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 38
+                                }
                             }
-                        ],
-                        "Rbrace": 87,
-                        "end": 88,
-                        "start": 35,
-                        "type": "BlockStmt"
-                    },
-                    "Doc": null,
-                    "Name": {
-                        "Name": "pointers",
-                        "NamePos": 24,
-                        "end": 32,
-                        "start": 24,
-                        "type": "Ident"
-                    },
-                    "Recv": null,
-                    "Type": {
-                        "Func": 19,
-                        "Params": {
-                            "Closing": 33,
-                            "List": null,
-                            "Opening": 32,
-                            "end": 34,
-                            "start": 32,
-                            "type": "FieldList"
                         },
-                        "Results": null,
-                        "end": 34,
-                        "start": 19,
-                        "type": "FuncType"
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 56
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 50
+                            },
+                            "@type": "AssignStmt",
+                            "Lhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 51
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 50
+                                    },
+                                    "@type": "Ident",
+                                    "Name": "b",
+                                    "NamePos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 50
+                                    }
+                                }
+                            ],
+                            "Rhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 56
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 55
+                                    },
+                                    "@type": "BasicLit",
+                                    "Kind": "INT",
+                                    "Value": "0",
+                                    "ValuePos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 55
+                                    }
+                                }
+                            ],
+                            "Tok": ":=",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 52
+                            }
+                        },
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 64
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 58
+                            },
+                            "@type": "AssignStmt",
+                            "Lhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 59
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 58
+                                    },
+                                    "@type": "Ident",
+                                    "Name": "a",
+                                    "NamePos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 58
+                                    }
+                                }
+                            ],
+                            "Rhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 64
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 62
+                                    },
+                                    "@type": "UnaryExpr",
+                                    "Op": "&",
+                                    "OpPos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 62
+                                    },
+                                    "X": {
+                                        "@end": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 64
+                                        },
+                                        "@start": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 63
+                                        },
+                                        "@type": "Ident",
+                                        "Name": "b",
+                                        "NamePos": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 63
+                                        }
+                                    }
+                                }
+                            ],
+                            "Tok": "=",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 60
+                            }
+                        },
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 72
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 66
+                            },
+                            "@type": "AssignStmt",
+                            "Lhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 68
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 66
+                                    },
+                                    "@type": "StarExpr",
+                                    "Star": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 66
+                                    },
+                                    "X": {
+                                        "@end": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 68
+                                        },
+                                        "@start": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 67
+                                        },
+                                        "@type": "Ident",
+                                        "Name": "a",
+                                        "NamePos": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 67
+                                        }
+                                    }
+                                }
+                            ],
+                            "Rhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 72
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 71
+                                    },
+                                    "@type": "BasicLit",
+                                    "Kind": "INT",
+                                    "Value": "1",
+                                    "ValuePos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 71
+                                    }
+                                }
+                            ],
+                            "Tok": "=",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 69
+                            }
+                        },
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 86
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 74
+                            },
+                            "@type": "AssignStmt",
+                            "Lhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 75
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 74
+                                    },
+                                    "@type": "Ident",
+                                    "Name": "a",
+                                    "NamePos": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 74
+                                    }
+                                }
+                            ],
+                            "Rhs": [
+                                {
+                                    "@end": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 86
+                                    },
+                                    "@start": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 78
+                                    },
+                                    "@type": "CallExpr",
+                                    "Args": [
+                                        {
+                                            "@end": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 85
+                                            },
+                                            "@start": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 82
+                                            },
+                                            "@type": "Ident",
+                                            "Name": "int",
+                                            "NamePos": {
+                                                "@type": "ast:Position",
+                                                "col": 0,
+                                                "line": 0,
+                                                "off": 82
+                                            }
+                                        }
+                                    ],
+                                    "Ellipsis": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 0
+                                    },
+                                    "Fun": {
+                                        "@end": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 81
+                                        },
+                                        "@start": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 78
+                                        },
+                                        "@type": "Ident",
+                                        "Name": "new",
+                                        "NamePos": {
+                                            "@type": "ast:Position",
+                                            "col": 0,
+                                            "line": 0,
+                                            "off": 78
+                                        }
+                                    },
+                                    "Lparen": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 81
+                                    },
+                                    "Rparen": {
+                                        "@type": "ast:Position",
+                                        "col": 0,
+                                        "line": 0,
+                                        "off": 85
+                                    }
+                                }
+                            ],
+                            "Tok": "=",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 76
+                            }
+                        }
+                    ],
+                    "Rbrace": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 87
+                    }
+                },
+                "Doc": null,
+                "Name": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 32
                     },
-                    "end": 88,
-                    "start": 19,
-                    "type": "FuncDecl"
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 24
+                    },
+                    "@type": "Ident",
+                    "Name": "pointers",
+                    "NamePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 24
+                    }
+                },
+                "Recv": null,
+                "Type": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 34
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 19
+                    },
+                    "@type": "FuncType",
+                    "Func": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 19
+                    },
+                    "Params": {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 34
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 32
+                        },
+                        "@type": "FieldList",
+                        "Closing": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 33
+                        },
+                        "List": null,
+                        "Opening": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 32
+                        }
+                    },
+                    "Results": null
                 }
-            ],
-            "Doc": null,
-            "Imports": null,
-            "Name": {
-                "Name": "fixtures",
-                "NamePos": 9,
-                "end": 17,
-                "start": 9,
-                "type": "Ident"
+            }
+        ],
+        "Doc": null,
+        "Imports": null,
+        "Name": {
+            "@end": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 17
             },
-            "Package": 1,
-            "Unresolved": [
-                {
-                    "Name": "int",
-                    "NamePos": 45,
-                    "end": 48,
-                    "start": 45,
-                    "type": "Ident"
+            "@start": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            },
+            "@type": "Ident",
+            "Name": "fixtures",
+            "NamePos": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            }
+        },
+        "Package": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "Unresolved": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 48
                 },
-                {
-                    "Name": "new",
-                    "NamePos": 78,
-                    "end": 81,
-                    "start": 78,
-                    "type": "Ident"
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 45
                 },
-                {
-                    "Name": "int",
-                    "NamePos": 82,
-                    "end": 85,
-                    "start": 82,
-                    "type": "Ident"
+                "@type": "Ident",
+                "Name": "int",
+                "NamePos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 45
                 }
-            ],
-            "end": 88,
-            "start": 1,
-            "type": "File"
-        }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 81
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 78
+                },
+                "@type": "Ident",
+                "Name": "new",
+                "NamePos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 78
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 85
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 82
+                },
+                "@type": "Ident",
+                "Name": "int",
+                "NamePos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 82
+                }
+            }
+        ]
     }
 }

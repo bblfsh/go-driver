@@ -3,105 +3,303 @@
     "language": "go",
     "errors": [],
     "ast": {
-        "GOAST": {
-            "Comments": null,
-            "Decls": [
-                {
-                    "Body": {
-                        "Lbrace": 36,
-                        "List": [
-                            {
-                                "Tok": "++",
-                                "TokPos": 40,
-                                "X": {
-                                    "Name": "a",
-                                    "NamePos": 39,
-                                    "end": 40,
-                                    "start": 39,
-                                    "type": "Ident"
-                                },
-                                "end": 42,
-                                "start": 39,
-                                "type": "IncDecStmt"
-                            },
-                            {
-                                "Tok": "--",
-                                "TokPos": 45,
-                                "X": {
-                                    "Name": "a",
-                                    "NamePos": 44,
-                                    "end": 45,
-                                    "start": 44,
-                                    "type": "Ident"
-                                },
-                                "end": 47,
-                                "start": 44,
-                                "type": "IncDecStmt"
-                            }
-                        ],
-                        "Rbrace": 48,
-                        "end": 49,
-                        "start": 36,
-                        "type": "BlockStmt"
-                    },
-                    "Doc": null,
-                    "Name": {
-                        "Name": "increment",
-                        "NamePos": 24,
-                        "end": 33,
-                        "start": 24,
-                        "type": "Ident"
-                    },
-                    "Recv": null,
-                    "Type": {
-                        "Func": 19,
-                        "Params": {
-                            "Closing": 34,
-                            "List": null,
-                            "Opening": 33,
-                            "end": 35,
-                            "start": 33,
-                            "type": "FieldList"
-                        },
-                        "Results": null,
-                        "end": 35,
-                        "start": 19,
-                        "type": "FuncType"
-                    },
-                    "end": 49,
-                    "start": 19,
-                    "type": "FuncDecl"
-                }
-            ],
-            "Doc": null,
-            "Imports": null,
-            "Name": {
-                "Name": "fixtures",
-                "NamePos": 9,
-                "end": 17,
-                "start": 9,
-                "type": "Ident"
-            },
-            "Package": 1,
-            "Unresolved": [
-                {
-                    "Name": "a",
-                    "NamePos": 39,
-                    "end": 40,
-                    "start": 39,
-                    "type": "Ident"
+        "@end": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 49
+        },
+        "@start": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "@type": "File",
+        "Comments": null,
+        "Decls": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 49
                 },
-                {
-                    "Name": "a",
-                    "NamePos": 44,
-                    "end": 45,
-                    "start": 44,
-                    "type": "Ident"
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 19
+                },
+                "@type": "FuncDecl",
+                "Body": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 49
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 36
+                    },
+                    "@type": "BlockStmt",
+                    "Lbrace": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 36
+                    },
+                    "List": [
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 42
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 39
+                            },
+                            "@type": "IncDecStmt",
+                            "Tok": "++",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 40
+                            },
+                            "X": {
+                                "@end": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 40
+                                },
+                                "@start": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 39
+                                },
+                                "@type": "Ident",
+                                "Name": "a",
+                                "NamePos": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 39
+                                }
+                            }
+                        },
+                        {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 47
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 44
+                            },
+                            "@type": "IncDecStmt",
+                            "Tok": "--",
+                            "TokPos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 45
+                            },
+                            "X": {
+                                "@end": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 45
+                                },
+                                "@start": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 44
+                                },
+                                "@type": "Ident",
+                                "Name": "a",
+                                "NamePos": {
+                                    "@type": "ast:Position",
+                                    "col": 0,
+                                    "line": 0,
+                                    "off": 44
+                                }
+                            }
+                        }
+                    ],
+                    "Rbrace": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 48
+                    }
+                },
+                "Doc": null,
+                "Name": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 33
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 24
+                    },
+                    "@type": "Ident",
+                    "Name": "increment",
+                    "NamePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 24
+                    }
+                },
+                "Recv": null,
+                "Type": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 35
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 19
+                    },
+                    "@type": "FuncType",
+                    "Func": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 19
+                    },
+                    "Params": {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 35
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 33
+                        },
+                        "@type": "FieldList",
+                        "Closing": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 34
+                        },
+                        "List": null,
+                        "Opening": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 33
+                        }
+                    },
+                    "Results": null
                 }
-            ],
-            "end": 49,
-            "start": 1,
-            "type": "File"
-        }
+            }
+        ],
+        "Doc": null,
+        "Imports": null,
+        "Name": {
+            "@end": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 17
+            },
+            "@start": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            },
+            "@type": "Ident",
+            "Name": "fixtures",
+            "NamePos": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            }
+        },
+        "Package": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "Unresolved": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 40
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 39
+                },
+                "@type": "Ident",
+                "Name": "a",
+                "NamePos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 39
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 45
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 44
+                },
+                "@type": "Ident",
+                "Name": "a",
+                "NamePos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 44
+                }
+            }
+        ]
     }
 }
