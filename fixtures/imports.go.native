@@ -3,323 +3,911 @@
     "language": "go",
     "errors": [],
     "ast": {
-        "GOAST": {
-            "Comments": null,
-            "Decls": [
-                {
-                    "Doc": null,
-                    "Lparen": 0,
-                    "Rparen": 0,
-                    "Specs": [
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": null,
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"fmt\"",
-                                "ValuePos": 26,
-                                "end": 31,
-                                "start": 26,
-                                "type": "BasicLit"
+        "@end": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 139
+        },
+        "@start": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "@type": "File",
+        "Comments": null,
+        "Decls": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 31
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 19
+                },
+                "@type": "GenDecl",
+                "Doc": null,
+                "Lparen": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Rparen": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Specs": [
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 31
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 26
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": null,
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 31
                             },
-                            "end": 31,
-                            "start": 26,
-                            "type": "ImportSpec"
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 26
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"fmt\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 26
+                            }
                         }
-                    ],
-                    "Tok": "import",
-                    "TokPos": 19,
-                    "end": 31,
-                    "start": 19,
-                    "type": "GenDecl"
-                },
-                {
-                    "Doc": null,
-                    "Lparen": 40,
-                    "Rparen": 138,
-                    "Specs": [
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": null,
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"./local\"",
-                                "ValuePos": 43,
-                                "end": 52,
-                                "start": 43,
-                                "type": "BasicLit"
-                            },
-                            "end": 52,
-                            "start": 43,
-                            "type": "ImportSpec"
-                        },
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": null,
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"bytes\"",
-                                "ValuePos": 54,
-                                "end": 61,
-                                "start": 54,
-                                "type": "BasicLit"
-                            },
-                            "end": 61,
-                            "start": 54,
-                            "type": "ImportSpec"
-                        },
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": null,
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"github.com/bblfsh/bblfshd\"",
-                                "ValuePos": 63,
-                                "end": 90,
-                                "start": 63,
-                                "type": "BasicLit"
-                            },
-                            "end": 90,
-                            "start": 63,
-                            "type": "ImportSpec"
-                        },
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": {
-                                "Name": ".",
-                                "NamePos": 92,
-                                "end": 93,
-                                "start": 92,
-                                "type": "Ident"
-                            },
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"runtime\"",
-                                "ValuePos": 94,
-                                "end": 103,
-                                "start": 94,
-                                "type": "BasicLit"
-                            },
-                            "end": 103,
-                            "start": 92,
-                            "type": "ImportSpec"
-                        },
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": {
-                                "Name": "_",
-                                "NamePos": 105,
-                                "end": 106,
-                                "start": 105,
-                                "type": "Ident"
-                            },
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"runtime/debug\"",
-                                "ValuePos": 107,
-                                "end": 122,
-                                "start": 107,
-                                "type": "BasicLit"
-                            },
-                            "end": 122,
-                            "start": 105,
-                            "type": "ImportSpec"
-                        },
-                        {
-                            "Comment": null,
-                            "Doc": null,
-                            "EndPos": 0,
-                            "Name": {
-                                "Name": "str",
-                                "NamePos": 124,
-                                "end": 127,
-                                "start": 124,
-                                "type": "Ident"
-                            },
-                            "Path": {
-                                "Kind": "STRING",
-                                "Value": "\"strings\"",
-                                "ValuePos": 128,
-                                "end": 137,
-                                "start": 128,
-                                "type": "BasicLit"
-                            },
-                            "end": 137,
-                            "start": 124,
-                            "type": "ImportSpec"
-                        }
-                    ],
-                    "Tok": "import",
-                    "TokPos": 33,
-                    "end": 139,
-                    "start": 33,
-                    "type": "GenDecl"
+                    }
+                ],
+                "Tok": "import",
+                "TokPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 19
                 }
-            ],
-            "Doc": null,
-            "Imports": [
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": null,
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"fmt\"",
-                        "ValuePos": 26,
-                        "end": 31,
-                        "start": 26,
-                        "type": "BasicLit"
-                    },
-                    "end": 31,
-                    "start": 26,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": null,
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"./local\"",
-                        "ValuePos": 43,
-                        "end": 52,
-                        "start": 43,
-                        "type": "BasicLit"
-                    },
-                    "end": 52,
-                    "start": 43,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": null,
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"bytes\"",
-                        "ValuePos": 54,
-                        "end": 61,
-                        "start": 54,
-                        "type": "BasicLit"
-                    },
-                    "end": 61,
-                    "start": 54,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": null,
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"github.com/bblfsh/bblfshd\"",
-                        "ValuePos": 63,
-                        "end": 90,
-                        "start": 63,
-                        "type": "BasicLit"
-                    },
-                    "end": 90,
-                    "start": 63,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": {
-                        "Name": ".",
-                        "NamePos": 92,
-                        "end": 93,
-                        "start": 92,
-                        "type": "Ident"
-                    },
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"runtime\"",
-                        "ValuePos": 94,
-                        "end": 103,
-                        "start": 94,
-                        "type": "BasicLit"
-                    },
-                    "end": 103,
-                    "start": 92,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": {
-                        "Name": "_",
-                        "NamePos": 105,
-                        "end": 106,
-                        "start": 105,
-                        "type": "Ident"
-                    },
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"runtime/debug\"",
-                        "ValuePos": 107,
-                        "end": 122,
-                        "start": 107,
-                        "type": "BasicLit"
-                    },
-                    "end": 122,
-                    "start": 105,
-                    "type": "ImportSpec"
-                },
-                {
-                    "Comment": null,
-                    "Doc": null,
-                    "EndPos": 0,
-                    "Name": {
-                        "Name": "str",
-                        "NamePos": 124,
-                        "end": 127,
-                        "start": 124,
-                        "type": "Ident"
-                    },
-                    "Path": {
-                        "Kind": "STRING",
-                        "Value": "\"strings\"",
-                        "ValuePos": 128,
-                        "end": 137,
-                        "start": 128,
-                        "type": "BasicLit"
-                    },
-                    "end": 137,
-                    "start": 124,
-                    "type": "ImportSpec"
-                }
-            ],
-            "Name": {
-                "Name": "fixtures",
-                "NamePos": 9,
-                "end": 17,
-                "start": 9,
-                "type": "Ident"
             },
-            "Package": 1,
-            "Unresolved": null,
-            "end": 139,
-            "start": 1,
-            "type": "File"
-        }
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 139
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 33
+                },
+                "@type": "GenDecl",
+                "Doc": null,
+                "Lparen": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 40
+                },
+                "Rparen": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 138
+                },
+                "Specs": [
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 52
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 43
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": null,
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 52
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 43
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"./local\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 43
+                            }
+                        }
+                    },
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 61
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 54
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": null,
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 61
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 54
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"bytes\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 54
+                            }
+                        }
+                    },
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 90
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 63
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": null,
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 90
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 63
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"github.com/bblfsh/bblfshd\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 63
+                            }
+                        }
+                    },
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 103
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 92
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 93
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 92
+                            },
+                            "@type": "Ident",
+                            "Name": ".",
+                            "NamePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 92
+                            }
+                        },
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 103
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 94
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"runtime\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 94
+                            }
+                        }
+                    },
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 122
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 105
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 106
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 105
+                            },
+                            "@type": "Ident",
+                            "Name": "_",
+                            "NamePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 105
+                            }
+                        },
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 122
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 107
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"runtime/debug\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 107
+                            }
+                        }
+                    },
+                    {
+                        "@end": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 137
+                        },
+                        "@start": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 124
+                        },
+                        "@type": "ImportSpec",
+                        "Comment": null,
+                        "Doc": null,
+                        "EndPos": {
+                            "@type": "ast:Position",
+                            "col": 0,
+                            "line": 0,
+                            "off": 0
+                        },
+                        "Name": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 127
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 124
+                            },
+                            "@type": "Ident",
+                            "Name": "str",
+                            "NamePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 124
+                            }
+                        },
+                        "Path": {
+                            "@end": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 137
+                            },
+                            "@start": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 128
+                            },
+                            "@type": "BasicLit",
+                            "Kind": "STRING",
+                            "Value": "\"strings\"",
+                            "ValuePos": {
+                                "@type": "ast:Position",
+                                "col": 0,
+                                "line": 0,
+                                "off": 128
+                            }
+                        }
+                    }
+                ],
+                "Tok": "import",
+                "TokPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 33
+                }
+            }
+        ],
+        "Doc": null,
+        "Imports": [
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 31
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 26
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": null,
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 31
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 26
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"fmt\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 26
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 52
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 43
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": null,
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 52
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 43
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"./local\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 43
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 61
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 54
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": null,
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 61
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 54
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"bytes\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 54
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 90
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 63
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": null,
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 90
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 63
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"github.com/bblfsh/bblfshd\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 63
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 103
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 92
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 93
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 92
+                    },
+                    "@type": "Ident",
+                    "Name": ".",
+                    "NamePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 92
+                    }
+                },
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 103
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 94
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"runtime\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 94
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 122
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 105
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 106
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 105
+                    },
+                    "@type": "Ident",
+                    "Name": "_",
+                    "NamePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 105
+                    }
+                },
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 122
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 107
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"runtime/debug\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 107
+                    }
+                }
+            },
+            {
+                "@end": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 137
+                },
+                "@start": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 124
+                },
+                "@type": "ImportSpec",
+                "Comment": null,
+                "Doc": null,
+                "EndPos": {
+                    "@type": "ast:Position",
+                    "col": 0,
+                    "line": 0,
+                    "off": 0
+                },
+                "Name": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 127
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 124
+                    },
+                    "@type": "Ident",
+                    "Name": "str",
+                    "NamePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 124
+                    }
+                },
+                "Path": {
+                    "@end": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 137
+                    },
+                    "@start": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 128
+                    },
+                    "@type": "BasicLit",
+                    "Kind": "STRING",
+                    "Value": "\"strings\"",
+                    "ValuePos": {
+                        "@type": "ast:Position",
+                        "col": 0,
+                        "line": 0,
+                        "off": 128
+                    }
+                }
+            }
+        ],
+        "Name": {
+            "@end": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 17
+            },
+            "@start": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            },
+            "@type": "Ident",
+            "Name": "fixtures",
+            "NamePos": {
+                "@type": "ast:Position",
+                "col": 0,
+                "line": 0,
+                "off": 9
+            }
+        },
+        "Package": {
+            "@type": "ast:Position",
+            "col": 0,
+            "line": 0,
+            "off": 1
+        },
+        "Unresolved": null
     }
 }
