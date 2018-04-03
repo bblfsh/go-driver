@@ -2,7 +2,6 @@ package normalizer
 
 import (
 	"go/token"
-	"strings"
 
 	"gopkg.in/bblfsh/sdk.v1/uast"
 	"gopkg.in/bblfsh/sdk.v1/uast/role"
@@ -32,63 +31,38 @@ var Code = []CodeTransformer{
 	positioner.NewFillLineColFromOffset(),
 }
 
-func astLeft(typ string, ast ObjectOp) ObjectOp {
-	return ASTObjectLeft(typ, ast)
-}
-
-func astRight(typ string, norm ObjectOp, rop ArrayOp, roles ...role.Role) ObjectOp {
-	if static := typeRoles[typ]; len(static) > 0 {
-		roles = append([]role.Role{}, roles...)
-		roles = append(roles, static...)
-	}
-	return ASTObjectRight(typ, norm, rop, roles...)
-}
-
 // mapAST is a helper for describing a single AST transformation for a given node type.
 func mapAST(typ string, ast, norm ObjectOp, roles ...role.Role) Mapping {
 	return mapASTCustom(typ, ast, norm, nil, roles...)
 }
 
-func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Role) Mapping {
-	return ASTMap(typ,
-		astLeft(typ, ast),
-		astRight(typ, norm, rop, roles...),
-	)
+func rolesByType(typ string) role.Roles {
+	return typeRoles[typ]
 }
 
-type objRoles map[string][]role.Role
+func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Role) Mapping {
+	return MapASTCustomType(typ, ast, norm, rolesByType, rop, roles...)
+}
 
-func annotateType(typ string, fields objRoles, roles ...role.Role) Mapping {
-	left := make(Obj, len(fields))
-	right := make(Obj, len(fields))
-	for name, roles := range fields {
-		left[name] = ObjectRoles(name + "_var")
-		right[name] = ObjectRoles(name+"_var", roles...)
-	}
-	return mapAST(typ, left, right, roles...)
+func annotateType(typ string, fields ObjRoles, roles ...role.Role) Mapping {
+	return AnnotateTypeCustom(mapASTCustom, typ, fields, nil, roles...)
+}
+
+func annotateTypeFields(typ string, fields FieldRoles, roles ...role.Role) Mapping {
+	return annotateTypeFieldsCustom(typ, fields, nil, roles...)
+}
+
+func annotateTypeFieldsCustom(typ string, fields FieldRoles, rop ArrayOp, roles ...role.Role) Mapping {
+	return AnnotateTypeFieldsCustom(mapASTCustom, typ, fields, rop, roles...)
 }
 
 func operator(field, vr string, lookup map[uast.Value]ArrayOp, roles ...role.Role) Field {
-	roles = append([]role.Role{
-		role.Expression, role.Operator,
-	}, roles...)
-	var opRoles Op = Roles(roles...)
-	if lookup != nil {
-		opRoles = AppendRoles(
-			LookupArrOpVar(vr, lookup),
-			roles...,
-		)
-	}
-	return Field{Name: field, Op: Fields{
-		{Name: uast.KeyType, Op: String(uast.TypeOperator)},
-		{Name: uast.KeyToken, Op: Var(vr)},
-		{Name: uast.KeyRoles, Op: opRoles},
-	}}
+	return Field{Name: field, Op: Operator(vr, lookup, roles...)}
 }
 
 func astFieldLeft() Op {
-	return astLeft("Field", Obj{
-		"Names": Each("field_name", ObjectRoles("field_names")),
+	return ASTObjectLeft("Field", Obj{
+		"Names": EachObjectRoles("field_name"),
 		"Type":  ObjectRoles("field_type"),
 	})
 }
@@ -101,40 +75,21 @@ func astFieldRight(inherit bool, roles ...role.Role) Op {
 		nameRoles = append(roles[:n:n], nameRoles...)
 		typeRoles = append(roles[:n:n], typeRoles...)
 	}
-	return astRight("Field", Obj{
-		"Names": Each("field_name", ObjectRoles("field_names", nameRoles...)),
+	return ASTObjectRightCustom("Field", Obj{
+		"Names": EachObjectRoles("field_name", nameRoles...),
 		"Type":  ObjectRoles("field_type", typeRoles...),
-	}, nil, roles...)
+	}, rolesByType, nil, roles...)
 }
 
 var (
-	literalRoles  = make(map[uast.Value]ArrayOp)
-	opRolesBinary = make(map[uast.Value]ArrayOp)
-	opRolesUnary  = make(map[uast.Value]ArrayOp)
-	opIncDec      = make(map[uast.Value]ArrayOp)
-	opAssign      = make(map[uast.Value]ArrayOp)
-	branchRoles   = make(map[uast.Value]ArrayOp)
-)
-
-func goTok(tok token.Token) uast.Value {
-	return uast.String(tok.String())
-}
-
-func fillTokenToRolesMap(dst map[uast.Value]ArrayOp, src map[token.Token][]role.Role) {
-	for tok, roles := range src {
-		dst[goTok(tok)] = Roles(roles...)
-	}
-}
-
-func init() {
-	fillTokenToRolesMap(literalRoles, map[token.Token][]role.Role{
+	literalRoles = TokenToRolesMap(map[token.Token][]role.Role{
 		token.STRING: {role.String},
 		token.CHAR:   {role.Character},
 		token.INT:    {role.Number},
 		token.FLOAT:  {role.Number},
 		token.IMAG:   {role.Incomplete}, // TODO: IMAG
 	})
-	fillTokenToRolesMap(opRolesBinary, map[token.Token][]role.Role{
+	opRolesBinary = TokenToRolesMap(map[token.Token][]role.Role{
 		token.ADD: {role.Arithmetic, role.Add},
 		token.SUB: {role.Arithmetic, role.Substract},
 		token.MUL: {role.Arithmetic, role.Multiply},
@@ -158,7 +113,7 @@ func init() {
 		token.LEQ: {role.Relational, role.LessThanOrEqual},
 		token.GEQ: {role.Relational, role.GreaterThanOrEqual},
 	})
-	fillTokenToRolesMap(opRolesUnary, map[token.Token][]role.Role{
+	opRolesUnary = TokenToRolesMap(map[token.Token][]role.Role{
 		token.ADD: {role.Arithmetic, role.Positive},
 		token.SUB: {role.Arithmetic, role.Negative},
 
@@ -170,11 +125,11 @@ func init() {
 
 		token.ARROW: {role.Incomplete},
 	})
-	fillTokenToRolesMap(opIncDec, map[token.Token][]role.Role{
+	opIncDec = TokenToRolesMap(map[token.Token][]role.Role{
 		token.INC: {role.Increment},
 		token.DEC: {role.Decrement},
 	})
-	fillTokenToRolesMap(opAssign, map[token.Token][]role.Role{
+	opAssign = TokenToRolesMap(map[token.Token][]role.Role{
 		token.ASSIGN: {},
 		token.DEFINE: {role.Declaration},
 
@@ -191,29 +146,24 @@ func init() {
 		token.SHR_ASSIGN:     {role.Operator, role.Bitwise, role.RightShift},
 		token.AND_NOT_ASSIGN: {role.Operator, role.Bitwise, role.And, role.Negative},
 	})
-	fillTokenToRolesMap(branchRoles, map[token.Token][]role.Role{
+	branchRoles = TokenToRolesMap(map[token.Token][]role.Role{
 		token.CONTINUE:    {role.Continue},
 		token.BREAK:       {role.Break},
 		token.GOTO:        {role.Goto},
 		token.FALLTHROUGH: {role.Incomplete}, // TODO: fallthrough
 	})
+)
+
+func goTok(tok token.Token) uast.Value {
+	return uast.String(tok.String())
 }
 
-func uncomment(s string) (string, error) {
-	// Remove // and /*...*/ from comment nodes' tokens
-	if strings.HasPrefix(s, "//") {
-		s = s[2:]
-	} else if strings.HasPrefix(s, "/*") {
-		s = s[2 : len(s)-2]
+func TokenToRolesMap(m map[token.Token][]role.Role) map[uast.Value]ArrayOp {
+	out := make(map[uast.Value]ArrayOp, len(m))
+	for tok, roles := range m {
+		out[goTok(tok)] = Roles(roles...)
 	}
-	return s, nil
-}
-
-func comment(s string) (string, error) {
-	if strings.Contains(s, "\n") {
-		return "/*" + s + "*/", nil
-	}
-	return "//" + s, nil
+	return out
 }
 
 // Annotations is a list of individual transformations to annotate a native AST with roles.
@@ -224,17 +174,15 @@ var Annotations = []Mapping{
 	annotateType("CommentGroup", nil, role.Comment, role.List),
 
 	mapAST("Comment", Obj{
-		"Text": StringConv(Var("text"), uncomment, comment),
+		"Text": UncommentCLike("text"),
 	}, Obj{ // ->
 		uast.KeyToken: Var("text"),
 	}, role.Comment),
 
 	annotateType("BadExpr", nil, role.Incomplete),
 
-	mapAST("Ident", Obj{
-		"Name": Var("name"),
-	}, Obj{ // ->
-		uast.KeyToken: Var("name"),
+	annotateTypeFields("Ident", FieldRoles{
+		"Name": {Rename: uast.KeyToken},
 	}, role.Identifier),
 
 	mapASTCustom("BasicLit", Obj{
@@ -276,108 +224,79 @@ var Annotations = []Mapping{
 	annotateType("BlockStmt", nil, role.Block, role.Scope),
 
 	mapASTCustom("AssignStmt", Obj{
-		"Lhs": Each("lhs", ObjectRoles("left")),
-		"Rhs": Each("rhs", ObjectRoles("right")),
+		"Lhs": EachObjectRoles("left"),
+		"Rhs": EachObjectRoles("right"),
 		"Tok": Var("op"),
 	}, Fields{ // ->
 		operator("Op", "op", opAssign, role.Operator, role.Assignment, role.Binary),
-		{Name: "Lhs", Op: Each("lhs", ObjectRoles("left", role.Assignment, role.Binary, role.Left))},
-		{Name: "Rhs", Op: Each("rhs", ObjectRoles("right", role.Assignment, role.Binary, role.Right))},
+		{Name: "Lhs", Op: EachObjectRoles("left", role.Assignment, role.Binary, role.Left)},
+		{Name: "Rhs", Op: EachObjectRoles("right", role.Assignment, role.Binary, role.Right)},
 	}, LookupArrOpVar("op", opAssign),
 		role.Assignment, role.Binary),
 
-	mapAST("IfStmt", Obj{
-		"Init": OptObjectRoles("init"),
-		"Cond": ObjectRoles("cond"),
-		"Body": ObjectRoles("body"),
-		"Else": OptObjectRoles("else"),
-	}, Obj{ // ->
-		"Init": OptObjectRoles("init", role.If, role.Initialization),
-		"Cond": ObjectRoles("cond", role.If, role.Condition),
-		"Body": ObjectRoles("body", role.Then, role.Body),
-		"Else": OptObjectRoles("else", role.Else),
+	annotateTypeFields("IfStmt", FieldRoles{
+		"Init": {Opt: true, Roles: role.Roles{role.If, role.Initialization}},
+		"Cond": {Roles: role.Roles{role.If, role.Condition}},
+		"Body": {Roles: role.Roles{role.Then, role.Body}},
+		"Else": {Opt: true, Roles: role.Roles{role.Else}},
 	}, role.If),
 
-	mapAST("SwitchStmt", Obj{
-		"Init": OptObjectRoles("init"),
-		"Body": ObjectRoles("body"),
-	}, Obj{ // ->
-		"Init": OptObjectRoles("init", role.Switch, role.Initialization),
-		"Body": ObjectRoles("body", role.Switch, role.Body),
+	annotateTypeFields("SwitchStmt", FieldRoles{
+		"Init": {Opt: true, Roles: role.Roles{role.Switch, role.Initialization}},
+		"Body": {Roles: role.Roles{role.Switch, role.Body}},
 	}, role.Switch),
 
-	mapAST("TypeSwitchStmt", Obj{
-		"Init": OptObjectRoles("init"),
-		"Body": ObjectRoles("body"),
-	}, Obj{ // ->
-		"Init": OptObjectRoles("init", role.Switch, role.Initialization),
-		"Body": ObjectRoles("body", role.Switch, role.Body),
+	annotateTypeFields("TypeSwitchStmt", FieldRoles{
+		"Init": {Opt: true, Roles: role.Roles{role.Switch, role.Initialization}},
+		"Body": {Roles: role.Roles{role.Switch, role.Body}},
 	}, role.Switch, role.Incomplete),
 
-	annotateType("SelectStmt", objRoles{
+	annotateType("SelectStmt", ObjRoles{
 		"Body": {role.Switch, role.Body},
 	}, role.Switch, role.Incomplete),
 
-	mapAST("ForStmt", Obj{
-		"Init": OptObjectRoles("init"),
-		"Cond": OptObjectRoles("cond"),
-		"Post": OptObjectRoles("post"),
-		"Body": ObjectRoles("body"),
-	}, Obj{ // ->
-		"Init": OptObjectRoles("init", role.For, role.Initialization),
-		"Cond": OptObjectRoles("cond", role.For, role.Condition),
-		"Body": ObjectRoles("body", role.For, role.Body),
-		"Post": OptObjectRoles("post", role.For, role.Update),
+	annotateTypeFields("ForStmt", FieldRoles{
+		"Init": {Opt: true, Roles: role.Roles{role.For, role.Initialization}},
+		"Cond": {Opt: true, Roles: role.Roles{role.For, role.Condition}},
+		"Body": {Roles: role.Roles{role.For, role.Body}},
+		"Post": {Opt: true, Roles: role.Roles{role.For, role.Update}},
 	}, role.For),
 
-	mapAST("RangeStmt", Obj{
-		"Key":   OptObjectRoles("key"),
-		"Value": OptObjectRoles("val"),
-		"X":     Var("x"),
-		"Body":  ObjectRoles("body"),
-	}, Obj{ // ->
-		"Key":   OptObjectRoles("key", role.For, role.Iterator, role.Key),
-		"Value": OptObjectRoles("val", role.For, role.Iterator, role.Value),
-		"X":     Var("x"),
-		"Body":  ObjectRoles("body", role.For, role.Body),
+	annotateTypeFields("RangeStmt", FieldRoles{
+		"Key":   {Opt: true, Roles: role.Roles{role.For, role.Iterator, role.Key}},
+		"Value": {Opt: true, Roles: role.Roles{role.For, role.Iterator, role.Value}},
+		"X":     {},
+		"Body":  {Roles: role.Roles{role.For, role.Body}},
 	}, role.For, role.Iterator),
 
-	mapASTCustom("BranchStmt", Obj{
-		"Label": Var("label"),
-		"Tok":   Var("tok"),
-	}, Fields{ // ->
-		{Name: "Tok", Op: Var("tok")},
-		{Name: "Label", Op: Var("label")},
+	annotateTypeFieldsCustom("BranchStmt", FieldRoles{
+		"Tok":   {Op: Var("tok")},
+		"Label": {},
 	}, LookupArrOpVar("tok", branchRoles)),
 
-	mapAST("ImportSpec", Obj{
-		"Name": OptObjectRoles("name"),
-		"Path": ObjectRoles("path"),
-	}, Obj{ // ->
-		"Name": OptObjectRoles("name", role.Import, role.Alias),
-		"Path": ObjectRoles("path", role.Import, role.Pathname),
+	annotateTypeFields("ImportSpec", FieldRoles{
+		"Name": {Opt: true, Roles: role.Roles{role.Import, role.Alias}},
+		"Path": {Roles: role.Roles{role.Import, role.Pathname}},
 	}, role.Import, role.Declaration),
 
-	mapAST("ValueSpec", Obj{
-		"Type": OptObjectRoles("type"),
-	}, Obj{ // ->
-		"Type": OptObjectRoles("type", role.Type),
-	}, role.Declaration),
-
-	annotateType("TypeSpec", objRoles{
+	annotateType("ValueSpec", ObjRoles{
 		"Type": {role.Type},
 	}, role.Declaration),
 
-	annotateType("ArrayType", objRoles{
+	annotateType("TypeSpec", ObjRoles{
+		"Type": {role.Type},
+	}, role.Declaration),
+
+	annotateType("ArrayType", ObjRoles{
 		"Elt": {role.Entry},
 	}, role.Type, role.List),
 
-	annotateType("MapType", objRoles{
+	annotateType("MapType", ObjRoles{
 		"Key":   {role.Key},
 		"Value": {role.Entry},
 	}, role.Type, role.Map),
 
-	annotateType("FuncLit", objRoles{
+	annotateType("FuncLit", ObjRoles{
 		"Type": {role.Type},
 		"Body": {role.Body},
 	}),
@@ -453,24 +372,24 @@ var Annotations = []Mapping{
 	mapAST("GenDecl", Fields{
 		{Name: "Tok", Op: Is(goTok(token.VAR))},
 		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": Each("names", ObjectRoles("var_names")),
+			"Names": EachObjectRoles("var_name"),
 		}))},
 	}, Fields{ // ->
 		{Name: "Tok", Op: Is(goTok(token.VAR))},
 		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": Each("names", ObjectRoles("var_names", role.Variable, role.Name)),
+			"Names": EachObjectRoles("var_name", role.Variable, role.Name),
 		}))},
 	}, role.Variable, role.Declaration),
 
 	mapAST("GenDecl", Fields{
 		{Name: "Tok", Op: Is(goTok(token.CONST))},
 		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": Each("names", ObjectRoles("const_names")),
+			"Names": EachObjectRoles("const_name"),
 		}))},
 	}, Fields{ // ->
 		{Name: "Tok", Op: Is(goTok(token.CONST))},
 		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": Each("names", ObjectRoles("const_names", role.Name)),
+			"Names": EachObjectRoles("const_name", role.Name),
 		}))},
 	}, role.Incomplete, role.Declaration),
 
@@ -486,21 +405,16 @@ var Annotations = []Mapping{
 		}))},
 	}, role.Type, role.Declaration),
 
-	mapAST("GenDecl", Fields{
-		{Name: "Tok", Op: Is(goTok(token.IMPORT))},
-	}, Fields{ // ->
-		{Name: "Tok", Op: Is(goTok(token.IMPORT))},
+	annotateTypeFields("GenDecl", FieldRoles{
+		"Tok": {Op: Is(goTok(token.IMPORT))},
 	}, role.Declaration),
 
-	mapAST("CallExpr", Obj{
-		"Fun":  ObjectRoles("func"),
-		"Args": Each("args", ObjectRoles("arg")),
-	}, Obj{ // ->
-		"Fun":  ObjectRoles("func", role.Callee),
-		"Args": Each("args", ObjectRoles("arg", role.Argument, role.Positional)),
+	annotateTypeFields("CallExpr", FieldRoles{
+		"Fun":  {Roles: role.Roles{role.Callee}},
+		"Args": {Arr: true, Roles: role.Roles{role.Argument, role.Positional}},
 	}, role.Call),
 
-	annotateType("KeyValueExpr", objRoles{
+	annotateType("KeyValueExpr", ObjRoles{
 		"Key":   {role.Key},
 		"Value": {role.Value},
 	}),
@@ -527,27 +441,3 @@ var Annotations = []Mapping{
 	annotateType("StarExpr", nil),
 	annotateType("TypeAssertExpr", nil, role.Incomplete),
 }
-
-/*
-
-	// Declarations
-	On(goast.GenDecl).Roles(role.Declaration).Self(
-		On(HasProperty("Tok", "var")).Roles(role.Variable).Children(
-			OnIntRole("Specs").Children(
-				OnIntRole("Names", role.Variable, role.Name),
-			),
-		),
-		// TODO: Constant role
-		On(HasProperty("Tok", "const")).Roles(role.Incomplete).Children(
-			OnIntRole("Specs").Children(
-				OnIntRole("Names", role.Name),
-			),
-		),
-		On(HasProperty("Tok", "type")).Roles(role.Type).Children(
-			OnIntRole("Specs").Children(
-				OnIntRole("Names", role.Type, role.Name),
-			),
-		),
-	),
-
-*/
