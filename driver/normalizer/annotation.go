@@ -16,6 +16,9 @@ var Native = Transformers([][]Transformer{
 	// The main block of transformation rules.
 	{Mappings(Annotations...)},
 	{
+		Mappings(
+			AnnotateIfNoRoles("FieldList", role.Incomplete),
+		),
 		// RolesDedup is used to remove duplicate roles assigned by multiple
 		// transformation rules.
 		RolesDedup(),
@@ -440,4 +443,5 @@ var Annotations = []Mapping{
 	annotateType("IndexExpr", nil),
 	annotateType("StarExpr", nil),
 	annotateType("TypeAssertExpr", nil, role.Incomplete),
+	annotateType("ParenExpr", nil, role.Incomplete),
 }
