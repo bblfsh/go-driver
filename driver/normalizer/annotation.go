@@ -47,41 +47,48 @@ func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Rol
 	return MapASTCustomType(typ, ast, norm, rolesByType, rop, roles...)
 }
 
-func annotateType(typ string, fields ObjRoles, roles ...role.Role) Mapping {
-	return AnnotateTypeCustom(mapASTCustom, typ, fields, nil, roles...)
+func annotateType(typ string, fields ObjAnnotator, roles ...role.Role) Mapping {
+	return annotateTypeCustom(typ, fields, nil, roles...)
 }
 
-func annotateTypeFields(typ string, fields FieldRoles, roles ...role.Role) Mapping {
-	return annotateTypeFieldsCustom(typ, fields, nil, roles...)
-}
-
-func annotateTypeFieldsCustom(typ string, fields FieldRoles, rop ArrayOp, roles ...role.Role) Mapping {
-	return AnnotateTypeFieldsCustom(mapASTCustom, typ, fields, rop, roles...)
+func annotateTypeCustom(typ string, fields ObjAnnotator, rop ArrayOp, roles ...role.Role) Mapping {
+	return AnnotateTypeCustom(mapASTCustom, typ, fields, rop, roles...)
 }
 
 func operator(field, vr string, lookup map[uast.Value]ArrayOp, roles ...role.Role) Field {
 	return Field{Name: field, Op: Operator(vr, lookup, roles...)}
 }
 
-func astFieldLeft() Op {
+var _ ObjAnnotator = astField{}
+
+type astField struct {
+	Inherit bool
+	Roles   []role.Role
+}
+
+func (f astField) left(pref string) ObjectOp {
 	return ASTObjectLeft("Field", Obj{
-		"Names": EachObjectRoles("field_name"),
-		"Type":  ObjectRoles("field_type"),
+		"Names": EachObjectRoles(pref + "field_name"),
+		"Type":  ObjectRoles(pref + "field_type"),
 	})
 }
 
-func astFieldRight(inherit bool, roles ...role.Role) Op {
+func (f astField) right(pref string) ObjectOp {
 	nameRoles := []role.Role{role.Name}
 	typeRoles := []role.Role{role.Type}
-	if inherit {
-		n := len(roles)
-		nameRoles = append(roles[:n:n], nameRoles...)
-		typeRoles = append(roles[:n:n], typeRoles...)
+	if f.Inherit {
+		n := len(f.Roles)
+		nameRoles = append(f.Roles[:n:n], nameRoles...)
+		typeRoles = append(f.Roles[:n:n], typeRoles...)
 	}
 	return ASTObjectRightCustom("Field", Obj{
-		"Names": EachObjectRoles("field_name", nameRoles...),
-		"Type":  ObjectRoles("field_type", typeRoles...),
-	}, rolesByType, nil, roles...)
+		"Names": EachObjectRoles(pref+"field_name", nameRoles...),
+		"Type":  ObjectRoles(pref+"field_type", typeRoles...),
+	}, rolesByType, nil, f.Roles...)
+}
+
+func (f astField) MappingParts(pref string) (src, dst ObjectOp) {
+	return f.left(pref), f.right(pref)
 }
 
 var (
@@ -184,7 +191,7 @@ var Annotations = []Mapping{
 
 	annotateType("BadExpr", nil, role.Incomplete),
 
-	annotateTypeFields("Ident", FieldRoles{
+	annotateType("Ident", FieldRoles{
 		"Name": {Rename: uast.KeyToken},
 	}, role.Identifier),
 
@@ -237,19 +244,19 @@ var Annotations = []Mapping{
 	}, LookupArrOpVar("op", opAssign),
 		role.Assignment, role.Binary),
 
-	annotateTypeFields("IfStmt", FieldRoles{
+	annotateType("IfStmt", FieldRoles{
 		"Init": {Opt: true, Roles: role.Roles{role.If, role.Initialization}},
 		"Cond": {Roles: role.Roles{role.If, role.Condition}},
 		"Body": {Roles: role.Roles{role.Then, role.Body}},
 		"Else": {Opt: true, Roles: role.Roles{role.Else}},
 	}, role.If),
 
-	annotateTypeFields("SwitchStmt", FieldRoles{
+	annotateType("SwitchStmt", FieldRoles{
 		"Init": {Opt: true, Roles: role.Roles{role.Switch, role.Initialization}},
 		"Body": {Roles: role.Roles{role.Switch, role.Body}},
 	}, role.Switch),
 
-	annotateTypeFields("TypeSwitchStmt", FieldRoles{
+	annotateType("TypeSwitchStmt", FieldRoles{
 		"Init": {Opt: true, Roles: role.Roles{role.Switch, role.Initialization}},
 		"Body": {Roles: role.Roles{role.Switch, role.Body}},
 	}, role.Switch, role.Incomplete),
@@ -258,26 +265,26 @@ var Annotations = []Mapping{
 		"Body": {role.Switch, role.Body},
 	}, role.Switch, role.Incomplete),
 
-	annotateTypeFields("ForStmt", FieldRoles{
+	annotateType("ForStmt", FieldRoles{
 		"Init": {Opt: true, Roles: role.Roles{role.For, role.Initialization}},
 		"Cond": {Opt: true, Roles: role.Roles{role.For, role.Condition}},
 		"Body": {Roles: role.Roles{role.For, role.Body}},
 		"Post": {Opt: true, Roles: role.Roles{role.For, role.Update}},
 	}, role.For),
 
-	annotateTypeFields("RangeStmt", FieldRoles{
+	annotateType("RangeStmt", FieldRoles{
 		"Key":   {Opt: true, Roles: role.Roles{role.For, role.Iterator, role.Key}},
 		"Value": {Opt: true, Roles: role.Roles{role.For, role.Iterator, role.Value}},
 		"X":     {},
 		"Body":  {Roles: role.Roles{role.For, role.Body}},
 	}, role.For, role.Iterator),
 
-	annotateTypeFieldsCustom("BranchStmt", FieldRoles{
+	annotateTypeCustom("BranchStmt", FieldRoles{
 		"Tok":   {Op: Var("tok")},
 		"Label": {},
 	}, LookupArrOpVar("tok", branchRoles)),
 
-	annotateTypeFields("ImportSpec", FieldRoles{
+	annotateType("ImportSpec", FieldRoles{
 		"Name": {Opt: true, Roles: role.Roles{role.Import, role.Alias}},
 		"Path": {Roles: role.Roles{role.Import, role.Pathname}},
 	}, role.Import, role.Declaration),
@@ -304,115 +311,72 @@ var Annotations = []Mapping{
 		"Body": {role.Body},
 	}),
 
-	mapAST("StructType", Fields{
-		{Name: "Fields", Op: Part("fields", Obj{
-			"List": Each("field", astFieldLeft()),
-		})},
-	}, Fields{ // ->
-		{Name: "Fields", Op: Part("fields", Obj{
-			"List": Each("field", astFieldRight(false, role.Entry)),
-		})},
+	annotateType("StructType", FieldRoles{
+		"Fields": {Sub: FieldRoles{
+			"List": {Arr: true, Sub: astField{
+				Roles: role.Roles{role.Entry},
+			}},
+		}},
 	}, role.Type),
 
-	mapAST("InterfaceType", Fields{
-		{Name: "Methods", Op: Part("fields", Fields{
-			RolesField("field-list"),
-			{Name: "List", Op: Each("field", astFieldLeft())},
-		})},
-	}, Fields{ // ->
-		{Name: "Methods", Op: Part("fields", Fields{
-			RolesField("field-list", role.Function, role.List),
-			{Name: "List", Op: Each("field",
-				astFieldRight(false, role.Entry),
-			)},
-		})},
+	annotateType("InterfaceType", FieldRoles{
+		"Methods": {Sub: FieldRoles{
+			"List": {Arr: true,
+				Sub: astField{Roles: role.Roles{role.Entry}},
+			},
+		}, Roles: role.Roles{role.Function, role.List}},
 	}, role.Type, role.Incomplete),
 
-	mapAST("FuncType", Fields{
-		{Name: "Params", Op: Part("params", Fields{
-			RolesField("params-list"),
-			{Name: "List", Op: Each("param", astFieldLeft())},
-		})},
-		{Name: "Results", Op: Opt("has-res", Part("results", Fields{
-			RolesField("results-list"),
-			{Name: "List", Op: Each("result", astFieldLeft())},
-		}))},
-	}, Fields{ // ->
-		{Name: "Params", Op: Part("params", Fields{
-			RolesField("params-list", role.ArgsList),
-			{Name: "List", Op: Each("param",
-				astFieldRight(false, role.Argument),
-			)},
-		})},
-		{Name: "Results", Op: Opt("has-res", Part("results", Fields{
-			RolesField("results-list", role.Return, role.ArgsList),
-			{Name: "List", Op: Each("result",
-				astFieldRight(false, role.Return, role.Argument),
-			)},
-		}))},
+	annotateType("FuncType", FieldRoles{
+		"Params": {Sub: FieldRoles{
+			"List": {Arr: true,
+				Sub: astField{Roles: role.Roles{role.Argument}},
+			},
+		}, Roles: role.Roles{role.ArgsList}},
+		"Results": {Opt: true, Sub: FieldRoles{
+			"List": {Arr: true,
+				Sub: astField{Roles: role.Roles{role.Return, role.Argument}},
+			},
+		}, Roles: role.Roles{role.Return, role.ArgsList}},
 	}, role.Function, role.Type),
 
-	mapAST("FuncDecl", Fields{
-		{Name: "Recv", Op: Opt("recv_set", Part("recv", Fields{
-			RolesField("field-list"),
-			{Name: "List", Op: Each("field", astFieldLeft())},
-		}))},
-		{Name: "Name", Op: ObjectRoles("name")},
-		{Name: "Type", Op: ObjectRoles("type")},
-		{Name: "Body", Op: ObjectRoles("body")},
-	}, Fields{ // ->
-		{Name: "Recv", Op: Opt("recv_set", Part("recv", Fields{
-			RolesField("field-list", role.Function, role.Receiver, role.List),
-			{Name: "List", Op: Each("field",
-				astFieldRight(true, role.Function, role.Receiver),
-			)},
-		}))},
-		{Name: "Name", Op: ObjectRoles("name", role.Function, role.Name)},
-		{Name: "Type", Op: ObjectRoles("type", role.Function, role.Type)},
-		{Name: "Body", Op: ObjectRoles("body", role.Function, role.Body)},
+	annotateType("FuncDecl", FieldRoles{
+		"Recv": {Opt: true, Sub: FieldRoles{
+			"List": {Arr: true, Sub: astField{
+				Inherit: true, Roles: role.Roles{role.Function, role.Receiver},
+			}},
+		}, Roles: role.Roles{role.Function, role.Receiver, role.List}},
+		"Name": {Roles: role.Roles{role.Function, role.Name}},
+		"Type": {Roles: role.Roles{role.Function, role.Type}},
+		"Body": {Roles: role.Roles{role.Function, role.Body}},
 	}, role.Function, role.Declaration),
 
-	mapAST("GenDecl", Fields{
-		{Name: "Tok", Op: Is(goTok(token.VAR))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": EachObjectRoles("var_name"),
-		}))},
-	}, Fields{ // ->
-		{Name: "Tok", Op: Is(goTok(token.VAR))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": EachObjectRoles("var_name", role.Variable, role.Name),
-		}))},
+	annotateType("GenDecl", FieldRoles{
+		"Tok": {Op: Is(goTok(token.VAR))},
+		"Specs": {Arr: true, Sub: FieldRoles{
+			"Names": {Arr: true, Roles: role.Roles{role.Variable, role.Name}},
+		}},
 	}, role.Variable, role.Declaration),
 
-	mapAST("GenDecl", Fields{
-		{Name: "Tok", Op: Is(goTok(token.CONST))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": EachObjectRoles("const_name"),
-		}))},
-	}, Fields{ // ->
-		{Name: "Tok", Op: Is(goTok(token.CONST))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Names": EachObjectRoles("const_name", role.Name),
-		}))},
+	annotateType("GenDecl", FieldRoles{
+		"Tok": {Op: Is(goTok(token.CONST))},
+		"Specs": {Arr: true, Sub: FieldRoles{
+			"Names": {Arr: true, Roles: role.Roles{role.Name}},
+		}},
 	}, role.Incomplete, role.Declaration),
 
-	mapAST("GenDecl", Fields{
-		{Name: "Tok", Op: Is(goTok(token.TYPE))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Name": ObjectRoles("type_name"),
-		}))},
-	}, Fields{ // ->
-		{Name: "Tok", Op: Is(goTok(token.TYPE))},
-		{Name: "Specs", Op: Each("specs", Part("spec", Obj{
-			"Name": ObjectRoles("type_name", role.Type, role.Name),
-		}))},
+	annotateType("GenDecl", FieldRoles{
+		"Tok": {Op: Is(goTok(token.TYPE))},
+		"Specs": {Arr: true, Sub: FieldRoles{
+			"Name": {Roles: role.Roles{role.Type, role.Name}},
+		}},
 	}, role.Type, role.Declaration),
 
-	annotateTypeFields("GenDecl", FieldRoles{
+	annotateType("GenDecl", FieldRoles{
 		"Tok": {Op: Is(goTok(token.IMPORT))},
 	}, role.Declaration),
 
-	annotateTypeFields("CallExpr", FieldRoles{
+	annotateType("CallExpr", FieldRoles{
 		"Fun":  {Roles: role.Roles{role.Callee}},
 		"Args": {Arr: true, Roles: role.Roles{role.Argument, role.Positional}},
 	}, role.Call),
