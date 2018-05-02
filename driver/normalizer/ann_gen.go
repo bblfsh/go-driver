@@ -3,7 +3,7 @@
 package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v1/uast/role"
+	"gopkg.in/bblfsh/sdk.v2/uast/role"
 )
 
 var typeRoles = map[string][]role.Role{
