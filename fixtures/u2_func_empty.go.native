@@ -1,171 +1,158 @@
-{
-    "status": "ok",
-    "language": "go",
-    "errors": [],
-    "ast": {
-        "@end": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 37
-        },
-        "@start": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 1
-        },
-        "@type": "File",
-        "Comments": null,
-        "Decls": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 37
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 19
-                },
-                "@type": "FuncDecl",
-                "Body": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 37
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 35
-                    },
-                    "@type": "BlockStmt",
-                    "Lbrace": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 35
-                    },
-                    "List": null,
-                    "Rbrace": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 36
-                    }
-                },
-                "Doc": null,
-                "Name": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 32
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 24
-                    },
-                    "@type": "Ident",
-                    "Name": "Testfnc1",
-                    "NamePos": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 24
-                    }
-                },
-                "Recv": null,
-                "Type": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 34
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 19
-                    },
-                    "@type": "FuncType",
-                    "Func": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 19
-                    },
-                    "Params": {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 34
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 32
-                        },
-                        "@type": "FieldList",
-                        "Closing": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 33
-                        },
-                        "List": null,
-                        "Opening": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 32
-                        }
-                    },
-                    "Results": null
-                }
-            }
-        ],
-        "Doc": null,
-        "Imports": null,
-        "Name": {
-            "@end": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 17
+{ '@type': "File",
+   '@role': [Unannotated],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 1,
+         line: 0,
+         col: 0,
+      },
+      end: { '@type': "uast:Position",
+         offset: 37,
+         line: 0,
+         col: 0,
+      },
+      Package: { '@type': "uast:Position",
+         offset: 1,
+         line: 0,
+         col: 0,
+      },
+   },
+   Comments: ~,
+   Decls: [
+      { '@type': "FuncDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 19,
+               line: 0,
+               col: 0,
             },
-            "@start": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 9
+            end: { '@type': "uast:Position",
+               offset: 37,
+               line: 0,
+               col: 0,
             },
-            "@type": "Ident",
-            "Name": "fixtures",
-            "NamePos": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 9
-            }
-        },
-        "Package": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 1
-        },
-        "Unresolved": null
-    }
+         },
+         Body: { '@type': "BlockStmt",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 35,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 37,
+                  line: 0,
+                  col: 0,
+               },
+               Lbrace: { '@type': "uast:Position",
+                  offset: 35,
+                  line: 0,
+                  col: 0,
+               },
+               Rbrace: { '@type': "uast:Position",
+                  offset: 36,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            List: ~,
+         },
+         Doc: ~,
+         Name: { '@type': "Ident",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 24,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 32,
+                  line: 0,
+                  col: 0,
+               },
+               NamePos: { '@type': "uast:Position",
+                  offset: 24,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            Name: "Testfnc1",
+         },
+         Recv: ~,
+         Type: { '@type': "FuncType",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 19,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 34,
+                  line: 0,
+                  col: 0,
+               },
+               Func: { '@type': "uast:Position",
+                  offset: 19,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            Params: { '@type': "FieldList",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 32,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 34,
+                     line: 0,
+                     col: 0,
+                  },
+                  Closing: { '@type': "uast:Position",
+                     offset: 33,
+                     line: 0,
+                     col: 0,
+                  },
+                  Opening: { '@type': "uast:Position",
+                     offset: 32,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               List: ~,
+            },
+            Results: ~,
+         },
+      },
+   ],
+   Doc: ~,
+   Imports: ~,
+   Name: { '@type': "Ident",
+      '@role': [Unannotated],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 9,
+            line: 0,
+            col: 0,
+         },
+         end: { '@type': "uast:Position",
+            offset: 17,
+            line: 0,
+            col: 0,
+         },
+         NamePos: { '@type': "uast:Position",
+            offset: 9,
+            line: 0,
+            col: 0,
+         },
+      },
+      Name: "fixtures",
+   },
+   Unresolved: ~,
 }

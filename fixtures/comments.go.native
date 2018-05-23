@@ -1,1423 +1,1367 @@
-{
-    "status": "ok",
-    "language": "go",
-    "errors": [],
-    "ast": {
-        "@end": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 440
-        },
-        "@start": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 57
-        },
-        "@type": "File",
-        "Comments": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 56
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 1
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 56
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 1
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 1
-                        },
-                        "Text": "// Package fixtures is a collection of Go code samples."
-                    }
-                ]
+{ '@type': "File",
+   '@role': [Unannotated],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 57,
+         line: 0,
+         col: 0,
+      },
+      end: { '@type': "uast:Position",
+         offset: 440,
+         line: 0,
+         col: 0,
+      },
+      Package: { '@type': "uast:Position",
+         offset: 57,
+         line: 0,
+         col: 0,
+      },
+   },
+   Comments: [
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 1,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 94
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 75
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 94
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 75
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 75
-                        },
-                        "Text": "// detached comment"
-                    }
-                ]
+            end: { '@type': "uast:Position",
+               offset: 56,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 120
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 96
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 120
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 96
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 96
-                        },
-                        "Text": "/* detached comment 2 */"
-                    }
-                ]
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 1,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 56,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 1,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// Package fixtures is a collection of Go code samples.",
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 147
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 122
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 147
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 122
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 122
-                        },
-                        "Text": "/*\n\tdetached\n\tmutiline\n*/"
-                    }
-                ]
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 75,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 177
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 149
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 177
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 149
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 149
-                        },
-                        "Text": "//go:generate echo directive"
-                    }
-                ]
+            end: { '@type': "uast:Position",
+               offset: 94,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 199
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 179
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 199
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 179
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 179
-                        },
-                        "Text": "// var block comment"
-                    }
-                ]
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 75,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 94,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 75,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// detached comment",
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 225
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 207
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 225
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 207
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 207
-                        },
-                        "Text": "// a is a variable"
-                    }
-                ]
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 96,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 257
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 240
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 257
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 240
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 240
-                        },
-                        "Text": "// inline comment"
-                    }
-                ]
+            end: { '@type': "uast:Position",
+               offset: 120,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 288
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 261
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 288
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 261
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 261
-                        },
-                        "Text": "// foo is a sample function"
-                    }
-                ]
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 96,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 120,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 96,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "/* detached comment 2 */",
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 327
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 303
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 327
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 303
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 303
-                        },
-                        "Text": "// function body comment"
-                    }
-                ]
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 122,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 385
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 331
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 357
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 331
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 331
-                        },
-                        "Text": "// data is a sample struct"
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 360
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 358
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 358
-                        },
-                        "Text": "//"
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 385
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 361
-                        },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 361
-                        },
-                        "Text": "// It's not very useful."
-                    }
-                ]
+            end: { '@type': "uast:Position",
+               offset: 147,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 438
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 415
-                },
-                "@type": "CommentGroup",
-                "List": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 438
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 122,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 147,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 122,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "/*\n\tdetached\n\tmutiline\n*/",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 149,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 177,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 149,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 177,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 149,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "//go:generate echo directive",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 179,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 199,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 179,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 199,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 179,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// var block comment",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 207,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 225,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 207,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 225,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 207,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// a is a variable",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 240,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 257,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 240,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 257,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 240,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// inline comment",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 261,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 288,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 261,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 288,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 261,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// foo is a sample function",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 303,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 327,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 303,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 327,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 303,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// function body comment",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 331,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 385,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 331,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 357,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 331,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// data is a sample struct",
+            },
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 358,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 360,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 358,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "//",
+            },
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 361,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 385,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 361,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// It's not very useful.",
+            },
+         ],
+      },
+      { '@type': "CommentGroup",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 415,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 438,
+               line: 0,
+               col: 0,
+            },
+         },
+         List: [
+            { '@type': "Comment",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 415,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 438,
+                     line: 0,
+                     col: 0,
+                  },
+                  Slash: { '@type': "uast:Position",
+                     offset: 415,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Text: "// struct field comment",
+            },
+         ],
+      },
+   ],
+   Decls: [
+      { '@type': "GenDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 200,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 259,
+               line: 0,
+               col: 0,
+            },
+            Lparen: { '@type': "uast:Position",
+               offset: 204,
+               line: 0,
+               col: 0,
+            },
+            Rparen: { '@type': "uast:Position",
+               offset: 258,
+               line: 0,
+               col: 0,
+            },
+            TokPos: { '@type': "uast:Position",
+               offset: 200,
+               line: 0,
+               col: 0,
+            },
+         },
+         Doc: { '@type': "CommentGroup",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 179,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 199,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            List: [
+               { '@type': "Comment",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 179,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 199,
+                        line: 0,
+                        col: 0,
+                     },
+                     Slash: { '@type': "uast:Position",
+                        offset: 179,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Text: "// var block comment",
+               },
+            ],
+         },
+         Specs: [
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 227,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 232,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: { '@type': "CommentGroup",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 207,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 225,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  List: [
+                     { '@type': "Comment",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 207,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 225,
+                              line: 0,
+                              col: 0,
+                           },
+                           Slash: { '@type': "uast:Position",
+                              offset: 207,
+                              line: 0,
+                              col: 0,
+                           },
                         },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 415
+                        Text: "// a is a variable",
+                     },
+                  ],
+               },
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 227,
+                           line: 0,
+                           col: 0,
                         },
-                        "@type": "Comment",
-                        "Slash": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 415
+                        end: { '@type': "uast:Position",
+                           offset: 228,
+                           line: 0,
+                           col: 0,
                         },
-                        "Text": "// struct field comment"
-                    }
-                ]
-            }
-        ],
-        "Decls": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 259
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 200
-                },
-                "@type": "GenDecl",
-                "Doc": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 199
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 179
-                    },
-                    "@type": "CommentGroup",
-                    "List": [
-                        {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 199
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 179
-                            },
-                            "@type": "Comment",
-                            "Slash": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 179
-                            },
-                            "Text": "// var block comment"
-                        }
-                    ]
-                },
-                "Lparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 204
-                },
-                "Rparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 258
-                },
-                "Specs": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 232
+                        NamePos: { '@type': "uast:Position",
+                           offset: 227,
+                           line: 0,
+                           col: 0,
                         },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 227
+                     },
+                     Name: "a",
+                  },
+               ],
+               Type: { '@type': "Ident",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 229,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 232,
+                        line: 0,
+                        col: 0,
+                     },
+                     NamePos: { '@type': "uast:Position",
+                        offset: 229,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Name: "int",
+               },
+               Values: ~,
+            },
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 234,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 239,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: { '@type': "CommentGroup",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 240,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 257,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  List: [
+                     { '@type': "Comment",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 240,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 257,
+                              line: 0,
+                              col: 0,
+                           },
+                           Slash: { '@type': "uast:Position",
+                              offset: 240,
+                              line: 0,
+                              col: 0,
+                           },
                         },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 225
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 207
-                            },
-                            "@type": "CommentGroup",
-                            "List": [
-                                {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 225
+                        Text: "// inline comment",
+                     },
+                  ],
+               },
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 234,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 235,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 234,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "b",
+                  },
+               ],
+               Type: { '@type': "Ident",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 236,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 239,
+                        line: 0,
+                        col: 0,
+                     },
+                     NamePos: { '@type': "uast:Position",
+                        offset: 236,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Name: "int",
+               },
+               Values: ~,
+            },
+         ],
+         Tok: "var",
+      },
+      { '@type': "FuncDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 289,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 329,
+               line: 0,
+               col: 0,
+            },
+         },
+         Body: { '@type': "BlockStmt",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 300,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 329,
+                  line: 0,
+                  col: 0,
+               },
+               Lbrace: { '@type': "uast:Position",
+                  offset: 300,
+                  line: 0,
+                  col: 0,
+               },
+               Rbrace: { '@type': "uast:Position",
+                  offset: 328,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            List: ~,
+         },
+         Doc: { '@type': "CommentGroup",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 261,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 288,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            List: [
+               { '@type': "Comment",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 261,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 288,
+                        line: 0,
+                        col: 0,
+                     },
+                     Slash: { '@type': "uast:Position",
+                        offset: 261,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Text: "// foo is a sample function",
+               },
+            ],
+         },
+         Name: { '@type': "Ident",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 294,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 297,
+                  line: 0,
+                  col: 0,
+               },
+               NamePos: { '@type': "uast:Position",
+                  offset: 294,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            Name: "foo",
+         },
+         Recv: ~,
+         Type: { '@type': "FuncType",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 289,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 299,
+                  line: 0,
+                  col: 0,
+               },
+               Func: { '@type': "uast:Position",
+                  offset: 289,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            Params: { '@type': "FieldList",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 297,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 299,
+                     line: 0,
+                     col: 0,
+                  },
+                  Closing: { '@type': "uast:Position",
+                     offset: 298,
+                     line: 0,
+                     col: 0,
+                  },
+                  Opening: { '@type': "uast:Position",
+                     offset: 297,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               List: ~,
+            },
+            Results: ~,
+         },
+      },
+      { '@type': "GenDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 386,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 440,
+               line: 0,
+               col: 0,
+            },
+            Lparen: { '@type': "uast:Position",
+               offset: 0,
+               line: 0,
+               col: 0,
+            },
+            Rparen: { '@type': "uast:Position",
+               offset: 0,
+               line: 0,
+               col: 0,
+            },
+            TokPos: { '@type': "uast:Position",
+               offset: 386,
+               line: 0,
+               col: 0,
+            },
+         },
+         Doc: { '@type': "CommentGroup",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 331,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 385,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            List: [
+               { '@type': "Comment",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 331,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 357,
+                        line: 0,
+                        col: 0,
+                     },
+                     Slash: { '@type': "uast:Position",
+                        offset: 331,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Text: "// data is a sample struct",
+               },
+               { '@type': "Comment",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 358,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 360,
+                        line: 0,
+                        col: 0,
+                     },
+                     Slash: { '@type': "uast:Position",
+                        offset: 358,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Text: "//",
+               },
+               { '@type': "Comment",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 361,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 385,
+                        line: 0,
+                        col: 0,
+                     },
+                     Slash: { '@type': "uast:Position",
+                        offset: 361,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Text: "// It's not very useful.",
+               },
+            ],
+         },
+         Specs: [
+            { '@type': "TypeSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 391,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 440,
+                     line: 0,
+                     col: 0,
+                  },
+                  Assign: { '@type': "uast:Position",
+                     offset: 0,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Name: { '@type': "Ident",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 391,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 395,
+                        line: 0,
+                        col: 0,
+                     },
+                     NamePos: { '@type': "uast:Position",
+                        offset: 391,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Name: "data",
+               },
+               Type: { '@type': "StructType",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 396,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 440,
+                        line: 0,
+                        col: 0,
+                     },
+                     Struct: { '@type': "uast:Position",
+                        offset: 396,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Fields: { '@type': "FieldList",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 403,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 440,
+                           line: 0,
+                           col: 0,
+                        },
+                        Closing: { '@type': "uast:Position",
+                           offset: 439,
+                           line: 0,
+                           col: 0,
+                        },
+                        Opening: { '@type': "uast:Position",
+                           offset: 403,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     List: [
+                        { '@type': "Field",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 406,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 414,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Comment: { '@type': "CommentGroup",
+                              '@role': [Unannotated],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 415,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 438,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                              },
+                              List: [
+                                 { '@type': "Comment",
+                                    '@role': [Unannotated],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 415,
+                                          line: 0,
+                                          col: 0,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 438,
+                                          line: 0,
+                                          col: 0,
+                                       },
+                                       Slash: { '@type': "uast:Position",
+                                          offset: 415,
+                                          line: 0,
+                                          col: 0,
+                                       },
                                     },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 207
+                                    Text: "// struct field comment",
+                                 },
+                              ],
+                           },
+                           Doc: ~,
+                           Names: [
+                              { '@type': "Ident",
+                                 '@role': [Unannotated],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 406,
+                                       line: 0,
+                                       col: 0,
                                     },
-                                    "@type": "Comment",
-                                    "Slash": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 207
+                                    end: { '@type': "uast:Position",
+                                       offset: 407,
+                                       line: 0,
+                                       col: 0,
                                     },
-                                    "Text": "// a is a variable"
-                                }
-                            ]
-                        },
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 228
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 227
-                                },
-                                "@type": "Ident",
-                                "Name": "a",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 227
-                                }
-                            }
-                        ],
-                        "Type": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 232
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 229
-                            },
-                            "@type": "Ident",
-                            "Name": "int",
-                            "NamePos": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 229
-                            }
-                        },
-                        "Values": null
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 239
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 234
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 257
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 240
-                            },
-                            "@type": "CommentGroup",
-                            "List": [
-                                {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 257
+                                    NamePos: { '@type': "uast:Position",
+                                       offset: 406,
+                                       line: 0,
+                                       col: 0,
                                     },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 240
-                                    },
-                                    "@type": "Comment",
-                                    "Slash": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 240
-                                    },
-                                    "Text": "// inline comment"
-                                }
-                            ]
+                                 },
+                                 Name: "a",
+                              },
+                           ],
+                           Tag: ~,
+                           Type: { '@type': "Ident",
+                              '@role': [Unannotated],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 408,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 414,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 NamePos: { '@type': "uast:Position",
+                                    offset: 408,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                              },
+                              Name: "string",
+                           },
                         },
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 235
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 234
-                                },
-                                "@type": "Ident",
-                                "Name": "b",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 234
-                                }
-                            }
-                        ],
-                        "Type": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 239
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 236
-                            },
-                            "@type": "Ident",
-                            "Name": "int",
-                            "NamePos": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 236
-                            }
-                        },
-                        "Values": null
-                    }
-                ],
-                "Tok": "var",
-                "TokPos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 200
-                }
+                     ],
+                  },
+                  Incomplete: false,
+               },
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 329
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 289
-                },
-                "@type": "FuncDecl",
-                "Body": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 329
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 300
-                    },
-                    "@type": "BlockStmt",
-                    "Lbrace": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 300
-                    },
-                    "List": null,
-                    "Rbrace": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 328
-                    }
-                },
-                "Doc": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 288
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 261
-                    },
-                    "@type": "CommentGroup",
-                    "List": [
-                        {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 288
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 261
-                            },
-                            "@type": "Comment",
-                            "Slash": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 261
-                            },
-                            "Text": "// foo is a sample function"
-                        }
-                    ]
-                },
-                "Name": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 297
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 294
-                    },
-                    "@type": "Ident",
-                    "Name": "foo",
-                    "NamePos": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 294
-                    }
-                },
-                "Recv": null,
-                "Type": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 299
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 289
-                    },
-                    "@type": "FuncType",
-                    "Func": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 289
-                    },
-                    "Params": {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 299
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 297
-                        },
-                        "@type": "FieldList",
-                        "Closing": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 298
-                        },
-                        "List": null,
-                        "Opening": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 297
-                        }
-                    },
-                    "Results": null
-                }
+         ],
+         Tok: "type",
+      },
+   ],
+   Doc: { '@type': "CommentGroup",
+      '@role': [Unannotated],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 1,
+            line: 0,
+            col: 0,
+         },
+         end: { '@type': "uast:Position",
+            offset: 56,
+            line: 0,
+            col: 0,
+         },
+      },
+      List: [
+         { '@type': "Comment",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 1,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 56,
+                  line: 0,
+                  col: 0,
+               },
+               Slash: { '@type': "uast:Position",
+                  offset: 1,
+                  line: 0,
+                  col: 0,
+               },
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 440
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 386
-                },
-                "@type": "GenDecl",
-                "Doc": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 385
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 331
-                    },
-                    "@type": "CommentGroup",
-                    "List": [
-                        {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 357
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 331
-                            },
-                            "@type": "Comment",
-                            "Slash": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 331
-                            },
-                            "Text": "// data is a sample struct"
-                        },
-                        {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 360
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 358
-                            },
-                            "@type": "Comment",
-                            "Slash": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 358
-                            },
-                            "Text": "//"
-                        },
-                        {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 385
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 361
-                            },
-                            "@type": "Comment",
-                            "Slash": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 361
-                            },
-                            "Text": "// It's not very useful."
-                        }
-                    ]
-                },
-                "Lparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 0
-                },
-                "Rparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 0
-                },
-                "Specs": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 440
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 391
-                        },
-                        "@type": "TypeSpec",
-                        "Assign": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 0
-                        },
-                        "Comment": null,
-                        "Doc": null,
-                        "Name": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 395
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 391
-                            },
-                            "@type": "Ident",
-                            "Name": "data",
-                            "NamePos": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 391
-                            }
-                        },
-                        "Type": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 440
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 396
-                            },
-                            "@type": "StructType",
-                            "Fields": {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 440
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 403
-                                },
-                                "@type": "FieldList",
-                                "Closing": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 439
-                                },
-                                "List": [
-                                    {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 414
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 406
-                                        },
-                                        "@type": "Field",
-                                        "Comment": {
-                                            "@end": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 438
-                                            },
-                                            "@start": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 415
-                                            },
-                                            "@type": "CommentGroup",
-                                            "List": [
-                                                {
-                                                    "@end": {
-                                                        "@type": "ast:Position",
-                                                        "col": 0,
-                                                        "line": 0,
-                                                        "off": 438
-                                                    },
-                                                    "@start": {
-                                                        "@type": "ast:Position",
-                                                        "col": 0,
-                                                        "line": 0,
-                                                        "off": 415
-                                                    },
-                                                    "@type": "Comment",
-                                                    "Slash": {
-                                                        "@type": "ast:Position",
-                                                        "col": 0,
-                                                        "line": 0,
-                                                        "off": 415
-                                                    },
-                                                    "Text": "// struct field comment"
-                                                }
-                                            ]
-                                        },
-                                        "Doc": null,
-                                        "Names": [
-                                            {
-                                                "@end": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 407
-                                                },
-                                                "@start": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 406
-                                                },
-                                                "@type": "Ident",
-                                                "Name": "a",
-                                                "NamePos": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 406
-                                                }
-                                            }
-                                        ],
-                                        "Tag": null,
-                                        "Type": {
-                                            "@end": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 414
-                                            },
-                                            "@start": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 408
-                                            },
-                                            "@type": "Ident",
-                                            "Name": "string",
-                                            "NamePos": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 408
-                                            }
-                                        }
-                                    }
-                                ],
-                                "Opening": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 403
-                                }
-                            },
-                            "Incomplete": false,
-                            "Struct": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 396
-                            }
-                        }
-                    }
-                ],
-                "Tok": "type",
-                "TokPos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 386
-                }
-            }
-        ],
-        "Doc": {
-            "@end": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 56
+            Text: "// Package fixtures is a collection of Go code samples.",
+         },
+      ],
+   },
+   Imports: ~,
+   Name: { '@type': "Ident",
+      '@role': [Unannotated],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 65,
+            line: 0,
+            col: 0,
+         },
+         end: { '@type': "uast:Position",
+            offset: 73,
+            line: 0,
+            col: 0,
+         },
+         NamePos: { '@type': "uast:Position",
+            offset: 65,
+            line: 0,
+            col: 0,
+         },
+      },
+      Name: "fixtures",
+   },
+   Unresolved: [
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 229,
+               line: 0,
+               col: 0,
             },
-            "@start": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 1
+            end: { '@type': "uast:Position",
+               offset: 232,
+               line: 0,
+               col: 0,
             },
-            "@type": "CommentGroup",
-            "List": [
-                {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 56
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 1
-                    },
-                    "@type": "Comment",
-                    "Slash": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 1
-                    },
-                    "Text": "// Package fixtures is a collection of Go code samples."
-                }
-            ]
-        },
-        "Imports": null,
-        "Name": {
-            "@end": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 73
+            NamePos: { '@type': "uast:Position",
+               offset: 229,
+               line: 0,
+               col: 0,
             },
-            "@start": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 65
+         },
+         Name: "int",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 236,
+               line: 0,
+               col: 0,
             },
-            "@type": "Ident",
-            "Name": "fixtures",
-            "NamePos": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 65
-            }
-        },
-        "Package": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 57
-        },
-        "Unresolved": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 232
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 229
-                },
-                "@type": "Ident",
-                "Name": "int",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 229
-                }
+            end: { '@type': "uast:Position",
+               offset: 239,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 239
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 236
-                },
-                "@type": "Ident",
-                "Name": "int",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 236
-                }
+            NamePos: { '@type': "uast:Position",
+               offset: 236,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 414
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 408
-                },
-                "@type": "Ident",
-                "Name": "string",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 408
-                }
-            }
-        ]
-    }
+         },
+         Name: "int",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 408,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 414,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 408,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "string",
+      },
+   ],
 }

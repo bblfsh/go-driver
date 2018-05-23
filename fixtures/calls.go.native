@@ -1,1273 +1,1207 @@
-{
-    "status": "ok",
-    "language": "go",
-    "errors": [],
-    "ast": {
-        "@end": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 150
-        },
-        "@start": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 1
-        },
-        "@type": "File",
-        "Comments": null,
-        "Decls": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 31
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 19
-                },
-                "@type": "GenDecl",
-                "Doc": null,
-                "Lparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 0
-                },
-                "Rparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 0
-                },
-                "Specs": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 31
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 26
-                        },
-                        "@type": "ImportSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "EndPos": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 0
-                        },
-                        "Name": null,
-                        "Path": {
-                            "@end": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 31
-                            },
-                            "@start": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 26
-                            },
-                            "@type": "BasicLit",
-                            "Kind": "STRING",
-                            "Value": "\"fmt\"",
-                            "ValuePos": {
-                                "@type": "ast:Position",
-                                "col": 0,
-                                "line": 0,
-                                "off": 26
-                            }
-                        }
-                    }
-                ],
-                "Tok": "import",
-                "TokPos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 19
-                }
+{ '@type': "File",
+   '@role': [Unannotated],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 1,
+         line: 0,
+         col: 0,
+      },
+      end: { '@type': "uast:Position",
+         offset: 150,
+         line: 0,
+         col: 0,
+      },
+      Package: { '@type': "uast:Position",
+         offset: 1,
+         line: 0,
+         col: 0,
+      },
+   },
+   Comments: ~,
+   Decls: [
+      { '@type': "GenDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 19,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 150
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 33
-                },
-                "@type": "GenDecl",
-                "Doc": null,
-                "Lparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 37
-                },
-                "Rparen": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 149
-                },
-                "Specs": [
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 52
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 40
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 41
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 40
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 40
-                                }
-                            }
-                        ],
-                        "Type": null,
-                        "Values": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 52
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 47
-                                },
-                                "@type": "CallExpr",
-                                "Args": null,
-                                "Ellipsis": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 0
-                                },
-                                "Fun": {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 50
-                                    },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 47
-                                    },
-                                    "@type": "Ident",
-                                    "Name": "foo",
-                                    "NamePos": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 47
-                                    }
-                                },
-                                "Lparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 50
-                                },
-                                "Rparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 51
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 70
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 54
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 55
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 54
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 54
-                                }
-                            },
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 58
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 57
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 57
-                                }
-                            }
-                        ],
-                        "Type": null,
-                        "Values": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 70
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 61
-                                },
-                                "@type": "CallExpr",
-                                "Args": [
-                                    {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 66
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 65
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "a",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 65
-                                        }
-                                    },
-                                    {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 69
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 68
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "b",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 68
-                                        }
-                                    }
-                                ],
-                                "Ellipsis": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 0
-                                },
-                                "Fun": {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 64
-                                    },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 61
-                                    },
-                                    "@type": "Ident",
-                                    "Name": "foo",
-                                    "NamePos": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 61
-                                    }
-                                },
-                                "Lparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 64
-                                },
-                                "Rparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 69
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 90
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 72
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 73
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 72
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 72
-                                }
-                            }
-                        ],
-                        "Type": null,
-                        "Values": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 90
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 79
-                                },
-                                "@type": "CallExpr",
-                                "Args": [
-                                    {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 86
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 85
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "c",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 85
-                                        }
-                                    }
-                                ],
-                                "Ellipsis": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 86
-                                },
-                                "Fun": {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 84
-                                    },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 79
-                                    },
-                                    "@type": "SelectorExpr",
-                                    "Sel": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 84
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 81
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "foo",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 81
-                                        }
-                                    },
-                                    "X": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 80
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 79
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "a",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 79
-                                        }
-                                    }
-                                },
-                                "Lparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 84
-                                },
-                                "Rparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 89
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 125
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 93
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 94
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 93
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 93
-                                }
-                            }
-                        ],
-                        "Type": null,
-                        "Values": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 125
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 97
-                                },
-                                "@type": "CallExpr",
-                                "Args": null,
-                                "Ellipsis": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 0
-                                },
-                                "Fun": {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 123
-                                    },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 97
-                                    },
-                                    "@type": "FuncLit",
-                                    "Body": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 123
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 108
-                                        },
-                                        "@type": "BlockStmt",
-                                        "Lbrace": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 108
-                                        },
-                                        "List": [
-                                            {
-                                                "@end": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 120
-                                                },
-                                                "@start": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 112
-                                                },
-                                                "@type": "ReturnStmt",
-                                                "Results": [
-                                                    {
-                                                        "@end": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 120
-                                                        },
-                                                        "@start": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 119
-                                                        },
-                                                        "@type": "BasicLit",
-                                                        "Kind": "INT",
-                                                        "Value": "1",
-                                                        "ValuePos": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 119
-                                                        }
-                                                    }
-                                                ],
-                                                "Return": {
-                                                    "@type": "ast:Position",
-                                                    "col": 0,
-                                                    "line": 0,
-                                                    "off": 112
-                                                }
-                                            }
-                                        ],
-                                        "Rbrace": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 122
-                                        }
-                                    },
-                                    "Type": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 107
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 97
-                                        },
-                                        "@type": "FuncType",
-                                        "Func": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 97
-                                        },
-                                        "Params": {
-                                            "@end": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 103
-                                            },
-                                            "@start": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 101
-                                            },
-                                            "@type": "FieldList",
-                                            "Closing": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 102
-                                            },
-                                            "List": null,
-                                            "Opening": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 101
-                                            }
-                                        },
-                                        "Results": {
-                                            "@end": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 107
-                                            },
-                                            "@start": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 104
-                                            },
-                                            "@type": "FieldList",
-                                            "Closing": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 0
-                                            },
-                                            "List": [
-                                                {
-                                                    "@end": {
-                                                        "@type": "ast:Position",
-                                                        "col": 0,
-                                                        "line": 0,
-                                                        "off": 107
-                                                    },
-                                                    "@start": {
-                                                        "@type": "ast:Position",
-                                                        "col": 0,
-                                                        "line": 0,
-                                                        "off": 104
-                                                    },
-                                                    "@type": "Field",
-                                                    "Comment": null,
-                                                    "Doc": null,
-                                                    "Names": null,
-                                                    "Tag": null,
-                                                    "Type": {
-                                                        "@end": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 107
-                                                        },
-                                                        "@start": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 104
-                                                        },
-                                                        "@type": "Ident",
-                                                        "Name": "int",
-                                                        "NamePos": {
-                                                            "@type": "ast:Position",
-                                                            "col": 0,
-                                                            "line": 0,
-                                                            "off": 104
-                                                        }
-                                                    }
-                                                }
-                                            ],
-                                            "Opening": {
-                                                "@type": "ast:Position",
-                                                "col": 0,
-                                                "line": 0,
-                                                "off": 0
-                                            }
-                                        }
-                                    }
-                                },
-                                "Lparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 123
-                                },
-                                "Rparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 124
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "@end": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 148
-                        },
-                        "@start": {
-                            "@type": "ast:Position",
-                            "col": 0,
-                            "line": 0,
-                            "off": 128
-                        },
-                        "@type": "ValueSpec",
-                        "Comment": null,
-                        "Doc": null,
-                        "Names": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 129
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 128
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 128
-                                }
-                            },
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 132
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 131
-                                },
-                                "@type": "Ident",
-                                "Name": "_",
-                                "NamePos": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 131
-                                }
-                            }
-                        ],
-                        "Type": null,
-                        "Values": [
-                            {
-                                "@end": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 148
-                                },
-                                "@start": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 135
-                                },
-                                "@type": "CallExpr",
-                                "Args": null,
-                                "Ellipsis": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 0
-                                },
-                                "Fun": {
-                                    "@end": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 146
-                                    },
-                                    "@start": {
-                                        "@type": "ast:Position",
-                                        "col": 0,
-                                        "line": 0,
-                                        "off": 135
-                                    },
-                                    "@type": "SelectorExpr",
-                                    "Sel": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 146
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 139
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "Println",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 139
-                                        }
-                                    },
-                                    "X": {
-                                        "@end": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 138
-                                        },
-                                        "@start": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 135
-                                        },
-                                        "@type": "Ident",
-                                        "Name": "fmt",
-                                        "NamePos": {
-                                            "@type": "ast:Position",
-                                            "col": 0,
-                                            "line": 0,
-                                            "off": 135
-                                        }
-                                    }
-                                },
-                                "Lparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 146
-                                },
-                                "Rparen": {
-                                    "@type": "ast:Position",
-                                    "col": 0,
-                                    "line": 0,
-                                    "off": 147
-                                }
-                            }
-                        ]
-                    }
-                ],
-                "Tok": "var",
-                "TokPos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 33
-                }
-            }
-        ],
-        "Doc": null,
-        "Imports": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 31
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 26
-                },
-                "@type": "ImportSpec",
-                "Comment": null,
-                "Doc": null,
-                "EndPos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 0
-                },
-                "Name": null,
-                "Path": {
-                    "@end": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 31
-                    },
-                    "@start": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 26
-                    },
-                    "@type": "BasicLit",
-                    "Kind": "STRING",
-                    "Value": "\"fmt\"",
-                    "ValuePos": {
-                        "@type": "ast:Position",
-                        "col": 0,
-                        "line": 0,
-                        "off": 26
-                    }
-                }
-            }
-        ],
-        "Name": {
-            "@end": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 17
+            end: { '@type': "uast:Position",
+               offset: 31,
+               line: 0,
+               col: 0,
             },
-            "@start": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 9
+            Lparen: { '@type': "uast:Position",
+               offset: 0,
+               line: 0,
+               col: 0,
             },
-            "@type": "Ident",
-            "Name": "fixtures",
-            "NamePos": {
-                "@type": "ast:Position",
-                "col": 0,
-                "line": 0,
-                "off": 9
-            }
-        },
-        "Package": {
-            "@type": "ast:Position",
-            "col": 0,
-            "line": 0,
-            "off": 1
-        },
-        "Unresolved": [
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 50
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 47
-                },
-                "@type": "Ident",
-                "Name": "foo",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 47
-                }
+            Rparen: { '@type': "uast:Position",
+               offset: 0,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 64
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 61
-                },
-                "@type": "Ident",
-                "Name": "foo",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 61
-                }
+            TokPos: { '@type': "uast:Position",
+               offset: 19,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 66
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 65
-                },
-                "@type": "Ident",
-                "Name": "a",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 65
-                }
+         },
+         Doc: ~,
+         Specs: [
+            { '@type': "ImportSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 26,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 31,
+                     line: 0,
+                     col: 0,
+                  },
+                  EndPos: { '@type': "uast:Position",
+                     offset: 0,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Name: ~,
+               Path: { '@type': "BasicLit",
+                  '@role': [Unannotated],
+                  '@pos': { '@type': "uast:Positions",
+                     start: { '@type': "uast:Position",
+                        offset: 26,
+                        line: 0,
+                        col: 0,
+                     },
+                     end: { '@type': "uast:Position",
+                        offset: 31,
+                        line: 0,
+                        col: 0,
+                     },
+                     ValuePos: { '@type': "uast:Position",
+                        offset: 26,
+                        line: 0,
+                        col: 0,
+                     },
+                  },
+                  Kind: "STRING",
+                  Value: "\"fmt\"",
+               },
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 69
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 68
-                },
-                "@type": "Ident",
-                "Name": "b",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 68
-                }
+         ],
+         Tok: "import",
+      },
+      { '@type': "GenDecl",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 33,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 80
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 79
-                },
-                "@type": "Ident",
-                "Name": "a",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 79
-                }
+            end: { '@type': "uast:Position",
+               offset: 150,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 86
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 85
-                },
-                "@type": "Ident",
-                "Name": "c",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 85
-                }
+            Lparen: { '@type': "uast:Position",
+               offset: 37,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 107
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 104
-                },
-                "@type": "Ident",
-                "Name": "int",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 104
-                }
+            Rparen: { '@type': "uast:Position",
+               offset: 149,
+               line: 0,
+               col: 0,
             },
-            {
-                "@end": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 138
-                },
-                "@start": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 135
-                },
-                "@type": "Ident",
-                "Name": "fmt",
-                "NamePos": {
-                    "@type": "ast:Position",
-                    "col": 0,
-                    "line": 0,
-                    "off": 135
-                }
-            }
-        ]
-    }
+            TokPos: { '@type': "uast:Position",
+               offset: 33,
+               line: 0,
+               col: 0,
+            },
+         },
+         Doc: ~,
+         Specs: [
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 40,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 52,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 40,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 41,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 40,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "CallExpr",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 47,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 52,
+                           line: 0,
+                           col: 0,
+                        },
+                        Ellipsis: { '@type': "uast:Position",
+                           offset: 0,
+                           line: 0,
+                           col: 0,
+                        },
+                        Lparen: { '@type': "uast:Position",
+                           offset: 50,
+                           line: 0,
+                           col: 0,
+                        },
+                        Rparen: { '@type': "uast:Position",
+                           offset: 51,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Args: ~,
+                     Fun: { '@type': "Ident",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 47,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 50,
+                              line: 0,
+                              col: 0,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 47,
+                              line: 0,
+                              col: 0,
+                           },
+                        },
+                        Name: "foo",
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 54,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 70,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 54,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 55,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 54,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 57,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 58,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 57,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "CallExpr",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 61,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 70,
+                           line: 0,
+                           col: 0,
+                        },
+                        Ellipsis: { '@type': "uast:Position",
+                           offset: 0,
+                           line: 0,
+                           col: 0,
+                        },
+                        Lparen: { '@type': "uast:Position",
+                           offset: 64,
+                           line: 0,
+                           col: 0,
+                        },
+                        Rparen: { '@type': "uast:Position",
+                           offset: 69,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Args: [
+                        { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 65,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 66,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 65,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "a",
+                        },
+                        { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 68,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 69,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 68,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "b",
+                        },
+                     ],
+                     Fun: { '@type': "Ident",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 61,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 64,
+                              line: 0,
+                              col: 0,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 61,
+                              line: 0,
+                              col: 0,
+                           },
+                        },
+                        Name: "foo",
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 72,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 90,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 72,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 73,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 72,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "CallExpr",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 79,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 90,
+                           line: 0,
+                           col: 0,
+                        },
+                        Ellipsis: { '@type': "uast:Position",
+                           offset: 86,
+                           line: 0,
+                           col: 0,
+                        },
+                        Lparen: { '@type': "uast:Position",
+                           offset: 84,
+                           line: 0,
+                           col: 0,
+                        },
+                        Rparen: { '@type': "uast:Position",
+                           offset: 89,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Args: [
+                        { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 85,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 86,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 85,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "c",
+                        },
+                     ],
+                     Fun: { '@type': "SelectorExpr",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 79,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 84,
+                              line: 0,
+                              col: 0,
+                           },
+                        },
+                        Sel: { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 81,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 84,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 81,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "foo",
+                        },
+                        X: { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 79,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 80,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 79,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "a",
+                        },
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 93,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 125,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 93,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 94,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 93,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "CallExpr",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 97,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 125,
+                           line: 0,
+                           col: 0,
+                        },
+                        Ellipsis: { '@type': "uast:Position",
+                           offset: 0,
+                           line: 0,
+                           col: 0,
+                        },
+                        Lparen: { '@type': "uast:Position",
+                           offset: 123,
+                           line: 0,
+                           col: 0,
+                        },
+                        Rparen: { '@type': "uast:Position",
+                           offset: 124,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Args: ~,
+                     Fun: { '@type': "FuncLit",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 97,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 123,
+                              line: 0,
+                              col: 0,
+                           },
+                        },
+                        Body: { '@type': "BlockStmt",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 108,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 123,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              Lbrace: { '@type': "uast:Position",
+                                 offset: 108,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              Rbrace: { '@type': "uast:Position",
+                                 offset: 122,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           List: [
+                              { '@type': "ReturnStmt",
+                                 '@role': [Unannotated],
+                                 '@pos': { '@type': "uast:Positions",
+                                    start: { '@type': "uast:Position",
+                                       offset: 112,
+                                       line: 0,
+                                       col: 0,
+                                    },
+                                    end: { '@type': "uast:Position",
+                                       offset: 120,
+                                       line: 0,
+                                       col: 0,
+                                    },
+                                    Return: { '@type': "uast:Position",
+                                       offset: 112,
+                                       line: 0,
+                                       col: 0,
+                                    },
+                                 },
+                                 Results: [
+                                    { '@type': "BasicLit",
+                                       '@role': [Unannotated],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 119,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 120,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                          ValuePos: { '@type': "uast:Position",
+                                             offset: 119,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                       },
+                                       Kind: "INT",
+                                       Value: "1",
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                        Type: { '@type': "FuncType",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 97,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 107,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              Func: { '@type': "uast:Position",
+                                 offset: 97,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Params: { '@type': "FieldList",
+                              '@role': [Unannotated],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 101,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 103,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 Closing: { '@type': "uast:Position",
+                                    offset: 102,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 Opening: { '@type': "uast:Position",
+                                    offset: 101,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                              },
+                              List: ~,
+                           },
+                           Results: { '@type': "FieldList",
+                              '@role': [Unannotated],
+                              '@pos': { '@type': "uast:Positions",
+                                 start: { '@type': "uast:Position",
+                                    offset: 104,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 end: { '@type': "uast:Position",
+                                    offset: 107,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 Closing: { '@type': "uast:Position",
+                                    offset: 0,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                                 Opening: { '@type': "uast:Position",
+                                    offset: 0,
+                                    line: 0,
+                                    col: 0,
+                                 },
+                              },
+                              List: [
+                                 { '@type': "Field",
+                                    '@role': [Unannotated],
+                                    '@pos': { '@type': "uast:Positions",
+                                       start: { '@type': "uast:Position",
+                                          offset: 104,
+                                          line: 0,
+                                          col: 0,
+                                       },
+                                       end: { '@type': "uast:Position",
+                                          offset: 107,
+                                          line: 0,
+                                          col: 0,
+                                       },
+                                    },
+                                    Comment: ~,
+                                    Doc: ~,
+                                    Names: ~,
+                                    Tag: ~,
+                                    Type: { '@type': "Ident",
+                                       '@role': [Unannotated],
+                                       '@pos': { '@type': "uast:Positions",
+                                          start: { '@type': "uast:Position",
+                                             offset: 104,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                          end: { '@type': "uast:Position",
+                                             offset: 107,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                          NamePos: { '@type': "uast:Position",
+                                             offset: 104,
+                                             line: 0,
+                                             col: 0,
+                                          },
+                                       },
+                                       Name: "int",
+                                    },
+                                 },
+                              ],
+                           },
+                        },
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Unannotated],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 128,
+                     line: 0,
+                     col: 0,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 148,
+                     line: 0,
+                     col: 0,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 128,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 129,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 128,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+                  { '@type': "Ident",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 131,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 132,
+                           line: 0,
+                           col: 0,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 131,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Name: "_",
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "CallExpr",
+                     '@role': [Unannotated],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 135,
+                           line: 0,
+                           col: 0,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 148,
+                           line: 0,
+                           col: 0,
+                        },
+                        Ellipsis: { '@type': "uast:Position",
+                           offset: 0,
+                           line: 0,
+                           col: 0,
+                        },
+                        Lparen: { '@type': "uast:Position",
+                           offset: 146,
+                           line: 0,
+                           col: 0,
+                        },
+                        Rparen: { '@type': "uast:Position",
+                           offset: 147,
+                           line: 0,
+                           col: 0,
+                        },
+                     },
+                     Args: ~,
+                     Fun: { '@type': "SelectorExpr",
+                        '@role': [Unannotated],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 135,
+                              line: 0,
+                              col: 0,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 146,
+                              line: 0,
+                              col: 0,
+                           },
+                        },
+                        Sel: { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 139,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 146,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 139,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "Println",
+                        },
+                        X: { '@type': "Ident",
+                           '@role': [Unannotated],
+                           '@pos': { '@type': "uast:Positions",
+                              start: { '@type': "uast:Position",
+                                 offset: 135,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              end: { '@type': "uast:Position",
+                                 offset: 138,
+                                 line: 0,
+                                 col: 0,
+                              },
+                              NamePos: { '@type': "uast:Position",
+                                 offset: 135,
+                                 line: 0,
+                                 col: 0,
+                              },
+                           },
+                           Name: "fmt",
+                        },
+                     },
+                  },
+               ],
+            },
+         ],
+         Tok: "var",
+      },
+   ],
+   Doc: ~,
+   Imports: [
+      { '@type': "ImportSpec",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 26,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 31,
+               line: 0,
+               col: 0,
+            },
+            EndPos: { '@type': "uast:Position",
+               offset: 0,
+               line: 0,
+               col: 0,
+            },
+         },
+         Comment: ~,
+         Doc: ~,
+         Name: ~,
+         Path: { '@type': "BasicLit",
+            '@role': [Unannotated],
+            '@pos': { '@type': "uast:Positions",
+               start: { '@type': "uast:Position",
+                  offset: 26,
+                  line: 0,
+                  col: 0,
+               },
+               end: { '@type': "uast:Position",
+                  offset: 31,
+                  line: 0,
+                  col: 0,
+               },
+               ValuePos: { '@type': "uast:Position",
+                  offset: 26,
+                  line: 0,
+                  col: 0,
+               },
+            },
+            Kind: "STRING",
+            Value: "\"fmt\"",
+         },
+      },
+   ],
+   Name: { '@type': "Ident",
+      '@role': [Unannotated],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 9,
+            line: 0,
+            col: 0,
+         },
+         end: { '@type': "uast:Position",
+            offset: 17,
+            line: 0,
+            col: 0,
+         },
+         NamePos: { '@type': "uast:Position",
+            offset: 9,
+            line: 0,
+            col: 0,
+         },
+      },
+      Name: "fixtures",
+   },
+   Unresolved: [
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 47,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 50,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 47,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "foo",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 61,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 64,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 61,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "foo",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 65,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 66,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 65,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "a",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 68,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 69,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 68,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "b",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 79,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 80,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 79,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "a",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 85,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 86,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 85,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "c",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 104,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 107,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 104,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "int",
+      },
+      { '@type': "Ident",
+         '@role': [Unannotated],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 135,
+               line: 0,
+               col: 0,
+            },
+            end: { '@type': "uast:Position",
+               offset: 138,
+               line: 0,
+               col: 0,
+            },
+            NamePos: { '@type': "uast:Position",
+               offset: 135,
+               line: 0,
+               col: 0,
+            },
+         },
+         Name: "fmt",
+      },
+   ],
 }

@@ -1,626 +1,432 @@
-Status:  ok
-Language:  go
-Errors: 
-UAST: 
-File {
-.  Roles: File
-.  StartPosition: {
-.  .  Offset: 1
-.  .  Line: 1
-.  .  Col: 2
-.  }
-.  EndPosition: {
-.  .  Offset: 59
-.  .  Line: 10
-.  .  Col: 1
-.  }
-.  Children: {
-.  .  0: ast:Position {
-.  .  .  Properties: {
-.  .  .  .  col: 2
-.  .  .  .  internalRole: Package
-.  .  .  .  line: 1
-.  .  .  .  off: 1
-.  .  .  }
-.  .  }
-.  .  1: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "fixtures"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 9
-.  .  .  .  Line: 1
-.  .  .  .  Col: 10
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 17
-.  .  .  .  Line: 2
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: Name
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 10
-.  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  line: 1
-.  .  .  .  .  .  off: 9
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  2: GenDecl {
-.  .  .  Roles: Declaration,Variable
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 19
-.  .  .  .  Line: 3
-.  .  .  .  Col: 2
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 59
-.  .  .  .  Line: 10
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  Tok: var
-.  .  .  .  internalRole: Decls
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 6
-.  .  .  .  .  .  internalRole: Lparen
-.  .  .  .  .  .  line: 3
-.  .  .  .  .  .  off: 23
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  1: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 2
-.  .  .  .  .  .  internalRole: Rparen
-.  .  .  .  .  .  line: 9
-.  .  .  .  .  .  off: 58
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  2: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 2
-.  .  .  .  .  .  internalRole: TokPos
-.  .  .  .  .  .  line: 3
-.  .  .  .  .  .  off: 19
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  3: ValueSpec {
-.  .  .  .  .  Roles: Declaration
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
-.  .  .  .  .  .  .  TOKEN "_"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 26
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 27
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 3
-.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  line: 4
-.  .  .  .  .  .  .  .  .  .  off: 26
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: UnaryExpr {
-.  .  .  .  .  .  .  Roles: Bitwise,Expression,Negative,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 30
-.  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Values
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Bitwise,Expression,Negative,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "^"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: Op
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 7
-.  .  .  .  .  .  .  .  .  .  internalRole: OpPos
-.  .  .  .  .  .  .  .  .  .  line: 4
-.  .  .  .  .  .  .  .  .  .  off: 30
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 31
-.  .  .  .  .  .  .  .  .  .  Line: 4
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 32
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  col: 8
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  .  .  line: 4
-.  .  .  .  .  .  .  .  .  .  .  .  off: 31
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  4: ValueSpec {
-.  .  .  .  .  Roles: Declaration
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
-.  .  .  .  .  .  .  TOKEN "_"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 34
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 35
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 3
-.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  line: 5
-.  .  .  .  .  .  .  .  .  .  off: 34
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: UnaryExpr {
-.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Negative,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 38
-.  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Values
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Negative,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "-"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: Op
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 7
-.  .  .  .  .  .  .  .  .  .  internalRole: OpPos
-.  .  .  .  .  .  .  .  .  .  line: 5
-.  .  .  .  .  .  .  .  .  .  off: 38
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 39
-.  .  .  .  .  .  .  .  .  .  Line: 5
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 40
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  col: 8
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  .  .  line: 5
-.  .  .  .  .  .  .  .  .  .  .  .  off: 39
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  5: ValueSpec {
-.  .  .  .  .  Roles: Declaration
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
-.  .  .  .  .  .  .  TOKEN "_"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 42
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 43
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 3
-.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  line: 6
-.  .  .  .  .  .  .  .  .  .  off: 42
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: UnaryExpr {
-.  .  .  .  .  .  .  Roles: Arithmetic,Expression,Positive,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 46
-.  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Values
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Arithmetic,Expression,Operator,Positive,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "+"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: Op
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 7
-.  .  .  .  .  .  .  .  .  .  internalRole: OpPos
-.  .  .  .  .  .  .  .  .  .  line: 6
-.  .  .  .  .  .  .  .  .  .  off: 46
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "a"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 47
-.  .  .  .  .  .  .  .  .  .  Line: 6
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 48
-.  .  .  .  .  .  .  .  .  .  Line: 7
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  col: 8
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  .  .  line: 6
-.  .  .  .  .  .  .  .  .  .  .  .  off: 47
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  .  6: ValueSpec {
-.  .  .  .  .  Roles: Declaration
-.  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  Col: 3
-.  .  .  .  .  }
-.  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  Col: 1
-.  .  .  .  .  }
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  internalRole: Specs
-.  .  .  .  .  }
-.  .  .  .  .  Children: {
-.  .  .  .  .  .  0: Ident {
-.  .  .  .  .  .  .  Roles: Expression,Identifier,Name,Variable
-.  .  .  .  .  .  .  TOKEN "_"
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 51
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 3
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 52
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 4
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Names
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 3
-.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  line: 8
-.  .  .  .  .  .  .  .  .  .  off: 51
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  .  1: UnaryExpr {
-.  .  .  .  .  .  .  Roles: Boolean,Expression,Negative,Unary
-.  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  Offset: 55
-.  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  Col: 7
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  internalRole: Values
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  0: ast:Operator {
-.  .  .  .  .  .  .  .  .  Roles: Boolean,Expression,Negative,Operator,Unary
-.  .  .  .  .  .  .  .  .  TOKEN "!"
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: Op
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  1: ast:Position {
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  col: 7
-.  .  .  .  .  .  .  .  .  .  internalRole: OpPos
-.  .  .  .  .  .  .  .  .  .  line: 8
-.  .  .  .  .  .  .  .  .  .  off: 55
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  2: Ident {
-.  .  .  .  .  .  .  .  .  Roles: Expression,Identifier
-.  .  .  .  .  .  .  .  .  TOKEN "b"
-.  .  .  .  .  .  .  .  .  StartPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 56
-.  .  .  .  .  .  .  .  .  .  Line: 8
-.  .  .  .  .  .  .  .  .  .  Col: 8
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  EndPosition: {
-.  .  .  .  .  .  .  .  .  .  Offset: 57
-.  .  .  .  .  .  .  .  .  .  Line: 9
-.  .  .  .  .  .  .  .  .  .  Col: 1
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  internalRole: X
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  Children: {
-.  .  .  .  .  .  .  .  .  .  0: ast:Position {
-.  .  .  .  .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  .  .  .  .  col: 8
-.  .  .  .  .  .  .  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  .  .  .  .  .  .  line: 8
-.  .  .  .  .  .  .  .  .  .  .  .  off: 56
-.  .  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  .  }
-.  .  .  .  .  .  .  }
-.  .  .  .  .  .  }
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  3: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 31
-.  .  .  .  Line: 4
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 32
-.  .  .  .  Line: 5
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 8
-.  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  line: 4
-.  .  .  .  .  .  off: 31
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  4: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 39
-.  .  .  .  Line: 5
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 40
-.  .  .  .  Line: 6
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 8
-.  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  line: 5
-.  .  .  .  .  .  off: 39
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  5: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "a"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 47
-.  .  .  .  Line: 6
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 48
-.  .  .  .  Line: 7
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 8
-.  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  line: 6
-.  .  .  .  .  .  off: 47
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  .  6: Ident {
-.  .  .  Roles: Expression,Identifier
-.  .  .  TOKEN "b"
-.  .  .  StartPosition: {
-.  .  .  .  Offset: 56
-.  .  .  .  Line: 8
-.  .  .  .  Col: 8
-.  .  .  }
-.  .  .  EndPosition: {
-.  .  .  .  Offset: 57
-.  .  .  .  Line: 9
-.  .  .  .  Col: 1
-.  .  .  }
-.  .  .  Properties: {
-.  .  .  .  internalRole: Unresolved
-.  .  .  }
-.  .  .  Children: {
-.  .  .  .  0: ast:Position {
-.  .  .  .  .  Properties: {
-.  .  .  .  .  .  col: 8
-.  .  .  .  .  .  internalRole: NamePos
-.  .  .  .  .  .  line: 8
-.  .  .  .  .  .  off: 56
-.  .  .  .  .  }
-.  .  .  .  }
-.  .  .  }
-.  .  }
-.  }
+{ '@type': "File",
+   '@role': [File],
+   '@pos': { '@type': "uast:Positions",
+      start: { '@type': "uast:Position",
+         offset: 1,
+         line: 1,
+         col: 2,
+      },
+      end: { '@type': "uast:Position",
+         offset: 59,
+         line: 10,
+         col: 1,
+      },
+      Package: { '@type': "uast:Position",
+         offset: 1,
+         line: 1,
+         col: 2,
+      },
+   },
+   Comments: ~,
+   Decls: [
+      { '@type': "GenDecl",
+         '@role': [Declaration, Variable],
+         '@pos': { '@type': "uast:Positions",
+            start: { '@type': "uast:Position",
+               offset: 19,
+               line: 3,
+               col: 2,
+            },
+            end: { '@type': "uast:Position",
+               offset: 59,
+               line: 10,
+               col: 1,
+            },
+            Lparen: { '@type': "uast:Position",
+               offset: 23,
+               line: 3,
+               col: 6,
+            },
+            Rparen: { '@type': "uast:Position",
+               offset: 58,
+               line: 9,
+               col: 2,
+            },
+            TokPos: { '@type': "uast:Position",
+               offset: 19,
+               line: 3,
+               col: 2,
+            },
+         },
+         Doc: ~,
+         Specs: [
+            { '@type': "ValueSpec",
+               '@role': [Declaration],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 26,
+                     line: 4,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 32,
+                     line: 5,
+                     col: 1,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@token': "_",
+                     '@role': [Expression, Identifier, Name, Variable],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 26,
+                           line: 4,
+                           col: 3,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 27,
+                           line: 4,
+                           col: 4,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 26,
+                           line: 4,
+                           col: 3,
+                        },
+                     },
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "UnaryExpr",
+                     '@role': [Bitwise, Expression, Negative, Unary],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 30,
+                           line: 4,
+                           col: 7,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 32,
+                           line: 5,
+                           col: 1,
+                        },
+                        OpPos: { '@type': "uast:Position",
+                           offset: 30,
+                           line: 4,
+                           col: 7,
+                        },
+                     },
+                     Op: { '@type': "uast:Operator",
+                        '@token': "^",
+                        '@role': [Bitwise, Expression, Negative, Operator, Unary],
+                     },
+                     X: { '@type': "Ident",
+                        '@token': "a",
+                        '@role': [Expression, Identifier],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 31,
+                              line: 4,
+                              col: 8,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 32,
+                              line: 5,
+                              col: 1,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 31,
+                              line: 4,
+                              col: 8,
+                           },
+                        },
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Declaration],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 34,
+                     line: 5,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 40,
+                     line: 6,
+                     col: 1,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@token': "_",
+                     '@role': [Expression, Identifier, Name, Variable],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 34,
+                           line: 5,
+                           col: 3,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 35,
+                           line: 5,
+                           col: 4,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 34,
+                           line: 5,
+                           col: 3,
+                        },
+                     },
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "UnaryExpr",
+                     '@role': [Arithmetic, Expression, Negative, Unary],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 38,
+                           line: 5,
+                           col: 7,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 40,
+                           line: 6,
+                           col: 1,
+                        },
+                        OpPos: { '@type': "uast:Position",
+                           offset: 38,
+                           line: 5,
+                           col: 7,
+                        },
+                     },
+                     Op: { '@type': "uast:Operator",
+                        '@token': "-",
+                        '@role': [Arithmetic, Expression, Negative, Operator, Unary],
+                     },
+                     X: { '@type': "Ident",
+                        '@token': "a",
+                        '@role': [Expression, Identifier],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 39,
+                              line: 5,
+                              col: 8,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 40,
+                              line: 6,
+                              col: 1,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 39,
+                              line: 5,
+                              col: 8,
+                           },
+                        },
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Declaration],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 42,
+                     line: 6,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 48,
+                     line: 7,
+                     col: 1,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@token': "_",
+                     '@role': [Expression, Identifier, Name, Variable],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 42,
+                           line: 6,
+                           col: 3,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 43,
+                           line: 6,
+                           col: 4,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 42,
+                           line: 6,
+                           col: 3,
+                        },
+                     },
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "UnaryExpr",
+                     '@role': [Arithmetic, Expression, Positive, Unary],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 46,
+                           line: 6,
+                           col: 7,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 48,
+                           line: 7,
+                           col: 1,
+                        },
+                        OpPos: { '@type': "uast:Position",
+                           offset: 46,
+                           line: 6,
+                           col: 7,
+                        },
+                     },
+                     Op: { '@type': "uast:Operator",
+                        '@token': "+",
+                        '@role': [Arithmetic, Expression, Operator, Positive, Unary],
+                     },
+                     X: { '@type': "Ident",
+                        '@token': "a",
+                        '@role': [Expression, Identifier],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 47,
+                              line: 6,
+                              col: 8,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 48,
+                              line: 7,
+                              col: 1,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 47,
+                              line: 6,
+                              col: 8,
+                           },
+                        },
+                     },
+                  },
+               ],
+            },
+            { '@type': "ValueSpec",
+               '@role': [Declaration],
+               '@pos': { '@type': "uast:Positions",
+                  start: { '@type': "uast:Position",
+                     offset: 51,
+                     line: 8,
+                     col: 3,
+                  },
+                  end: { '@type': "uast:Position",
+                     offset: 57,
+                     line: 9,
+                     col: 1,
+                  },
+               },
+               Comment: ~,
+               Doc: ~,
+               Names: [
+                  { '@type': "Ident",
+                     '@token': "_",
+                     '@role': [Expression, Identifier, Name, Variable],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 51,
+                           line: 8,
+                           col: 3,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 52,
+                           line: 8,
+                           col: 4,
+                        },
+                        NamePos: { '@type': "uast:Position",
+                           offset: 51,
+                           line: 8,
+                           col: 3,
+                        },
+                     },
+                  },
+               ],
+               Type: ~,
+               Values: [
+                  { '@type': "UnaryExpr",
+                     '@role': [Boolean, Expression, Negative, Unary],
+                     '@pos': { '@type': "uast:Positions",
+                        start: { '@type': "uast:Position",
+                           offset: 55,
+                           line: 8,
+                           col: 7,
+                        },
+                        end: { '@type': "uast:Position",
+                           offset: 57,
+                           line: 9,
+                           col: 1,
+                        },
+                        OpPos: { '@type': "uast:Position",
+                           offset: 55,
+                           line: 8,
+                           col: 7,
+                        },
+                     },
+                     Op: { '@type': "uast:Operator",
+                        '@token': "!",
+                        '@role': [Boolean, Expression, Negative, Operator, Unary],
+                     },
+                     X: { '@type': "Ident",
+                        '@token': "b",
+                        '@role': [Expression, Identifier],
+                        '@pos': { '@type': "uast:Positions",
+                           start: { '@type': "uast:Position",
+                              offset: 56,
+                              line: 8,
+                              col: 8,
+                           },
+                           end: { '@type': "uast:Position",
+                              offset: 57,
+                              line: 9,
+                              col: 1,
+                           },
+                           NamePos: { '@type': "uast:Position",
+                              offset: 56,
+                              line: 8,
+                              col: 8,
+                           },
+                        },
+                     },
+                  },
+               ],
+            },
+         ],
+         Tok: "var",
+      },
+   ],
+   Doc: ~,
+   Imports: ~,
+   Name: { '@type': "Ident",
+      '@token': "fixtures",
+      '@role': [Expression, Identifier],
+      '@pos': { '@type': "uast:Positions",
+         start: { '@type': "uast:Position",
+            offset: 9,
+            line: 1,
+            col: 10,
+         },
+         end: { '@type': "uast:Position",
+            offset: 17,
+            line: 2,
+            col: 1,
+         },
+         NamePos: { '@type': "uast:Position",
+            offset: 9,
+            line: 1,
+            col: 10,
+         },
+      },
+   },
 }
-
