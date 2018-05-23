@@ -4,6 +4,7 @@ import (
 	"go/token"
 
 	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	"gopkg.in/bblfsh/sdk.v2/uast/role"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
 	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
@@ -55,7 +56,7 @@ func annotateTypeCustom(typ string, fields ObjAnnotator, rop ArrayOp, roles ...r
 	return AnnotateTypeCustom(mapASTCustom, typ, fields, rop, roles...)
 }
 
-func operator(field, vr string, lookup map[uast.Value]ArrayOp, roles ...role.Role) Field {
+func operator(field, vr string, lookup map[nodes.Value]ArrayOp, roles ...role.Role) Field {
 	return Field{Name: field, Op: Operator(vr, lookup, roles...)}
 }
 
@@ -164,12 +165,16 @@ var (
 	})
 )
 
-func goTok(tok token.Token) uast.Value {
-	return uast.String(tok.String())
+func goTok(tok token.Token) nodes.Value {
+	return nodes.String(tok.String())
 }
 
-func TokenToRolesMap(m map[token.Token][]role.Role) map[uast.Value]ArrayOp {
-	out := make(map[uast.Value]ArrayOp, len(m))
+func isGoTok(tok token.Token) Op {
+	return Is(goTok(tok))
+}
+
+func TokenToRolesMap(m map[token.Token][]role.Role) map[nodes.Value]ArrayOp {
+	out := make(map[nodes.Value]ArrayOp, len(m))
 	for tok, roles := range m {
 		out[goTok(tok)] = Roles(roles...)
 	}
@@ -352,28 +357,28 @@ var Annotations = []Mapping{
 	}, role.Function, role.Declaration),
 
 	annotateType("GenDecl", FieldRoles{
-		"Tok": {Op: Is(goTok(token.VAR))},
+		"Tok": {Op: isGoTok(token.VAR)},
 		"Specs": {Arr: true, Sub: FieldRoles{
 			"Names": {Arr: true, Roles: role.Roles{role.Variable, role.Name}},
 		}},
 	}, role.Variable, role.Declaration),
 
 	annotateType("GenDecl", FieldRoles{
-		"Tok": {Op: Is(goTok(token.CONST))},
+		"Tok": {Op: isGoTok(token.CONST)},
 		"Specs": {Arr: true, Sub: FieldRoles{
 			"Names": {Arr: true, Roles: role.Roles{role.Name}},
 		}},
 	}, role.Incomplete, role.Declaration),
 
 	annotateType("GenDecl", FieldRoles{
-		"Tok": {Op: Is(goTok(token.TYPE))},
+		"Tok": {Op: isGoTok(token.TYPE)},
 		"Specs": {Arr: true, Sub: FieldRoles{
 			"Name": {Roles: role.Roles{role.Type, role.Name}},
 		}},
 	}, role.Type, role.Declaration),
 
 	annotateType("GenDecl", FieldRoles{
-		"Tok": {Op: Is(goTok(token.IMPORT))},
+		"Tok": {Op: isGoTok(token.IMPORT)},
 	}, role.Declaration),
 
 	annotateType("CallExpr", FieldRoles{

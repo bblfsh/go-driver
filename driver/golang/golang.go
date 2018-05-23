@@ -10,6 +10,7 @@ import (
 	"gopkg.in/bblfsh/sdk.v2/protocol"
 	"gopkg.in/bblfsh/sdk.v2/sdk/driver"
 	"gopkg.in/bblfsh/sdk.v2/uast"
+	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 )
 
 func ParseString(code string) (*ast.File, error) {
@@ -21,7 +22,7 @@ func ParseString(code string) (*ast.File, error) {
 	return tree, nil
 }
 
-func Parse(code string) (uast.Node, error) {
+func Parse(code string) (nodes.Node, error) {
 	f, err := ParseString(code)
 	if err != nil {
 		return nil, err
@@ -34,31 +35,31 @@ var (
 	objectType  = reflect.TypeOf((*ast.Object)(nil))
 	nodeType    = reflect.TypeOf((*ast.Node)(nil)).Elem()
 	posType     = reflect.TypeOf(token.Pos(0))
-	uastIntType = reflect.TypeOf(uast.Int(0))
+	uastIntType = reflect.TypeOf(nodes.Int(0))
 )
 
-func convPos(p token.Pos) uast.Node {
-	return uast.Position{Offset: uint32(p)}.ToObject()
+func convPos(p token.Pos) uast.Position {
+	return uast.Position{Offset: uint32(p)}
 }
 
 // convValue takes an AST node/value and converts it to a tree of uast types
 // like Object and List. In this case we have a full control of json encoding
 // and can annotate the tree with native AST type names.
-func convValue(v reflect.Value) (uast.Node, error) {
+func convValue(v reflect.Value) (nodes.Node, error) {
 	if !v.IsValid() {
 		return nil, nil
 	}
 	t := v.Type()
 	switch t {
 	case posType:
-		return convPos(v.Interface().(token.Pos)), nil
+		return convPos(v.Interface().(token.Pos)).ToObject(), nil
 	}
 	switch t.Kind() {
 	case reflect.Slice:
 		if v.Len() == 0 {
 			return nil, nil
 		}
-		arr := make(uast.Array, 0, v.Len())
+		arr := make(nodes.Array, 0, v.Len())
 		for i := 0; i < v.Len(); i++ {
 			el, err := convValue(v.Index(i))
 			if err != nil {
@@ -68,19 +69,27 @@ func convValue(v reflect.Value) (uast.Node, error) {
 		}
 		return arr, nil
 	case reflect.Struct:
-		m := make(uast.Object, t.NumField())
-		m[uast.KeyType] = uast.String(t.Name()) // annotate nodes with type names
+		m := make(nodes.Object, t.NumField())
+		m[uast.KeyType] = nodes.String(t.Name()) // annotate nodes with type names
+		pos := make(uast.Positions)
 		for i := 0; i < t.NumField(); i++ {
 			f := t.Field(i)
-			if f.Type == scopeType || f.Type == objectType {
+			fv := v.Field(i)
+			if f.Type == posType {
+				pos[f.Name] = convPos(fv.Interface().(token.Pos))
+				continue
+			} else if f.Type == scopeType || f.Type == objectType {
 				// do not follow scope and object pointers - need a graph structure for it
 				continue
 			}
-			el, err := convValue(v.Field(i))
+			el, err := convValue(fv)
 			if err != nil {
 				return nil, err
 			}
 			m[f.Name] = el
+		}
+		if len(pos) != 0 {
+			m[uast.KeyPos] = pos.ToObject()
 		}
 		return m, nil
 	case reflect.Ptr, reflect.Interface:
@@ -91,10 +100,16 @@ func convValue(v reflect.Value) (uast.Node, error) {
 		if err != nil {
 			return nil, err
 		}
-		if m, ok := o.(uast.Object); ok && v.Type().Implements(nodeType) {
+		if m, ok := o.(nodes.Object); ok && v.Type().Implements(nodeType) {
 			n := v.Interface().(ast.Node)
-			m[uast.KeyStart] = convPos(n.Pos())
-			m[uast.KeyEnd] = convPos(n.End())
+			pos := uast.PositionsOf(m)
+			if pos == nil {
+				pos = make(uast.Positions)
+			}
+			pos[uast.KeyStart] = convPos(n.Pos())
+			pos[uast.KeyEnd] = convPos(n.End())
+
+			m[uast.KeyPos] = pos.ToObject()
 		}
 		return o, nil
 	}
@@ -102,9 +117,9 @@ func convValue(v reflect.Value) (uast.Node, error) {
 	if s, ok := o.(interface {
 		String() string
 	}); ok {
-		return uast.String(s.String()), nil
+		return nodes.String(s.String()), nil
 	} else if t.ConvertibleTo(uastIntType) {
-		return v.Convert(uastIntType).Interface().(uast.Int), nil
+		return v.Convert(uastIntType).Interface().(nodes.Int), nil
 	}
 	return uast.ToNode(o)
 }

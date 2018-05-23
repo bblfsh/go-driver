@@ -20,10 +20,22 @@ var Suite = &fixtures.Suite{
 		return golang.NewDriver()
 	},
 	Transforms: driver.Transforms{
-		Native: normalizer.Native,
-		Code:   normalizer.Code,
+		Preprocess: normalizer.Preprocess,
+		Normalize:  normalizer.Normalize,
+		Native:     normalizer.Native,
+		Code:       normalizer.Code,
 	},
 	BenchName: "json",
+	Semantic: fixtures.SemanticConfig{
+		BlacklistTypes: []string{
+			"Ident",
+			"Comment",
+			"BlockStmt",
+			"ImportSpec",
+			"FuncDecl",
+			"FuncType",
+		},
+	},
 }
 
 func TestGoDriver(t *testing.T) {
