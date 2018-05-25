@@ -7,7 +7,6 @@ import (
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	"gopkg.in/bblfsh/sdk.v2/uast/role"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
-	"gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner"
 )
 
 // Native is the of list `transformer.Transformer` to apply to a native AST.
@@ -31,9 +30,7 @@ var Native = Transformers([][]Transformer{
 // fix positional information.
 //
 // https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner
-var Code = []CodeTransformer{
-	positioner.NewFillLineColFromOffset(),
-}
+var Code []CodeTransformer
 
 // mapAST is a helper for describing a single AST transformation for a given node type.
 func mapAST(typ string, ast, norm ObjectOp, roles ...role.Role) Mapping {

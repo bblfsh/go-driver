@@ -13,21 +13,21 @@ import (
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 )
 
-func ParseString(code string) (*ast.File, error) {
+func ParseString(code string) (*ast.File, *token.FileSet, error) {
 	fs := token.NewFileSet()
 	tree, err := parser.ParseFile(fs, "input.go", code, parser.ParseComments)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
-	return tree, nil
+	return tree, fs, nil
 }
 
 func Parse(code string) (nodes.Node, error) {
-	f, err := ParseString(code)
+	f, fs, err := ParseString(code)
 	if err != nil {
 		return nil, err
 	}
-	return convValue(reflect.ValueOf(f))
+	return convValue(reflect.ValueOf(f), fs)
 }
 
 var (
@@ -38,21 +38,30 @@ var (
 	uastIntType = reflect.TypeOf(nodes.Int(0))
 )
 
-func convPos(p token.Pos) uast.Position {
-	return uast.Position{Offset: uint32(p)}
+func convPos(p token.Pos, fs *token.FileSet) uast.Position {
+	if !p.IsValid() {
+		return uast.Position{}
+	}
+	pos := fs.Position(p)
+	return uast.Position{
+		Offset: uint32(pos.Offset),
+		Line:   uint32(pos.Line),
+		Col:    uint32(pos.Column),
+	}
 }
 
 // convValue takes an AST node/value and converts it to a tree of uast types
 // like Object and List. In this case we have a full control of json encoding
 // and can annotate the tree with native AST type names.
-func convValue(v reflect.Value) (nodes.Node, error) {
+func convValue(v reflect.Value, fs *token.FileSet) (nodes.Node, error) {
 	if !v.IsValid() {
 		return nil, nil
 	}
 	t := v.Type()
 	switch t {
 	case posType:
-		return convPos(v.Interface().(token.Pos)).ToObject(), nil
+		p := convPos(v.Interface().(token.Pos), fs)
+		return p.ToObject(), nil
 	}
 	switch t.Kind() {
 	case reflect.Slice:
@@ -61,7 +70,7 @@ func convValue(v reflect.Value) (nodes.Node, error) {
 		}
 		arr := make(nodes.Array, 0, v.Len())
 		for i := 0; i < v.Len(); i++ {
-			el, err := convValue(v.Index(i))
+			el, err := convValue(v.Index(i), fs)
 			if err != nil {
 				return nil, err
 			}
@@ -76,13 +85,14 @@ func convValue(v reflect.Value) (nodes.Node, error) {
 			f := t.Field(i)
 			fv := v.Field(i)
 			if f.Type == posType {
-				pos[f.Name] = convPos(fv.Interface().(token.Pos))
+				p := convPos(fv.Interface().(token.Pos), fs)
+				pos[f.Name] = p
 				continue
 			} else if f.Type == scopeType || f.Type == objectType {
 				// do not follow scope and object pointers - need a graph structure for it
 				continue
 			}
-			el, err := convValue(fv)
+			el, err := convValue(fv, fs)
 			if err != nil {
 				return nil, err
 			}
@@ -96,7 +106,7 @@ func convValue(v reflect.Value) (nodes.Node, error) {
 		if v.IsNil() {
 			return nil, nil
 		}
-		o, err := convValue(v.Elem())
+		o, err := convValue(v.Elem(), fs)
 		if err != nil {
 			return nil, err
 		}
@@ -106,8 +116,8 @@ func convValue(v reflect.Value) (nodes.Node, error) {
 			if pos == nil {
 				pos = make(uast.Positions)
 			}
-			pos[uast.KeyStart] = convPos(n.Pos())
-			pos[uast.KeyEnd] = convPos(n.End())
+			pos[uast.KeyStart] = convPos(n.Pos(), fs)
+			pos[uast.KeyEnd] = convPos(n.End(), fs)
 
 			m[uast.KeyPos] = pos.ToObject()
 		}
