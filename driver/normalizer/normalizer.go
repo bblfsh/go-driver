@@ -1,7 +1,6 @@
 package normalizer
 
 import (
-	"fmt"
 	"go/token"
 	"gopkg.in/bblfsh/sdk.v2/uast"
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
@@ -30,7 +29,7 @@ var Normalize = Transformers([][]Transformer{
 }...)
 
 var Normalizers = []Mapping{
-	mapUAST("", "Ident", uast.Identifier{},
+	MapSemantic("", "Ident", uast.Identifier{},
 		map[string]string{
 			"NamePos": "start",
 		},
@@ -42,7 +41,7 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("", "BasicLit", uast.String{},
+	MapSemantic("", "BasicLit", uast.String{},
 		map[string]string{
 			"ValuePos": "start",
 		},
@@ -56,7 +55,7 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("", "Comment", uast.Comment{},
+	MapSemantic("", "Comment", uast.Comment{},
 		map[string]string{
 			"Slash": "start",
 		},
@@ -75,7 +74,7 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("", "BlockStmt", uast.Block{},
+	MapSemantic("", "BlockStmt", uast.Block{},
 		map[string]string{
 			"Lbrace": "start",
 			"Rbrace": "rbrace", // TODO: off+1 = end
@@ -88,7 +87,7 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("uast:Import (all)", "ImportSpec", uast.Import{},
+	MapSemantic("uast:Import (all)", "ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
@@ -96,14 +95,14 @@ var Normalizers = []Mapping{
 			"Comment": Is(nil),
 			"Doc":     Is(nil),
 			"Name":    Is(nil),
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
 			}),
 		},
 		Obj{
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
@@ -113,25 +112,25 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("uast:Import (side)", "ImportSpec", uast.Import{},
+	MapSemantic("uast:Import (side)", "ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
 		Obj{
 			"Comment": Is(nil),
 			"Doc":     Is(nil),
-			"Name": uastType(uast.Identifier{}, Obj{
+			"Name": UASTType(uast.Identifier{}, Obj{
 				uast.KeyPos: AnyNode(nil),
 				"Name":      String("_"),
 			}),
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
 			}),
 		},
 		Obj{
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
@@ -141,25 +140,25 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("uast:Import (cur)", "ImportSpec", uast.Import{},
+	MapSemantic("uast:Import (cur)", "ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
 		Obj{
 			"Comment": Is(nil),
 			"Doc":     Is(nil),
-			"Name": uastType(uast.Identifier{}, Obj{
+			"Name": UASTType(uast.Identifier{}, Obj{
 				uast.KeyPos: AnyNode(nil),
 				"Name":      String("."),
 			}),
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
 			}),
 		},
 		Obj{
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
@@ -170,33 +169,33 @@ var Normalizers = []Mapping{
 		},
 	),
 
-	mapUAST("uast:Import (alias)", "ImportSpec", uast.Import{},
+	MapSemantic("uast:Import (alias)", "ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
 		Obj{
 			"Comment": Is(nil),
 			"Doc":     Is(nil),
-			"Name": uastType(uast.Identifier{}, Obj{
+			"Name": UASTType(uast.Identifier{}, Obj{
 				uast.KeyPos: Var("alias_pos"),
 				"Name":      Var("alias"),
 			}),
-			"Path": uastType(uast.String{}, Obj{
+			"Path": UASTType(uast.String{}, Obj{
 				uast.KeyPos: Var("path_pos"),
 				"Value":     Var("path"),
 				"Format":    String(""),
 			}),
 		},
 		Obj{
-			"Path": uastType(uast.Alias{}, Obj{
+			"Path": UASTType(uast.Alias{}, Obj{
 				// FIXME
 				//uast.KeyStart: Var("alias_start"),
 				//uast.KeyEnd: Var("path_end"),
-				"Name": uastType(uast.Identifier{}, Obj{
+				"Name": UASTType(uast.Identifier{}, Obj{
 					uast.KeyPos: Var("alias_pos"),
 					"Name":      Var("alias"),
 				}),
-				"Obj": uastType(uast.String{}, Obj{
+				"Obj": UASTType(uast.String{}, Obj{
 					uast.KeyPos: Var("path_pos"),
 					"Value":     Var("path"),
 					"Format":    String(""),
@@ -206,7 +205,7 @@ var Normalizers = []Mapping{
 			"Names": Arr(),
 		},
 	),
-	mapUAST("", "FuncDecl", uast.FunctionGroup{},
+	MapSemantic("", "FuncDecl", uast.FunctionGroup{},
 		nil,
 		Obj{
 			"Name": Var("name"),
@@ -218,10 +217,10 @@ var Normalizers = []Mapping{
 		Obj{
 			"Nodes": Arr(
 				Var("doc"), // FIXME: do not insert if it's nil
-				uastType(uast.Alias{}, Obj{
+				UASTType(uast.Alias{}, Obj{
 					// FIXME: position
 					"Name": Var("name"),
-					"Obj": uastType(uast.Function{}, Obj{
+					"Obj": UASTType(uast.Function{}, Obj{
 						"Type": Var("type"),
 						"Body": Var("body"),
 						"Recv": Var("recv"), // TODO
@@ -230,7 +229,7 @@ var Normalizers = []Mapping{
 			),
 		},
 	),
-	mapUAST("", "FuncType", uast.FunctionType{},
+	MapSemantic("", "FuncType", uast.FunctionType{},
 		map[string]string{
 			"Func": "pos_func",
 		},
@@ -250,7 +249,7 @@ var Normalizers = []Mapping{
 			"Returns": Opt("results_exists", Var("out")),
 		},
 	),
-	mapUAST(" (variadic)", "Field", uast.Argument{},
+	MapSemantic(" (variadic)", "Field", uast.Argument{},
 		map[string]string{
 			"Func": "pos_func",
 		},
@@ -275,45 +274,6 @@ var Normalizers = []Mapping{
 			"Variadic": Bool(true),
 		},
 	),
-}
-
-func uastType(uobj interface{}, op ObjectOp) ObjectOp {
-	utyp := uast.TypeOf(uobj)
-	if utyp == "" {
-		panic(fmt.Errorf("type is not registered: %T", uobj))
-	}
-	obj := op.Object()
-	obj.SetField(uast.KeyType, String(utyp))
-	return obj
-}
-
-func mapUAST(name, typ string, uobj interface{}, pos map[string]string, src, dst ObjectOp) Mapping {
-	utyp := uast.TypeOf(uobj)
-	if strings.HasPrefix(name, " ") {
-		name = typ + " -> " + utyp + name
-	} else if name == "" {
-		name = typ + " -> " + utyp
-	}
-	so, do := src.Object(), dst.Object()
-
-	sp := uastType(uast.Positions{}, Obj{
-		uast.KeyStart: Var("start"),
-		uast.KeyEnd:   Var("end"),
-	}).Object()
-	dp := uastType(uast.Positions{}, Obj{
-		uast.KeyStart: Var("start"),
-		uast.KeyEnd:   Var("end"),
-	}).Object()
-	for k, v := range pos {
-		sp.SetField(k, Var(v))
-		if v != "start" && v != "end" {
-			dp.SetField(k, Var(v))
-		}
-	}
-	so.SetField(uast.KeyType, String(typ))
-	so.SetField(uast.KeyPos, sp)
-	do.SetField(uast.KeyPos, dp)
-	return Map(name, so, uastType(uobj, do))
 }
 
 type commentNorm struct {
