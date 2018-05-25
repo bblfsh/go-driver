@@ -20,8 +20,12 @@ func TestNative(t *testing.T) {
 	require.NoError(t, err)
 	require.Equal(t, driver.Status(protocol.Ok), resp.Status)
 	require.Empty(t, resp.Errors)
-	pos := func(p int) nodes.Node {
-		return uast.Position{Offset: uint32(p)}.ToObject()
+	pos := func(p, l, c int) nodes.Node {
+		return uast.Position{
+			Offset: uint32(p),
+			Line:   uint32(l),
+			Col:    uint32(c),
+		}.ToObject()
 	}
 	type str = nodes.String
 
@@ -29,17 +33,17 @@ func TestNative(t *testing.T) {
 		uast.KeyType: str("File"),
 		uast.KeyPos: nodes.Object{
 			uast.KeyType:  str(uast.TypePositions),
-			uast.KeyStart: pos(1),
-			uast.KeyEnd:   pos(13),
-			"Package":     pos(1),
+			uast.KeyStart: pos(0, 1, 1),
+			uast.KeyEnd:   pos(12, 1, 13),
+			"Package":     pos(0, 1, 1),
 		},
 		"Name": nodes.Object{
 			uast.KeyType: str("Ident"),
 			uast.KeyPos: nodes.Object{
 				uast.KeyType:  str(uast.TypePositions),
-				uast.KeyStart: pos(9),
-				uast.KeyEnd:   pos(13),
-				"NamePos":     pos(9),
+				uast.KeyStart: pos(8, 1, 9),
+				uast.KeyEnd:   pos(12, 1, 13),
+				"NamePos":     pos(8, 1, 9),
 			},
 			"Name": str("main"),
 		},
