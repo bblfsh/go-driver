@@ -33,45 +33,41 @@ var Native = Transformers([][]Transformer{
 var Code []CodeTransformer
 
 // mapAST is a helper for describing a single AST transformation for a given node type.
-func mapAST(typ string, ast, norm ObjectOp, roles ...role.Role) Mapping {
-	return mapASTCustom(typ, ast, norm, nil, roles...)
+func mapAST(typ string, m ObjMapping, roles ...role.Role) Mapping {
+	return annotateTypeCustom(typ, m, nil, roles...)
 }
 
 func rolesByType(typ string) role.Roles {
 	return typeRoles[typ]
 }
 
-func mapASTCustom(typ string, ast, norm ObjectOp, rop ArrayOp, roles ...role.Role) Mapping {
-	return MapASTCustomType(typ, ast, norm, rolesByType, rop, roles...)
+func annotateTypeCustom(typ string, m ObjMapping, rop ArrayOp, roles ...role.Role) ObjMapping {
+	return AnnotateTypeCustomMap(typ, m, rolesByType, rop, roles...)
 }
 
-func annotateType(typ string, fields ObjAnnotator, roles ...role.Role) Mapping {
+func annotateType(typ string, fields ObjMapping, roles ...role.Role) Mapping {
 	return annotateTypeCustom(typ, fields, nil, roles...)
-}
-
-func annotateTypeCustom(typ string, fields ObjAnnotator, rop ArrayOp, roles ...role.Role) Mapping {
-	return AnnotateTypeCustom(mapASTCustom, typ, fields, rop, roles...)
 }
 
 func operator(field, vr string, lookup map[nodes.Value]ArrayOp, roles ...role.Role) Field {
 	return Field{Name: field, Op: Operator(vr, lookup, roles...)}
 }
 
-var _ ObjAnnotator = astField{}
+var _ ObjMapping = astField{}
 
 type astField struct {
 	Inherit bool
 	Roles   []role.Role
 }
 
-func (f astField) left(pref string) ObjectOp {
+func (f astField) left() ObjectOp {
 	return ASTObjectLeft("Field", Obj{
-		"Names": EachObjectRoles(pref + "field_name"),
-		"Type":  ObjectRoles(pref + "field_type"),
+		"Names": EachObjectRoles("field_name"),
+		"Type":  ObjectRoles("field_type"),
 	})
 }
 
-func (f astField) right(pref string) ObjectOp {
+func (f astField) right() ObjectOp {
 	nameRoles := []role.Role{role.Name}
 	typeRoles := []role.Role{role.Type}
 	if f.Inherit {
@@ -80,13 +76,16 @@ func (f astField) right(pref string) ObjectOp {
 		typeRoles = append(f.Roles[:n:n], typeRoles...)
 	}
 	return ASTObjectRightCustom("Field", Obj{
-		"Names": EachObjectRoles(pref+"field_name", nameRoles...),
-		"Type":  ObjectRoles(pref+"field_type", typeRoles...),
+		"Names": EachObjectRoles("field_name", nameRoles...),
+		"Type":  ObjectRoles("field_type", typeRoles...),
 	}, rolesByType, nil, f.Roles...)
 }
 
-func (f astField) MappingParts(pref string) (src, dst ObjectOp) {
-	return f.left(pref), f.right(pref)
+func (f astField) Mapping() (src, dst Op) {
+	return f.ObjMapping()
+}
+func (f astField) ObjMapping() (src, dst ObjectOp) {
+	return f.left(), f.right()
 }
 
 var (
@@ -185,11 +184,11 @@ var Annotations = []Mapping{
 
 	annotateType("CommentGroup", nil, role.Comment, role.List),
 
-	mapAST("Comment", Obj{
+	mapAST("Comment", MapObj(Obj{
 		"Text": UncommentCLike("text"),
 	}, Obj{ // ->
 		uast.KeyToken: Var("text"),
-	}, role.Comment),
+	}), role.Comment),
 
 	annotateType("BadExpr", nil, role.Incomplete),
 
@@ -197,45 +196,45 @@ var Annotations = []Mapping{
 		"Name": {Rename: uast.KeyToken},
 	}, role.Identifier),
 
-	mapASTCustom("BasicLit", Obj{
+	annotateTypeCustom("BasicLit", MapObj(Obj{
 		"Value": Var("val"),
 		"Kind":  Var("kind"),
 	}, Fields{ // ->
 		{Name: "Kind", Op: Var("kind")},
 		{Name: uast.KeyToken, Op: Var("val")},
-	}, LookupArrOpVar("kind", literalRoles),
+	}), LookupArrOpVar("kind", literalRoles),
 		role.Literal, role.Primitive),
 
-	mapASTCustom("BinaryExpr", Obj{
+	annotateTypeCustom("BinaryExpr", MapObj(Obj{
 		"X":  ObjectRoles("left"),
 		"Y":  ObjectRoles("right"),
 		"Op": Var("op"),
-	}, Pre(Fields{ // ->
+	}, JoinObj(Fields{ // ->
 		operator("Op", "op", opRolesBinary, role.Binary),
 	}, Obj{
 		"X": ObjectRoles("left", role.Binary, role.Left),
 		"Y": ObjectRoles("right", role.Binary, role.Right),
-	}), LookupArrOpVar("op", opRolesBinary), role.Binary),
+	})), LookupArrOpVar("op", opRolesBinary), role.Binary),
 
-	mapASTCustom("UnaryExpr", Obj{
+	annotateTypeCustom("UnaryExpr", MapObj(Obj{
 		"X":  Var("x"),
 		"Op": Var("op"),
 	}, Fields{ // ->
 		operator("Op", "op", opRolesUnary, role.Unary),
 		{Name: "X", Op: Var("x")},
-	}, LookupArrOpVar("op", opRolesUnary), role.Unary),
+	}), LookupArrOpVar("op", opRolesUnary), role.Unary),
 
-	mapASTCustom("IncDecStmt", Obj{
+	annotateTypeCustom("IncDecStmt", MapObj(Obj{
 		"X":   Var("x"),
 		"Tok": Var("op"),
 	}, Fields{ // ->
 		operator("Op", "op", opIncDec, role.Unary),
 		{Name: "X", Op: Var("x")},
-	}, LookupArrOpVar("op", opIncDec), role.Unary),
+	}), LookupArrOpVar("op", opIncDec), role.Unary),
 
 	annotateType("BlockStmt", nil, role.Block, role.Scope),
 
-	mapASTCustom("AssignStmt", Obj{
+	annotateTypeCustom("AssignStmt", MapObj(Obj{
 		"Lhs": EachObjectRoles("left"),
 		"Rhs": EachObjectRoles("right"),
 		"Tok": Var("op"),
@@ -243,7 +242,7 @@ var Annotations = []Mapping{
 		operator("Op", "op", opAssign, role.Operator, role.Assignment, role.Binary),
 		{Name: "Lhs", Op: EachObjectRoles("left", role.Assignment, role.Binary, role.Left)},
 		{Name: "Rhs", Op: EachObjectRoles("right", role.Assignment, role.Binary, role.Right)},
-	}, LookupArrOpVar("op", opAssign),
+	}), LookupArrOpVar("op", opAssign),
 		role.Assignment, role.Binary),
 
 	annotateType("IfStmt", FieldRoles{
