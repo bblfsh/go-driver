@@ -11,15 +11,15 @@ import (
 
 var Preprocess = Transformers([][]Transformer{
 	{Mappings(
-		Map("remove unresolved",
-			Part("_", Obj{
+		MapPart("_", MapObj( // remove unresolved
+			Obj{
 				uast.KeyType: String("File"),
 				"Unresolved": AnyNode(nil),
-			}),
-			Part("_", Obj{
+			},
+			Obj{
 				uast.KeyType: String("File"),
-			}),
-		),
+			},
+		)),
 	)},
 }...)
 
@@ -29,256 +29,328 @@ var Normalize = Transformers([][]Transformer{
 }...)
 
 var Normalizers = []Mapping{
-	MapSemantic("", "Ident", uast.Identifier{},
+	MapSemanticPos("Ident", uast.Identifier{},
 		map[string]string{
 			"NamePos": "start",
 		},
-		Obj{
-			"Name": Var("name"),
-		},
-		Obj{
-			"Name": Var("name"),
-		},
+		ObjMap{"Name": Var("name")},
 	),
 
-	MapSemantic("", "BasicLit", uast.String{},
+	MapSemanticPos("BasicLit", uast.String{},
 		map[string]string{
 			"ValuePos": "start",
 		},
-		Obj{
-			"Kind":  isGoTok(token.STRING),
-			"Value": Quote(Var("val")), // TODO: store quote type
-		},
-		Obj{
-			"Value":  Var("val"),
-			"Format": String(""),
-		},
+		MapObj(
+			Obj{
+				"Kind":  isGoTok(token.STRING),
+				"Value": Quote(Var("val")), // TODO: store quote type
+			},
+			Obj{
+				"Value":  Var("val"),
+				"Format": String(""),
+			},
+		),
 	),
 
-	MapSemantic("", "Comment", uast.Comment{},
+	MapSemanticPos("Comment", uast.Comment{},
 		map[string]string{
 			"Slash": "start",
 		},
-		Obj{
-			"Text": commentNorm{
-				text: "text", block: "block",
-				pref: "pref", suff: "suff", tab: "tab",
+		MapObj(
+			Obj{
+				"Text": commentNorm{
+					text: "text", block: "block",
+					pref: "pref", suff: "suff", tab: "tab",
+				},
 			},
-		},
-		Fields{
-			{Name: "Block", Op: Var("block")},
-			{Name: "Prefix", Op: Var("pref")},
-			{Name: "Suffix", Op: Var("suff")},
-			{Name: "Tab", Op: Var("tab")},
-			{Name: "Text", Op: Var("text")},
-		},
+			Fields{
+				{Name: "Block", Op: Var("block")},
+				{Name: "Prefix", Op: Var("pref")},
+				{Name: "Suffix", Op: Var("suff")},
+				{Name: "Tab", Op: Var("tab")},
+				{Name: "Text", Op: Var("text")},
+			},
+		),
 	),
 
-	MapSemantic("", "BlockStmt", uast.Block{},
+	MapSemanticPos("BlockStmt", uast.Block{},
 		map[string]string{
 			"Lbrace": "start",
 			"Rbrace": "rbrace", // TODO: off+1 = end
 		},
-		Obj{
-			"List": Var("stmts"),
-		},
-		Obj{
-			"Statements": Var("stmts"),
-		},
+		MapObj(
+			Obj{
+				"List": Var("stmts"),
+			},
+			Obj{
+				"Statements": Var("stmts"),
+			},
+		),
 	),
-
-	MapSemantic("uast:Import (all)", "ImportSpec", uast.Import{},
+	// all-in-one
+	MapSemanticPos("ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
-		Obj{
-			"Comment": Is(nil),
-			"Doc":     Is(nil),
-			"Name":    Is(nil),
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-		},
-		Obj{
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-			"All":   Bool(true),
-			"Names": Arr(),
-		},
+		MapObj(
+			Obj{
+				"Comment": Is(nil),
+				"Doc":     Is(nil),
+				"Path":    Var("path"),
+				"Name": Cases("case",
+					// case 1: no alias for the import
+					Is(nil),
+					// case 2: side-effect import
+					UASTType(uast.Identifier{}, Obj{
+						uast.KeyPos: AnyNode(nil),
+						"Name":      String("_"),
+					}),
+					// case 3: import to the package scope
+					UASTType(uast.Identifier{}, Obj{
+						uast.KeyPos: AnyNode(nil),
+						"Name":      String("."),
+					}),
+				),
+			},
+			// ->
+			CasesObj("case",
+				// common
+				Obj{
+					"Path": Var("path"),
+				},
+				Objs{
+					// case 1: no alias for the import
+					{
+						"All":    Bool(true),
+						"Names":  Arr(),
+						"Target": Is(nil), // TODO
+					},
+					// case 2: side-effect import
+					{
+						"All":    Bool(false),
+						"Names":  Arr(),
+						"Target": Is(nil), // TODO
+					},
+					// case 3: import to the package scope
+					{
+						"All":    Bool(true),
+						"Names":  Arr(),
+						"Target": Obj{"Scope": String(".")}, // TODO
+					},
+				},
+			),
+		),
 	),
 
-	MapSemantic("uast:Import (side)", "ImportSpec", uast.Import{},
+	// alias
+	MapSemanticPos("ImportSpec", uast.Import{},
 		map[string]string{
 			"EndPos": "endp",
 		},
-		Obj{
-			"Comment": Is(nil),
-			"Doc":     Is(nil),
-			"Name": UASTType(uast.Identifier{}, Obj{
-				uast.KeyPos: AnyNode(nil),
-				"Name":      String("_"),
-			}),
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-		},
-		Obj{
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-			"All":   Bool(false),
-			"Names": Arr(),
-		},
-	),
 
-	MapSemantic("uast:Import (cur)", "ImportSpec", uast.Import{},
-		map[string]string{
-			"EndPos": "endp",
-		},
-		Obj{
-			"Comment": Is(nil),
-			"Doc":     Is(nil),
-			"Name": UASTType(uast.Identifier{}, Obj{
-				uast.KeyPos: AnyNode(nil),
-				"Name":      String("."),
-			}),
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-		},
-		Obj{
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-			"All":   Bool(true),
-			"Names": Arr(),
-			"Scope": String("."), // TODO
-		},
-	),
-
-	MapSemantic("uast:Import (alias)", "ImportSpec", uast.Import{},
-		map[string]string{
-			"EndPos": "endp",
-		},
-		Obj{
-			"Comment": Is(nil),
-			"Doc":     Is(nil),
-			"Name": UASTType(uast.Identifier{}, Obj{
-				uast.KeyPos: Var("alias_pos"),
-				"Name":      Var("alias"),
-			}),
-			"Path": UASTType(uast.String{}, Obj{
-				uast.KeyPos: Var("path_pos"),
-				"Value":     Var("path"),
-				"Format":    String(""),
-			}),
-		},
-		Obj{
-			"Path": UASTType(uast.Alias{}, Obj{
-				// FIXME
-				//uast.KeyStart: Var("alias_start"),
-				//uast.KeyEnd: Var("path_end"),
+		MapObj(
+			Obj{
+				"Comment": Is(nil),
+				"Doc":     Is(nil),
 				"Name": UASTType(uast.Identifier{}, Obj{
 					uast.KeyPos: Var("alias_pos"),
 					"Name":      Var("alias"),
 				}),
-				"Obj": UASTType(uast.String{}, Obj{
+				"Path": UASTType(uast.String{}, Obj{
 					uast.KeyPos: Var("path_pos"),
 					"Value":     Var("path"),
 					"Format":    String(""),
 				}),
-			}),
-			"All":   Bool(true),
-			"Names": Arr(),
-		},
-	),
-	MapSemantic("", "FuncDecl", uast.FunctionGroup{},
-		nil,
-		Obj{
-			"Name": Var("name"),
-			"Type": Var("type"),
-			"Recv": Var("recv"),
-			"Body": Var("body"),
-			"Doc":  Var("doc"),
-		},
-		Obj{
-			"Nodes": Arr(
-				Var("doc"), // FIXME: do not insert if it's nil
-				UASTType(uast.Alias{}, Obj{
-					// FIXME: position
-					"Name": Var("name"),
-					"Obj": UASTType(uast.Function{}, Obj{
-						"Type": Var("type"),
-						"Body": Var("body"),
-						"Recv": Var("recv"), // TODO
+			},
+			// ->
+			Obj{
+				"Path": UASTType(uast.Alias{}, Obj{
+					// FIXME
+					//uast.KeyStart: Var("alias_start"),
+					//uast.KeyEnd: Var("path_end"),
+					"Name": UASTType(uast.Identifier{}, Obj{
+						uast.KeyPos: Var("alias_pos"),
+						"Name":      Var("alias"),
+					}),
+					"Node": UASTType(uast.String{}, Obj{
+						uast.KeyPos: Var("path_pos"),
+						"Value":     Var("path"),
+						"Format":    String(""),
 					}),
 				}),
-			),
-		},
+				"All":   Bool(true),
+				"Names": Arr(),
+			},
+		),
 	),
-	MapSemantic("", "FuncType", uast.FunctionType{},
+	// FIXME: it affects struct fields as well
+	MapSemantic("Field", uast.Argument{},
+		MapObj(
+			Obj{
+				"Comment": Is(nil), // FIXME: is it possible to attach it?
+				"Doc":     Is(nil),
+				"Tag":     Is(nil),
+				"Names": Cases("names",
+					Is(nil),
+					Arr( // FIXME: there might be multiple names
+						Var("name"),
+					),
+				),
+				"Type": Cases("variadic",
+					// case 1: variadic
+					Obj{
+						uast.KeyType: String("Ellipsis"),
+						// FIXME: store positions?
+						// "Ellipsis" same as start
+						uast.KeyPos: AnyNode(nil),
+						"Elt":       Var("type"),
+					},
+					// case 2: normal arg
+					Check(
+						Not(Has{uast.KeyType: String("Ellipsis")}),
+						Var("type"),
+					),
+				),
+			},
+			CasesObj("variadic",
+				// common
+				Obj{
+					"Name": Cases("names",
+						Is(nil),
+						Check(NotNil(), Var("name")),
+					),
+					"Type":     Var("type"),
+					"Receiver": Bool(false),
+				},
+				Objs{
+					// case 1: variadic
+					{"Variadic": Bool(true)},
+					// case 2: normal arg
+					{"Variadic": Bool(false)},
+				},
+			),
+		),
+	),
+	MapSemanticPos("FuncType", uast.FunctionType{},
 		map[string]string{
 			"Func": "pos_func",
 		},
-		Obj{
-			"Params": Obj{
-				uast.KeyType: String("FieldList"),
-				// FIXME: store positions?
-				// "Opening" same as start
-				// "Closing" same as end
-				uast.KeyPos: AnyNode(nil),
-				"List":      Var("args"),
+		MapObj(
+			Obj{
+				"Params": Obj{
+					uast.KeyType: String("FieldList"),
+					// FIXME: store positions?
+					// "Opening" same as start
+					// "Closing" same as end
+					uast.KeyPos: AnyNode(nil),
+					"List": Cases("list",
+						Is(nil),
+						Check(NotNil(), Var("args")),
+					),
+				},
+				"Results": Cases("res",
+					Is(nil),
+					Obj{
+						uast.KeyType: String("FieldList"),
+						// FIXME: store positions?
+						// "Opening" same as start
+						// "Closing" same as end
+						uast.KeyPos: AnyNode(nil),
+						"List":      Var("out"),
+					},
+				),
 			},
-			"Results": Opt("results_exists", Var("out")),
-		},
-		Obj{
-			"Args":    Var("args"),
-			"Returns": Opt("results_exists", Var("out")),
-		},
+			Obj{
+				"Arguments": Cases("list",
+					Arr(),
+					Check(NotNil(), Var("args")),
+				),
+				"Returns": Cases("res",
+					Is(nil),
+					Var("out"),
+				),
+			},
+		),
 	),
-	MapSemantic(" (variadic)", "Field", uast.Argument{},
-		map[string]string{
-			"Func": "pos_func",
-		},
-		Obj{
-			"Comment": Is(nil), // FIXME: is it possible to attach it?
-			"Doc":     Is(nil),
-			"Tag":     Is(nil),
-			"Names": Arr( // FIXME: name might not exist
-				Var("name"),
+	MapSemantic("FuncDecl", uast.FunctionGroup{},
+		MapObj(
+			CasesObj("recv_case",
+				// common
+				Obj{
+					"Name": Var("name"),
+					"Body": Var("body"),
+					"Doc":  Var("doc"),
+				},
+				Objs{
+					// case 1: no receiver
+					{
+						"Type": Var("type"),
+						"Recv": Is(nil),
+					},
+					// case 2: receiver
+					{
+						"Type": UASTTypePart("type", uast.FunctionType{}, Obj{
+							"Arguments": Var("args"),
+						}),
+						"Recv": Obj{
+							uast.KeyType: String("FieldList"),
+							// FIXME: store positions?
+							// "Opening" same as start
+							// "Closing" same as end
+							uast.KeyPos: AnyNode(nil),
+							"List": One(
+								UASTTypePart("recv", uast.Argument{}, Obj{
+									"Receiver": Bool(false),
+								}),
+							),
+						},
+					},
+				},
 			),
-			"Type": Obj{
-				uast.KeyType: String("Ellipsis"),
-				// FIXME: store positions?
-				// "Ellipsis" same as start
-				uast.KeyPos: AnyNode(nil),
-				"Elt":       Var("type"),
+			// ->
+			Obj{
+				"Nodes": Arr(
+					Var("doc"), // FIXME: do not insert if it's nil
+					UASTType(uast.Alias{}, Obj{
+						// FIXME: position
+						"Name": Var("name"),
+						"Node": UASTType(uast.Function{}, CasesObj("recv_case",
+							// common
+							Obj{
+								"Body": Var("body"),
+							},
+							Objs{
+								// case 1: no receiver - store type as-is
+								{
+									"Type": Var("type"),
+								},
+								// case 2: receiver - need to inject as a first argument with a flag
+								{
+									"Type": UASTTypePart("type", uast.FunctionType{}, Obj{
+										"Arguments": PrependOne(
+											UASTTypePart("recv", uast.Argument{}, Obj{
+												"Receiver": Bool(true),
+											}),
+											Var("args"),
+										),
+									}),
+								},
+							},
+						)),
+					}),
+				),
 			},
-		},
-		Obj{
-			"Name":     Var("name"),
-			"Type":     Var("type"),
-			"Variadic": Bool(true),
-		},
+		),
 	),
 }
 
 type commentNorm struct {
 	text, block     string
 	pref, suff, tab string
+}
+
+func (commentNorm) Kinds() nodes.Kind {
+	return nodes.KindString
 }
 
 func (op commentNorm) Check(st *State, n nodes.Node) (bool, error) {
