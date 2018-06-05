@@ -87,6 +87,15 @@ var Normalizers = []Mapping{
 			},
 		),
 	),
+
+	MapPart("flist", ObjMap{
+		uast.KeyType: String("FieldList"),
+		"List": Map(
+			fieldSplit{vr: "fields"},
+			Var("fields"),
+		),
+	}),
+
 	// all-in-one
 	MapSemanticPos("ImportSpec", uast.Import{},
 		map[string]string{
@@ -183,95 +192,88 @@ var Normalizers = []Mapping{
 			},
 		),
 	),
-	// FIXME: it affects struct fields as well
-	MapSemantic("Field", uast.Argument{},
-		MapObj(
+
+	MapPart("func", ObjMap{
+		uast.KeyType: String("FuncType"),
+		"Params": Map(
 			Obj{
-				"Comment": Is(nil), // FIXME: is it possible to attach it?
-				"Doc":     Is(nil),
-				"Tag":     Is(nil),
-				"Names": Cases("names",
+				uast.KeyType: String("FieldList"),
+				// FIXME: store positions?
+				// "Opening" same as start
+				// "Closing" same as end
+				uast.KeyPos: AnyNode(nil),
+				"List": Cases("list",
 					Is(nil),
-					Arr( // FIXME: there might be multiple names
-						Var("name"),
-					),
-				),
-				"Type": Cases("variadic",
-					// case 1: variadic
-					Obj{
-						uast.KeyType: String("Ellipsis"),
-						// FIXME: store positions?
-						// "Ellipsis" same as start
-						uast.KeyPos: AnyNode(nil),
-						"Elt":       Var("type"),
-					},
-					// case 2: normal arg
-					Check(
-						Not(Has{uast.KeyType: String("Ellipsis")}),
-						Var("type"),
-					),
+					Check(NotNil(), Var("args")),
 				),
 			},
-			CasesObj("variadic",
-				// common
-				Obj{
-					"Name": Cases("names",
-						Is(nil),
-						Check(NotNil(), Var("name")),
-					),
-					"Type":     Var("type"),
-					"Receiver": Bool(false),
-				},
-				Objs{
-					// case 1: variadic
-					{"Variadic": Bool(true)},
-					// case 2: normal arg
-					{"Variadic": Bool(false)},
-				},
+			Cases("list",
+				Arr(),
+				Check(NotNil(), Var("args")),
 			),
 		),
-	),
+		"Results": Map(
+			Cases("res",
+				Is(nil),
+				Obj{
+					uast.KeyType: String("FieldList"),
+					// FIXME: store positions?
+					// "Opening" same as start
+					// "Closing" same as end
+					uast.KeyPos: AnyNode(nil),
+					"List":      Var("out"),
+				},
+			),
+			Cases("res",
+				Is(nil),
+				Var("out"),
+			),
+		),
+	}),
+	MapPart("func", ObjMap{
+		uast.KeyType: String("FuncType"),
+		"Params":     MapEach("args", fieldMap),
+		"Results":    MapEach("res", fieldMap),
+	}),
 	MapSemanticPos("FuncType", uast.FunctionType{},
 		map[string]string{
 			"Func": "pos_func",
 		},
 		MapObj(
 			Obj{
-				"Params": Obj{
+				"Params":  Var("args"),
+				"Results": Var("out"),
+			},
+			Obj{
+				"Arguments": Var("args"),
+				"Returns":   Var("out"),
+			},
+		),
+	),
+	MapPart("func", ObjMap{
+		uast.KeyType: String("FuncDecl"),
+		"Recv": Map(
+			Cases("recv",
+				Is(nil),
+				Obj{
 					uast.KeyType: String("FieldList"),
 					// FIXME: store positions?
 					// "Opening" same as start
 					// "Closing" same as end
 					uast.KeyPos: AnyNode(nil),
-					"List": Cases("list",
-						Is(nil),
-						Check(NotNil(), Var("args")),
-					),
+					"List":      Var("out"),
 				},
-				"Results": Cases("res",
-					Is(nil),
-					Obj{
-						uast.KeyType: String("FieldList"),
-						// FIXME: store positions?
-						// "Opening" same as start
-						// "Closing" same as end
-						uast.KeyPos: AnyNode(nil),
-						"List":      Var("out"),
-					},
-				),
-			},
-			Obj{
-				"Arguments": Cases("list",
-					Arr(),
-					Check(NotNil(), Var("args")),
-				),
-				"Returns": Cases("res",
-					Is(nil),
-					Var("out"),
-				),
-			},
+			),
+			Cases("recv",
+				Is(nil),
+				Var("out"),
+			),
 		),
-	),
+	}),
+	MapPart("func", ObjMap{
+		uast.KeyType: String("FuncDecl"),
+		"Recv":       MapEach("recv", fieldMap),
+	}),
 	MapSemantic("FuncDecl", uast.FunctionGroup{},
 		MapObj(
 			CasesObj("recv_case",
@@ -292,18 +294,11 @@ var Normalizers = []Mapping{
 						"Type": UASTTypePart("type", uast.FunctionType{}, Obj{
 							"Arguments": Var("args"),
 						}),
-						"Recv": Obj{
-							uast.KeyType: String("FieldList"),
-							// FIXME: store positions?
-							// "Opening" same as start
-							// "Closing" same as end
-							uast.KeyPos: AnyNode(nil),
-							"List": One(
-								UASTTypePart("recv", uast.Argument{}, Obj{
-									"Receiver": Bool(false),
-								}),
-							),
-						},
+						"Recv": One(
+							UASTTypePart("recv", uast.Argument{}, Obj{
+								"Receiver": Bool(false),
+							}),
+						),
 					},
 				},
 			),
@@ -343,6 +338,54 @@ var Normalizers = []Mapping{
 		),
 	),
 }
+
+var fieldMap = MapSemantic("Field", uast.Argument{},
+	MapObj(
+		Obj{
+			"Comment": Is(nil), // FIXME: is it possible to attach it?
+			"Doc":     Is(nil),
+			"Tag":     Is(nil),
+			"Names": Cases("names",
+				Is(nil),
+				Arr( // another transform makes sure that there is only one name
+					Var("name"),
+				),
+			),
+			"Type": Cases("variadic",
+				// case 1: variadic
+				Obj{
+					uast.KeyType: String("Ellipsis"),
+					// FIXME: store positions?
+					// "Ellipsis" same as start
+					uast.KeyPos: AnyNode(nil),
+					"Elt":       Var("type"),
+				},
+				// case 2: normal arg
+				Check(
+					Not(Has{uast.KeyType: String("Ellipsis")}),
+					Var("type"),
+				),
+			),
+		},
+		CasesObj("variadic",
+			// common
+			Obj{
+				"Name": Cases("names",
+					Is(nil),
+					Check(NotNil(), Var("name")),
+				),
+				"Type":     Var("type"),
+				"Receiver": Bool(false),
+			},
+			Objs{
+				// case 1: variadic
+				{"Variadic": Bool(true)},
+				// case 2: normal arg
+				{"Variadic": Bool(false)},
+			},
+		),
+	),
+)
 
 type commentNorm struct {
 	text, block     string
@@ -415,4 +458,47 @@ func (op commentNorm) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 		return "//" + text, nil
 	}
 	return "/*" + text + "*/", nil
+}
+
+type fieldSplit struct {
+	vr string
+}
+
+func (fieldSplit) Kinds() nodes.Kind {
+	return nodes.KindArray
+}
+
+func (op fieldSplit) Check(st *State, n nodes.Node) (bool, error) {
+	arr, ok := n.(nodes.Array)
+	if !ok {
+		return false, nil
+	}
+	arr = arr.CloneList()
+	for i := 0; i < len(arr); i++ {
+		obj, ok := arr[i].(nodes.Object)
+		if !ok {
+			return false, nil
+		}
+		names, _ := obj["Names"].(nodes.Array)
+		if len(names) < 2 {
+			continue
+		}
+		objs := make([]nodes.Node, 0, len(names))
+		for _, name := range names {
+			v := obj.CloneObject()
+			// TODO: store additional info to join nodes later
+			v["Names"] = nodes.Array{name}
+			objs = append(objs, v)
+		}
+		arr = append(arr[:i], append(objs, arr[i+1:]...)...)
+		i += len(objs) - 1
+	}
+	if err := st.SetVar(op.vr, arr); err != nil {
+		return false, err
+	}
+	return true, nil
+}
+
+func (op fieldSplit) Construct(st *State, n nodes.Node) (nodes.Node, error) {
+	return st.MustGetVar(op.vr) // TODO: join nodes back on reverse
 }
