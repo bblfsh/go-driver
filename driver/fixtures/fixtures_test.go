@@ -19,13 +19,8 @@ var Suite = &fixtures.Suite{
 	NewDriver: func() driver.BaseDriver {
 		return golang.NewDriver()
 	},
-	Transforms: driver.Transforms{
-		Preprocess: normalizer.Preprocess,
-		Normalize:  normalizer.Normalize,
-		Native:     normalizer.Native,
-		Code:       normalizer.Code,
-	},
-	BenchName: "json",
+	Transforms: normalizer.Transforms,
+	BenchName:  "json",
 	Semantic: fixtures.SemanticConfig{
 		BlacklistTypes: []string{
 			"Ident",
