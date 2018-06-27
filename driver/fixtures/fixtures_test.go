@@ -31,6 +31,9 @@ var Suite = &fixtures.Suite{
 			"FuncType",
 		},
 	},
+	Docker: fixtures.DockerConfig{
+		Image: "golang:1.10",
+	},
 }
 
 func TestGoDriver(t *testing.T) {
