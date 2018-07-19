@@ -1,8 +1,9 @@
-FROM golang:1.9-alpine3.7
+FROM golang:1.10-stretch
 
 RUN mkdir -p /opt/driver/src && \
-    adduser ${BUILD_USER} -u ${BUILD_UID} -D -h /opt/driver/src
+    useradd --uid ${BUILD_UID} --home /opt/driver ${BUILD_USER}
 
-RUN apk add --no-cache make git curl ca-certificates
+RUN apt update && \
+    apt install -y --no-install-recommends make git curl ca-certificates
 
 WORKDIR /opt/driver/src

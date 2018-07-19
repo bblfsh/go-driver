@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM debian:jessie-slim
 MAINTAINER source{d}
 
 ADD build /opt/driver
