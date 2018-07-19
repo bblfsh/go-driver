@@ -1,0 +1,14 @@
+sdk: '2'
+go-runtime:
+  version: '1.10-alpine'
+native:
+  image: 'golang:1.10-alpine'
+  build:
+    gopath: '/go'
+    run:
+      - 'go build -o /tmp/native native.go'
+    artifacts:
+      - path: '/tmp/native'
+  test:
+    run:
+      - 'go test ../driver/golang/...'
