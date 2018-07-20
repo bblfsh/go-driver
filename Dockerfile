@@ -34,27 +34,29 @@ FROM native as driver
 
 WORKDIR $DRIVER_REPO_PATH/
 
-# build tests
-RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 # build server binary
 RUN go build -o /tmp/driver ./driver/main.go
+# build tests
+RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 
 #=======================
 # Stage 3: Driver Build
 #=======================
 FROM golang:1.10-alpine
 
+
+
 LABEL maintainer="source{d}" \
       bblfsh.language="go"
 
 WORKDIR /opt/driver
 
-# copy driver manifest and static files
-ADD .manifest.release.toml ./etc/manifest.toml
-
 # copy build artifacts for native driver
 COPY --from=native /tmp/native ./bin/
 
+
+# copy driver server binary
+COPY --from=driver /tmp/driver ./bin/
 
 # copy tests binary
 COPY --from=driver /tmp/fixtures.test ./bin/
@@ -62,7 +64,7 @@ COPY --from=driver /tmp/fixtures.test ./bin/
 RUN ln -s /opt/driver ../build
 VOLUME /opt/fixtures
 
-# copy driver server binary
-COPY --from=driver /tmp/driver ./bin/
+# copy driver manifest and static files
+ADD .manifest.release.toml ./etc/manifest.toml
 
 ENTRYPOINT ["/opt/driver/bin/driver"]
