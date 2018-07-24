@@ -42,7 +42,7 @@ RUN go test -c -o /tmp/fixtures.test ./driver/fixtures/
 #=======================
 # Stage 3: Driver Build
 #=======================
-FROM golang:1.10-alpine
+FROM alpine:3.7
 
 
 
