@@ -1,11 +1,10 @@
 package golang
 
 import (
+	"context"
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"gopkg.in/bblfsh/sdk.v2/protocol"
-	"gopkg.in/bblfsh/sdk.v2/sdk/driver"
 	"gopkg.in/bblfsh/sdk.v2/uast"
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 )
@@ -13,13 +12,8 @@ import (
 func TestNative(t *testing.T) {
 	const code = `package main`
 
-	resp, err := NewDriver().Parse(&driver.InternalParseRequest{
-		Encoding: driver.Encoding(protocol.UTF8),
-		Content:  string(code),
-	})
+	ast, err := NewDriver().Parse(context.Background(), code)
 	require.NoError(t, err)
-	require.Equal(t, driver.Status(protocol.Ok), resp.Status)
-	require.Empty(t, resp.Errors)
 	pos := func(p, l, c int) nodes.Node {
 		return uast.Position{
 			Offset: uint32(p),
@@ -53,5 +47,5 @@ func TestNative(t *testing.T) {
 		"Decls":      nil,
 		"Unresolved": nil,
 	}
-	require.Equal(t, exp, resp.AST)
+	require.Equal(t, exp, ast)
 }
