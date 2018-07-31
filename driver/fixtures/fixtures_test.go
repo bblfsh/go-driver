@@ -6,8 +6,8 @@ import (
 
 	"github.com/bblfsh/go-driver/driver/golang"
 	"github.com/bblfsh/go-driver/driver/normalizer"
-	"gopkg.in/bblfsh/sdk.v2/sdk/driver"
-	"gopkg.in/bblfsh/sdk.v2/sdk/driver/fixtures"
+	"gopkg.in/bblfsh/sdk.v2/driver"
+	"gopkg.in/bblfsh/sdk.v2/driver/fixtures"
 )
 
 const projectRoot = "../../"
@@ -16,7 +16,7 @@ var Suite = &fixtures.Suite{
 	Lang: "go",
 	Ext:  ".go",
 	Path: filepath.Join(projectRoot, fixtures.Dir),
-	NewDriver: func() driver.BaseDriver {
+	NewDriver: func() driver.Native {
 		return golang.NewDriver()
 	},
 	Transforms: normalizer.Transforms,

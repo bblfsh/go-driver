@@ -90,6 +90,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/mcuadros/go-lookup"
+  packages = ["."]
+  revision = "5650f26be7675b629fff8356a50d906fa03e9c8b"
+
+[[projects]]
+  branch = "master"
   name = "github.com/mgutz/ansi"
   packages = ["."]
   revision = "9520e82c474b0a04dd04f8a40959027271bab992"
@@ -277,24 +283,38 @@
   version = "v1.13.0"
 
 [[projects]]
+  name = "gopkg.in/bblfsh/sdk.v1"
+  packages = [
+    "manifest",
+    "protocol",
+    "uast"
+  ]
+  revision = "94e3b212553e761677da180f321d9a7a60ebec5f"
+  version = "v1.16.1"
+
+[[projects]]
   branch = "v2"
   name = "gopkg.in/bblfsh/sdk.v2"
   packages = [
+    "driver",
+    "driver/fixtures",
+    "driver/manifest",
+    "driver/native",
+    "driver/native/jsonlines",
+    "driver/server",
     "internal/docker",
-    "manifest",
     "protocol",
-    "sdk/driver",
-    "sdk/driver/fixtures",
-    "sdk/jsonlines",
-    "sdk/server",
-    "sdk/viewer",
+    "protocol/v1",
     "uast",
     "uast/nodes",
+    "uast/nodes/nodesproto",
+    "uast/nodes/nodesproto/pio",
     "uast/role",
     "uast/transformer",
+    "uast/viewer",
     "uast/yaml"
   ]
-  revision = "2aca0d0dad8fe47b8ed5e87d2f3616c7e3f4ef16"
+  revision = "71424c14698b5c8c398b5e136e7705ad8b0e2768"
 
 [[projects]]
   name = "gopkg.in/src-d/go-errors.v1"
@@ -311,6 +331,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "03461dd534877a9041411ce4d013d33c35520a38260c931b3af166767df38b37"
+  inputs-digest = "6fcd2dd7b02b2c1f6be4ad41ce62533af6daff11db2bea5a2906735a5e098a4d"
   solver-name = "gps-cdcl"
   solver-version = 1

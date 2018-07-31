@@ -1,14 +1,12 @@
 package golang
 
 import (
-	"fmt"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"reflect"
 
-	"gopkg.in/bblfsh/sdk.v2/protocol"
-	"gopkg.in/bblfsh/sdk.v2/sdk/driver"
+	"context"
 	"gopkg.in/bblfsh/sdk.v2/uast"
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 )
@@ -146,17 +144,6 @@ func (Driver) Start() error {
 func (Driver) Close() error {
 	return nil
 }
-func (Driver) Parse(req *driver.InternalParseRequest) (*driver.InternalParseResponse, error) {
-	code, err := req.Encoding.Decode(req.Content)
-	if err != nil {
-		return nil, fmt.Errorf("failed to decode contents: %v", err)
-	}
-	n, err := Parse(code)
-	if err != nil {
-		return nil, err
-	}
-	return &driver.InternalParseResponse{
-		Status: driver.Status(protocol.Ok),
-		AST:    n,
-	}, nil
+func (Driver) Parse(ctx context.Context, code string) (nodes.Node, error) {
+	return Parse(code)
 }

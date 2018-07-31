@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/bblfsh/go-driver/driver/golang"
-	"gopkg.in/bblfsh/sdk.v2/sdk/driver"
+	"gopkg.in/bblfsh/sdk.v2/driver/native"
 )
 
 func main() {
-	driver.NativeMain(golang.NewDriver())
+	native.Main(golang.NewDriver())
 }
