@@ -29,7 +29,9 @@ File {
 .  .  .  .  offset: 0
 .  .  .  }
 .  .  }
-.  .  1: Identifier {
+.  .  1: Ident {
+.  .  .  Roles: Identifier,Expression
+.  .  .  TOKEN "fixtures"
 .  .  .  StartPosition: {
 .  .  .  .  Offset: 8
 .  .  .  .  Line: 1
@@ -41,8 +43,27 @@ File {
 .  .  .  .  Col: 17
 .  .  .  }
 .  .  .  Properties: {
-.  .  .  .  Name: fixtures
 .  .  .  .  internalRole: Name
+.  .  .  }
+.  .  .  Children: {
+.  .  .  .  0: Position {
+.  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  Offset: 8
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 9
+.  .  .  .  .  }
+.  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  Offset: 9
+.  .  .  .  .  .  Line: 1
+.  .  .  .  .  .  Col: 10
+.  .  .  .  .  }
+.  .  .  .  .  Properties: {
+.  .  .  .  .  .  col: 9
+.  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  line: 1
+.  .  .  .  .  .  offset: 8
+.  .  .  .  .  }
+.  .  .  .  }
 .  .  .  }
 .  .  }
 .  .  2: GenDecl {
@@ -150,8 +171,9 @@ File {
 .  .  .  .  .  .  .  .  offset: 0
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
-.  .  .  .  .  .  1: Identifier {
-.  .  .  .  .  .  .  Roles: Type,Name
+.  .  .  .  .  .  1: Ident {
+.  .  .  .  .  .  .  Roles: Identifier,Expression,Type,Name
+.  .  .  .  .  .  .  TOKEN "Testcls1"
 .  .  .  .  .  .  .  StartPosition: {
 .  .  .  .  .  .  .  .  Offset: 23
 .  .  .  .  .  .  .  .  Line: 3
@@ -163,8 +185,27 @@ File {
 .  .  .  .  .  .  .  .  Col: 14
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  Properties: {
-.  .  .  .  .  .  .  .  Name: Testcls1
 .  .  .  .  .  .  .  .  internalRole: Name
+.  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  Children: {
+.  .  .  .  .  .  .  .  0: Position {
+.  .  .  .  .  .  .  .  .  StartPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 23
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 6
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  EndPosition: {
+.  .  .  .  .  .  .  .  .  .  Offset: 24
+.  .  .  .  .  .  .  .  .  .  Line: 3
+.  .  .  .  .  .  .  .  .  .  Col: 7
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  .  Properties: {
+.  .  .  .  .  .  .  .  .  .  col: 6
+.  .  .  .  .  .  .  .  .  .  internalRole: NamePos
+.  .  .  .  .  .  .  .  .  .  line: 3
+.  .  .  .  .  .  .  .  .  .  offset: 23
+.  .  .  .  .  .  .  .  .  }
+.  .  .  .  .  .  .  .  }
 .  .  .  .  .  .  .  }
 .  .  .  .  .  .  }
 .  .  .  .  .  .  2: StructType {
