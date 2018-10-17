@@ -1,4 +1,4 @@
-{ '@type': "File",
+{ '@type': "go:File",
    '@role': [File],
    '@pos': { '@type': "uast:Positions",
       start: { '@type': "uast:Position",
@@ -19,7 +19,7 @@
    },
    Comments: ~,
    Decls: [
-      { '@type': "GenDecl",
+      { '@type': "go:GenDecl",
          '@role': [Declaration, Type],
          '@pos': { '@type': "uast:Positions",
             start: { '@type': "uast:Position",
@@ -50,7 +50,7 @@
          },
          Doc: ~,
          Specs: [
-            { '@type': "TypeSpec",
+            { '@type': "go:TypeSpec",
                '@role': [Declaration],
                '@pos': { '@type': "uast:Positions",
                   start: { '@type': "uast:Position",
