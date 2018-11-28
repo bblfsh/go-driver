@@ -1,12 +1,14 @@
 package golang
 
 import (
+	"context"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"reflect"
 
-	"context"
+	"github.com/opentracing/opentracing-go"
+
 	"gopkg.in/bblfsh/sdk.v2/uast"
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 )
@@ -145,5 +147,8 @@ func (Driver) Close() error {
 	return nil
 }
 func (Driver) Parse(ctx context.Context, code string) (nodes.Node, error) {
+	sp, _ := opentracing.StartSpanFromContext(ctx, "go.Parse")
+	defer sp.Finish()
+
 	return Parse(code)
 }

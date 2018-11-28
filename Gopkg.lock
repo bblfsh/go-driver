@@ -30,6 +30,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/codahale/hdrhistogram"
+  packages = ["."]
+  revision = "3a0bb77429bd3a61596f5e8a3172445844342120"
+
+[[projects]]
+  branch = "master"
   name = "github.com/containerd/continuity"
   packages = ["pathdriver"]
   revision = "0377f7d767206f3a9e8881d0f02267b0d89c7a62"
@@ -51,6 +57,12 @@
   packages = ["."]
   revision = "47565b4f722fb6ceae66b95f853feed578a4a51c"
   version = "v0.3.3"
+
+[[projects]]
+  name = "github.com/fatih/color"
+  packages = ["."]
+  revision = "5b77d2a35fb0ede96d138fc9a99f5c9b6aef11b4"
+  version = "v1.7.0"
 
 [[projects]]
   name = "github.com/gogo/protobuf"
@@ -75,6 +87,12 @@
   ]
   revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
   version = "v1.1.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/grpc-ecosystem/grpc-opentracing"
+  packages = ["go/otgrpc"]
+  revision = "8e809c8a86450a29b90dcc9efbf062d0fe6d9746"
 
 [[projects]]
   name = "github.com/mattn/go-colorable"
@@ -120,6 +138,16 @@
   packages = ["libcontainer/user"]
   revision = "4fc53a81fb7c994640722ac585fa9ca548971871"
   version = "v1.0.0-rc5"
+
+[[projects]]
+  name = "github.com/opentracing/opentracing-go"
+  packages = [
+    ".",
+    "ext",
+    "log"
+  ]
+  revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
+  version = "v1.0.2"
 
 [[projects]]
   name = "github.com/ory/dockertest"
@@ -177,6 +205,36 @@
   ]
   revision = "f35b8ab0b5a2cef36673838d662e249dd9c94686"
   version = "v1.2.2"
+
+[[projects]]
+  name = "github.com/uber/jaeger-client-go"
+  packages = [
+    ".",
+    "config",
+    "internal/baggage",
+    "internal/baggage/remote",
+    "internal/spanlog",
+    "internal/throttler",
+    "internal/throttler/remote",
+    "log",
+    "rpcmetrics",
+    "thrift",
+    "thrift-gen/agent",
+    "thrift-gen/baggage",
+    "thrift-gen/jaeger",
+    "thrift-gen/sampling",
+    "thrift-gen/zipkincore",
+    "transport",
+    "utils"
+  ]
+  revision = "1a782e2da844727691fef1757c72eb190c2909f0"
+  version = "v2.15.0"
+
+[[projects]]
+  name = "github.com/uber/jaeger-lib"
+  packages = ["metrics"]
+  revision = "ed3a127ec5fef7ae9ea95b01b542c47fbd999ce5"
+  version = "v1.5.0"
 
 [[projects]]
   name = "github.com/x-cray/logrus-prefixed-formatter"
@@ -295,6 +353,7 @@
 [[projects]]
   name = "gopkg.in/bblfsh/sdk.v2"
   packages = [
+    "cmd",
     "driver",
     "driver/errors",
     "driver/fixtures",
@@ -314,8 +373,8 @@
     "uast/viewer",
     "uast/yaml"
   ]
-  revision = "c40738ca4cc89a0a04a08b9e46ae42a1e7663fe9"
-  version = "v2.6.0"
+  revision = "910019c320386fa99a2e283d80c5c1769717d545"
+  version = "v2.9.0"
 
 [[projects]]
   name = "gopkg.in/src-d/go-errors.v1"
@@ -332,6 +391,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c0e1e0f9ec836d921a56eb126693796f310e6ec65dc60e2e3f2bd513fef05cd8"
+  inputs-digest = "bb6063773ffbc807d0c2f3f064cf2efda0491bf1fbb4c0ad081cf0df357ceaa8"
   solver-name = "gps-cdcl"
   solver-version = 1
