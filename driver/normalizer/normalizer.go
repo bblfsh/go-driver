@@ -2,11 +2,12 @@ package normalizer
 
 import (
 	"go/token"
+	"strings"
+	"unicode"
+
 	"gopkg.in/bblfsh/sdk.v2/uast"
 	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
 	. "gopkg.in/bblfsh/sdk.v2/uast/transformer"
-	"strings"
-	"unicode"
 )
 
 var Preprocess = Transformers([][]Transformer{
