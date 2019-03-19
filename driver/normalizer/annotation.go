@@ -25,12 +25,14 @@ var Native = Transformers([][]Transformer{
 	},
 }...)
 
-// Code is a special block of transformations that are applied at the end
+var Code []CodeTransformer // deprecated
+
+// PreprocessCode is a special block of transformations that are applied at the end
 // and can access original source code file. It can be used to improve or
 // fix positional information.
 //
 // https://godoc.org/gopkg.in/bblfsh/sdk.v2/uast/transformer/positioner
-var Code []CodeTransformer
+var PreprocessCode []CodeTransformer
 
 // mapAST is a helper for describing a single AST transformation for a given node type.
 func mapAST(typ string, m ObjMapping, roles ...role.Role) Mapping {
