@@ -9,8 +9,8 @@ import (
 
 	"github.com/opentracing/opentracing-go"
 
-	"gopkg.in/bblfsh/sdk.v2/uast"
-	"gopkg.in/bblfsh/sdk.v2/uast/nodes"
+	"github.com/bblfsh/sdk/v3/uast"
+	"github.com/bblfsh/sdk/v3/uast/nodes"
 )
 
 func ParseString(code string) (*ast.File, *token.FileSet, error) {
