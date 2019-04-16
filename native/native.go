@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/bblfsh/go-driver/driver/golang"
-	"gopkg.in/bblfsh/sdk.v2/driver/native"
+	"github.com/bblfsh/sdk/v3/driver/native"
 )
 
 func main() {

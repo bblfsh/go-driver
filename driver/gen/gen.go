@@ -128,7 +128,7 @@ func main() {
 		fmt.Fprintln(w, genHeader+`package normalizer
 
 import (
-	"gopkg.in/bblfsh/sdk.v2/uast/role"
+	"github.com/bblfsh/sdk/v3/uast/role"
 )
 
 var typeRoles = map[string][]role.Role{`)

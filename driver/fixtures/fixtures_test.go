@@ -6,8 +6,8 @@ import (
 
 	"github.com/bblfsh/go-driver/driver/golang"
 	"github.com/bblfsh/go-driver/driver/normalizer"
-	"gopkg.in/bblfsh/sdk.v2/driver"
-	"gopkg.in/bblfsh/sdk.v2/driver/fixtures"
+	"github.com/bblfsh/sdk/v3/driver"
+	"github.com/bblfsh/sdk/v3/driver/fixtures"
 )
 
 const projectRoot = "../../"
