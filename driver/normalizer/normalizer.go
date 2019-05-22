@@ -106,7 +106,7 @@ var Normalizers = []Mapping{
 			Obj{
 				"Comment": Is(nil),
 				"Doc":     Is(nil),
-				"Path":    Var("path"),
+				"Path":    pathSplit{Var("path")},
 				"Name": Cases("case",
 					// case 1: no alias for the import
 					Is(nil),
@@ -163,7 +163,7 @@ var Normalizers = []Mapping{
 				"Comment": Is(nil),
 				"Doc":     Is(nil),
 				"Name":    Var("alias"),
-				"Path":    Var("path"),
+				"Path":    pathSplit{Var("path")},
 			},
 			// ->
 			Obj{
@@ -488,4 +488,45 @@ func (op fieldSplit) Check(st *State, n nodes.Node) (bool, error) {
 
 func (op fieldSplit) Construct(st *State, n nodes.Node) (nodes.Node, error) {
 	return st.MustGetVar(op.vr) // TODO: join nodes back on reverse
+}
+
+// pathSplit splits the Go imports path and constructs a QualifiedIdentifier from it.
+type pathSplit struct {
+	path Op
+}
+
+func (pathSplit) Kinds() nodes.Kind {
+	return nodes.KindObject
+}
+
+func (op pathSplit) Check(st *State, n nodes.Node) (bool, error) {
+	obj, ok := n.(nodes.Object)
+	if !ok {
+		return false, ErrUnexpectedType.New(nodes.String(""), n)
+	}
+	var path uast.String
+	if err := uast.NodeAs(obj, &path); err != nil {
+		return false, err
+	}
+	var idents []uast.Identifier
+	for _, name := range strings.Split(path.Value, "/") {
+		idents = append(idents, uast.Identifier{Name: name})
+	}
+	var out interface{}
+	if len(idents) == 1 {
+		name := idents[0]
+		name.GenNode = path.GenNode
+		out = name
+	} else {
+		out = uast.QualifiedIdentifier{GenNode: path.GenNode, Names: idents}
+	}
+	nd, err := uast.ToNode(out)
+	if err != nil {
+		return false, err
+	}
+	return op.path.Check(st, nd)
+}
+
+func (op pathSplit) Construct(st *State, n nodes.Node) (nodes.Node, error) {
+	return op.path.Construct(st, n) // TODO: join nodes back on reverse
 }
