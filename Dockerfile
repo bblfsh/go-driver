@@ -12,7 +12,7 @@
 #==============================
 # Stage 1: Native Driver Build
 #==============================
-FROM golang:1.10-alpine as native
+FROM golang:1.12-alpine as native
 
 ENV DRIVER_REPO=github.com/bblfsh/go-driver
 ENV DRIVER_REPO_PATH=/go/src/$DRIVER_REPO
@@ -32,6 +32,10 @@ RUN go build -o /tmp/native native.go
 # Stage 1.1: Native Driver Tests
 #================================
 FROM native as native_test
+
+# workaround for https://github.com/golang/go/issues/28065
+ENV CGO_ENABLED=0
+
 # run native driver tests
 RUN go test ../driver/golang/...
 
@@ -44,6 +48,9 @@ FROM native as driver
 WORKDIR $DRIVER_REPO_PATH/
 
 ENV GO111MODULE=on GOFLAGS=-mod=vendor
+
+# workaround for https://github.com/golang/go/issues/28065
+ENV CGO_ENABLED=0
 
 # build server binary
 RUN go build -o /tmp/driver ./driver/main.go
