@@ -162,15 +162,8 @@ var Normalizers = []Mapping{
 			Obj{
 				"Comment": Is(nil),
 				"Doc":     Is(nil),
-				"Name": UASTType(uast.Identifier{}, Obj{
-					uast.KeyPos: Var("alias_pos"),
-					"Name":      Var("alias"),
-				}),
-				"Path": UASTType(uast.String{}, Obj{
-					uast.KeyPos: Var("path_pos"),
-					"Value":     Var("path"),
-					"Format":    String(""),
-				}),
+				"Name":    Var("alias"),
+				"Path":    Var("path"),
 			},
 			// ->
 			Obj{
@@ -178,15 +171,8 @@ var Normalizers = []Mapping{
 					// FIXME
 					//uast.KeyStart: Var("alias_start"),
 					//uast.KeyEnd: Var("path_end"),
-					"Name": UASTType(uast.Identifier{}, Obj{
-						uast.KeyPos: Var("alias_pos"),
-						"Name":      Var("alias"),
-					}),
-					"Node": UASTType(uast.String{}, Obj{
-						uast.KeyPos: Var("path_pos"),
-						"Value":     Var("path"),
-						"Format":    String(""),
-					}),
+					"Name": Var("alias"),
+					"Node": Var("path"),
 				}),
 				"All":   Bool(true),
 				"Names": Arr(),
