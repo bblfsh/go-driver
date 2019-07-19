@@ -9,7 +9,7 @@ import (
 	. "github.com/bblfsh/sdk/v3/uast/transformer"
 )
 
-// Native is the of list `transformer.Transformer` to apply to a native AST.
+// Native is a list of `transformer.Transformer` to apply to a native AST.
 // To learn more about the Transformers and the available ones take a look to:
 // https://godoc.org/github.com/bblfsh/sdk/v3/uast/transformer
 var Native = Transformers([][]Transformer{
@@ -166,7 +166,6 @@ var (
 func goTok(tok token.Token) nodes.Value {
 	return nodes.String(tok.String())
 }
-
 func isGoTok(tok token.Token) Op {
 	return Is(goTok(tok))
 }
