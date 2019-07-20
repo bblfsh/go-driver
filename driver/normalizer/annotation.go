@@ -10,8 +10,8 @@ import (
 )
 
 // Native is the of list `transformer.Transformer` to apply to a native AST.
-// To learn more about the Transformers and the available ones take a look to:
-// https://godoc.org/github.com/bblfsh/sdk/v3/uast/transformer
+// To learn more about the Transformers and to see the available ones, read
+// https://godoc.org/github.com/bblfsh/sdk/uast/transformer.
 var Native = Transformers([][]Transformer{
 	// The main block of transformation rules.
 	{Mappings(Annotations...)},
@@ -31,7 +31,7 @@ var Code []CodeTransformer // deprecated
 // and can access original source code file. It can be used to improve or
 // fix positional information.
 //
-// https://godoc.org/github.com/bblfsh/sdk/v3/uast/transformer/positioner
+// https://godoc.org/github.com/bblfsh/sdk/uast/transformer/positioner
 var PreprocessCode []CodeTransformer
 
 // mapAST is a helper for describing a single AST transformation for a given node type.
