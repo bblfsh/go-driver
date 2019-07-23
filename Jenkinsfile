@@ -47,19 +47,19 @@ spec:
   triggers { pollSCM('H/2 * * * *') }
   stages {
     stage('Run transformations benchmark') {
-      when { branch 'jenkins-integration' }
+      when { branch 'master' }
       steps {
         sh "set -o pipefail ; go test -run=NONE -bench=. ./driver/... | tee ${env.BENCHMARK_FILE}"
       }
     }
     stage('Store transformations benchmark to prometheus') {
-      when { branch 'jenkins-integration' }
+      when { branch 'master' }
       steps {
         sh "/root/bblfsh-performance parse-and-store --language=${env.DRIVER_LANGUAGE} --commit=${env.GIT_COMMIT} --storage=prom ${env.BENCHMARK_FILE}"
       }
     }
     stage('Run end-to-end benchmark') {
-      when { branch 'jenkins-integration' }
+      when { branch 'master' }
       steps {
         sh "/root/bblfsh-performance end-to-end --language=${env.DRIVER_LANGUAGE} --commit=${env.GIT_COMMIT} --docker-tag=latest --custom-driver=true --storage=prom ${env.DRIVER_SRC_FIXTURES}"
       }
