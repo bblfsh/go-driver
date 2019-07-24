@@ -395,7 +395,7 @@ var Annotations = []Mapping{
 
 	annotateType("ReturnStmt", nil, role.Return),
 	annotateType("GoStmt", nil, role.Incomplete),       // TODO: Async role
-	annotateType("SelectorExpr", nil, role.Incomplete), // TODO: new role
+	annotateType("SelectorExpr", nil, role.Qualified),
 
 	annotateType("CompositeLit", nil, role.Literal),
 	annotateType("ChanType", nil, role.Type, role.Incomplete),
