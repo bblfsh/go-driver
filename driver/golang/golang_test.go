@@ -1,12 +1,30 @@
 package golang
 
 import (
+	"bytes"
 	"context"
+	"go/format"
+	"go/parser"
+	"go/printer"
+	"go/token"
+	"io/ioutil"
+	"path/filepath"
+	"strings"
 	"testing"
+
+	"github.com/bblfsh/go-driver/driver/golang/convert"
 
 	"github.com/bblfsh/sdk/v3/uast"
 	"github.com/bblfsh/sdk/v3/uast/nodes"
+	"github.com/bblfsh/sdk/v3/uast/transformer"
 	"github.com/stretchr/testify/require"
+	"gopkg.in/src-d/go-log.v1"
+	"gopkg.in/yaml.v2"
+)
+
+const (
+	fixtures               = "../../fixtures"
+	exclusionFileSubstring = "error"
 )
 
 func TestNative(t *testing.T) {
@@ -48,4 +66,148 @@ func TestNative(t *testing.T) {
 		"Unresolved": nil,
 	}
 	require.Equal(t, exp, ast)
+}
+
+// TestStringReplace tests simple replace string in code transformation
+// NOTE! due to positions issue previous and final strings have the same length
+// NOTE! tested code is sensible to blocks' empty lines, because we still do not preserve the positions
+func TestStringReplaceTransform(t *testing.T) {
+	in, err := Parse(getCode("foo"))
+	require.NoError(t, err)
+
+	expCode := getCode("bar")
+	exp, err := Parse(expCode)
+	require.NoError(t, err)
+
+	m := transformer.Mappings(
+		transformer.Map(
+			transformer.String("\"foo\""),
+			transformer.String("\"bar\""),
+		),
+	)
+
+	act, err := m.Do(in)
+	require.NoError(t, err)
+	require.Equal(t, exp, act)
+
+	buf := &bytes.Buffer{}
+	require.NoError(t, printer.Fprint(buf, token.NewFileSet(), convert.NodeToAST(act)))
+	require.Equal(t, expCode, buf.String(), buf.String())
+}
+
+// TestUASTNodeToCode
+// 1) parse code ${exp_code} to UAST node
+// 2) convert UAST node to AST node
+// 3) convert AST node to ${act_code}
+// <expected> formatted(${exp_code}) eq formatted(${act_code})
+// TODO(lwsanty): research for approaches to preserve positions, see https://github.com/dave/dst
+// NOTE! currently positions are not preserved during the conversions, that leads to the cases when we cannot preserve
+// the code-style(not fmt-related issue!) that leads to some fixtures failure.
+// Ones that pass are whitelisted in testdata/whitelist.yml
+func TestUASTNodeToCode(t *testing.T) {
+	files, err := selectFiles()
+	require.NoError(t, err)
+
+	wl, err := loadWhiteList()
+	require.NoError(t, err)
+
+	for _, f := range files {
+		fBase := filepath.Base(f)
+		t.Run(fBase, func(t *testing.T) {
+			if _, ok := wl[fBase]; !ok {
+				t.Skipf("skipping test for %s: not supported yet", fBase)
+			}
+
+			data, err := ioutil.ReadFile(f)
+			require.NoError(t, err)
+
+			expCode, err := formatCode(string(data))
+			require.NoError(t, err)
+			node, err := Parse(expCode)
+			require.NoError(t, err)
+
+			actCode, err := nodeToCode(node)
+			require.NoError(t, err)
+			require.Equal(t, expCode, actCode)
+		})
+	}
+}
+
+func nodeToCode(n nodes.Node) (string, error) {
+	astNode := convert.NodeToAST(n)
+
+	buf := &bytes.Buffer{}
+	if err := format.Node(buf, token.NewFileSet(), astNode); err != nil {
+		return "", err
+	}
+
+	return buf.String(), nil
+}
+
+func formatCode(code string) (string, error) {
+	fSet := token.NewFileSet()
+	node, err := parser.ParseFile(fSet, "test.go", code, parser.ParseComments)
+	if err != nil {
+		return "", err
+	}
+
+	var buf bytes.Buffer
+	err = format.Node(&buf, fSet, node)
+	if err != nil {
+		return "", err
+	}
+
+	return buf.String(), nil
+}
+
+func selectFiles() ([]string, error) {
+	matches, err := filepath.Glob(filepath.Join(fixtures, "*.go"))
+	if err != nil {
+		return nil, err
+	}
+
+	for i, m := range matches {
+		if !strings.Contains(m, exclusionFileSubstring) {
+			continue
+		}
+		matches = append(matches[:i], matches[i+1:]...)
+	}
+
+	log.Infof("matches: %v", matches)
+	return matches, nil
+}
+
+func getCode(name string) string {
+	return `package main
+
+import "fmt"
+
+func main() {
+	var a string = "` + name + `"
+	yo := func() {
+		fmt.Println("zdarov")
+	}
+	yo()
+	fmt.Println(a)
+}
+`
+}
+
+func loadWhiteList() (map[string]struct{}, error) {
+	text, err := ioutil.ReadFile("testdata/whitelist.yml")
+	if err != nil {
+		return nil, err
+	}
+
+	var files []string
+	err = yaml.Unmarshal(text, &files)
+	if err != nil {
+		return nil, err
+	}
+
+	res := make(map[string]struct{})
+	for _, f := range files {
+		res[f] = struct{}{}
+	}
+	return res, nil
 }
