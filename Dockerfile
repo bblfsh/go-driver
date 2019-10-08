@@ -12,7 +12,7 @@
 #==============================
 # Stage 1: Native Driver Build
 #==============================
-FROM golang:1.12-alpine as native
+FROM golang:1.13-alpine as native
 
 ENV DRIVER_REPO=github.com/bblfsh/go-driver
 ENV DRIVER_REPO_PATH=/go/src/$DRIVER_REPO
