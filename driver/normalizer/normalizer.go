@@ -508,9 +508,34 @@ func (op pathSplit) Check(st *State, n nodes.Node) (bool, error) {
 	if err := uast.NodeAs(obj, &path); err != nil {
 		return false, err
 	}
+	var spos uast.Position
+	if p := path.Positions.Start(); p != nil {
+		// make a copy
+		spos = *p
+		// the position is from a string, so we should exclude "
+		// when reconstructing positions for identifiers in the import path
+		spos.Offset++
+		spos.Col++
+	}
 	var idents []uast.Identifier
 	for _, name := range strings.Split(path.Value, "/") {
-		idents = append(idents, uast.Identifier{Name: name})
+		id := uast.Identifier{Name: name}
+		if spos.Valid() {
+			p := spos
+			// reconstruct the position
+			pe := p
+			pe.Offset += uint32(len(name))
+			pe.Col += uint32(len(name))
+			id.Positions = uast.Positions{
+				uast.KeyStart: p,
+				uast.KeyEnd:   pe,
+			}
+			// skip "/"
+			pe.Offset++
+			pe.Col++
+			spos = pe
+		}
+		idents = append(idents, id)
 	}
 	var out interface{}
 	if len(idents) == 1 {
