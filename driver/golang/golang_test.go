@@ -12,11 +12,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/bblfsh/go-driver/driver/golang/convert"
-
 	"github.com/bblfsh/sdk/v3/uast"
 	"github.com/bblfsh/sdk/v3/uast/nodes"
 	"github.com/bblfsh/sdk/v3/uast/transformer"
+
 	"github.com/stretchr/testify/require"
 )
 
@@ -114,7 +113,7 @@ func TestStringReplaceTransform(t *testing.T) {
 	require.Equal(t, exp, act)
 
 	buf := &bytes.Buffer{}
-	require.NoError(t, printer.Fprint(buf, token.NewFileSet(), convert.NodeToAST(act)))
+	require.NoError(t, printer.Fprint(buf, token.NewFileSet(), NodeToAST(act)))
 	require.Equal(t, expCode, buf.String(), buf.String())
 }
 
@@ -158,7 +157,7 @@ func TestUASTNodeToCode(t *testing.T) {
 }
 
 func nodeToCode(n nodes.Node) (string, error) {
-	astNode := convert.NodeToAST(n)
+	astNode := NodeToAST(n)
 
 	buf := &bytes.Buffer{}
 	if err := format.Node(buf, token.NewFileSet(), astNode); err != nil {

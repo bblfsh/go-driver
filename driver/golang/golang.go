@@ -7,9 +7,8 @@ import (
 	"go/token"
 	"reflect"
 
-	"github.com/bblfsh/go-driver/driver/golang/convert"
-
 	"github.com/bblfsh/sdk/v3/uast/nodes"
+
 	"github.com/opentracing/opentracing-go"
 )
 
@@ -27,7 +26,7 @@ func Parse(code string) (nodes.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	return convert.ValueToNode(reflect.ValueOf(f), fs)
+	return ValueToNode(reflect.ValueOf(f), fs)
 }
 
 func NewDriver() *Driver {
