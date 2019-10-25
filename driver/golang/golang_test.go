@@ -214,7 +214,7 @@ func main() {
 `
 }
 
-// aaaaa
+// aaaa
 func getWhiteListMap() (map[string]struct{}, error) {
 	res := make(map[string]struct{})
 	for _, f := range whiteList {
