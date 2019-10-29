@@ -17,3 +17,5 @@ require (
 	google.golang.org/genproto v0.0.0-20190716160619-c506a9f90610 // indirect
 	google.golang.org/grpc v1.22.0 // indirect
 )
+
+replace github.com/bblfsh/sdk/v3 v3.3.1 => github.com/lwsanty/sdk/v3 v3.2.1-0.20191029095207-ecb3d72975e2

@@ -38,13 +38,18 @@ spec:
     PROM_ADDRESS = "http://prom-pushgateway-prometheus-pushgateway.monitoring.svc.cluster.local:9091"
     PROM_JOB = "bblfsh_perfomance"
   }
-  // TODO(lwsanty): https://github.com/src-d/infrastructure/issues/992
-  // this is polling for every 2 minutes
-  // however it's better to use trigger curl http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
-  // https://kohsuke.org/2011/12/01/polling-must-die-triggering-jenkins-builds-from-a-git-hook/
-  // the problem is that it requires Jenkins to be accessible from the hook side
-  // probably Travis CI could trigger Jenkins after all unit tests have passed...
-  triggers { pollSCM('H/2 * * * *') }
+  triggers {
+    GenericTrigger(
+      genericVariables: [
+        [key: 'ref', value: '$.ref', regexpFilter: 'refs/heads/master'],
+        [key: 'repository.full_name', value: '$.full_name', regexpFilter: 'bblfsh/go-driver']
+      ],
+      causeString: 'Triggered on $full_name $ref',
+
+      printContributedVariables: true,
+      printPostContent: true
+    )
+  }
   stages {
     stage('Run transformations benchmark') {
       when { branch 'master' }
