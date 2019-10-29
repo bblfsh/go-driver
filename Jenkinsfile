@@ -50,7 +50,7 @@ spec:
       printPostContent: true,
 
       regexpFilterText: '$ref',
-      regexpFilterExpression: 'refs/heads/master'
+      regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
     )
   }
   stages {

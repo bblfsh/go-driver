@@ -18,4 +18,4 @@ require (
 	google.golang.org/grpc v1.22.0 // indirect
 )
 
-replace github.com/bblfsh/sdk/v3 v3.3.1 => github.com/lwsanty/sdk/v3 v3.2.1-0.20191029103549-19a6beab0da5
+replace github.com/bblfsh/sdk/v3 v3.3.1 => github.com/lwsanty/sdk/v3 v3.2.1-0.20191029134811-f1e544804ae1
