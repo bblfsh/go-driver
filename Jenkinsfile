@@ -41,13 +41,16 @@ spec:
   triggers {
     GenericTrigger(
       genericVariables: [
-        [key: 'ref', value: '$.ref', regexpFilter: 'refs/heads/master'],
-        [key: 'repository.full_name', value: '$.full_name', regexpFilter: 'bblfsh/go-driver']
+        [key: 'ref', value: '$.ref']
       ],
-      causeString: 'Triggered on $full_name $ref',
+      token: 'go-driver',
+      causeString: 'Triggered on $ref',
 
       printContributedVariables: true,
-      printPostContent: true
+      printPostContent: true,
+
+      regexpFilterText: '$ref',
+      regexpFilterExpression: 'refs/heads/master'
     )
   }
   stages {
